@@ -64,6 +64,8 @@ change keyboard?
 
 ## status.components
 
+Create React Native Components yourselves or use our pre-farbicated components
+
 ## status.components.view
 
 ## status.components.text
