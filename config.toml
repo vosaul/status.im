@@ -1,8 +1,8 @@
 theme = "docuapi"
 themesdir = "themes"
 languageCode = "en-us"
-baseurl = "http://docuapi.com/"
-title = "DocuAPI Example Site"
+baseurl = "http://docs.status.im"
+title = "Status Developer Documentation"
 
 # Code higlighting settings
 pygmentsCodefences = true
@@ -44,7 +44,7 @@ name = "Clojurescript"
 [languages.en]
 languageName = "English"
 weight = 2
-title = "DocuAPI Example Site"
+title = "Status Developer Documentation"
 
 # Left sidebar footer items. Use HTMl or Markdown.
 toc_footers = [ 
