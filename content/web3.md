@@ -1024,7 +1024,7 @@ console.log(uncle); // see web3.eth.getBlock
 
 ***
 
-##### web3.eth.getTransaction
+## web3.eth.getTransaction
 
     web3.eth.getTransaction(transactionHash [, callback])
 
