@@ -46,7 +46,7 @@ curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
+```js
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
@@ -99,7 +99,7 @@ curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
+```js
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
@@ -177,7 +177,7 @@ curl "http://example.com/api/kittens/2"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
+```js
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');

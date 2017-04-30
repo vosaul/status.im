@@ -19,10 +19,10 @@ search = true
   
 # Configure the language example tabs.
 [[params.language_tabs]]
-key = "javascript"
+key = "js"
 name = "Javascript"
 [[params.language_tabs]]
-key = "clojurescript"
+key = "cljs"
 name = "Clojurescript"
 # [[params.language_tabs]]
 # key = "go"
