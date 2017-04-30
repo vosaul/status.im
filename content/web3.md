@@ -5,10 +5,6 @@ title: Web3 API Reference
 
 # web3 (API)
 
-<aside class="notice">
-Status already provides the <code>web3</code> object in both HTML5 DApps and Chatbots, so you can safely skip this step.
-</aside>
-
 
 To make your Ðapp work on Ethereum, you can use the `web3` object provided by the [web3.js library](https://github.com/ethereum/web3.js). Under the hood it communicates to a local node through [RPC calls](https://github.com/ethereum/wiki/wiki/JSON-RPC). web3.js works with any Ethereum node, which exposes an RPC layer.
 
@@ -18,6 +14,10 @@ If you want to look at some more sophisticated examples using web3.js check out 
 
 
 ## Getting Started
+
+<aside class="notice">
+Status already provides the <code>web3</code> object in both HTML5 DApps and Chatbots, so you can safely skip this step.
+</aside>
 
 TODO check how metamask suggests to embed
 
