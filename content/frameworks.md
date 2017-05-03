@@ -129,11 +129,15 @@ From within your DApp directory, run:
 
 This should tell you that the the app is running, and that the DApp has been added to the Status Contacts.
 
+<aside>TODO: Running Status on a real device, this did not work for me ("Cannot connect to Status."), I needed to add the IP of my device as an ENV variable: `IP=192.168.123.102 npm run start`.
+  <br/>
+Even after that, the DApp is added to status, but opens on click it opens the browser with a "oops, error" message and just "/browse" in the address bar</aside>
+
 ![The DApp added to the default Contacts](images/starting-a-dapp-on-status-with-frameworks_03.png)
 
 *The DApp added to the default Contacts*
 
-After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse [http://localhost:](http://localhost:8080/)3000/` for iOS, and `/browse [http://10.0.3.2:3000/](http://10.0.3.2:3000/)` for Android.
+After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://localhost:3000/` for iOS, and `/browse http://10.0.3.2:3000/` for Android.
 
 In fact, you can also browse to that address from Console with the command `/browse`, just like you could browse to any other web address inside Status. You can also enter that address into your browser, and you’ll see the same thing.
 
@@ -171,29 +175,28 @@ In the same directory, open the file `embark.json` and edit the `plugins` key:
     "plugins": {
         "embark-status": {
           "deviceIp": "your-device-ip",
-          "whisperIdentity": "dapp-test",
-          "name": "MyDapp"
+          "whisperIdentity": "dapp-embark-test",
+          "name": "MyEmbarkDapp"
         }
       }
 
-You can get the device IP from the Status Console, which was shown after you ran `/debug “On"` above. For instance, if `/debug` told me my IP was `10.0.3.15`, the entire `embark_demo/embark.json` file would look like this:
+You can get the device IP from the Status Console, which was shown after you ran `/debug “On"` above. For instance, if `/debug` told me my IP was `192.168.123.102`, the entire `embark_demo/embark.json` file would look like this:
 
     {"contracts": ["app/contracts/**"],
       "app": {
         "css/app.css": ["app/css/**"],
         "images/": ["app/images/**"],
-
         "js/app.js": ["embark.js", "app/js/_vendor/jquery.min.js", "app/js/_vendor/bootstrap.min.js", "app/js/**"],
         "index.html": "app/index.html"
       },
       "buildDir": "dist/",
       "config": "config/",
-        "plugins": {
-     "embark-status": {
-         "deviceIp": "10.0.3.15",
-         "whisperIdentity": "dapp-test",
-         "name": "MyDapp"
-     }
+      "plugins": {
+        "embark-status": {
+          "deviceIp": "192.168.123.102",
+          "whisperIdentity": "dapp-embark-test",
+          "name": "MyEmbarkDapp"
+        }
       }
     }
 
@@ -201,7 +204,7 @@ Finally, if you’re running Status on Android, enable port forwarding with:
 
     adb forward tcp:5561 tcp:5561
 
-## Running the DApp
+### Running the DApp
 
 Now we’re ready to run the DApp on Status. From within your DApp directory, run:
 
@@ -209,7 +212,6 @@ Now we’re ready to run the DApp on Status. From within your DApp directory, ru
 # start your DApp
 embark run
 ```
-<aside class="warning">TODO: this references Embark, check whether it applies to Truffle</aside>
 
 The Embark console will appear within your shell with useful information about the SimpleStorage contract it has created, compiled, and deployed. It will also tell you that the DApp has been added to Status!
 
@@ -219,7 +221,11 @@ The Embark console will appear within your shell with useful information about t
 
 *The Embark simulator runs in one Terminal window on the top, and the Embark console on the bottom*
 
-You should be able to tap the Contacts tab within Status and see your DApp there. After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse [http://localhost:](http://localhost:8080/)8000/` for iOS, and `/browse [http://10.0.3.2:8000/](http://10.0.3.2:3000/)` for Android.
+<aside>TODO: Again, this is probably written for the case when device is the same machine. With a real device, Embark says "Adding DApp to Status" but nothing appears in Status.</aside>
+
+You should be able to tap the Contacts tab within Status and see your DApp there. After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://localhost:8000/` for iOS, and `/browse http://192.168.123.102:3000/` for Android.
+
+<aside>TODO: Does this difference between address bar contents on iOS/Android presume that iOS is running in simulator and Android on real device? Make that clear and explicit.</aside>
 
 In fact, you can also browse to that address from Console with the command `/browse`, just like you could browse to any other web address inside Status. You can also enter that address into your browser, and you’ll see the same thing.
 
