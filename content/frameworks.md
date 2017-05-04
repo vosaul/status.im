@@ -15,7 +15,14 @@ In this tutorial, we’ll use the Truffle and Embark frameworks to create a basi
 
 Broadly speaking, for both Truffle and Embark, you’ll get the Status app running and connected to your computer, either on a simulator or on a real phone. Next, you’ll install some necessary dependencies. Then, you’ll start testrpc, a mini-Ethereum network that runs on your computer. Finally, you’ll install the Status Truffle box or the Status Embark plugin, create a basic demo app, and add it to Status.
 
-<aside class="warning">TODO: bullet point list of sections below</aside>
+This is what we're going to go through:
+
+* [Installing Status](#installing-status)
+* [Enabling Debugging](#enabling-debugging)
+* [Installing Git, Node, and NPM](#installing-git-node-and-npm)
+* [Installing testrpc](#installing-testrpc)
+* [Creating a DApp using Truffle](#creating-a-dapp-using-truffle)
+* [Creating a DApp using Embark](#creating-a-dapp-using-embark)
 
 ## Installing Status
 
@@ -47,7 +54,7 @@ The message also shows you your IP address, which you’ll need later for Embark
 
 ## Installing Git, Node, and NPM
 
-<aside>Can we leave out this paragraph about git? Truffle/Embark are installed using `npm`, afaict, which probably depends on git, but it's part of a basic dev toolset.</aside>
+<aside>Can we leave out this first paragraph about git? Truffle/Embark are installed using `npm`, afaict, which probably depends on git, but it's part of a basic dev toolset.</aside>
 
 We’ll use the version control tool Git to install the Truffle and Embark frameworks. If you have Xcode installed, Git is probably already installed. To see if it’s installed, open Terminal or any command line program and just enter `git`. You should see a list of common Git commands. If you don’t, you can install Git with [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
@@ -74,7 +81,7 @@ While the steps up until now apply to using both Truffle and Embark, now we’ll
 
 ### Running testrpc
 
-If you try to run `truffle migrate` in the next section without `testrpc` running, it’s going to give you an error. So let’s get it going. Open Terminal or any command line program and enter the command:
+Open Terminal or any command line program and enter the command:
 
 `testrpc`
 
@@ -116,7 +123,7 @@ With the Status Truffle box successfully cloned, let’s walk through the next s
     # already be running
      truffle migrate
 
-As you run the `migrate` command, you can look at the window with `testrpc` running, and you’ll see your transactions being published to your local network.
+As you run the `migrate` command, you can look at the window with `testrpc` running, and you’ll see your transactions being published to your local network. If you get `Error: Invalid JSON RPC response`, you probably forgot to run `testrpc`.
 
 ### Running our Truffle DApp on Status
 
@@ -129,9 +136,9 @@ From within your DApp directory, run:
 
 This should tell you that the the app is running, and that the DApp has been added to the Status Contacts.
 
-<aside>TODO: Running Status on a real device, this did not work for me ("Cannot connect to Status."), I needed to add the IP of my device as an ENV variable: `IP=192.168.123.102 npm run start`.
+<aside>NOTE: If you're running Status on a real iOS device, you need to provide the IP of the device as an ENV variable, e.g. `IP=192.168.123.102 npm run start`.
   <br/>
-Even after that, the DApp is added to status, but opens on click it opens the browser with a "oops, error" message and just "/browse" in the address bar</aside>
+Even then, `truffle-box-status` seems to rely on `status-dev-cli` which has a hardcoded value of `localhost` as the host of the DApp: <a href="https://github.com/status-im/status-dev-cli/blob/7b51136d8d0dc7b0a95136e6489c34870f925e4b/index.js#L33">(see github)</a></aside>
 
 ![The DApp added to the default Contacts](images/starting-a-dapp-on-status-with-frameworks_03.png)
 
@@ -221,7 +228,7 @@ The Embark console will appear within your shell with useful information about t
 
 *The Embark simulator runs in one Terminal window on the top, and the Embark console on the bottom*
 
-<aside>TODO: Again, this is probably written for the case when device is the same machine. With a real device, Embark says "Adding DApp to Status" but nothing appears in Status.</aside>
+<aside>TODO: Again, this does not work on a real iOS device. To deploy the DApp on the device you'd need to <a href="https://github.com/status-im/embark-status/blob/master/index.js#L13">patch this line in embark-status</a> to include `--dapp-port 5561`?</aside>
 
 You should be able to tap the Contacts tab within Status and see your DApp there. After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://localhost:8000/` for iOS, and `/browse http://192.168.123.102:3000/` for Android.
 
