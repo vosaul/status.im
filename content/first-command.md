@@ -1,29 +1,11 @@
 ## Create Your First Status Command
-
 ```js
-var phoneConfig = {
-    name: "phone",
-    registeredOnly: true,
-    icon: "phone_white",
-    color: "#5bb2a2",
-    title: I18n.t('phone_title'),
-    description: I18n.t('phone_description'),
-    sequentialParams: true,
-    validator: function (params) {
-        return {
-            validationHandler: "phone",
-            parameters: [params.phone]
-        };
-    },
-    params: [{
-        name: "phone",
-        type: status.types.PHONE,
-        suggestions: phoneSuggestions,
-        placeholder: I18n.t('phone_placeholder')
-    }]
-};
-status.response(phoneConfig);
-status.command(phoneConfig);
+status.command({
+ name: “hello”,
+ title: “HelloBot”,
+ description: “Helps you say hello”,
+ color: “#7099e6”,
+});
 ```
 
 ```js
@@ -74,15 +56,17 @@ status.command({
 
 Once you have worked through the Quickstart tutorial and understood the basic steps to building a DApp and adding it into status, it's time to get our hands a little more dirty with by actually writing some real commands that will begin to utilise the awesome power of the Chat API.
 
-In the my-dapp directory you created with the index.html and app.js files, we can now begin to do some more fun things. We start by writing a command in the app.js that will allow us to confirm a user's phone number and send them a response.
+In the my-dapp directory you created with the index.html and app.js files, we can now begin to do some more fun things. We start by writing a command in the app.js that will allow us to say hello to a user when they open the DApp.
 
-Now, the example provided is a fairly big chunck of code to work through, but it will all become clear if you take a look over the API specs below.
+`status.command()` can take 12 different parameters, of which we are only using 4 to ensure that we can greet our user nicely and make them feel great about using all this new and awesome technology.
 
-`status.command()` can take 12 different parameters, of which we are using 9 to ensure that we get the phone configuration set up properly.
+It is possible to build up the different parameters we want in a variable, and then pass this in to `status.command()`.
 
-As you can see, we build up the different parameters we want in a variable, and then pass this in to `status.command()`. In this case, we are also passing it to `status.response()` as we require some interaction from the user. 'status.response()` takes the same parameters that `status.command()` does, the only difference is that with this method you can actively ask a user to issue a command.
+However, we are just building up the command ourselves as it is easy enough to keep track of four simple arguments. Obviously, this small `hello` example can be extended greatly so that we can get responses from users and do a bunch of other rad things, but that will all become clear in the sections below on interactive suggestion areas etc.
 
-Obviously, it is also possible to build the command yourself without first defining a variable, as shown in the second example where we use `status.command()` to allow a user to access the Ropsten faucet and get some test ether to send to their friends and interact with DApps already living in Status. 
+We have included a far more complete example that utilises 9 of the 12 parameters you can pass into `status.command()` and is what we use to make it possible for our users to access the Status Faucet and get some of that tasty (test) ether to send to their friends and interact with the DApps already living in Status.
+
+Read on!
 
 
 
