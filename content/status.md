@@ -32,7 +32,7 @@ status.command({
 });
 ```
 
-> It is important to note that <code>params</code> are available for any <code>status.command</code>, including in `params` itself. For instance, if your users sends <code>/hello whatsup</code>, the input <code>whatsup</code> will be available in your command under <code>params.hello</code>. You can add additional <code>params</code> to - for instance - <code>preview</code> like so:
+> It is important to note that params are available for any status.command, including in params itself. For instance, if your user sends /hello whatsup, the input "whatsup" will be available in your command under params.hello. You can add additional params to - for instance - preview like so:
 
 ```js
 params: [{
@@ -42,9 +42,9 @@ params: [{
 }],
 ```
 
-> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. <code>Type your password</code>. Alternatively, you can also include <code>suggestions</code> for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the <code>/faucet command</code>, you’ll see two suggestions to choose from.
+> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. Type your password. Alternatively, you can also include suggestions for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the /faucet command, you’ll see two suggestions to choose from.
 
-> Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the <code>status.components</code>):
+> Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the status.components):
 
 ```js
 validator: function(params) {
@@ -276,8 +276,30 @@ If you define a `text` input, when the user responds, it will pop up a normal QW
 Defining `number` will result in the keyboard opening to it's number section.
 
 ## status.types.PHONE
-
-Defining `phone` will result in the keyboard opening to it's number section as well.
+```js
+var phoneConfig = {
+    name: "phone",
+    registeredOnly: true,
+    icon: "phone_white",
+    color: "#5bb2a2",
+    title: I18n.t('phone_title'),
+    description: I18n.t('phone_description'),
+    sequentialParams: true,
+    validator: function (params) {
+        return {
+            validationHandler: "phone",
+            parameters: [params.phone]
+        };
+    },
+    params: [{
+        name: "phone",
+        type: status.types.PHONE,
+        suggestions: phoneSuggestions,
+        placeholder: I18n.t('phone_placeholder')
+    }]
+};
+```
+Defining `phone` will result in the keyboard opening to it's number section as well. One example should suffice to give you a general idea of how this works, so we have provided an excerpt of how we do phone cofirmation using the `PHONE` type. You can find the full code [here](https://github.com/status-im/status-react/blob/develop/bots/console/bot.js#L450)
 
 ## status.types.PASSWORD
 
@@ -285,9 +307,20 @@ Defining `password` will result in the keyboard opening to it's variable charact
 
 ## status.events
 
+Events are essentially the glue that allow you to commuicate with the Status Chat API effectively.
+
 ## status.events.SET_VALUE
+```js 
+{onPress: status.components.dispatch([status.events.SET_VALUE, entry])},
+```
+
+This method will completely update the content of text input. The full function around the snippet example provided can be found [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/console/bot.js#L560).
 
 ## status.events.SET_COMMAND_ARGUMENT
+```js
+{onPress: status.components.dispatch([status.events.SET_COMMAND_ARGUMENT, [0, entry.url]])},
+```
+As opposed to `SET_VALUE`, this event will only update a single argument which you define. The full function around the snippet example provided can be found [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/console/bot.js#L485).
 
 ## status.components
 
@@ -330,7 +363,25 @@ Expects only 1 argument - `url`.
 
 ## status.components.validationMessage
 
-This is the only custom Status component and it takes just two strings, and will return them wrapped in text components inside a view.
+> An example of using validationMessage within the validator argument being passed to status.command.
+```js
+validator: function (params, context) {
+        var f = faucets.map(function (entry) {
+            return entry.url;
+        });
+
+        if (f.indexOf(params.url) == -1) {
+            var error = status.components.validationMessage(
+                I18n.t('faucet_incorrect_title'),
+                I18n.t('faucet_incorrect_description')
+            );
+
+            return {markup: error};
+        }
+    }
+```
+
+This is the only custom Status component and it takes just two strings, and will return them wrapped in text components inside a view. You can find the full example [here](https://github.com/status-im/status-react/blob/develop/bots/console/bot.js#L550).
 
 ## status.components.bridgedWebview
 
