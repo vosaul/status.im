@@ -32,7 +32,7 @@ status.command({
 });
 ```
 
-> It is important to note that `params` are available for any `status.command`, including in `params` itself. For instance, if your users sends `/hello whatsup`, the input `whatsup` will be available in your command under `params.hello`.. You can add additional `params` to - for instance - `preview` like so:
+> It is important to note that <code>params</code> are available for any <code>status.command</code>, including in `params` itself. For instance, if your users sends <code>/hello whatsup</code>, the input <code>whatsup</code> will be available in your command under <code>params.hello</code>. You can add additional <code>params</code> to - for instance - <code>preview</code> like so:
 
 ```js
 params: [{
@@ -42,9 +42,9 @@ params: [{
 }],
 ```
 
-> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. `Type your password`. Alternatively, you can also include `suggestions` for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the `/faucet command`, you’ll see two suggestions to choose from.
+> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. <code>Type your password</code>. Alternatively, you can also include <code>suggestions</code> for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the <code>/faucet command</code>, you’ll see two suggestions to choose from.
 
-> Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the `status.components`):
+> Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the <code>status.components</code>):
 
 ```js
 validator: function(params) {
@@ -71,7 +71,7 @@ handler: function (params) {
     },
 ```
 
-> Full example of pretty much all the `status.command` stuff in action:
+> Full example of pretty much all the <code>status.command</code> stuff in action:
 
 ```js
 status.command({
@@ -119,25 +119,25 @@ status.command({
 });
 ```
 
-### status.command Parameters
+### Parameters
 
-Parameter |  Description | Additional Arguments/Info
---------- |  ----------- | -----------------
-name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote name: `“hello”`, your user might invoke `/hello` | There is an additional `params` object available on any of the below commands, including in params itself. For instance, if your users sends `/hello whatsup`, the input `whatsup` will be available in your command under `params.hello`
-title | This is what will appear in the list of suggestions when a user starts typing a command. |
-description | Appears below the `title` in the list of suggestions and does exactly what it says. |
-validator | Allows you to check your users’ input before sending off the command. | It takes a function, which should return an error if the input is invalid.
-color | Defines the background color of the name of your command as it appears in the list of suggestions. | Give commands different colors to help your users easily distinguish commands, and to harmonize with your DApp’s brand and color scheme.
-icon | Define which icon will appear next to action messages, such as sending Ether or requesting a location. | Think an arrow for sending, a pin for location etc.
-params | Define all the possible inputs to your command. | Requires an array holding an object, with possible parameters `name`, `placeholder`, `suggestions`, and one of the `status.types`, which are: `status.types.TEXT`, `status.types.NUMBER`, `status.types.PHONE`, and `status.types.PASSWORD`.
-preview | Defines what your user will see as a result of *their* action, before any other response. | The preview parameter takes a function, which should return a `status.component`.
-shortPreview | While `preview` controls how your command appears within your DApp’s chat interface, `short-preview` controls how your commands get shown in the list of chats, before your users tap on your chat. | `short-prview` expects two params: `icon` and `params`.  
-onSend | A self-explanatory param that takes a function whcih will be executed when the user presses the “send” button. It will return a map that should contain a `markup` value. | If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
-fullscreen | If your command has suggestions, this param controls whether that list of suggestions expands to fill the entire screen. | If your command has a lot of suggestions, you might want set fullscreen to true, so that your users don’t have to pull the list upwards. On the other hand, if your command has only a few suggestions and you set fullscreen to true, your users will have to pull the list downwards to keep it from hiding the screen. Choose whichever will be most convenient to your users, considering your command’s suggestions.
-request | This will allow you to request any action from the user, such as a phone number, password, confirmation to send Ether etc. | Used with the `executeImmediately` option set to `true`, it will create a message the user can tap on an execute immediately.
-executeImmediately (Boolean) | If true, this means that the **response** will be executed immediately when you press on it. | For instance, when you see a response in a chat, you don’t have to type something — you just need to press on a response and it will be executed right after that.
-sequentialParams (Boolean) | Specifies the way command arguments will be “requested”. | The default approach (`sequentialParams = false`) is to type a command this way: `/send 0.1 ETH somebody`, where `0.1`, `ETH` and `somebody` are arguments. However, there may be situations when you want to ask each argument separately. You can see the difference by executing `/password` command; it asks you for a password and only after that requests confirmation.  Currently there is one limitation — you can use argument types (`type` value) only for `sequentialParams`, and if you want to, for example, hide the argument input, you should use `sequentialParams`
-handler (!= null) | Of course, you probably want the command to do something when your users call it! The `handler` parameter takes a function to accomplish this. | For instance, suppose your user inputs `/hello howdy`. “Howdy” is a valid string, and will pass the `hello` validator. From there, your handler could take over to send this greeting to another user: `handler: web3.shh.post(params.hello)`.
+Argument |  Description 
+--------- |  ----------- 
+name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote name: `“hello”`, your user might invoke `/hello`. There is an additional `params` object available on any of the below commands, including in params itself.
+title | This is what will appear in the list of suggestions when a user starts typing a command. 
+description | Appears below the `title` in the list of suggestions and does exactly what it says. 
+validator | Allows you to check your users’ input before sending off the command. It takes a function, which should return an error if the input is invalid.
+color | Defines the background color of the name of your command as it appears in the list of suggestions. Give commands different colors to help your users easily distinguish commands, and to harmonize with your DApp’s brand and color scheme.
+icon | Define which icon will appear next to action messages, such as sending Ether or requesting a location. Think an arrow for sending, a pin for location etc.
+params | Define all the possible inputs to your command. Requires an array holding an object, with possible parameters `name`, `placeholder`, `suggestions`, and one of the `status.types`, which are: `status.types.TEXT`, `status.types.NUMBER`, `status.types.PHONE`, and `status.types.PASSWORD`.
+preview | Defines what your user will see as a result of *their* action, before any other response. The preview parameter takes a function, which should return a `status.component`.
+shortPreview | While `preview` controls how your command appears within your DApp’s chat interface, `short-preview` controls how your commands get shown in the list of chats, before your users tap on your chat. `short-prview` expects two params: `icon` and `params`.  
+onSend | A self-explanatory param that takes a function whcih will be executed when the user presses the “send” button. It will return a map that should contain a `markup` value. If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
+fullscreen | If your command has suggestions, this param controls whether that list of suggestions expands to fill the entire screen. See the interactive suggestion area tutorial for more.
+request | This will allow you to request any action from the user, such as a phone number, password, confirmation to send Ether etc. Used with the `executeImmediately` option set to `true`, it will create a message the user can tap on an execute immediately.
+executeImmediately (Boolean) | If true, this means that the **response** will be executed immediately when you press on it. For instance, when you see a response in a chat, you don’t have to type something — you just need to press on a response and it will be executed right after that.
+sequentialParams (Boolean) | Specifies the way command arguments will be “requested”. The default approach (`sequentialParams = false`) is to type a command this way: `/send 0.1 ETH somebody`, where `0.1`, `ETH` and `somebody` are arguments. However, there may be situations when you want to ask each argument separately. You can see the difference by executing `/password` command; it asks you for a password and, only after the user has provided one, requests confirmation.  Currently there is one limitation — you can use argument types (`type` value) only for `sequentialParams`, and if you want to (for example) hide the argument input, you should use `sequentialParams`
+handler (!= null) | Of course, you probably want the command to do something when your users call it! The `handler` parameter takes a function to accomplish this. For instance, suppose your user inputs `/hello howdy`. “Howdy” is a valid string, and will pass the `hello` validator. From there, your handler could take over to send this greeting to another user: `handler: web3.shh.post(params.hello)`.
 
 ## status.response
 
@@ -187,19 +187,22 @@ This method allows your DApp to respond to events. This method requires an event
 ## status.addListener
 
 ```js
-status.addListener("on-message-input-change", function (params, context) {
+status.addListener("on-message-input-change", 
+ function (params, context) {
     return jsSuggestions({code: params.message}, context);
 });
 ```
 
 ```js
-status.addListener("init", function (params, context) {
+status.addListener("init", 
+ function (params, context) {
     return {"text-message": "Hey, man!"};
 });
 ```
 
 ```js
-status.addListener("on-message-send", function (params, context) {
+status.addListener("on-message-send", 
+ function (params, context) {
     if (isNaN(params.message)) {
         return {"text-message": "Seems that you don't want to send money :("};
     }
@@ -233,30 +236,22 @@ on-message-send | Will be called when any (not command) message is sent.
 ## status.localizeNumber
 
 ```js
-function validateSend(params, context) {
-    if (!context.to) {
+preview: function (params, context) {
         return {
-            markup: status.components.validationMessage(
-                "Wrong address",
-                "Recipient address must be specified"
+            markup: status.components.text(
+                {},
+                I18n.t('request_requesting') + " "
+                + status.localizeNumber(params.amount, context.delimiter, context.separator)
+                + " ETH"
             )
         };
-    }
-    if (!params.amount) {
-        return {
-            markup: status.components.validationMessage(
-                I18n.t('validation_title'),
-                I18n.t('validation_amount_specified')
-            )
-        };
-    }
-    ```
+    },
+ ```
 
-Simply uses the lightweight i18n.js library to localize stuff for you.
+A simple method to try and ensure that whatever numbe the user inputs is put into a usable format. The example provided shows it in use to make sure the number requesting ETH is handled correctly. This is part of a larger `status.command()` object that can be found [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/wallet/bot.js#L182).
 
 ## status.types
 
-> Types and Events are defined [here](https://github.com/status-im/status-react/blob/develop/resources/status.js#L183) in the status object:
 ```js
     types: {
         TEXT: 'text',
@@ -300,31 +295,38 @@ Create React Native Components yourself or use our pre-fabricated components.
 
 ## status.components.view
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects 2 arguments - `options` and `element`. 
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. 
+Expects 2 arguments - `options` and `element`. 
 
 ## status.components.text
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects 2 arguments - `options` and some array of strings `s`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. 
+Expects 2 arguments - `options` and some array of strings `s`.
 
 ## status.components.slider
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects only one argument - `options`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
+Expects only one argument - `options`.
 
 ## status.components.image
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects only one argument - `options`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
+Expects only one argument - `options`.
 
 ## status.components.touchable
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects 2 arguments - `options` and `element`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
+Expects 2 arguments - `options` and `element`.
 
 ## status.components.scrollView
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects 2 arguments - `options` and `elements`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
+Expects 2 arguments - `options` and `elements`.
 
 ## status.components.webView
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. Expects only 1 argument - `url`.
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
+Expects only 1 argument - `url`.
 
 ## status.components.validationMessage
 
@@ -340,7 +342,7 @@ A method that allows you to add a subscription in the markup and expects just 1 
 
 ## status.components.dispatch
 
-```
+```js
 var view = ["view", {},
         ["text", {}, "Balance " + balance + " ETH"],
         ["text", {}, ["subscribe", ["doubledValue"]]],
