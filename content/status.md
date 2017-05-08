@@ -22,12 +22,12 @@ In this guide, we’ll explore how you can use the Status Chat API while develop
 
 ```js
 status.command({
- name: “hello”,
- title: “HelloBot”,
- description: “Helps you say hello”,
- color: “#7099e6”,
+ name: "hello",
+ title: "HelloBot",
+ description: "Helps you say hello",
+ color: "#7099e6",
  preview: function () {
- return status.components.text({}, “you’re saying hello”);
+ return status.components.text({}, "you’re saying hello");
  }
 });
 ```
@@ -36,7 +36,7 @@ status.command({
 
 ```js
 params: [{
- name: “hello”,
+ name: "hello",
  type: status.types.TEXT
  placeholder: "Why not say hello"
 }],
@@ -49,7 +49,7 @@ params: [{
 ```js
 validator: function(params) {
  if (!params.hello) {
-   return status.components.text({}, “Say hello”);
+   return status.components.text({}, "Say hello");
    }
  }
  ```
@@ -123,7 +123,7 @@ status.command({
 
 Argument |  Description 
 --------- |  ----------- 
-name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote name: `“hello”`, your user might invoke `/hello`. There is an additional `params` object available on any of the below commands, including in params itself.
+name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote name: `"hello"`, your user might invoke `/hello`. There is an additional `params` object available on any of the below commands, including in params itself.
 title | This is what will appear in the list of suggestions when a user starts typing a command. 
 description | Appears below the `title` in the list of suggestions and does exactly what it says. 
 validator | Allows you to check your users’ input before sending off the command. It takes a function, which should return an error if the input is invalid.
@@ -132,12 +132,12 @@ icon | Define which icon will appear next to action messages, such as sending Et
 params | Define all the possible inputs to your command. Requires an array holding an object, with possible parameters `name`, `placeholder`, `suggestions`, and one of the `status.types`, which are: `status.types.TEXT`, `status.types.NUMBER`, `status.types.PHONE`, and `status.types.PASSWORD`.
 preview | Defines what your user will see as a result of *their* action, before any other response. The preview parameter takes a function, which should return a `status.component`.
 shortPreview | While `preview` controls how your command appears within your DApp’s chat interface, `short-preview` controls how your commands get shown in the list of chats, before your users tap on your chat. `short-prview` expects two params: `icon` and `params`.  
-onSend | A self-explanatory param that takes a function whcih will be executed when the user presses the “send” button. It will return a map that should contain a `markup` value. If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
+onSend | A self-explanatory param that takes a function whcih will be executed when the user presses the "send" button. It will return a map that should contain a `markup` value. If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
 fullscreen | If your command has suggestions, this param controls whether that list of suggestions expands to fill the entire screen. See the interactive suggestion area tutorial for more.
 request | This will allow you to request any action from the user, such as a phone number, password, confirmation to send Ether etc. Used with the `executeImmediately` option set to `true`, it will create a message the user can tap on an execute immediately.
 executeImmediately (Boolean) | If true, this means that the **response** will be executed immediately when you press on it. For instance, when you see a response in a chat, you don’t have to type something — you just need to press on a response and it will be executed right after that.
-sequentialParams (Boolean) | Specifies the way command arguments will be “requested”. The default approach (`sequentialParams = false`) is to type a command this way: `/send 0.1 ETH somebody`, where `0.1`, `ETH` and `somebody` are arguments. However, there may be situations when you want to ask each argument separately. You can see the difference by executing `/password` command; it asks you for a password and, only after the user has provided one, requests confirmation.  Currently there is one limitation — you can use argument types (`type` value) only for `sequentialParams`, and if you want to (for example) hide the argument input, you should use `sequentialParams`
-handler (!= null) | Of course, you probably want the command to do something when your users call it! The `handler` parameter takes a function to accomplish this. For instance, suppose your user inputs `/hello howdy`. “Howdy” is a valid string, and will pass the `hello` validator. From there, your handler could take over to send this greeting to another user: `handler: web3.shh.post(params.hello)`.
+sequentialParams (Boolean) | Specifies the way command arguments will be "requested". The default approach (`sequentialParams = false`) is to type a command this way: `/send 0.1 ETH somebody`, where `0.1`, `ETH` and `somebody` are arguments. However, there may be situations when you want to ask each argument separately. You can see the difference by executing `/password` command; it asks you for a password and, only after the user has provided one, requests confirmation.  Currently there is one limitation — you can use argument types (`type` value) only for `sequentialParams`, and if you want to (for example) hide the argument input, you should use `sequentialParams`
+handler (!= null) | Of course, you probably want the command to do something when your users call it! The `handler` parameter takes a function to accomplish this. For instance, suppose your user inputs `/hello howdy`. "Howdy" is a valid string, and will pass the `hello` validator. From there, your handler could take over to send this greeting to another user: `handler: web3.shh.post(params.hello)`.
 
 ## status.response
 
@@ -177,12 +177,12 @@ Because `status.command()` and `status.response()` take the same parameters, you
 ## status.on
 
 ```js
-status.on(“init”, function(params, context) {
- status.sendMessage(“Hello, man!”);
+status.on("init", function(params, context) {
+ status.sendMessage("Hello, man!");
 });
 ```
 
-This method allows your DApp to respond to events. This method requires an event name as a string, and a callback function. With the "init" option shown here, your DApp will trigger `status.sendMessage()` when the Status app loads your DApp — your DApp will greet your users even before they have clicked on it. Other options include “text-change” and “message”
+This method allows your DApp to respond to events. This method requires an event name as a string, and a callback function. With the "init" option shown here, your DApp will trigger `status.sendMessage()` when the Status app loads your DApp — your DApp will greet your users even before they have clicked on it. Other options include "text-change" and "message"
 
 ## status.addListener
 
@@ -229,7 +229,7 @@ status.addListener("on-message-send",
 Listener |  Description
 -------------------------- |  -----------
 on-message-input-change | This is analogous to the `text-change` event of chat’s input and we feel is fairly obvious given the example provided.
-init | Is called once when a new session begins (by session currently means interval between login and logout from account). In the example provided the bot will just send this “Hey, man!” message to the user, but it could also it could return `markup` which will be shown in suggestions area, etc.
+init | Is called once when a new session begins (by session currently means interval between login and logout from account). In the example provided the bot will just send this "Hey, man!" message to the user, but it could also it could return `markup` which will be shown in suggestions area, etc.
 on-message-send | Will be called when any (not command) message is sent.
 
 

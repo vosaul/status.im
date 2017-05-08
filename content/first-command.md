@@ -1,10 +1,10 @@
 ## Create Your First Status Command
 ```js
 status.command({
- name: “hello”,
- title: “HelloBot”,
- description: “Helps you say hello”,
- color: “#7099e6”,
+ name: "hello",
+ title: "HelloBot",
+ description: "Helps you say hello",
+ color: "#7099e6",
 });
 ```
 

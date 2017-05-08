@@ -44,11 +44,11 @@ If you don’t have a smartphone, or you only have an iPhone but want to get sta
 
 ## Enabling Debugging
 
-![With your phone connected, /debug “On”](images/starting-a-dapp-on-status-with-frameworks_01.png)
+![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
 
-*With your phone connected, /debug “On”*
+*With your phone connected, /debug "On"*
 
-We’ll assume you have Status open, and that if you’re using a physical phone it’s connected to your computer. Now we need to enable debugging from within the Status app. After you’re logged in to Status, click on Console and run `/debug`, then pick “On.” You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. You don’t need those right now, because you’ll be using the pre-configured Status Truffle box or the Embark plugin.
+We’ll assume you have Status open, and that if you’re using a physical phone it’s connected to your computer. Now we need to enable debugging from within the Status app. After you’re logged in to Status, click on Console and run `/debug`, then pick "On." You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. You don’t need those right now, because you’ll be using the pre-configured Status Truffle box or the Embark plugin.
 
 The message also shows you your IP address, which you’ll need later for Embark.
 
@@ -187,7 +187,7 @@ In the same directory, open the file `embark.json` and edit the `plugins` key:
         }
       }
 
-You can get the device IP from the Status Console, which was shown after you ran `/debug “On"` above. For instance, if `/debug` told me my IP was `192.168.123.102`, the entire `embark_demo/embark.json` file would look like this:
+You can get the device IP from the Status Console, which was shown after you ran `/debug "On"` above. For instance, if `/debug` told me my IP was `192.168.123.102`, the entire `embark_demo/embark.json` file would look like this:
 
     {"contracts": ["app/contracts/**"],
       "app": {

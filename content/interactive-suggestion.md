@@ -6,7 +6,7 @@ This first thing to add is a `preview` object to that neat little `hello` comman
 
 ```js
 preview: function () {
- return status.components.text({}, “you’re saying hello”);
+ return status.components.text({}, "you’re saying hello");
  },
 ```
 
@@ -14,7 +14,7 @@ Next, we can add a `params` object to define a bunch of useful things, including
 
 ```js
  params: [{
- name: “hello”,
+ name: "hello",
  type: status.types.TEXT
  placeholder: "Why not say hello"
 }],
@@ -26,13 +26,13 @@ If you want to be more exact about what options there are for your user to respo
 
 ```js
 params: [{
- name: “hello”,
+ name: "hello",
  type: status.types.TEXT
  suggestions: helloSuggestions
 }],
 ```
 
-"But wait!" we hear you cry, "what on earth is that `helloSuggestions` thing about?!". Well, let’s make a function to explain. This will return a `scrollView` with two suggestions: “Hello”, and “Goodbye”. Don’t get intimidated by the length, there’s actually not much to it.
+"But wait!" we hear you cry, "what on earth is that `helloSuggestions` thing about?!". Well, let’s make a function to explain. This will return a `scrollView` with two suggestions: "Hello", and "Goodbye". Don’t get intimidated by the length, there’s actually not much to it.
 
 ```js
 *// Three little helpers - don't worry about them, they're just for

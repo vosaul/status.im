@@ -6,7 +6,7 @@ npm install -g status-dev-cli
 mkdir my-dapp && cd my-dapp
 ```
 
-> In indext.html, add:
+> In index.html, add:
 ```html
 <html>
 <head>
