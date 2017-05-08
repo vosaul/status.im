@@ -13,10 +13,18 @@ In this guide, we’ll explore how you can use the Status Status API to develop 
 
 # Quickstart
 
+If you already have a DApp with a web interface, then this will be the quickest Quickstart ever (trademark pending). Simply open Status, navigate to Console, hit the `/browse` command and type in the url where you DApp is running.
+
+Voila! Users in Status can already see your DApp and interact with it (on the Ropsten Test Network). Make some mobile optimizations of your own and you're away.
+
+OK, but what if `(a)` I don't have a DApp yet, or `(b)` I want to use this awesome API to get access to native mobile commands and actual, fully decentralized, chatbot functionality for my DApp?
+
+First, install Status (easy for [android](http://test.status.im/), tougher for iOS due to TestFlight. You can also [build it yourself](https://wiki.status.im/contributing/development/building-status/) if you're feeling intrepid). 
+
 ```shell
 npm install -g status-dev-cli
-
 mkdir my-dapp && cd my-dapp
+touch index.html app.js
 ```
 > In index.html, add: 
 
@@ -58,18 +66,12 @@ http-server
 
 ```shell
 adb forward tcp:5561 tcp:5561  # Android only
-status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://127.0.0.1:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
+status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<Your IP>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
 ```
 
-<aside class="success">
-  You can move the raw json we are inputting here into a file of it's own and just reference that file in future.
-</aside>
+Before we really dive into the finer print, we will be using only the bare-bones `status-dev-cli` tools in order to create our very first status DApp that can be accessed through Status. First, install the dev tools globally using NPM.
 
-Before we really dive into the finer print,, we will be using only the bare-bones `status-dev-cli` tools in order to create our very first status DApp that lives within Status. It should take all of 10 minutes once you have installed status (easy for [android](http://test.status.im/), tougher for iOS due to TestFlight), or have the app [running](https://wiki.status.im/contributing/development/building-status/) in a simulator on your machine. Simply follow along in the example provided to the right and you should be up and away in no time at all!
-
-First, install the dev tools globally using NPM.
-
-Then, create a directory for you app to live in,m switch into it and create an `index.html` file and an `app.js` file.
+Then, create a directory for you app to live in, switch into it and create an `index.html` file and an `app.js` file.
 
 The index.html will be really simple. We are going to add several meta tags to make our DApp look good on small screens of mobile phones and add a span that will be used by our JavaScript.
 
@@ -79,7 +81,7 @@ You then need to install a really simple `http-server` from NPM, and start it in
 
 Then, open your Status app, navigate to Console, select the `debug` option and turn it on. This should return a message with an IP address.
 
-Open a new terminal window and navigate back to you `my-dapp` directory and go ahead and add you dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console.
+Open a new terminal window and navigate back to you `my-dapp` directory and go ahead and add you dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console. `<Your-IP>` needs to be `127.0.0.1` if you are using a simulator, or whatever your PC's IP is if you are using a connected phone.
 
 You can also do live-reloading once you're happy with this by running `status-dev-cli watch-dapp . '{"whisper-identity": "my-dapp"}'`
 
