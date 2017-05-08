@@ -89,7 +89,9 @@ Happy travels!
   You need not use NPM's http-server to serve content, there are innumerable ways of doing this. Just pick whatever is best for your environment.
 </aside>
 
-# Create Your First Status Command
+# Step-by-Step Tutorials
+
+## Create Your First Status Command
 
 ```js
 status.command({
@@ -160,7 +162,7 @@ We have also included a far more complete example that utilises 9 of the 12 para
 
 Read on!
 
-# Create An Interactive Suggestion Area
+## Create An Interactive Suggestion Area
 
 Great work! So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going and learned how to issue a basic command that will greet our user when they open the app. Now it's time to actually start doing what chatbots are meant to do - interact with users and gather the necessary info we need from them.
 
