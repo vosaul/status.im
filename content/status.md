@@ -71,7 +71,7 @@ handler: function (params) {
     },
 ```
 
-> Full example of pretty much all the <code>status.command</code> stuff in action:
+> Full example of pretty much all the status.command stuff in action:
 
 ```js
 status.command({
@@ -227,7 +227,7 @@ status.addListener("on-message-send",
 ```
 
 Listener |  Description
---------- |  -----------
+-------------------------- |  -----------
 on-message-input-change | This is analogous to the `text-change` event of chat’s input and we feel is fairly obvious given the example provided.
 init | Is called once when a new session begins (by session currently means interval between login and logout from account). In the example provided the bot will just send this “Hey, man!” message to the user, but it could also it could return `markup` which will be shown in suggestions area, etc.
 on-message-send | Will be called when any (not command) message is sent.
@@ -269,11 +269,41 @@ Types dictate what sort of data your users may input. The type you specify will 
 
 ## status.types.TEXT
 
-If you define a `text` input, when the user responds, it will pop up a normal QWERTY keyboard.
+```js
+
+status.command({
+    name: "faucet",
+    title: I18n.t('faucet_title'),
+    description: I18n.t('faucet_description'),
+    color: "#7099e6",
+    registeredOnly: true,
+    params: [{
+        name: "url",
+        type: status.types.TEXT,
+        suggestions: faucetSuggestions,
+        placeholder: I18n.t('faucet_placeholder')
+    }],
+```
+
+If you define a `text` input, when the user responds, it will pop up a normal QWERTY keyboard.   
+The example provided shows the first part of the `status.commnad()` we use to interact with our faucet so that our users can get some (test) ether to do interesting things with.
 
 ## status.types.NUMBER
 
-Defining `number` will result in the keyboard opening to it's number section.
+```js
+status.response({
+    name: "confirmation-code",
+    color: "#7099e6",
+    description: I18n.t('confirm_description'),
+    sequentialParams: true,
+    params: [{
+        name: "code",
+        type: status.types.NUMBER
+    }],
+```
+
+Defining `number` will result in the keyboard opening to it's number section.  
+The example provided shows the first part of the `status.response()` object we use to request a confirmation code from the user when syncing their phone contacts.
 
 ## status.types.PHONE
 ```js
@@ -303,7 +333,30 @@ Defining `phone` will result in the keyboard opening to it's number section as w
 
 ## status.types.PASSWORD
 
-Defining `password` will result in the keyboard opening to it's variable character section.
+```js 
+status.response({
+    name: "password",
+    color: "#7099e6",
+    description: I18n.t('password_description'),
+    icon: "lock_white",
+    sequentialParams: true,
+    params: [
+        {
+            name: "password",
+            type: status.types.PASSWORD,
+            placeholder: I18n.t('password_placeholder'),
+            hidden: true
+        },
+        {
+            name: "password-confirmation",
+            type: status.types.PASSWORD,
+            placeholder: I18n.t('password_placeholder2'),
+            hidden: true
+        }
+```
+
+Defining `password` will result in the keyboard opening to it's variable character section.  
+The example provided shows the first part of the `status.response()` object we use to request and confirm a password from our user when they are setting up their account.
 
 ## status.events
 
@@ -328,18 +381,46 @@ Create React Native Components yourself or use our pre-fabricated components.
 
 ## status.components.view
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. 
-Expects 2 arguments - `options` and `element`. 
+```js
+function faucetSuggestions(params) {
+    var suggestions = faucets.map(function (entry) {
+        return status.components.touchable(
+            {onPress: status.components.dispatch([status.events.SET_COMMAND_ARGUMENT, [0, entry.url]])},
+            status.components.view(
+                suggestionContainerStyle,
+                [status.components.view(
+                    suggestionSubContainerStyle,
+                    [
+                        status.components.text(
+                            {style: valueStyle},
+                            entry.name
+                        ),
+                        status.components.text(
+                            {style: descriptionStyle},
+                            entry.url
+                        )
+                    ]
+                )]
+            )
+        );
+    });
+```
+
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.   
+Expects 2 arguments - `options` and `element`.  
+The example provided shows how we use the `view` component (in combination with the `text` component) to provide different suggestions about which faucets our users can call to get some test ether.
 
 ## status.components.text
 
-Standard RN component - please see [JSCoach](https://js.coach/react-native) for more. 
+Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.   
 Expects 2 arguments - `options` and some array of strings `s`.
 
 ## status.components.slider
 
 Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
-Expects only one argument - `options`.
+Expects only one argument - `options`.  
+
+Please see the `defineSubscription` method below for an example of this component in action.
 
 ## status.components.image
 
@@ -348,37 +429,87 @@ Expects only one argument - `options`.
 
 ## status.components.touchable
 
+```js
+function jsSuggestions(params, context) {
+    var suggestions = getJsSuggestions(params.code, context);
+    var sugestionsMarkup = [];
+
+    for (var i = 0; i < suggestions.length; i++) {
+        var suggestion = suggestions[i];
+
+        if (suggestion.title.indexOf('*') >= 0) {
+            suggestion.title = createMarkupText(suggestion.title);
+        }
+        var suggestionMarkup = status.components.view(jsSuggestionContainerStyle,
+            [status.components.view(jsSubContainerStyle,
+                [
+                    status.components.text({style: jsValueStyle},
+                        suggestion.title),
+                    status.components.text({style: jsDescriptionStyle},
+                        suggestion.desc)
+                ])]);
+        if (suggestion.pressValue) {
+            suggestionMarkup = status.components.touchable({
+                    onPress: status.components.dispatch([status.events.SET_VALUE, suggestion.pressValue])
+                },
+                suggestionMarkup
+            );
+        }
+        sugestionsMarkup.push(suggestionMarkup);
+    }
+
+    if (sugestionsMarkup.length > 0) {
+        var view = status.components.scrollView(jsSuggestionsContainerStyle(sugestionsMarkup.length),
+            sugestionsMarkup
+        );
+        return {markup: view};
+    }
+}
+```
+
 Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
-Expects 2 arguments - `options` and `element`.
+Expects 2 arguments - `options` and `element`.  
+The example provided uses the `touchable` component to make our suggestions that much more native and-feeling and interactive.
 
 ## status.components.scrollView
 
+```js
+    var view = status.components.scrollView(
+        suggestionsContainerStyle(ph.length),
+        suggestions
+    );
+
+    return {markup: view};
+```
+
 Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
-Expects 2 arguments - `options` and `elements`.
+Expects 2 arguments - `options` and `elements`.  
+In the code snippet provided, we have taken the suggestions from the example above to do `components.view` and now want to inject it into a scrollView component for a better and smoother UI that our users have more control over.
 
 ## status.components.webView
 
 Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
-Expects only 1 argument - `url`.
+Expects only 1 argument - `url` and is what we use to display - as expected - the webView of a given DApp when browsing to it.
 
 ## status.components.validationMessage
 
 > An example of using validationMessage within the validator argument being passed to status.command.
+
 ```js
 validator: function (params, context) {
-        var f = faucets.map(function (entry) {
-            return entry.url;
-        });
+    var f = faucets.map(function (entry) {
+        return entry.url;
+    });
 
-        if (f.indexOf(params.url) == -1) {
-            var error = status.components.validationMessage(
-                I18n.t('faucet_incorrect_title'),
-                I18n.t('faucet_incorrect_description')
-            );
+    if (f.indexOf(params.url) == -1) {
+        var error = status.components.validationMessage(
+            I18n.t('faucet_incorrect_title'),
+            I18n.t('faucet_incorrect_description')
+        );
 
-            return {markup: error};
-        }
+        return {markup: error};
     }
+}
 ```
 
 This is the only custom Status component and it takes just two strings, and will return them wrapped in text components inside a view. You can find the full example [here](https://github.com/status-im/status-react/blob/develop/bots/console/bot.js#L550).
@@ -419,13 +550,59 @@ In the example provided, the variable `view` is what we mean by markup (and is, 
 
 A method that allows you to set the suggestions that will appear in the markup, whether this is something simple like sending a message, or pretty much anything
 
-## status.setDefaultDb
+## status.setDefaultDb and status.updateDb
 
-A method that can be used to add default values to bot-db. These values will be applied to app-db only when markup is rendered the first time. For instance, on each change in command input suggestions handler for particular command's parameter is called, and this handler returns some markup. If markup wasn't changed between calls values passed to setDefaultDb will not be applied to bot-db
+```js
+function superSuggestion(params, context) {
+    var balance = parseFloat(web3.fromWei(web3.eth.getBalance(context.from), "ether"));
+    var defaultSliderValue = balance / 2;
 
-## status.updateDb
+    var view = ["view", {},
+        ["text", {}, "Balance " + balance + " ETH"],
+        ["text", {}, ["subscribe", ["doubledValue"]]],
+        ["slider", {
+            maximumValue: ["subscribe", ["balance"]],
+            value: defaultSliderValue,
+            minimumValue: 0,
+            onSlidingComplete: ["dispatch", ["set", "sliderValue"]],
+            step: 0.05
+        }],
+        ['touchable',
+            {onPress: ['dispatch', ["set-value-from-db", "roundedValue"]]},
+            ["view", {}, ["text", {}, "Set value"]]
+        ],
+        ["text", {style: {color: "red"}}, ["subscribe", ["validationText"]]]
+    ];
 
-A method that updates the bot-db, even if the markup doesn't contain any changes. It too expects just 1 argument - `map`
+    status.setDefaultDb({
+        sliderValue: defaultSliderValue,
+        doubledValue: doubledValueLabel({value: defaultSliderValue})
+    });
+
+    var validationText = "";
+
+    if (isNaN(params.message)) {
+        validationText = "That's not a float number!";
+    } else if (parseFloat(params.message) > balance) {
+        validationText =
+            "Input value is too big!" +
+            " You have only " + balance + " ETH on your balance!";
+    }
+
+    status.updateDb({
+        balance: balance,
+        validationText: validationText
+    });
+
+    return {markup: view};
+};
+```
+
+It is easiest to show you an example of these two methods at work in our [demo-bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js#L31) within a superSuggestions object we have created.
+
+`status.setDefaultDb` is a method that can be used to add default values to bot-db. These values will be applied to app-db only when markup is rendered the first time. For instance, on each change in command input suggestions handler for particular command's parameter is called, and this handler returns some markup. If markup wasn't changed between calls values passed to setDefaultDb will not be applied to bot-db
+
+`status.updateDb` is a method that updates the bot-db, even if the markup doesn't contain any changes. It too expects just 1 argument - `map`
 
 ## status.sendMessage
 
