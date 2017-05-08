@@ -30,7 +30,7 @@ We will be using only the bare-bones `status-dev-cli` tools in order to create o
 * Keyboard
 * Suggestions
 
-![Chat Anantomy](https://github.com/status-im/docs.status.im/blob/develop/static/images/chat-anatomy.png)
+![Chat Anatomy](images/chat-anatomy.png)
 
 Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the message appear. Creating all of these native setups is totally possible through the API - just read on.
 
@@ -64,12 +64,14 @@ The message also shows you your IP address, which you’ll need later for Embark
 
 ## My First Mobile DApp
 
+First, install Status (easy for [android](http://test.status.im/), tougher for iOS due to TestFlight. You can also [build it yourself](https://wiki.status.im/contributing/development/building-status/) if you're feeling intrepid).
+
 ```shell
 npm install -g status-dev-cli
 mkdir my-dapp && cd my-dapp
 touch index.html app.js
 ```
-> In index.html, add: 
+> In index.html, add:
 
 ```html
 <html>
@@ -87,18 +89,18 @@ touch index.html app.js
 </body>
 </html>
 ```
-> In app.js, add:  
+> In app.js, add:
 
 ```js
 function onContentLoaded() {
   var accountSpan = document.getElementById("account");
-  accountSpan.innerHTML = 
+  accountSpan.innerHTML =
     (typeof web3 === "undefined" ? "undefined" : web3.eth.accounts);
 }
 document.addEventListener("DOMContentLoaded", onContentLoaded);
 ```
 
-> Install and start an HTTP server - we recommend NPM for ease-of-use. Make sure you are still in your my-dapp directory when running the 2nd command.  
+> Install and start an HTTP server - we recommend NPM for ease-of-use. Make sure you are still in your my-dapp directory when running the 2nd command.
 
 ```shell
 npm install http-server -g
@@ -109,7 +111,7 @@ http-server
 
 ```shell
 adb forward tcp:5561 tcp:5561  # Android only
-status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<Your IP>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
+status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<IP of machine running http-server>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
 ```
 First, install the dev tools globally using NPM.
 
@@ -121,7 +123,7 @@ Our app.js file will also be simple. We are going to display the information abo
 
 You then need to install a really simple `http-server` from NPM, and start it in the `my-dapp` directory we just created.
 
-Then, open your Status app, navigate to Console, select the `debug` option and turn it on. This should return a message with an IP address.
+Then, open your Status app, navigate to Console, select the `/debug` option and turn it `On`. This should return a message with an IP address.
 
 Open a new terminal window and navigate back to you `my-dapp` directory and go ahead and add you dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console. `<Your-IP>` needs to be `127.0.0.1` if you are using a simulator, or whatever your PC's IP is if you are using a connected phone.
 
