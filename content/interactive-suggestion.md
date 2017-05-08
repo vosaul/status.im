@@ -6,8 +6,8 @@ This first thing to add is a `preview` object to that neat little `hello` comman
 
 ```js
 preview: function () {
- return status.components.text({}, "you’re saying hello");
- },
+    return status.components.text({}, "you’re saying hello");
+},
 ```
 
 Next, we can add a `params` object to define a bunch of useful things, including the `TYPE` of response we're expecting (so that Status knows which keyboard to show the user. We are ALL about UI!)
@@ -35,8 +35,8 @@ params: [{
 "But wait!" we hear you cry, "what on earth is that `helloSuggestions` thing about?!". Well, let’s make a function to explain. This will return a `scrollView` with two suggestions: "Hello", and "Goodbye". Don’t get intimidated by the length, there’s actually not much to it.
 
 ```js
-*// Three little helpers - don't worry about them, they're just for
-// style.*
+// Three little helpers - don't worry about them, they're just for
+// style.
 
 function suggestionsContainerStyle(suggestionsCount) {
     return {
@@ -62,7 +62,7 @@ var valueStyle = {
     color: "#000000de"
 };
 
-*// The main star of our show! It will return two touchable buttons.*
+// The main star of our show! It will return two touchable buttons.
 
 function helloSuggestions() {
     var suggestions = ["Hello", "Goodbye"].map(function(entry) {
@@ -83,14 +83,14 @@ function helloSuggestions() {
         );
     });
 
-*// Let's wrap those two touchable buttons in a scrollView*
-var view = status.components.scrollView(
+    // Let's wrap those two touchable buttons in a scrollView
+    var view = status.components.scrollView(
         suggestionsContainerStyle(2),
         suggestions
     );
 
-*// Give back the whole thing inside an object.*
-return {markup: view};
+    // Give back the whole thing inside an object.
+    return {markup: view};
 }
 ```
 The main point of this example is that your `suggestions` parameter should accept users’ input, and then return a component to be rendered.
