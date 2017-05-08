@@ -57,7 +57,7 @@ http-server
 > In a new terminal window. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You may also need to do port forwarding if you are using an Android device.
 
 ```shell
-(only on android) adb forward tcp:5561 tcp:5561
+adb forward tcp:5561 tcp:5561  # Android only
 status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://127.0.0.1:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
 ```
 
