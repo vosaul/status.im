@@ -12,9 +12,9 @@ https://github.com/status-im/status-react/blob/develop/resources/status.js#L160
 Ethereum. Anywhere.  
 Status is a browser, messenger, and gateway to a decentralized world.  
 
-Status allows users to interact with a wide array of DApps using the same intuitive chat interface. In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your DApp more convenient, and effectively makes your DApp more powerful.
+The Status API allows users to interact with a wide array of DApps using the same intuitive chat interface. In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your DApp more convenient, and effectively makes your DApp more powerful.
 
-In this guide, we’ll explore how you can use the Status API while developing your DApp on Status to create custom commands for your users. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status — and that invites mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile app.
+In this guide, we’ll explore how you can use the Status API while developing your DApp to create custom chatbot commands that users in Status can see. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status — and that brings both mobile users and native mobile commands. With little extra developer time invested, you’ll gain a fully mobile, chatbot-enabled app.
 
 ## status.command
 
@@ -42,7 +42,7 @@ params: [{
 }],
 ```
 
-> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. Type your password. Alternatively, you can also include suggestions for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the /faucet command, you’ll see two suggestions to choose from.
+> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. "Type your password". Alternatively, you can also include suggestions for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the /faucet command, you’ll see two suggestions to choose from.
 
 > Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the status.components):
 
@@ -123,16 +123,16 @@ status.command({
 
 Argument |  Description 
 --------- |  ----------- 
-name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote name: `"hello"`, your user might invoke `/hello`. There is an additional `params` object available on any of the below commands, including in params itself.
+name |  What your users will type in following a forward slash to invoke the command. For instance, if you wrote `name: "hello"`, your user might invoke `/hello`. There is an additional `params` object available on any of the below commands, including in params itself.
 title | This is what will appear in the list of suggestions when a user starts typing a command. 
-description | Appears below the `title` in the list of suggestions and does exactly what it says. 
+description | Appears below the `title` in the list of suggestions and allows you to provide a description of the command. 
 validator | Allows you to check your users’ input before sending off the command. It takes a function, which should return an error if the input is invalid.
-color | Defines the background color of the name of your command as it appears in the list of suggestions. Give commands different colors to help your users easily distinguish commands, and to harmonize with your DApp’s brand and color scheme.
+color | Defines the background color of the name of your command as it appears in the list of suggestions. Give commands different colors to help your users distinguish commands easily, and to harmonize with your DApp’s brand and color scheme.
 icon | Define which icon will appear next to action messages, such as sending Ether or requesting a location. Think an arrow for sending, a pin for location etc.
-params | Define all the possible inputs to your command. Requires an array holding an object, with possible parameters `name`, `placeholder`, `suggestions`, and one of the `status.types`, which are: `status.types.TEXT`, `status.types.NUMBER`, `status.types.PHONE`, and `status.types.PASSWORD`.
+params | Defines all the possible inputs to your command. Requires an array holding an object, with possible parameters `name`, `placeholder`, `suggestions`, and one of the `status.types`, which are: `status.types.TEXT`, `status.types.NUMBER`, `status.types.PHONE`, and `status.types.PASSWORD`.
 preview | Defines what your user will see as a result of *their* action, before any other response. The preview parameter takes a function, which should return a `status.component`.
 shortPreview | While `preview` controls how your command appears within your DApp’s chat interface, `short-preview` controls how your commands get shown in the list of chats, before your users tap on your chat. `short-prview` expects two params: `icon` and `params`.  
-onSend | A self-explanatory param that takes a function whcih will be executed when the user presses the "send" button. It will return a map that should contain a `markup` value. If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
+onSend | A self-explanatory param that takes a function which will be executed when the user presses the "send" button. It will return a map that should contain the markup value. If you specify this function, there will be no way to send a command to the chat and, in this case, the area (it’s called the `result-box`) with a specified markup will be displayed instead.
 fullscreen | If your command has suggestions, this param controls whether that list of suggestions expands to fill the entire screen. See the interactive suggestion area tutorial for more.
 request | This will allow you to request any action from the user, such as a phone number, password, confirmation to send Ether etc. Used with the `executeImmediately` option set to `true`, it will create a message the user can tap on an execute immediately.
 executeImmediately (Boolean) | If true, this means that the **response** will be executed immediately when you press on it. For instance, when you see a response in a chat, you don’t have to type something — you just need to press on a response and it will be executed right after that.
@@ -166,11 +166,11 @@ status.response({
 });
 ```
 
-Now that you’ve covered all the parameters for `status.command()`, you can easily understand `status.response()`. This method takes the same parameters that `status.command()` does. The difference is that with this method you can actively ask a user to issue a command.
+Now that you’ve covered all the parameters for `status.command()`, you can easily understand `status.response()`. This method takes the same parameters that `status.command()` does. The difference is that, with this method, you can actively ask a user to issue a command of their own.
 
-For example, the Status DApp Wallet allows you to `/request` money. In that case, the person you’re requesting money from will see the result of `status.response(send)` — they’ll be asked to give a command, `/send`, in response to your `/request` command. Please check line 77-158 [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/wallet/bot.js#L77)
+For example, the Status DApp Wallet allows you to `/request` money. In that case, the person you’re requesting money from will see the result of `status.response(send)`. In other words, they’ll be asked to give a command, `/send`, in response to your `/request` command. Please check line 77-158 [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/wallet/bot.js#L77) for more code.
 
-The Wallet example illustrates that as a DApp developer, you may wish to use `status.command()` and `status.response()` together to create dialogues of commands. You could also use `status.response()` by itself to prompt your users to enter necessary information as part of the onboarding process for your DApp.
+The Wallet example illustrates that, as a DApp developer, you may wish to use `status.command()` and `status.response()` together to create dialogues of commands. You can also just use `status.response()` by itself to prompt your users to enter necessary information as part of the onboarding process for your DApp.
 
 Because `status.command()` and `status.response()` take the same parameters, you can sometimes use nearly the same code for both of them. You simply have to consider when you want to ask a user to issue a command, and when you want to just make the command available. Most of the time, you’ll use `status.command()`.
 
@@ -182,7 +182,7 @@ status.on("init", function(params, context) {
 });
 ```
 
-This method allows your DApp to respond to events. This method requires an event name as a string, and a callback function. With the "init" option shown here, your DApp will trigger `status.sendMessage()` when the Status app loads your DApp — your DApp will greet your users even before they have clicked on it. Other options include "text-change" and "message"
+This method allows your DApp to respond to events. It requires an event name as a string, and a callback function. With the "init" option shown here, your DApp will trigger `status.sendMessage()` when the Status app loads your DApp — your DApp will greet your users even before they have clicked on it. Other options include "text-change" and "message"
 
 ## status.addListener
 
@@ -228,9 +228,9 @@ status.addListener("on-message-send",
 
 Listener |  Description
 -------------------------- |  -----------
-on-message-input-change | This is analogous to the `text-change` event of chat’s input and we feel is fairly obvious given the example provided.
-init | Is called once when a new session begins (by session currently means interval between login and logout from account). In the example provided the bot will just send this "Hey, man!" message to the user, but it could also it could return `markup` which will be shown in suggestions area, etc.
-on-message-send | Will be called when any (not command) message is sent.
+on-message-input-change | This is analogous to a `text-change` event, except that it targets the chat’s input. You can find the jsSuggestions that are passed in in the example [here](https://github.com/status-im/status-react/blob/develop/bots/console/bot.js#L312).
+init | Is called once, when a new session begins ("session" is currently taken to mean the interval between login and logout from a user's account). In the example provided the bot will just send the "Hey, man!" message to the user, but it could also it could return `markup` which will be shown in the suggestions area, etc.
+on-message-send | Will be called when any (not command) message is sent. The example provided shows you how to send ether to yourself as a neat way of testing the functionality.
 
 
 ## status.localizeNumber
@@ -248,7 +248,7 @@ preview: function (params, context) {
     },
  ```
 
-A simple method to try and ensure that whatever numbe the user inputs is put into a usable format. The example provided shows it in use to make sure the number requesting ETH is handled correctly. This is part of a larger `status.command()` object that can be found [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/wallet/bot.js#L182).
+A simple method to try and ensure that whatever number the user inputs, is put into a usable format. The example provided shows it in use to make sure the number requesting ETH is handled correctly. This is part of a larger `status.command()` object that can be found [here](https://github.com/status-im/status-react/blob/30596f743f0a6ac0b7aec575cc1483dd306cc1ef/bots/wallet/bot.js#L182).
 
 ## status.types
 
@@ -258,11 +258,7 @@ A simple method to try and ensure that whatever numbe the user inputs is put int
         NUMBER: 'number',
         PHONE: 'phone',
         PASSWORD: 'password'
-    },
-    events: {
-        SET_VALUE: 'set-value',
-        SET_COMMAND_ARGUMENT: 'set-command-argument'
-    },
+    }
 ```
 
 Types dictate what sort of data your users may input. The type you specify will determine what kind of keyboard gets shown to the user (if you have not already defined a custom one) so that they can input their response easily. It is important to specify them for a smooth, easy, and intuitive UI.
@@ -359,6 +355,13 @@ Defining `password` will result in the keyboard opening to it's variable charact
 The example provided shows the first part of the `status.response()` object we use to request and confirm a password from our user when they are setting up their account.
 
 ## status.events
+
+```js
+    events: {
+        SET_VALUE: 'set-value',
+        SET_COMMAND_ARGUMENT: 'set-command-argument'
+    }
+```
 
 Events are essentially the glue that allow you to commuicate with the Status API effectively.
 
