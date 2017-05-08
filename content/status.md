@@ -14,7 +14,7 @@ Status is a browser, messenger, and gateway to a decentralized world.
 
 Status allows users to interact with a wide array of DApps using the same intuitive chat interface. In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your DApp more convenient, and effectively makes your DApp more powerful.
 
-In this guide, we’ll explore how you can use the Status Chat API while developing your DApp on Status to create custom commands for your users. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status — and that invites mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile app.
+In this guide, we’ll explore how you can use the Status API while developing your DApp on Status to create custom commands for your users. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status — and that invites mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile app.
 
 ## status.command
 
@@ -360,7 +360,7 @@ The example provided shows the first part of the `status.response()` object we u
 
 ## status.events
 
-Events are essentially the glue that allow you to commuicate with the Status Chat API effectively.
+Events are essentially the glue that allow you to commuicate with the Status API effectively.
 
 ## status.events.SET_VALUE
 ```js 

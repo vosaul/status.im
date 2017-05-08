@@ -8,7 +8,7 @@ status.command({
 });
 ```
 
-Once you have worked through the Quickstart tutorial and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Chat API.
+Once you have worked through the Quickstart tutorial and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API.
 
 In the my-dapp directory you created with the index.html and app.js files, we can now begin to do some more fun things. We start by writing a command in the app.js that will allow us to say `hello` to a user when they open the DApp.
 
