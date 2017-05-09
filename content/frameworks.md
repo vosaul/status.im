@@ -17,40 +17,12 @@ Broadly speaking, for both Truffle and Embark, you’ll get the Status app runni
 
 This is what we're going to go through:
 
-* [Installing Status](#installing-status)
-* [Enabling Debugging](#enabling-debugging)
 * [Installing Git, Node, and NPM](#installing-git-node-and-npm)
 * [Installing testrpc](#installing-testrpc)
 * [Creating a DApp using Truffle](#creating-a-dapp-using-truffle)
 * [Creating a DApp using Embark](#creating-a-dapp-using-embark)
 
-## Installing Status
-
-To develop on Status, you need to have Status running either:
-
-* on a real phone,
-
-* in an Android simulator, or
-
-* in an iOS simulator.
-
-You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight iOS, but you can sign up for early iOS access  [on our website](http://status.im).
-
-If you are running in an Android simulator, you also need to run on the command line:
-
-    adb forward tcp:5561 tcp:5561
-
-If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). Following those guidelines, you can install an Android simulator, or start up Status in the Xcode simulator. Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
-
-## Enabling Debugging
-
-![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
-
-*With your phone connected, /debug "On"*
-
-We’ll assume you have Status open, and that if you’re using a physical phone it’s connected to your computer. Now we need to enable debugging from within the Status app. After you’re logged in to Status, click on Console and run `/debug`, then pick "On." You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. You don’t need those right now, because you’ll be using the pre-configured Status Truffle box or the Embark plugin.
-
-The message also shows you your IP address, which you’ll need later for Embark.
+In order to install Status and enable debugging, please see the first of the [tutorials](#installing-status) [above](#enabling-debugging)
 
 ## Installing Git, Node, and NPM
 
@@ -60,8 +32,7 @@ We’ll use the version control tool Git to install the Truffle and Embark frame
 
 We will also need __node__ (Node.js) and __npm__ (Node Package Manager) to install some dependencies, so make sure you have the latest versions installed. In particular, `testrpc` will complain if you don’t have at least Node 6.9.1.
 
-On OS X, the easiest way to install node & npm is with [Homebrew](https://brew.sh). You can run `brew install node`, and then check the version with `node --version`. Npm is installed with node, but updated more often so it's good to update it with `npm install npm@latest -g
-`.
+On OS X, the easiest way to install node & npm is with [Homebrew](https://brew.sh). You can run `brew install node`, and then check the version with `node --version`. Npm is installed with node, but updated more often so it's good to update it with `npm install npm@latest -g`.
 
 ## Installing testrpc
 
