@@ -9,12 +9,9 @@ https://github.com/status-im/status-react/blob/develop/resources/status.js#L160
 
 ## status
 
-Ethereum. Anywhere.  
-Status is a browser, messenger, and gateway to a decentralized world.  
+Remember, this is all about Ethereum. Anywhere.
 
-The Status API allows users to interact with a wide array of DApps using the same intuitive chat interface. In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your DApp more convenient, and effectively makes your DApp more powerful.
-
-In this guide, we’ll explore how you can use the Status API while developing your DApp to create custom chatbot commands that users in Status can see. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status — and that brings both mobile users and native mobile commands. With little extra developer time invested, you’ll gain a fully mobile, chatbot-enabled app.
+Below you will find the formal API specification from which you can glean all the information you need to make your DApp truly mobile, with native mobile commands and an intuitive chat interface through which users can actually see, interact with, and pay for the services you offer.
 
 ## status.command
 
@@ -32,7 +29,7 @@ status.command({
 });
 ```
 
-> It is important to note that params are available for any status.command, including in params itself. For instance, if your user sends /hello whatsup, the input "whatsup" will be available in your command under params.hello. You can add additional params to - for instance - preview like so:
+> It is important to note that params are available for any status.command(), including in params itself. For instance, if your user sends /hello whatsup, the input "whatsup" will be available in your command under params.hello. You can add additional params to - for instance - preview like so:
 
 ```js
 params: [{
@@ -42,7 +39,7 @@ params: [{
 }],
 ```
 
-> The placeholder parameter above only applies if your users haven’t put any input into the command, not even the name of the command. You can use it to include helpful guidance where necessary, i.e. "Type your password". Alternatively, you can also include suggestions for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the /faucet command, you’ll see two suggestions to choose from.
+> The placeholder parameter above only applies if your users haven’t input anything into the command, not even the name. You can use it to include helpful guidance where necessary, i.e. "Type your password". Alternatively, you can also include suggestions for your users’ input. This should return a component to be rendered. For instance, if you are using the Console DApp and you select the /faucet command, you’ll see two suggestions to choose from.
 
 > Example validator function (this specific example will raise an error if your user doesn’t input a string. Notice that you should return your message inside one of the status.components):
 
