@@ -13,13 +13,56 @@ In this guide, we’ll explore how you can use the Status Status API to develop 
 
 # Quickstart
 
-If you already have a DApp with a web interface, then this will be the quickest Quickstart ever (trademark pending). Simply open Status, navigate to Console, hit the `/browse` command and type in the url where you DApp is running.
+If you already have a DApp with a web interface, then this will be the quickest Quickstart ever (trademark pending). Simply open Status, navigate to Console, hit the `@browse` command and type in the url where you DApp is running.
 
-Voila! Users in Status can already see your DApp and interact with it (on the Ropsten Test Network). Make some mobile optimizations of your own and you're away.
+Voila! Users in Status can already see your DApp and interact with it (on the Ropsten Test Network). Make some mobile optimizations of your own and you're away. That is the power of decentralized, web3 technologies. Awesome, right?
 
 OK, but what if `(a)` I don't have a DApp yet, or `(b)` I want to use this awesome API to get access to native mobile commands and actual, fully decentralized, chatbot functionality for my DApp?
 
-First, install Status (easy for [android](http://test.status.im/), tougher for iOS due to TestFlight. You can also [build it yourself](https://wiki.status.im/contributing/development/building-status/) if you're feeling intrepid). 
+# Tutorials
+
+## Overview
+
+We will be using only the bare-bones `status-dev-cli` tools in order to create our very first status DApp that can be accessed through Status. Just before we get started, it's well worth acquainting yourself with some of our terminology so you'll be able to make sense of it all. This anatomy establishes the different sections of the chat interface and establishes a common verbiage. The main components are:
+
+* Message
+* Input
+* Keyboard
+* Suggestions
+
+![Chat Anantomy](https://github.com/status-im/docs.status.im/blob/develop/static/images/chat-anatomy.png)
+
+Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the message appear. Creating all of these native setups is totally possible through the API - just read on.
+
+## Installing Status
+
+To develop on Status, you need to have Status running either:
+
+* on a real phone,
+
+* in an Android simulator, or
+
+* in an iOS simulator.
+
+You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight iOS, but you can sign up for early iOS access  [on our website](http://status.im).
+
+If you are running in an Android simulator, you also need to run on the command line:
+```shell
+adb forward tcp:5561 tcp:5561
+```
+If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself, for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). Following those guidelines, you can install an Android simulator, or start up Status in the Xcode simulator. Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
+
+## Enabling Debugging
+
+![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
+
+*With your phone connected, /debug "On"*
+
+We’ll assume you have Status open, and that if you’re using a physical phone it’s connected to your computer. Now we need to enable debugging from within the Status app. After you’re logged in to Status, click on Console and run `/debug`, then pick "On." You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. You don’t need those right now, because you’ll be using the pre-configured Status Truffle box or the Embark plugin.
+
+The message also shows you your IP address, which you’ll need later for Embark.
+
+## My First Mobile DApp
 
 ```shell
 npm install -g status-dev-cli
@@ -62,16 +105,15 @@ npm install http-server -g
 http-server
 ```
 
-> In a new terminal window. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You may also need to do port forwarding if you are using an Android device.
+> In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You may also need to do adb port forwarding if you are using an Android device.
 
 ```shell
 adb forward tcp:5561 tcp:5561  # Android only
 status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<Your IP>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
 ```
+First, install the dev tools globally using NPM.
 
-Before we really dive into the finer print, we will be using only the bare-bones `status-dev-cli` tools in order to create our very first status DApp that can be accessed through Status. First, install the dev tools globally using NPM.
-
-Then, create a directory for you app to live in, switch into it and create an `index.html` file and an `app.js` file.
+Then, create a directory for you app to live in, switch into it, and create an `index.html` file and an `app.js` file.
 
 The index.html will be really simple. We are going to add several meta tags to make our DApp look good on small screens of mobile phones and add a span that will be used by our JavaScript.
 
@@ -85,30 +127,34 @@ Open a new terminal window and navigate back to you `my-dapp` directory and go a
 
 You can also do live-reloading once you're happy with this by running `status-dev-cli watch-dapp . '{"whisper-identity": "my-dapp"}'`
 
+But wait, there's yet more! If you close the `webView` markup with your account listed in it, you will see that you already have access to the `@browse`, `/location`, `/send` and `/request` functionality - those come standard with any DApp that makes its home within Status. All you will need to do is learn how to handle them.
+
 Happy travels!
 
 <aside class="warn">
   You need not use NPM's http-server to serve content, there are innumerable ways of doing this. Just pick whatever is best for your environment.
 </aside>
 
-# Step-by-Step Tutorials
-
-## Create Your First Status Command
+## My First Status Command
 
 ```js
-status.command({
-    name: "hello",
-    title: "HelloBot",
-    description: "Helps you say hello",
-    color: "#7099e6",
-});
+function sayHello() {
+ status.command({
+     name: "hello",
+     title: "HelloBot",
+     description: "Helps you say hello",
+     color: "#7099e6",
+ });
+}
 ```
 
-Once you have worked through the Quickstart tutorial and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API.
+Once you have worked through the first tutorial and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API. All we have done so far is added our DApp to Status and displayed our account in it using a `webView`. Now, it's time to start making use of the API proper, in order to leverage all that native mobile and chatbot functionality so that we can take your DApp to the next level.
 
-In the my-dapp directory you created with the index.html and app.js files, we can now begin to do some more fun things. We start by writing a command in the app.js that will allow us to say `hello` to a user when they open the DApp.
+We kind of cheated a little in the previous tutorial. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. We use [ClojureScript](http://www.braveclojure.com/introduction/) and React Native to handle all our things, but you don't have to. The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write and integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
 
-`status.command()` can take 12 different parameters, of which we are only using 4 to ensure that we can greet our user nicely and make them feel great about using all this new and awesome technology.
+![status-anantomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
+
+The `status.command()` function that we are calling in this example can take 12 different parameters, of which we are only using 4 to ensure that we can greet our user nicely and make them feel great about using all this new and awesome technology.
 
 It is possible to build up the different parameters we want in a variable, and then pass this in to `status.command()`. However, we are just building up the command ourselves as it is easy enough to keep track of four simple arguments.
 
@@ -164,11 +210,11 @@ We have also included a far more complete example that utilises 9 of the 12 para
 
 Read on!
 
-## Create An Interactive Suggestion Area
+## My First Interactive Suggestion Area
 
-Great work! So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going and learned how to issue a basic command that will greet our user when they open the app. Now it's time to actually start doing what chatbots are meant to do - interact with users and gather the necessary info we need from them.
+Great work! So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to issue a basic command that will greet our user when they open the app. Now it's time to start doing what chatbots are meant to do - interact with users and gather the necessary info we need from them.
 
-This first thing to add is a `preview` object to that neat little `hello` command we just wrote in app.js. `preview` defines what your user will see as a result of their action, before any other response. The preview parameter takes a function, which should return a `status.component`.
+This first thing we must do is add a `preview` object to that neat little `hello` command we just wrote in app.js. `preview` defines what your user will see as a result of their action, before any other response. The preview parameter takes a function, which should return a `status.component`.
 
 ```js
 preview: function () {
