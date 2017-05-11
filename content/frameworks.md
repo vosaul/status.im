@@ -24,9 +24,39 @@ This is what we're going to go through:
 
 In order to install Status and enable debugging, please see the first of the [tutorials](#installing-status) [above](#enabling-debugging)
 
-## Installing Git, Node, and NPM
+## Networking
 
-<aside>Can we leave out this first paragraph about git? Truffle/Embark are installed using `npm`, afaict, which probably depends on git, but it's part of a basic dev toolset.</aside>
+### iPhone
+If you're running Status on an real iPhone (not simulator), you will need to know the IP of both your computer and your phone.
+
+To find phone's IP, go to Status Console and set `/debug` to `On`.
+
+To find out your computer's IP, use `ifconfig` and look for the IP on the line starting with `inet`
+
+    ifconfig en0     # OS X
+    ifconfig eth0    # Linux
+
+      en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        ether d2:b6:39:f5:59:1f
+        inet6 fe80::898:6cbd:e58:a6a7%en0 prefixlen 64 secured scopeid 0x4
+    --> inet 192.168.123.101 netmask 0xffffff00 broadcast 192.168.123.255
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+
+(If you have more than one network adapter, try just `ifconfig` and look for the right one.)
+
+<aside class="warning">Node module `truffle-box-status` relies on `status-dev-cli` which has a hardcoded value of `localhost` as the host of the DApp: <a href="https://github.com/status-im/status-dev-cli/blob/7b51136d8d0dc7b0a95136e6489c34870f925e4b/index.js#L33">(see github)</a>. This should be fixed to be configurable.</aside>
+
+### Android
+
+On Android, you will not need to explicitly set IPs, but you need to tunnel the `testrpc` port the DApp server by doing:
+
+    adb reverse tcp:8546 tcp:8546
+
+    adb reverse tcp:3000 tcp:3000
+
+## Installing Git, Node, and NPM
 
 We’ll use the version control tool Git to install the Truffle and Embark frameworks. If you have Xcode installed, Git is probably already installed. To see if it’s installed, open Terminal or any command line program and just enter `git`. You should see a list of common Git commands. If you don’t, you can install Git with [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
@@ -54,7 +84,9 @@ While the steps up until now apply to using both Truffle and Embark, now we’ll
 
 Open Terminal or any command line program and enter the command:
 
-`testrpc`
+`testrpc -p 8546`
+
+We're running testrpc on (non-default) RPC port 8546, just to avoid potential conflict with the node running inside Status.
 
 That’s it! It will show you a list of available accounts, private keys, Wallet, and mnemonic.
 
@@ -98,24 +130,37 @@ As you run the `migrate` command, you can look at the window with `testrpc` runn
 
 ### Running our Truffle DApp on Status
 
+If you are running on a real iOS device, you need to configure Truffle Box to use the network on your computer. In `truffle.js`, change `host` to the IP of your computer:
+
+    module.exports = {
+      migrations_directory: "./migrations",
+      networks: {
+        development: {
+          host: "<IP_of_your_computer>",
+          port: 8546,
+          network_id: "*" // Match any network id
+        }
+      }
+    };
+
+
 Now we are ready to see our DApp running on Status.
 
 From within your DApp directory, run:
 
-    # Run your JavaScript
+    # Run the server
      npm run start
 
-This should tell you that the the app is running, and that the DApp has been added to the Status Contacts.
+    # Run the server (iOS real device)
+     IP=<IP_of_your_phone> npm run start
 
-<aside>NOTE: If you're running Status on a real iOS device, you need to provide the IP of the device as an ENV variable, e.g. `IP=192.168.123.102 npm run start`.
-  <br/>
-Even then, `truffle-box-status` seems to rely on `status-dev-cli` which has a hardcoded value of `localhost` as the host of the DApp: <a href="https://github.com/status-im/status-dev-cli/blob/7b51136d8d0dc7b0a95136e6489c34870f925e4b/index.js#L33">(see github)</a></aside>
+This should tell you that the the app is running, and that the DApp has been added to the Status Contacts.
 
 ![The DApp added to the default Contacts](images/starting-a-dapp-on-status-with-frameworks_03.png)
 
 *The DApp added to the default Contacts*
 
-After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://localhost:3000/` for iOS, and `/browse http://10.0.3.2:3000/` for Android.
+After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://<IP_of_your_computer>:3000/` on iOS, and `/browse http://localhost:3000/` for Android.
 
 In fact, you can also browse to that address from Console with the command `/browse`, just like you could browse to any other web address inside Status. You can also enter that address into your browser, and you’ll see the same thing.
 
@@ -148,7 +193,9 @@ Now we are almost ready to see our DApp running on Status — this part is short
 
     npm install embark-status --save
 
-In the same directory, open the file `embark.json` and edit the `plugins` key:
+On a real iPhone, you need to insert its IP into two config files.
+
+Open the file `embark.json` and edit the `plugins` key. If your phone's IP is `192.168.123.102`, it would look like this:
 
     "plugins": {
         "embark-status": {
@@ -158,25 +205,14 @@ In the same directory, open the file `embark.json` and edit the `plugins` key:
         }
       }
 
-You can get the device IP from the Status Console, which was shown after you ran `/debug "On"` above. For instance, if `/debug` told me my IP was `192.168.123.102`, the entire `embark_demo/embark.json` file would look like this:
+Also, you need to tell Embark the IP of the DApp host. If your computer's IP is 192.168.123.101, then `config/webserver.js` would look like:
 
-    {"contracts": ["app/contracts/**"],
-      "app": {
-        "css/app.css": ["app/css/**"],
-        "images/": ["app/images/**"],
-        "js/app.js": ["embark.js", "app/js/_vendor/jquery.min.js", "app/js/_vendor/bootstrap.min.js", "app/js/**"],
-        "index.html": "app/index.html"
-      },
-      "buildDir": "dist/",
-      "config": "config/",
-      "plugins": {
-        "embark-status": {
-          "deviceIp": "192.168.123.102",
-          "whisperIdentity": "dapp-embark-test",
-          "name": "MyEmbarkDapp"
-        }
-      }
+    {
+      "enabled": true,
+      "host": "192.168.123.101",
+      "port": 8000
     }
+
 
 Finally, if you’re running Status on Android, enable port forwarding with:
 
@@ -199,11 +235,9 @@ The Embark console will appear within your shell with useful information about t
 
 *The Embark simulator runs in one Terminal window on the top, and the Embark console on the bottom*
 
-<aside>TODO: Again, this does not work on a real iOS device. To deploy the DApp on the device you'd need to <a href="https://github.com/status-im/embark-status/blob/master/index.js#L13">patch this line in embark-status</a> to include `--dapp-port 5561`?</aside>
+<aside class="warning">To deploy the DApp on the device we need to <a href="https://github.com/status-im/embark-status/blob/master/index.js#L13">patch this line in embark-status</a> to include `--dapp-port 5561`.</aside>
 
-You should be able to tap the Contacts tab within Status and see your DApp there. After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://localhost:8000/` for iOS, and `/browse http://192.168.123.102:3000/` for Android.
-
-<aside>TODO: Does this difference between address bar contents on iOS/Android presume that iOS is running in simulator and Android on real device? Make that clear and explicit.</aside>
+You should be able to tap the Contacts tab within Status and see your DApp there. After you’ve clicked on your DApp within Status, you’ll see that the chat area at the bottom shows `/browse http://192.168.123.101:8000/` for a real iOS device, and `/browse http://localhost:3000/` for Android.
 
 In fact, you can also browse to that address from Console with the command `/browse`, just like you could browse to any other web address inside Status. You can also enter that address into your browser, and you’ll see the same thing.
 

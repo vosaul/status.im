@@ -52,6 +52,8 @@ adb forward tcp:5561 tcp:5561
 ```
 If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself, for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). Following those guidelines, you can install an Android simulator, or start up Status in the Xcode simulator. Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
 
+<aside>Building for iPhone can get tricky, so using a real iPhone with a Status install from TestFlight is recommended.</aside>
+
 ## Enabling Debugging
 
 ![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
