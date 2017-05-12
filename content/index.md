@@ -9,34 +9,36 @@ Welcome to the Status API! Tread carefully, for you tread on the dreams of a bet
 
 Status allows users to interact with a wide array of Decentralized Applications (DApps) using the same intuitive chat interface (it also does a bunch of other things, but we'll focus on this aspect for now). In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your specific DApp more convenient, and effectively makes your DApp more powerful by giving it access to potentially far wider and more powerful network effects.
 
-In this guide, we’ll explore how you can use the Status API to develop your DApp and create custom commands for your users that will work in a beautifully-intuitive, mobile context. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status. It's really worth emphasising that using Status brings with it access to mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile app.
+In this guide, we’ll explore how you can use the Status Status API to develop your DApp and create custom commands for your users that will work in a beautifully-intuitive, mobile context. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status. It's really worth emphasising that using Status brings with it access to mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile DApp.
 
 # Quickstart
 
-If you already have a DApp with a web interface, then this will be the quickest Quickstart ever (trademark pending). Simply open Status, navigate to Console, hit the `@browse` command and type in the url where you DApp is running.
+If you already have a DApp with a web interface, then this will be the quickest Quickstart ever (trademark pending). Simply open Status, navigate to Console, hit the `@browse` command and type in the url where your DApp is running.
 
 Voila! Users in Status can already see your DApp and interact with it (on the Ropsten Test Network). Make some mobile optimizations of your own and you're away. That is the power of decentralized, web3 technologies. Awesome, right?
 
-OK, but what if `(a)` I don't have a DApp yet, or `(b)` I want to use this awesome API to get access to native mobile commands and actual, fully decentralized, chatbot functionality for my DApp?
+OK, but what if `(a)` I don't have a DApp but want to learn how to build one on Status, or `(b)` I want to use this awesome API to make the most of an awesome, native mobile UX, or `(c)` I know what I'm doing and want to create fully decentralized, chatbot functionality for my DApp?
 
 # Tutorials
 
 ## Overview
 
-We will be using only the bare-bones `status-dev-cli` tools in order to create our very first status DApp that can be accessed through Status. Just before we get started, it's well worth acquainting yourself with some of our terminology so you'll be able to make sense of it all. This anatomy establishes the different sections of the chat interface and establishes a common verbiage. The main components are:
+Just before we get started, it's well worth acquainting yourself with some of our terminology so you'll be able to make sense of it all. This anatomy establishes the different sections of the chat interface and establishes a common verbiage. The main components are:
 
 * Message
 * Input
 * Keyboard
 * Suggestions
 
-![Chat Anatomy](images/chat-anatomy.png)
+![Chat Anantomy](images/chat-anatomy.png)
 
-Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the message appear. Creating all of these native setups is totally possible through the API - just read on.
+Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the messages appear. 
+
+Creating all of these native setups is totally possible through the API - just read on.
 
 ## Installing Status
 
-To develop on Status, you need to have Status running either:
+OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To develop on Status, you need to have Status running either:
 
 * on a real phone,
 
@@ -44,36 +46,39 @@ To develop on Status, you need to have Status running either:
 
 * in an iOS simulator.
 
-You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight iOS, but you can sign up for early iOS access  [on our website](http://status.im).
+You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight iOS, but you can sign up for early iOS access [on our website](http://status.im).
 
-If you are running in an Android simulator, you also need to run on the command line:
-```shell
-adb forward tcp:5561 tcp:5561
-```
 If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself, for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). Following those guidelines, you can install an Android simulator, or start up Status in the Xcode simulator. Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
-
-<aside>Building for iPhone can get tricky, so using a real iPhone with a Status install from TestFlight is recommended.</aside>
 
 ## Enabling Debugging
 
+First, connect your phone to your development machine. If you are using an android device, you can check that is is connected and then enable port forwarding on `5561` for the debug server.
+
+```shell
+* android only
+adb devices
+adb forward tcp:5561 tcp:5561
+
+** more than one device connected?
+adb -s DEVICE_ID forward tcp:5561 tcp:5561
+```
+ 
 ![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
 
 *With your phone connected, /debug "On"*
 
-We’ll assume you have Status open, and that if you’re using a physical phone it’s connected to your computer. Now we need to enable debugging from within the Status app. After you’re logged in to Status, click on Console and run `/debug`, then pick "On." You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. You don’t need those right now, because you’ll be using the pre-configured Status Truffle box or the Embark plugin.
+You then need to open Status, navigate to `Console`, hit the `debug` suggestion and turn on the debugging server. You’ll get back a message telling that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. 
 
-The message also shows you your IP address, which you’ll need later for Embark.
+The important part of the message is you `IP` address, which we'll be using throughout.
 
 ## My First Mobile DApp
-
-First, install Status (easy for [android](http://test.status.im/), tougher for iOS due to TestFlight. You can also [build it yourself](https://wiki.status.im/contributing/development/building-status/) if you're feeling intrepid).
 
 ```shell
 npm install -g status-dev-cli
 mkdir my-dapp && cd my-dapp
 touch index.html app.js
 ```
-> In index.html, add:
+> In index.html, add: 
 
 ```html
 <html>
@@ -91,18 +96,18 @@ touch index.html app.js
 </body>
 </html>
 ```
-> In app.js, add:
+> In app.js, add:  
 
 ```js
 function onContentLoaded() {
   var accountSpan = document.getElementById("account");
-  accountSpan.innerHTML =
+  accountSpan.innerHTML = 
     (typeof web3 === "undefined" ? "undefined" : web3.eth.accounts);
 }
 document.addEventListener("DOMContentLoaded", onContentLoaded);
 ```
 
-> Install and start an HTTP server - we recommend NPM for ease-of-use. Make sure you are still in your my-dapp directory when running the 2nd command.
+> Install and start an HTTP server - we recommend NPM for ease-of-use. Make sure you are still in your my-dapp directory when running the 2nd command.  
 
 ```shell
 npm install http-server -g
@@ -113,29 +118,27 @@ http-server
 
 ```shell
 adb forward tcp:5561 tcp:5561  # Android only
-status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<IP of machine running http-server>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
+status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<Your IP>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
 ```
-First, install the dev tools globally using NPM.
+First, install the `status-dev-cli` tools globally using NPM.
 
-Then, create a directory for you app to live in, switch into it, and create an `index.html` file and an `app.js` file.
+Then, create a directory for your app to live in, switch into it, and create an `index.html` file and an `app.js` file.
 
-The index.html will be really simple. We are going to add several meta tags to make our DApp look good on small screens of mobile phones and add a span that will be used by our JavaScript.
+The index.html will be really simple. We are going to add several meta tags to make our DApp look good on the small screens of mobile phones, and add a span that will be used by our JavaScript.
 
-Our app.js file will also be simple. We are going to display the information about your account inside a span with account id. Status injects web3.js automatically, so you have an access to web3 variable from everywhere and you don’t need to care about including web3.js manually. However, you can do this and most probably you want to do this if you want to make your DApps work on other platforms.
+Our `app.js` file will also be simple. We are going to display the information about your account inside a span with `account id`. Status injects `web3.js` automatically, so you have an access to web3 variable from everywhere and you don’t need to care about including `web3.js` manually. However, you can do this and most probably you want to do this if you want to make your DApps work on other platforms.
 
 You then need to install a really simple `http-server` from NPM, and start it in the `my-dapp` directory we just created.
 
-Then, open your Status app, navigate to Console, select the `/debug` option and turn it `On`. This should return a message with an IP address.
+Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
 
-Open a new terminal window and navigate back to you `my-dapp` directory and go ahead and add you dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console. `<Your-IP>` needs to be `127.0.0.1` if you are using a simulator, or whatever your PC's IP is if you are using a connected phone.
+`<Your-IP>` needs to be `127.0.0.1` if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
 
 You can also do live-reloading once you're happy with this by running `status-dev-cli watch-dapp . '{"whisper-identity": "my-dapp"}'`
 
-But wait, there's yet more! If you close the `webView` markup with your account listed in it, you will see that you already have access to the `@browse`, `/location`, `/send` and `/request` functionality - those come standard with any DApp that makes its home within Status. All you will need to do is learn how to handle them.
-
 Happy travels!
 
-<aside class="warn">
+<aside class="success">
   You need not use NPM's http-server to serve content, there are innumerable ways of doing this. Just pick whatever is best for your environment.
 </aside>
 
