@@ -1,0 +1,12 @@
+<style>
+[class^="tab"]:checked ~ [class^="tab-content"] {
+  display: block;
+}
+</style>
+<div class="content tabs">
+    {{ range .Params }}
+        <input class="tab{{ . }}" type="radio" name="tabs" checked>
+        <label>{{ . }}</label>
+    {{ end }}
+{{ .Inner }}
+</div>
