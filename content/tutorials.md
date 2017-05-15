@@ -348,18 +348,7 @@ status-dev-cli add-dapp '{"whisper-identity": "embark", "dapp-url": "http://<MAC
 {{% /tab %}}
 {{% /tabs %}}
 
-## My First Status Command
-
-```js
-function sayHello() {
- status.command({
-     name: "hello",
-     title: "HelloBot",
-     description: "Helps you say hello",
-     color: "#7099e6",
- });
-}
-```
+## My First Interactive Suggestion Area
 
 Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API. It's time to make use of the API proper in order to build a decentralized chatbot that leverages Status' awesome mobile interface, so that we can take your DApp to the next level.
 
@@ -369,63 +358,68 @@ Please take a moment to familiarise yourself with the anatomy of Status so that 
 
 ![status-anantomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
 
-The `status.command()` function that we are going to call for our very first `hello world` example can take 12 different parameters, of which we are only going to use 4 in order to greet our user and make them feel great about using all this new and awesome technology.
+### Do It Yourself
 
-It is possible to build up the different parameters we want in a variable, and then pass this in to `status.command()`. However, we are just building up the command ourselves as it is easy enough to keep track of four simple arguments.
+First, we're going to navigate back to our `my-dapp` directory we created for the first tutorial and make a new directory and file to keep our javascript in. 
 
-Obviously, this small `hello` example can be extended greatly so that we can get responses from users and do a bunch of other rad things, but that will all become clear in the sections below on interactive suggestion areas etc.
+```shell
+cd ~/my-dapp
+mkdir bot && cd bot/ && touch bot.js
+```
+
+Instead of simply adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
+
+Add the following code snippet to the newly-created `bot.js` file.
 
 ```js
-status.command({
-    name: "faucet",
-    title: I18n.t('faucet_title'),
-    description: I18n.t('faucet_description'),
-    color: "#7099e6",
-    registeredOnly: true,
-    params: [{
-        name: "url",
-        type: status.types.TEXT,
-        suggestions: faucetSuggestions,
-        placeholder: I18n.t('faucet_placeholder')
-    }],
-    preview: function (params) {
-        return {
-            markup: status.components.text(
-                {},
-                params.url
-            )
+status.addListener("on-message-send", function (params, context) {
+    var result = {
+            err: null,
+            data: null,
+            messages: []
         };
-    },
-    shortPreview: function (params) {
-        return {
-            markup: status.components.text(
-                {},
-                I18n.t('faucet_title') + ": " + params.url
-            )
-        };
-    },
-    validator: function (params, context) {
-        var f = faucets.map(function (entry) {
-            return entry.url;
-        });
 
-        if (f.indexOf(params.url) == -1) {
-            var error = status.components.validationMessage(
-                I18n.t('faucet_incorrect_title'),
-                I18n.t('faucet_incorrect_description')
-            );
-
-            return {markup: error};
-        }
+    try {
+        result["text-message"] = "You're amazing, master!";
+    } catch (e) {
+        result.err = e;
     }
+
+    return result;
 });
 ```
 
-We have also included a far more complete example that utilises 9 of the 12 parameters you can pass into `status.command()` and is what we use to make it possible for our users to access the Status Faucet and get some of that tasty (test) ether to send to their friends and interact with the DApps already living in Status.
+Then, navigate back to the `my-dapp` directory, due the necessary Android steps if you are using that platform, and start the http server again. Then, open a new shell window and add your new bot.
 
-Read on!
+```shell
+#make sure you're in my-dapp or the equivalent
+cd ..
 
-## My First Interactive Suggestion Area
+#start the server and then open a new shell window
+http-server
+```
+
+```shell
+# android only
+adb -s DEVICE_ID reverse tcp:8080 tcp::8080
+
+status-dev-cli add-dapp '{"whisper-identity": "botler",  "name": "Botler",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
+```
+
+This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. You'll see that it opens a browse window by default, which is not desired behaviour and will be fixed in the next release. Just close the window and type a message to your new bot. 
+
+Obviously, there's much more we can do than simply listen for messages and send flattering responses. Generally speaking, we construct functions and suggestions outside of our listeners, and then pass these in rather than constructing the messages directly in the `addListener` call. You can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
+
+Go ahead and try and add this bot too, and see if you can figure out how it works and what you can do with it!
+
+```shell
+cd bot/ && touch demo_bot.js && cd ..
+status-dev-cli add-dapp '{"whisper-identity": "slider",  "name": "Slider",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/demo_bot.js"}' --ip <DEVICE-IP>
+```
+
+TODO: Explain the Demo Bot and lead into writing your own commands.
+
+## My First Status Command
 
 Great work! So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to issue a basic command that will greet our user when they open the app. Now it's time to start doing what chatbots are meant to do - interact with users and gather the necessary info we need from them.
 
