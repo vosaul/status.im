@@ -54,7 +54,7 @@ inet 10.10.0.216 netmask 0xfffffe00 broadcast 10.10.1.255
 ## My First DApp
 
 {{% tabs diy embark truffle %}}
-{{% tab diy block %}}
+{{% tab diy %}}
 ### Do It Yourself with `status-dev-cli`
 
 ```shell
@@ -127,7 +127,7 @@ Happy travels!
 
 {{% /tab %}}
 
-{{% tab truffle none %}}
+{{% tab truffle %}}
 ### Truffle
 
 OK, so we can write a little HTML5 DApp that displays information to Status users through a simple webView component. However, we want to do so much more! We want to write smart contracts, deploy them, and interact with them through a fully mobile user interface; and we want to build decentralized chatbots that live within Status and make friends with all the humans.
@@ -239,7 +239,7 @@ module.exports = {
 ``` 
 {{% /tab %}}
 
-{{% tab embark none %}}
+{{% tab embark %}}
 ### Embark
 
 OK, so Truffle is not your favourite and you prefer using Embark. Fine with us. As always, make sure you have installed the framework first.
