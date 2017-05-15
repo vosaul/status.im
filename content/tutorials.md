@@ -125,13 +125,13 @@ Happy travels!
 
 ### Truffle
 
-OK, so we can write a little HTML5 DApp that displays information to Status users through a simple webView component. However, we want to do so much more! We want to write smart contracts, deploy them, and interact with them through a fully mobile user experience; and we want to build decentralized chatbots that live within Status and make friends with all the human users.
+OK, so we can write a little HTML5 DApp that displays information to Status users through a simple webView component. However, we want to do so much more! We want to write smart contracts, deploy them, and interact with them through a fully mobile user interface; and we want to build decentralized chatbots that live within Status and make friends with all the humans.
 
-If you want to get straight to making chatbots, please go [here](#my-first-command).
+If you want to get straight to making chatbots, please go [here](#my-first-status-command).
 
-Frameworks can lighten the load of developing considerably, and so we include here two quick examples to get you up and running with the two most popular Ethereum frameworks currently available - Truffle and Embark.
+Frameworks can lighten the load of developing considerably, and so we include here some quick examples to get you up and running with the two most popular Ethereum frameworks currently available - Truffle and Embark.
 
-Firstly, we'll need an Ethereum network to develop against, so let's go get `testrpc` - a neat little simulation of the rules and logic of the Ethereum network that runs much faster than the live network (because it's only simulating things) and is very useful to develop against.
+Firstly, we'll need a network to develop against, so let's go get `testrpc` - a neat little simulation of the rules and logic of the Ethereum network that runs much faster than the live network (because it's only simulating things) and is very useful for quick and dirty iterations.
 
 ```shell
 npm install -g ethereumjs-testrpc
@@ -141,19 +141,17 @@ testrpc -p 8546
 adb reverse tcp:8546 tcp:8546
 ```
 
-We're running testrpc on (non-default) RPC port 8546, just to avoid potential conflict with the node running inside Status. If using android, you need to open the connection from your PC to your phone on that port, so Status can listen for changes there.
+That’s it! It will show you a list of available accounts, private keys, your HD wallet and mnemonic. Please note that we're running testrpc on (non-default) RPC port 8546, just to avoid potential conflict with the node running inside Status. If using android, you need to open the connection from your PC to your phone on that port, so Status can listen for changes there.
 
-We also need to make sure that our Status client is listening to our new `testrpc` network, rather than Ropsten so that we can get the information we need about our contracts etc. Luckily, this is as easy as running:
+We also need to make sure that our Status client is listening to our new `testrpc` network, rather than Ropsten, so that we can get the information we need about our contracts etc. Luckily, this is as easy as running:
 
 ```shell
 status-dev-cli switch-node http://localhost:8546
 
-# Of course, there can be options. You can use go-ethereum instead of TestRPC, and instead of port forwarding you can switch to any other accessible node using its IP address.
+# Of course, there are options. You can use go-ethereum instead of TestRPC, and instead of port forwarding you can switch to any other accessible node using its IP address.
 ```
 
-That’s it! It will show you a list of available accounts, private keys, your HD wallet and mnemonic.
-
-Open a new shell (such as a new Terminal window or tab) for the next part. You’ll leave `testrpc` running in the first window, and use the second window for the rest of the tutorial.
+Open a new shell (i.e. a new Terminal window or tab) for the next part. You’ll leave `testrpc` running in the first window, and use the second window for the rest of the tutorial.
 
 Now that you have `testrpc` is going, and a new shell is open, run:
 
@@ -163,7 +161,7 @@ npm install -g truffle // Version 3.0.5+ required.
 
 This installs the Truffle framework, and you can find its GitHub [page here](https://github.com/trufflesuite/truffle).
 
-With Truffle installed, we can grab the Status Truffle Box, and get a basic DApp running. All the Truffle boxes also include the app frameworks React and Redux, which were designed by Facebook and are widely used by app developers. You can find the other Truffle Boxes [here](https://truffle-box.github.io/).
+With Truffle installed, we can grab the Status Truffle Box, and get a basic DApp running. All the Truffle Boxes also include the app frameworks React and Redux, which were designed by Facebook and are widely used by app developers. You can find the other Truffle Boxes [here](https://truffle-box.github.io/).
 
 To install the Status Truffle box, all you have to do is run this command in the same Terminal window:
 
@@ -172,19 +170,17 @@ git clone https://github.com/status-im/truffle-box-status.git
 
 # Change into the truffle box directory and install the node dependencies
 cd truffle-box-status && npm install
-```
 
-![Example on OS X: testrpc running on the left, and installing Truffle on the right](images/starting-a-dapp-on-status-with-frameworks_02.png)
-
-*Example on OS X: testrpc running on the left, and installing Truffle on the right*
-
-```shell
 # Compile the contracts from Solidity (much like JavaScript) into runnable EVM code
  truffle compile
  
 # Publish the compiled contracts to your network. testrpc must already be running
  truffle migrate
 ```
+
+![Example on OS X: testrpc running on the left, and installing Truffle on the right](images/starting-a-dapp-on-status-with-frameworks_02.png)
+
+*Example on OS X: testrpc running on the left, and installing Truffle on the right*
 
 As you run the `migrate` command - which is what deploys your contracts to the network - you can look at the window with `testrpc` running, and you’ll see your transactions being published. If you get `Error: Invalid JSON RPC response`, you probably forgot to run `testrpc`.
 
@@ -214,7 +210,7 @@ Again, the DApp should appear in your chats screen, and navigating to it should 
 
 *Known problems:*
 
-1) `status0dev-cli` currently has a hard-coded value for `localhost`, rather than allowing dynamic inputs. We are working on a fix, but - depending on your setup - you may need to change this for everything to work smoothly. Do this simply by executing:
+1) `status-dev-cli` currently has a hard-coded value for `localhost`, rather than allowing dynamic inputs. We are working on a fix, but - depending on your setup - you may need to change this for everything to work smoothly. Do this simply by executing:
 
 ```shell
 cd node_modules/status-dev-cli/ && nano index.js
@@ -255,7 +251,7 @@ cd embark_demo
 Next we want to start the network. You can run a full Ethereum node with `embark blockchain`, but for development you probably want to run `testrpc`. We want it to run on port 8546 though, so it doesn't interfere with Status, so we need to edit the `blockchain.js`:
 
 ```shell
-cd embark_demo/config/ && nano blockchain.json
+nano config/blockchain.json
 
 # Now edit the 'Development' Network to read:
 
@@ -281,7 +277,7 @@ cd embark_demo/config/ && nano blockchain.json
 cd .. && embark simulator
 ```
 
-Open a new shell tab, navigate to the same DApp directory, and - after the usual Android extras - install Status Embark:
+Open a new shell tab, navigate to the same DApp directory, and - after ensuring you Android device has access to `testrpc` - install Status Embark:
 
 ```shell
 # Android only 
@@ -326,7 +322,11 @@ Now we’re ready to run the DApp on Status. From within your DApp directory, ru
 embark run
 ```
 
-The Embark console will appear within your shell with useful information about the SimpleStorage contract it has created, compiled, and deployed. It will also tell you that the DApp has been added to Status!
+The Embark console will appear within your shell with useful information about the SimpleStorage contract it has created, compiled, and deployed. Now just add your DApp, and have some fun!
+
+```shell
+status-dev-cli add-dapp '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-IP>:8000/", "name": "Embark"}' --ip <DEVICE-IP>
+```
 
 ![](images/starting-a-dapp-on-status-with-frameworks_04.png)
 
@@ -352,13 +352,15 @@ function sayHello() {
 }
 ```
 
-Once you have worked through the first tutorial and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API. All we have done so far is added our DApp to Status and displayed our account in it using a `webView`. Now, it's time to start making use of the API proper, in order to leverage all that native mobile and chatbot functionality so that we can take your DApp to the next level.
+Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API. It's time to make use of the API proper in order to build a decentralized chatbot that leverages Status' awesome mobile interface, so that we can take your DApp to the next level.
 
-We kind of cheated a little in the previous tutorial. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. We use [ClojureScript](http://www.braveclojure.com/introduction/) and React Native to handle all our things, but you don't have to. The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write and integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
+We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. We use [ClojureScript](http://www.braveclojure.com/introduction/) and React Native to handle all our things, but you don't have to. The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write, and then integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
+
+Please take a moment to familiarise yourself with the anatomy of Status so that you can get a visual sense of what is happening where and how you can best utilise it all.
 
 ![status-anantomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
 
-The `status.command()` function that we are calling in this example can take 12 different parameters, of which we are only using 4 to ensure that we can greet our user nicely and make them feel great about using all this new and awesome technology.
+The `status.command()` function that we are going to call for our very first `hello world` example can take 12 different parameters, of which we are only going to use 4 in order to greet our user and make them feel great about using all this new and awesome technology.
 
 It is possible to build up the different parameters we want in a variable, and then pass this in to `status.command()`. However, we are just building up the command ourselves as it is easy enough to keep track of four simple arguments.
 
