@@ -1,11 +1,15 @@
 <style>
-[class^="tab"]:checked ~ [class^="tab-content"] {
-  display: block;
+.tab-content { display: none; }
+
+{{ range $i, $e := .Params }}
+.tab-{{ $e }}:checked ~ .content-{{ $e }} {{ if ne $i (sub (len $.Params) 1) }}, {{end}}
+{{ end }} {
+    display: block;
 }
 </style>
 <div class="content tabs">
     {{ range .Params }}
-        <input class="tab{{ . }}" type="radio" name="tabs" checked>
+        <input class="tab-{{ . }}" type="radio" name="tabs" checked>
         <label>{{ . }}</label>
     {{ end }}
 {{ .Inner }}
