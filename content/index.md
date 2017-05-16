@@ -9,7 +9,7 @@ Welcome to the Status API! Tread carefully, for you tread on the dreams of a bet
 
 Status allows users to interact with a wide array of Decentralized Applications (DApps) using the same intuitive chat interface (it also does a bunch of other things, but we'll focus on this aspect for now). In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your specific DApp more convenient, and effectively makes your DApp more powerful by giving it access to potentially far wider and more powerful network effects.
 
-In this guide, we’ll explore how you can use the Status Status API to develop your DApp and create custom commands for your users that will work in a beautifully-intuitive, mobile context. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status. It's really worth emphasising that using Status brings with it access to mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile DApp.
+In this guide, we’ll explore how you can use the Status API to develop your DApp and create custom commands for your users that will work in a beautifully-intuitive, mobile context. As a result of developing on Status, you’ll have a DApp that your users can access on MetaMask, Mist, and Status. It's really worth emphasising that using Status brings with it access to mobile users with native mobile commands. With little extra developer time invested, you’ll gain a mobile DApp.
 
 # Quickstart
 
