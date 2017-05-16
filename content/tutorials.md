@@ -1,5 +1,5 @@
 ---
-weight: 20
+weight: 10
 title: Tutorials
 ---
 
@@ -128,6 +128,7 @@ Happy travels!
 {{% /tab %}}
 
 {{% tab truffle %}}
+
 ### Truffle
 
 OK, so we can write a little HTML5 DApp that displays information to Status users through a simple webView component. However, we want to do so much more! We want to write smart contracts, deploy them, and interact with them through a fully mobile user interface; and we want to build decentralized chatbots that live within Status and make friends with all the humans.
@@ -237,9 +238,11 @@ module.exports = {
   }
 };
 ``` 
+
 {{% /tab %}}
 
 {{% tab embark %}}
+
 ### Embark
 
 OK, so Truffle is not your favourite and you prefer using Embark. Fine with us. As always, make sure you have installed the framework first.
@@ -346,7 +349,14 @@ status-dev-cli add-dapp '{"whisper-identity": "embark", "dapp-url": "http://<MAC
 1) To deploy the DApp successfully on a device you may need to patch [this line](https://github.com/status-im/embark-status/blob/master/index.js#L13) in embark-status to include `+ " --dapp-port 5561"`.
 
 {{% /tab %}}
+
 {{% /tabs %}}
+
+Using Status, you can now develop mobile DApps as easily as developing for MetaMask or Mist! But Status offers extra goodies as well.
+
+In particular, Status will help you allow your users to chat with your DApp! The chat interface will let your users easily and intuitively accomplish tasks. In the future, your users will be able to hold group conversations where all the other participants are DApps, which is kind of amazing.
+
+Later we’ll have an easy mechanism to make your DApp available for others to use on Status, but for now please just submit a pull request using our [guide on adding DApps](http://wiki.status.im/contributing/development/adding-dapps/).
 
 ## My First Interactive Suggestion Area
 
@@ -357,6 +367,10 @@ We kind of cheated a little in the previous tutorials. While it is totally possi
 Please take a moment to familiarise yourself with the anatomy of Status so that you can get a visual sense of what is happening where and how you can best utilise it all.
 
 ![status-anantomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
+
+
+{{% tabs diy embark truffle %}}
+{{% tab diy %}}
 
 ### Do It Yourself
 
@@ -408,7 +422,7 @@ status-dev-cli add-dapp '{"whisper-identity": "botler",  "name": "Botler",  "dap
 
 This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. You'll see that it opens a browse window by default, which is not desired behaviour and will be fixed in the next release. Just close the window and type a message to your new bot. 
 
-Obviously, there's much more we can do than simply listen for messages and send flattering responses. Generally speaking, we construct functions and suggestions outside of our listeners, and then pass these in rather than constructing the messages directly in the `addListener` call. You can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
+Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
 
 Go ahead and try and add this bot too, and see if you can figure out how it works and what you can do with it!
 
@@ -417,7 +431,83 @@ cd bot/ && touch demo_bot.js && cd ..
 status-dev-cli add-dapp '{"whisper-identity": "slider",  "name": "Slider",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/demo_bot.js"}' --ip <DEVICE-IP>
 ```
 
-TODO: Explain the Demo Bot and lead into writing your own commands.
+{{% /tab %}}
+
+{{% tab truffle %}}
+
+### Truffle
+
+OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks offer some really cool features and make development significantly easier for many projects. So, let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. Navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
+
+```shell
+# Android only
+adb forward tcp:5561 tcp:5561
+
+test rpc -p 8546
+
+# Android only
+adb reverse tcp:8546 tcp:8546
+
+status-dev-cli switch-node "http://localhost:8546"
+cd ~/truffle-box-status
+
+# If you want to be extra sure your contracts are there, run:
+truffle migrate --reset
+```
+
+Then, we need to make a new javascript file and put it in a place we can access in the browser. Copy the code provided into another `bot.js` file.
+
+```shell
+cd build/ && mkdir bot/
+touch bot/bot.js
+nano bot/bot.js
+```
+
+```js
+status.addListener("on-message-send", function (params, context) {
+    var result = {
+            err: null,
+            data: null,
+            messages: []
+        };
+
+    try {
+        result["text-message"] = "You're amazing, master!";
+    } catch (e) {
+        result.err = e;
+    }
+
+    return result;
+});
+```
+
+This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
+
+```shell
+# Make sure you're in the truflle-box-status/ directory
+cd ..
+
+truffle serve
+
+# In another shell
+adb reverse tcp:8080 tcp:8080
+
+status-dev-cli add-dapp '{"whisper-identity": "truffle-botler",  "name": "Truffle Botler",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
+```
+
+And you're away! You should be able to see you DApp, browse to the same site as before, and chat with the reptitively flattering greeter bot.
+
+{{% /tab %}}
+
+{{% tab embark %}}
+
+### Embark
+
+
+
+{{% /tab %}}
+
+{{% /tabs %}}
 
 ## My First Status Command
 
