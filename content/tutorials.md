@@ -62,7 +62,7 @@ npm install -g status-dev-cli
 mkdir my-dapp && cd my-dapp
 touch index.html app.js
 ```
-> In index.html, add: 
+> In index.html, add:   
 
 ```html
 <html>
@@ -80,12 +80,12 @@ touch index.html app.js
 </body>
 </html>
 ```
-> In app.js, add:  
+> In app.js, add:    
 
 ```js
 function onContentLoaded() {
   var accountSpan = document.getElementById("account");
-  accountSpan.innerHTML = 
+  accountSpan.innerHTML =  
     (typeof web3 === "undefined" ? "undefined" : web3.eth.accounts);
 }
 document.addEventListener("DOMContentLoaded", onContentLoaded);
@@ -101,7 +101,7 @@ http-server
 > In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You should already have enabled adb port forwarding on 5561 if you are using an Android device.
 
 ```shell
-status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<Your IP>:8080/", "name": "My DApp"}' --ip <IP listed in Status console>
+status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "My DApp"}' --ip <DEVICE-IP>
 ```
 First, install the `status-dev-cli` tools globally using NPM.
 
@@ -115,7 +115,7 @@ You then need to install a really simple `http-server` from NPM, and start it in
 
 Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
 
-`<Your-IP>` needs to be `127.0.0.1` if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
+`<MACHINE-IP>` needs to be `localhost` or `127.0.0.1`, if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
 
 That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch-dapp . '{"whisper-identity": "my-dapp"}'`
 
@@ -199,7 +199,7 @@ adb reverse tcp:3000 tcp:3000
 Now we are ready to see our DApp running on Status. From within your DApp directory, run:
 
 ```shell
-# Run the server
+# Run your Javascript
 npm run start
 
 #(Remember to set ENV variable if working with real device)
