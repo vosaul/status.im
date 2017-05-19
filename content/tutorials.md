@@ -585,6 +585,50 @@ And there you go! You should be able to see your DApp, navigate to it, tap the n
 
 ### Truffle
 
+```shell
+cd ~/truffle-box-status/build/bot/ && touch hello.js
+nano hello.js
+```
+
+Navigate back to the truffle box  `build` directory and make a new file for us to write a command in that we can display through truffle. Place the same command provided above in that file.
+
+```js
+status.command({
+     name: "hello",
+     title: "HelloBot",
+     description: "Helps you say hello",
+     color: "#CCCCCC",
+     preview: function (params) {
+             var text = status.components.text(
+                 {
+                     style: {
+                         marginTop: 5,
+                         marginHorizontal: 0,
+                         fontSize: 14,
+                         fontFamily: "font",
+                         color: "black"
+                     }
+                 }, "Hello from the other side!");
+
+             return {markup: status.components.view({}, [text])};
+         }
+ });
+```
+
+This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
+
+```shell
+# Make sure you're in the truflle-box-status/ directory
+cd ..
+
+truffle serve
+
+# In another shell
+adb reverse tcp:8080 tcp:8080
+
+status-dev-cli add-dapp '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
+```
+
 
 {{% /tab %}}
 
