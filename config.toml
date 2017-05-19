@@ -49,8 +49,12 @@ title = "Status Developer Documentation"
 # Left sidebar footer items. Use HTMl or Markdown.
 toc_footers = [ 
 "Android: <a href='http://test.status.im'>Download</a>, <a href='http://artifacts.status.im:8081/artifactory/nightlies-local/'>Nightlies</a>",
-"<a href='https://wiki.status.im'>Wiki</a>",
-"<a href='http://slack.status.im'>Slack</a>",
+"iOS: Testflight invite required",
+"-------",
+"<a href='https://hackathon.status.im'>Enter our Hackathon</a>",
+"<a href='https://wiki.status.im'>Read the Wiki</a>",
+"<a href='http://slack.status.im'>Join our Slack</a>",
+"<a href='https://github.com/status-im/docs.status.im'>Edit this Documentation</a>",
 ]
 [languages.en.blackfriday]
 angledQuotes = false
