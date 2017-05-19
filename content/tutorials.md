@@ -375,7 +375,7 @@ Later we’ll have an easy mechanism to make your DApp available for others to u
 
 ## My First 1-1 Chatbot
 
-Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API. It's time to make use of the API proper in order to build a decentralized chatbot that leverages Status' awesome mobile interface, so that we can take your DApp to the next level.
+Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API.
 
 We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. There are essentailly two different ways for developers to interact with Status, best illustrated by the Status Anatomy below:
 
