@@ -612,7 +612,7 @@ Let's go ahead and make that `hello` command we just created a little bit more c
 ```shell
 cd ~/my-dapp/bot/ && nano hello.js
 ```
-Ins addition to the preview parameter we used last time, let's add in a `params` parameter that has a `suggestions` object in it. This will create a suggestions area which - if you refer back to the [Chat Anatomy](#overview) - is what rolls up above the keyboard, such as you see when turning on the debugging server with the options `On` and `Off`.
+Instead of the preview parameter we used last time, let's build another `status.command()` and add in a `params` option with a `suggestions` object in it. This will create a suggestions area which - if you refer back to the [Chat Anatomy](#overview) - is what rolls up above the keyboard, such as you see when turning on the debugging server with the options `On` and `Off`.
 
 ```js
 status.command({
@@ -624,21 +624,7 @@ status.command({
               name: "greet",
               type: status.types.TEXT
               suggestions: helloSuggestions
-             }],
-     preview: function (params) {
-             var text = status.components.text(
-                 {
-                     style: {
-                         marginTop: 5,
-                         marginHorizontal: 0,
-                         fontSize: 14,
-                         fontFamily: "font",
-                         color: "black"
-                     }
-                 }, "Hello from the other side!");
-
-             return {markup: status.components.view({}, [text])};
-         }
+             }]
  })
 ```
 
