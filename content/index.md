@@ -18,20 +18,3 @@ If you already have a DApp with a web interface, then this will be the quickest 
 Voila! Users in Status can already see your DApp and interact with it (on the Ropsten Test Network). Make some mobile optimizations of your own and you're away. That is the power of decentralized, web3 technologies. Awesome, right?
 
 OK, but what if `(a)` I don't have a DApp but want to learn how to build one on Status, or `(b)` I want to use this awesome API to make the most of an awesome, native mobile UX, or `(c)` I know what I'm doing and want to create fully decentralized, chatbot functionality for my DApp?
-
-# Tutorials
-
-## Overview
-
-Just before we get started, it's well worth acquainting yourself with some of our terminology so you'll be able to make sense of it all. This anatomy establishes the different sections of the chat interface and establishes a common verbiage. The main components are:
-
-* Message
-* Input
-* Keyboard
-* Suggestions
-
-![Chat Anantomy](images/chat-anatomy.png)
-
-Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the messages appear. 
-
-Creating all of these native setups is totally possible through the API - just read on.

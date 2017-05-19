@@ -1,9 +1,24 @@
 ---
-weight: 10
+weight: 20
 title: Tutorials
 ---
 
 # Tutorials
+
+## Overview
+
+Just before we get started, it's well worth acquainting yourself with some of our terminology so you'll be able to make sense of it all. This anatomy establishes the different sections of the chat interface and establishes a common verbiage. The main components are:
+
+* Message
+* Input
+* Keyboard
+* Suggestions
+
+![Chat Anatomy](images/chat-anatomy.png)
+
+Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the messages appear. 
+
+Creating all of these native setups is totally possible through the API - just read on.
 
 ## Installing Status
 
@@ -26,11 +41,11 @@ Our wiki guidelines should be all you need, but if you get lost come ask around 
 First, connect your phone to your development machine. If you are using an android device, you can check that is is connected and then enable port forwarding on `5561` for the debug server.
 
 ```shell
-* android only
+# android only
 adb devices
 adb forward tcp:5561 tcp:5561
 
-** more than one device connected?
+# more than one device connected?
 adb -s DEVICE_ID forward tcp:5561 tcp:5561
 ```
  
@@ -366,7 +381,7 @@ We kind of cheated a little in the previous tutorials. While it is totally possi
 
 Please take a moment to familiarise yourself with the anatomy of Status so that you can get a visual sense of what is happening where and how you can best utilise it all.
 
-![status-anantomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
+![status-anatomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
 
 
 {{% tabs diy embark truffle %}}
