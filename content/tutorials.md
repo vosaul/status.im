@@ -373,16 +373,15 @@ In particular, Status will help you allow your users to chat with your DApp! The
 
 Later we’ll have an easy mechanism to make your DApp available for others to use on Status, but for now please just submit a pull request using our [guide on adding DApps](http://wiki.status.im/contributing/development/adding-dapps/).
 
-## My First Interactive Suggestion Area
+## My First 1-1 Chatbot
 
-Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing some real commands that will begin to utilise the awesome power of the Status API. It's time to make use of the API proper in order to build a decentralized chatbot that leverages Status' awesome mobile interface, so that we can take your DApp to the next level.
+Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API. It's time to make use of the API proper in order to build a decentralized chatbot that leverages Status' awesome mobile interface, so that we can take your DApp to the next level.
 
-We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. We use [ClojureScript](http://www.braveclojure.com/introduction/) and React Native to handle all our things, but you don't have to. The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write, and then integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
+We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. There are essentailly two different ways for developers to interact with Status, best illustrated by the Status Anatomy below:
 
-Please take a moment to familiarise yourself with the anatomy of Status so that you can get a visual sense of what is happening where and how you can best utilise it all.
+![status-anatomy.png](images/status-anatomy.png)
 
-![status-anatomy.png](https://github.com/status-im/docs.status.im/blob/develop/static/images/status-anatomy.png)
-
+The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write, and then integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
 
 {{% tabs diy embark truffle %}}
 {{% tab diy %}}
@@ -438,13 +437,6 @@ status-dev-cli add-dapp '{"whisper-identity": "botler",  "name": "Botler",  "dap
 This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. You'll see that it opens a browse window by default, which is not desired behaviour and will be fixed in the next release. Just close the window and type a message to your new bot. 
 
 Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
-
-Go ahead and try and add this bot too, and see if you can figure out how it works and what you can do with it!
-
-```shell
-cd bot/ && touch demo_bot.js && cd ..
-status-dev-cli add-dapp '{"whisper-identity": "slider",  "name": "Slider",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/demo_bot.js"}' --ip <DEVICE-IP>
-```
 
 {{% /tab %}}
 
@@ -510,7 +502,89 @@ adb reverse tcp:8080 tcp:8080
 status-dev-cli add-dapp '{"whisper-identity": "truffle-botler",  "name": "Truffle Botler",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
 ```
 
-And you're away! You should be able to see you DApp, browse to the same site as before, and chat with the reptitively flattering greeter bot.
+And you're away! You should be able to see your DApp, browse to the same site as before, and chat with the repetitively flattering greeter bot.
+
+{{% /tab %}}
+
+{{% tab embark %}}
+
+### Embark
+
+First, go back to the `embark_demo/` directory we created [earlier](#my-first-dapp), where we set up the correct configuration for Embark and Status. Essentially, you just want to make sure - as with the Truffle Box example - that you put the javascript file in the right place so that you can reference it correctly.
+
+{{% /tab %}}
+
+{{% /tabs %}}
+
+
+## My First Status Command
+
+{{% tabs diy embark truffle %}}
+{{% tab diy %}}
+
+### Do It Yourself with `status-dev-cli`
+
+So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to start a conversation with a simple javascript chatbot. Now it's time to start using the API proper and start using the provided commands to interact with our users and help them out.
+
+Navigate back to your `my-dapp` directory and make a new directory for us to put all the bots we're about to learn about in. These are simple javascript files which we pass in as an additional `bot-url` parameter to `status-dev-cli` which then gets executed in the Otto VM jail.
+
+```shell
+cd ~/my-dapp/ && mkdir bot/
+cd bot/ && touch hello.js
+nano hello.js
+
+# or use 'vi hello.js' if that's your preference
+```
+
+Then, open the file in the text editor of your choice and add in the code provided. All we want to do is provide our user with a command, called `hello` that they can issue into the chat and we can respond to. In order to achieve this effect, we set up a simple `status.command()` and pass in a name, title and description so as to identify our command and display it to the user, along with some helpful information about what it does.
+
+We then set a color for the command to appear in set up our preview function. You can read about exactly what the preview function can achieve in the formal API specififcation but, in a nutshell, the preview defines what the user will see returned in the markup - i.e. where the messages appear. 
+
+Here, we are creating a simple text response by setting up a variable that we pass to `status.components.text`, which the perceptive will notice is a React Native component - a whole bunch more of which are available and detailed in the formal specification. Beneath the text, we are creating a standard response of "Hello from the other side!", all of which will be returned as json to the markup. Note again the use of another React Native component - `status.components.view`.
+
+```js
+status.command({
+     name: "hello",
+     title: "HelloBot",
+     description: "Helps you say hello",
+     color: "#CCCCCC",
+     preview: function (params) {
+             var text = status.components.text(
+                 {
+                     style: {
+                         marginTop: 5,
+                         marginHorizontal: 0,
+                         fontSize: 14,
+                         fontFamily: "font",
+                         color: "black"
+                     }
+                 }, "Hello from the other side!");
+
+             return {markup: status.components.view({}, [text])};
+         }
+ });
+```
+
+Go ahead and serve your dapp again:
+
+```shell
+cd ~/my-dapp
+http-server
+
+# In another shell if on android
+adb -s DEVICE_ID reverse tcp:8080 tcp:8080
+
+status-dev-cli add '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://localhost:8080/bot/hello.js"}' --ip <DEVICE-IP>
+```
+
+And there you go! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. Notice that we didn't `add-dapp` this time, we just `add`ed a contact so that - when users open a chat with your DApp - it doesn't automatically open a browser window.
+
+{{% /tab %}}
+
+{{% tab truffle &}}
+
+### Truffle
+
 
 {{% /tab %}}
 
@@ -519,51 +593,60 @@ And you're away! You should be able to see you DApp, browse to the same site as 
 ### Embark
 
 
-
 {{% /tab %}}
 
 {{% /tabs %}}
 
-## My First Status Command
 
-Great work! So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to issue a basic command that will greet our user when they open the app. Now it's time to start doing what chatbots are meant to do - interact with users and gather the necessary info we need from them.
+## My First Interactive Suggestions Area
 
-This first thing we must do is add a `preview` object to that neat little `hello` command we just wrote in app.js. `preview` defines what your user will see as a result of their action, before any other response. The preview parameter takes a function, which should return a `status.component`.
+OK, so we can build up a basic command, show it to the user and have it do something (like return text) when the user taps it. That's great, but what happens if we want to be a bit more dynamic and interactive and suggest to our users a range of options to choose from when issuing the command?
 
-```js
-preview: function () {
-    return status.components.text({}, "you’re saying hello");
-},
+{{% tabs diy embark truffle %}}
+{{% tab diy %}}
+
+### Do It Yourself with `status-dev-cli`
+
+Let's go ahead and make that `hello` command we just created a little bit more clever.
+
+```shell
+cd ~/my-dapp/bot/ && nano hello.js
 ```
-
-Next, we can add a `params` object to define a bunch of useful things, including the `TYPE` of response we're expecting (so that Status knows which keyboard to show the user. We are ALL about UI!)
-
-```js
- params: [{
- name: "hello",
- type: status.types.TEXT
- placeholder: "Why not say hello"
-}],
-```
-
-It's worth noting that these `params` are available in any parameter, including in `params` itself. For instance, if your users sends `/hello whatsup`, the input `whatsup` will be available in your command under `params.hello`. Also worth noting is the `placeholder` we have use in the provided example - full details can be found in the formal API spec.
-
-If you want to be more exact about what options there are for your user to respond and make this truly interactive, you can use a `suggestions` parameter instead:
+Ins addition to the preview parameter we used last time, let's add in a `params` parameter that has a `suggestions` object in it. This will create a suggestions area which - if you refer back to the [Chat Anatomy](#overview) - is what rolls up above the keyboard, such as you see when turning on the debugging server with the options `On` and `Off`.
 
 ```js
-params: [{
- name: "hello",
- type: status.types.TEXT
- suggestions: helloSuggestions
-}],
+status.command({
+     name: "greet",
+     title: "Greeter",
+     description: "Helps you say choose greetings",
+     color: "#0000ff",
+     params: [{
+              name: "greet",
+              type: status.types.TEXT
+              suggestions: helloSuggestions
+             }],
+     preview: function (params) {
+             var text = status.components.text(
+                 {
+                     style: {
+                         marginTop: 5,
+                         marginHorizontal: 0,
+                         fontSize: 14,
+                         fontFamily: "font",
+                         color: "black"
+                     }
+                 }, "Hello from the other side!");
+
+             return {markup: status.components.view({}, [text])};
+         }
+ })
 ```
 
 "But wait!" we hear you cry, "what on earth is that `helloSuggestions` thing about?!". Well, let’s make a function to explain. This will return a `scrollView` with two suggestions: "Hello", and "Goodbye". Don’t get intimidated by the length, there’s actually not much to it.
 
-```js
-// Three little helpers - don't worry about them, they're just for
-// style.
+First, we set up the helpers that will style the suggestion as it appears in the suggestions area.
 
+```js
 function suggestionsContainerStyle(suggestionsCount) {
     return {
         marginVertical: 1,
@@ -587,9 +670,11 @@ var valueStyle = {
     fontFamily: "font",
     color: "#000000de"
 };
+```
 
-// The main star of our show! It will return two touchable buttons.
+Now, we need to write the main star of our show - that mysterious `helloSuggestions` function we passed into the `params` of our `status.command()`. The objective here is to return two touchable buttons - one for `Hello` and the other for `Goodbye`. We are making quite extensive use of React native Components here, so we expect at least some level of familiarity with the framework in order to get the most out of these tutorials.
 
+```js
 function helloSuggestions() {
     var suggestions = ["Hello", "Goodbye"].map(function(entry) {
         return status.components.touchable(
@@ -619,8 +704,84 @@ function helloSuggestions() {
     return {markup: view};
 }
 ```
+
 The main point of this example is that your `suggestions` parameter should accept users’ input, and then return a component to be rendered.
+
+We have already added this contact to Status, so let's se if we can set up our environment to do some live reloading so that we don't have to revert to the cli every time we want to change something in the process of building all the new things.
+
+```shell
+status-dev-cli watch $PWD '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://localhost:8080/bot/hello.js"}' --ip <DEVICE-IP>
+```
 
 You can also work with the `suggestionsTrigger` parameter. Now that we’ve covered `params` and the possibility of `suggestions`, it’s easy to see that `suggestionsTrigger` will take a string corresponding to an event that, when triggered, will show all your `suggestions`. If you don’t include this parameter, the default is "on-change", so your suggestions will show when your users selects the command.
 
 It's also worth knowing about the `fullscreen` option. If your command has `suggestions`, this `param` controls whether that list of suggestions expands to fill the entire screen. If your command has a lot of suggestions, you might want to set `fullscreen` to `true`, so that your users don’t have to pull the list upwards. On the other hand, if your command has only a few suggestions and you set `fullscreen` to `true`, your users will have to pull the list downwards to keep it from hiding the screen. Choose whichever will be most convenient to your users, considering your command’s suggestions.
+
+{{% /tab %}}
+
+{{% tab truffle &}}
+
+### Truffle
+
+
+{{% /tab %}}
+
+{{% tab embark %}}
+
+### Embark
+
+
+{{% /tab %}}
+
+{{% /tabs %}}
+
+For another full example of an interactive suggestion area, please take a look over our [Demo Bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js), which makes prominent use of the `defineSubscription` method from the API and may be helpful for those looking to waork with things like the `status.component.slider` React Native Component.
+
+You could also build a location bot following a similar pattern. We provide the code for you, just because we can. See if you can get it all working right this time...
+
+```js
+I18n.translations = {
+    en: {
+        location_title: 'Location',
+        location_suggestions_title: 'Send location',
+        location_description: 'Share your location',
+        location_address: 'address'
+}}
+
+status.command({
+    name: "location",
+    title: I18n.t('location_title'),
+    description: I18n.t('location_description')
+    hideSendButton: true,
+    sequentialParams: true,
+    params: [{
+        name: "address",
+        type: status.types.TEXT,
+        placeholder: I18n.t('location_address')
+    }]
+ })
+ ```
+ 
+ Or, even better, can you get some location suggestions to display?
+ 
+ ```js
+ function locationsSuggestions (params) {
+    var result = {title: "Send location"};
+    var seqArg = params.seqArg ? params.seqArg : "";
+
+    if (seqArg == "Dropped pin")
+    {
+        result.markup = ["view", {}, ["text", {}, "Dropped pin" + seqArg]];
+    }
+    else if (seqArg != "")
+    {
+        result.markup = ["view", {}, ["text", {}, "Let's try to find something " + seqArg]];
+    }
+    else
+    {
+        result.markup = ['current-location', {showMap: true}];
+    }
+
+    return result;
+}
+```
