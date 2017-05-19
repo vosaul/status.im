@@ -5,6 +5,8 @@ title: API Introduction
 
 # Introduction
 
+<p style='color:red;'>DOCUMENTATION STILL WORK IN PROGRESS</p>
+
 Welcome to the Status API! Tread carefully, for you tread on the dreams of a better web.
 
 Status allows users to interact with a wide array of Decentralized Applications (DApps) using the same intuitive chat interface (it also does a bunch of other things, but we'll focus on this aspect for now). In the near future, Status users will be able to have group chats where most of the participants are DApp chatbots. All DApp developers will benefit from this synergy, because a common chat interface for multiple DApps makes using your specific DApp more convenient, and effectively makes your DApp more powerful by giving it access to potentially far wider and more powerful network effects.
