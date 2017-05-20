@@ -38,6 +38,9 @@ Our wiki guidelines should be all you need, but if you get lost come ask around 
 
 ## Networking and Debugging
 
+{{% tabs android-device genymotion %}}
+{{% tab android-device %}}
+
 First, connect your phone to your development machine. If you are using an android device, you can check that is is connected and then enable port forwarding on `5561` for the debug server.
 
 ```shell
@@ -56,6 +59,25 @@ adb -s DEVICE_ID forward tcp:5561 tcp:5561
 You then need to open Status, navigate to `Console`, hit the `debug` suggestion and turn on the debugging server. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. 
 
 The important part of the message is your `device IP` address, which we'll be using throughout.
+
+{{% /tab %}}
+
+{{% tab genymotion %}}
+
+1. Install genymotion
+2. Create a genymotion virtual device
+3. Switch to network bridge mode
+4. Start device
+5. Install status.im apk from nightly builds by dragging onto emulator window
+6. Start status.im app on device
+7. Turn on debugging in console (/debug). Record the ip address to use later as THE_DEVICE_IP. You should be able to ping this ip from your actual os
+8. Forward port 5561 (use genymotion adb!): `/opt/genymotion/tools/adb forward tcp:5561 tcp:5561`
+9. Serve your app over http
+10. `status-dev-cli add [dapp]` where dapp is your json file with `whisper-identity` etc.
+
+{{% /tab %}}
+
+{{% /tabs %}}
 
 To find out your computer's IP, use `ifconfig` from the command line and look for your internal IPv4 address:
 ```shell
@@ -116,7 +138,7 @@ http-server
 > In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You should already have enabled adb port forwarding on 5561 if you are using an Android device.
 
 ```shell
-status-dev-cli add-dapp '{"whisper-identity": "my-dapp", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "My DApp"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>
 ```
 First, install the `status-dev-cli` tools globally using NPM.
 
@@ -132,7 +154,14 @@ Open a new terminal session, navigate back to your `my-dapp` directory, and go a
 
 `<MACHINE-IP>` needs to be `localhost` or `127.0.0.1`, if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
 
-That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch-dapp . '{"whisper-identity": "my-dapp"}'`
+That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch $PWD '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>`
+
+* Known Issues
+
+1) You may need to escape the `json` information you are passing into `status-dev-cli` if you are on a windows machine, like so: `status-dev-cli add '{\"whisper-identity\": \"my-dapp5\", \"dapp-url\": \"http://<MACHINE-ip>:8
+080\",\"name\": \"My DApp\"}' --ip <DEVICE-IP>`
+
+2) If using a real device, you also need to ensure that it is set to use MTP (media transfer Protocol) in the USB-debugging settings. Open the equivalent of your settings or develop options by pulling down the top menu and clicking in the debugging options.
 
 Happy travels!
 
@@ -148,7 +177,7 @@ Happy travels!
 
 OK, so we can write a little HTML5 DApp that displays information to Status users through a simple webView component. However, we want to do so much more! We want to write smart contracts, deploy them, and interact with them through a fully mobile user interface; and we want to build decentralized chatbots that live within Status and make friends with all the humans.
 
-If you want to get straight to making chatbots, please go [here](#my-first-status-command).
+If you want to get straight to making chatbots, please go [here](#my-first-1-1-chatbot).
 
 Frameworks can lighten the load of developing considerably, and so we include here some quick examples to get you up and running with the two most popular Ethereum frameworks currently available - Truffle and Embark.
 
@@ -229,17 +258,11 @@ This should tell you that the the app is running, and that the DApp has been add
 
 Again, the DApp should appear in your chats screen, and navigating to it should automatically open a browser that reveals all the goodies hidden in this truffle box. It should also display the stored value of `5` from the SimpleStorage contract that we deployed to `testrpc` by running `truffle migrate` above.
 
+If you would like to change the name that appears for your bot when it gets added to Status, simply edit the `package.json` and update the name there.
+
 *Known problems:*
 
-1) `status-dev-cli` currently has a hard-coded value for `localhost`, rather than allowing dynamic inputs. We are working on a fix, but - depending on your setup - you may need to change this for everything to work smoothly. Do this simply by executing:
-
-```shell
-cd node_modules/status-dev-cli/ && nano index.js
-```
-
-and change lines 13 and 33 to reflect the correct IP address of your machine.
-
-2) If you are running on a real iOS device, you need to configure Truffle Box to use the network on your computer. In `truffle.js`, change `host` to the IP of your computer:
+1) If you are running on a real iOS device, you need to configure Truffle Box to use the network on your computer. In `truffle.js`, change `host` to the IP of your computer:
 
 ```js
 module.exports = {
@@ -278,7 +301,7 @@ Next we want to start the network. You can run a full Ethereum node with `embark
 ```shell
 nano config/blockchain.json
 
-# Now edit the 'Development' Network to read:
+# Now edit the 'Development' Network and change only the rpcPort field to 8546:
 
 "development": {
     "enabled": true,
@@ -325,7 +348,7 @@ Open the file `embark.json` and edit the `plugins` key to reflects your DEVICE's
 }
 ```
 
-Also, you need to tell Embark the IP of the DApp host. Navigate to and change the `config/webserver.js` file so that it reflects your development machine's IP address:
+Also, you may need to tell Embark the IP of the DApp host if you're not using `localhost` as a default. Navigate to and change the `config/webserver.js` file so that it reflects your development machine's IP address:
 
 ```js
 {
@@ -350,7 +373,7 @@ embark run
 The Embark console will appear within your shell with useful information about the SimpleStorage contract it has created, compiled, and deployed. Now just add your DApp, and have some fun!
 
 ```shell
-status-dev-cli add-dapp '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-IP>:8000/", "name": "Embark"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-IP>:8000/", "name": "Embark"}' --ip <DEVICE-IP>
 ```
 
 ![](images/starting-a-dapp-on-status-with-frameworks_04.png)
@@ -388,14 +411,14 @@ The main take away here is that the chat context itself is actually an Otto VM j
 
 ### Do It Yourself
 
-First, we're going to navigate back to our `my-dapp` directory we created for the first tutorial and make a new directory and file to keep our javascript in. 
+First, we're going to create a new `bots` directory and add file to keep our javascript in. 
 
 ```shell
-cd ~/my-dapp
-mkdir bot && cd bot/ && touch bot.js
+cd ~
+mkdir bots && cd bots && touch bot.js
 ```
 
-Instead of simply adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
+Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
 
 Add the following code snippet to the newly-created `bot.js` file.
 
@@ -417,7 +440,7 @@ status.addListener("on-message-send", function (params, context) {
 });
 ```
 
-Then, navigate back to the `my-dapp` directory, due the necessary Android steps if you are using that platform, and start the http server again. Then, open a new shell window and add your new bot.
+Then, navigate back to the `bots` directory, do the necessary Android steps if you are using that platform, and start the http server again. Then, open a new shell window and add your new bot. It's important to note a few things here. We are `add`ing a new new bot, rather than just watching the DApp we built earlier for changes. Also, we are only passing in a `bot-url`, rather than a `dapp-url` - this will ensure that, when you open your new bot contact, it won't automatically launch a browser a window.
 
 ```shell
 #make sure you're in my-dapp or the equivalent
@@ -431,7 +454,7 @@ http-server
 # android only
 adb -s DEVICE_ID reverse tcp:8080 tcp::8080
 
-status-dev-cli add-dapp '{"whisper-identity": "botler",  "name": "Botler",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bot.js"}' --ip <DEVICE-IP>
 ```
 
 This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. You'll see that it opens a browse window by default, which is not desired behaviour and will be fixed in the next release. Just close the window and type a message to your new bot. 
@@ -450,12 +473,13 @@ OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks o
 # Android only
 adb forward tcp:5561 tcp:5561
 
-test rpc -p 8546
+testrpc -p 8546
 
 # Android only
 adb reverse tcp:8546 tcp:8546
 
 status-dev-cli switch-node "http://localhost:8546"
+
 cd ~/truffle-box-status
 
 # If you want to be extra sure your contracts are there, run:
@@ -499,7 +523,7 @@ truffle serve
 # In another shell
 adb reverse tcp:8080 tcp:8080
 
-status-dev-cli add-dapp '{"whisper-identity": "truffle-botler",  "name": "Truffle Botler",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "truffle-botler",  "name": "Truffle Botler", "bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
 ```
 
 And you're away! You should be able to see your DApp, browse to the same site as before, and chat with the repetitively flattering greeter bot.
