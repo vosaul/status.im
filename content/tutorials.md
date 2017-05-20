@@ -460,6 +460,18 @@ Obviously, there's much more we can do than simply listen for messages and send 
 
 {{% /tab %}}
 
+{{% tab embark %}}
+
+### Embark
+
+OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks offer some really cool features and make development significantly easier for many projects. Let's see what it's like to add the same chatbot to Status using Embark.
+
+First, go back to the `embark_demo/` directory we created [earlier](#my-first-dapp), where we set up the correct configuration for Embark and Status. Essentially, you just want to make sure - as with the Truffle Box example - that you put the javascript file in the right place so that you can reference it correctly.
+
+TODO
+
+{{% /tab %}}
+
 {{% tab truffle %}}
 
 ### Truffle
@@ -527,18 +539,6 @@ And you're away! You should be able to see your DApp, browse to the same site as
 
 {{% /tab %}}
 
-{{% tab embark %}}
-
-### Embark
-
-OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks offer some really cool features and make development significantly easier for many projects. Let's see what it's like to add the same chatbot to Status using Embark.
-
-First, go back to the `embark_demo/` directory we created [earlier](#my-first-dapp), where we set up the correct configuration for Embark and Status. Essentially, you just want to make sure - as with the Truffle Box example - that you put the javascript file in the right place so that you can reference it correctly.
-
-TODO
-
-{{% /tab %}}
-
 {{% /tabs %}}
 
 Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API.
@@ -553,6 +553,7 @@ The main take away here is that the chat context itself is actually an Otto VM j
 ## My First Status Command
 
 {{% tabs diy embark truffle %}}
+
 {{% tab diy %}}
 
 ### Do It Yourself with `status-dev-cli`
@@ -568,10 +569,6 @@ cd ~/bots/ && nano bot.js
 ```
 
 Then, open the file in the text editor of your choice and add in the code provided. All we want to do is provide our user with a command, called `hello` that they can issue into the chat and we can respond to. In order to achieve this effect, we set up a simple `status.command()` and pass in a name, title and description so as to identify our command and display it to the user, along with some helpful information about what it does.
-
-We then set a color for the command to appear in set up our preview function. You can read about exactly what the preview function can achieve in the formal API specififcation but, in a nutshell, the preview defines what the user will see returned in the markup - i.e. where the messages appear. 
-
-Here, we are creating a simple text response by setting up a variable that we pass to `status.components.text`, which the perceptive will notice is a React Native component - a whole bunch more of which are available and detailed in the formal specification. Beneath the text, we are creating a standard response of "Hello from the other side!", all of which will be returned as json to the markup. Note again the use of another React Native component - `status.components.view`.
 
 ```js
 status.command({
@@ -596,6 +593,10 @@ status.command({
  });
 ```
 
+We then set a color for the command to appear in set up our preview function. You can read about exactly what the preview function can achieve in the formal API specififcation but, in a nutshell, the preview defines what the user will see returned in the markup - i.e. where the messages appear. 
+
+Here, we are creating a simple text response by setting up a variable that we pass to `status.components.text`, which the perceptive will notice is a React Native component - a whole bunch more of which are available and detailed in the formal specification. Beneath the text, we are creating a standard response of "Hello from the other side!", all of which will be returned as json to the markup. Note again the use of another React Native component - `status.components.view`.
+
 Go ahead and serve your dapp again:
 
 ```shell
@@ -608,6 +609,13 @@ status-dev-cli watch $PWD '{"whisper-identity": "botler",  "name": "Botler" ,"bo
 ```
 
 And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
+
+{{% /tab %}}
+
+{{% tab embark %}}
+
+### Embark
+
 
 {{% /tab %}}
 
@@ -660,13 +668,6 @@ status-dev-cli watch $PWD '{"whisper-identity": "truffle-hello",  "name": "Truff
 
 {{% /tab %}}
 
-{{% tab embark %}}
-
-### Embark
-
-
-{{% /tab %}}
-
 {{% /tabs %}}
 
 We can now write a 1-1 chatbot that responds when users send messages to it using the `status.addListener` method provided by the API, but what if we want to provide our users with a command they can interact with, rather than just waiting for them to send us some kind of message, or take some other action?
@@ -687,7 +688,7 @@ Instead of the preview parameter we used last time, let's build another `status.
 status.command({
      name: "greet",
      title: "Greeter",
-     description: "Helps you say choose greetings",
+     description: "Helps you choose greetings",
      color: "#0000ff",
      params: [{
               name: "greet",
