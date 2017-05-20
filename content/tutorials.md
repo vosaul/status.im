@@ -550,14 +550,12 @@ First, go back to the `embark_demo/` directory we created [earlier](#my-first-da
 
 So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to start a conversation with a simple javascript chatbot. Now it's time to start using the API proper and start using the provided commands to interact with our users and help them out.
 
-Navigate back to your `my-dapp` directory and make a new directory for us to put all the bots we're about to learn about in. These are simple javascript files which we pass in as an additional `bot-url` parameter to `status-dev-cli` which then gets executed in the Otto VM jail.
+Navigate back to your `bots` directory and open the `bot.js` file where we put the `status.addListener` function in the previous tutorials. We will again pass this fils in as a `bot-url` parameter to `status-dev-cli`, which will then execute the code in an Otto VM jail.
 
 ```shell
-cd ~/my-dapp/ && mkdir bot/
-cd bot/ && touch hello.js
-nano hello.js
+cd ~/bots/ && nano bot.js
 
-# or use 'vi hello.js' if that's your preference
+# or use 'vi bot.js' if that's your preference
 ```
 
 Then, open the file in the text editor of your choice and add in the code provided. All we want to do is provide our user with a command, called `hello` that they can issue into the chat and we can respond to. In order to achieve this effect, we set up a simple `status.command()` and pass in a name, title and description so as to identify our command and display it to the user, along with some helpful information about what it does.
@@ -592,16 +590,15 @@ status.command({
 Go ahead and serve your dapp again:
 
 ```shell
-cd ~/my-dapp
 http-server
 
 # In another shell if on android
 adb -s DEVICE_ID reverse tcp:8080 tcp:8080
 
-status-dev-cli add '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://localhost:8080/bot/hello.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bot.js"}' --ip <DEVICE-IP>
 ```
 
-And there you go! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. Notice that we didn't `add-dapp` this time, we just `add`ed a contact so that - when users open a chat with your DApp - it doesn't automatically open a browser window.
+And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
 
 {{% /tab %}}
 
@@ -650,7 +647,7 @@ truffle serve
 # In another shell
 adb reverse tcp:8080 tcp:8080
 
-status-dev-cli add-dapp '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter",  "dapp-url" : "http://<MACHINE-IP>:8080/" ,"bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter", "bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
 ```
 
 
