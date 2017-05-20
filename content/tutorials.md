@@ -74,7 +74,7 @@ The important part of the message is your `device IP` address, which we'll be us
 4. Start device
 5. Install status.im apk from nightly builds by dragging onto emulator window
 6. Start status.im app on device
-7. Turn on debugging in console (/debug). Record the ip address to use later as <DEVICE-IP>. You should be able to ping this ip from your actual os
+7. Turn on debugging in console (/debug). Record the ip address to use later as THE_DEVICE_IP. You should be able to ping this ip from your actual os
 8. Forward port 5561 (use genymotion adb!): `/opt/genymotion/tools/adb forward tcp:5561 tcp:5561`
 9. Serve your app over http
 10. `status-dev-cli add [dapp]` where dapp is your json file with `whisper-identity` etc.
@@ -403,14 +403,6 @@ Later we’ll have an easy mechanism to make your DApp available for others to u
 
 ## My First 1-1 Chatbot
 
-Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API.
-
-We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. There are essentailly two different ways for developers to interact with Status, best illustrated by the Status Anatomy below:
-
-![status-anatomy.png](images/status-anatomy.png)
-
-The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write, and then integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
-
 {{% tabs diy embark truffle %}}
 {{% tab diy %}}
 
@@ -462,7 +454,7 @@ adb -s DEVICE_ID reverse tcp:8080 tcp::8080
 status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bot.js"}' --ip <DEVICE-IP>
 ```
 
-This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. You'll see that it opens a browse window by default, which is not desired behaviour and will be fixed in the next release. Just close the window and type a message to your new bot. 
+This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
 
 Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
 
@@ -472,7 +464,7 @@ Obviously, there's much more we can do than simply listen for messages and send 
 
 ### Truffle
 
-OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks offer some really cool features and make development significantly easier for many projects. So, let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. Navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
+ Let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. Navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
 
 ```shell
 # Android only
@@ -539,11 +531,23 @@ And you're away! You should be able to see your DApp, browse to the same site as
 
 ### Embark
 
+OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks offer some really cool features and make development significantly easier for many projects. Let's see what it's like to add the same chatbot to Status using Embark.
+
 First, go back to the `embark_demo/` directory we created [earlier](#my-first-dapp), where we set up the correct configuration for Embark and Status. Essentially, you just want to make sure - as with the Truffle Box example - that you put the javascript file in the right place so that you can reference it correctly.
+
+TODO
 
 {{% /tab %}}
 
 {{% /tabs %}}
+
+Once you have worked through the first tutorials and understood the basic steps to building a DApp and adding it into Status, it's time to get our hands a little more dirty by actually writing a simple, one-response chatbot that will begin to utilise the awesome power of the Status API.
+
+We kind of cheated a little in the previous tutorials. While it is totally possible to have your html5 DApp work perfectly in Status via `webView`, it's obviously not the most optimal way to do things. There are essentailly two different ways for developers to interact with Status, best illustrated by the Status Anatomy below:
+
+![status-anatomy.png](images/status-anatomy.png)
+
+The main take away here is that the chat context itself is actually an Otto VM jail that executes the javascript you write, and then integrates that directly with Status. So, we can actually write bots that are purely javascript-based. Please see [here](https://github.com/status-im/status-react/tree/develop/bots) for a full list of all our current bots and their source code.
 
 
 ## My First Status Command
@@ -612,11 +616,10 @@ And there you go - we are now capable of greeting and interacting with our bot i
 ### Truffle
 
 ```shell
-cd ~/truffle-box-status/build/bot/ && touch hello.js
-nano hello.js
+cd ~/truffle-box-status/build/bot/ && nano bot.js
 ```
 
-Navigate back to the truffle box  `build` directory and make a new file for us to write a command in that we can display through truffle. Place the same command provided above in that file.
+Navigate back to the truffle box  `build` directory and open the `bot.js` file we previously created so as to add the code provided and display it through truffle.
 
 ```js
 status.command({
@@ -635,13 +638,12 @@ status.command({
                          color: "black"
                      }
                  }, "Hello from the other side!");
-
              return {markup: status.components.view({}, [text])};
          }
  });
 ```
 
-This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
+we'll do the same as last time and, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
 
 ```shell
 # Make sure you're in the truflle-box-status/ directory
@@ -652,7 +654,7 @@ truffle serve
 # In another shell
 adb reverse tcp:8080 tcp:8080
 
-status-dev-cli add '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter", "bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter", "bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
 ```
 
 
@@ -667,15 +669,12 @@ status-dev-cli add '{"whisper-identity": "truffle-hello",  "name": "Truffle Gree
 
 {{% /tabs %}}
 
+We can now write a 1-1 chatbot that responds when users send messages to it using the `status.addListener` method provided by the API, but what if we want to provide our users with a command they can interact with, rather than just waiting for them to send us some kind of message, or take some other action?
+
+We need to use the `status.command()` method. As usual, we can do this ourselves through the barebones `status-dev-cli`, or through the popular frameworks currently available on Ethereum.
+
 
 ## My First Interactive Suggestions Area
-
-OK, so we can build up a basic command, show it to the user and have it do something (like return text) when the user taps it. That's great, but what happens if we want to be a bit more dynamic and interactive and suggest to our users a range of options to choose from when issuing the command?
-
-{{% tabs diy embark truffle %}}
-{{% tab diy %}}
-
-### Do It Yourself with `status-dev-cli`
 
 Let's go ahead and make that `hello` command we just created a little bit more clever.
 
@@ -773,23 +772,9 @@ You can also work with the `suggestionsTrigger` parameter. Now that we’ve cove
 
 It's also worth knowing about the `fullscreen` option. If your command has `suggestions`, this `param` controls whether that list of suggestions expands to fill the entire screen. If your command has a lot of suggestions, you might want to set `fullscreen` to `true`, so that your users don’t have to pull the list upwards. On the other hand, if your command has only a few suggestions and you set `fullscreen` to `true`, your users will have to pull the list downwards to keep it from hiding the screen. Choose whichever will be most convenient to your users, considering your command’s suggestions.
 
-{{% /tab %}}
-
-{{% tab truffle %}}
-
-### Truffle
+OK, so we can build up a basic command, show it to the user and have it do something (like return text) when the user taps it. That's great, but what happens if we want to be a bit more dynamic and interactive and suggest to our users a range of options to choose from when issuing the command? Let's take a look...
 
 
-{{% /tab %}}
-
-{{% tab embark %}}
-
-### Embark
-
-
-{{% /tab %}}
-
-{{% /tabs %}}
 
 For another full example of an interactive suggestion area, please take a look over our [Demo Bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js), which makes prominent use of the `defineSubscription` method from the API and may be helpful for those looking to waork with things like the `status.component.slider` React Native Component.
 
