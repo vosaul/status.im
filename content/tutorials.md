@@ -42,8 +42,9 @@ Our wiki guidelines should be all you need, but if you get lost come ask around 
 
 ## Networking and Debugging
 
-{{% tabs android-device genymotion %}}
-{{% tab android-device %}}
+{{% tabs Android-Device Genymotion %}}
+
+{{% tab Android-Device %}}
 
 First, connect your phone to your development machine. If you are using an android device, you can check that is is connected and then enable port forwarding on `5561` for the debug server.
 
@@ -66,7 +67,7 @@ The important part of the message is your `device IP` address, which we'll be us
 
 {{% /tab %}}
 
-{{% tab genymotion %}}
+{{% tab Genymotion %}}
 
 1. Install genymotion
 2. Create a genymotion virtual device
@@ -95,8 +96,8 @@ inet 10.10.0.216 netmask 0xfffffe00 broadcast 10.10.1.255
 
 ## My First DApp
 
-{{% tabs diy embark truffle %}}
-{{% tab diy %}}
+{{% tabs DIY Embark Truffle %}}
+{{% tab DIY %}}
 ### Do It Yourself with `status-dev-cli`
 
 ```shell
@@ -176,7 +177,7 @@ Happy travels!
 
 {{% /tab %}}
 
-{{% tab truffle %}}
+{{% tab Truffle %}}
 
 ### Truffle
 
@@ -284,7 +285,7 @@ module.exports = {
 
 {{% /tab %}}
 
-{{% tab embark %}}
+{{% tab Embark %}}
 
 ### Embark
 
@@ -403,8 +404,8 @@ Later we’ll have an easy mechanism to make your DApp available for others to u
 
 ## My First 1-1 Chatbot
 
-{{% tabs diy embark truffle %}}
-{{% tab diy %}}
+{{% tabs DIY Embark Truffle %}}
+{{% tab DIY %}}
 
 ### Do It Yourself
 
@@ -460,7 +461,7 @@ Obviously, there's much more we can do than simply listen for messages and send 
 
 {{% /tab %}}
 
-{{% tab embark %}}
+{{% tab Embark %}}
 
 ### Embark
 
@@ -472,7 +473,7 @@ TODO
 
 {{% /tab %}}
 
-{{% tab truffle %}}
+{{% tab Truffle %}}
 
 ### Truffle
 
@@ -552,9 +553,9 @@ The main take away here is that the chat context itself is actually an Otto VM j
 
 ## My First Status Command
 
-{{% tabs diy embark truffle %}}
+{{% tabs DIY Embark Truffle %}}
 
-{{% tab diy %}}
+{{% tab DIY %}}
 
 ### Do It Yourself with `status-dev-cli`
 
@@ -612,14 +613,14 @@ And there you go - we are now capable of greeting and interacting with our bot i
 
 {{% /tab %}}
 
-{{% tab embark %}}
+{{% tab Embark %}}
 
 ### Embark
 
 
 {{% /tab %}}
 
-{{% tab truffle %}}
+{{% tab Truffle %}}
 
 ### Truffle
 

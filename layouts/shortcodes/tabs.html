@@ -1,6 +1,4 @@
 <style>
-.tab-content { display: none; }
-
 {{ range $i, $e := .Params }}
 .tab-{{ $e }}:checked ~ .content-{{ $e }} {{ if ne $i (sub (len $.Params) 1) }}, {{end}}
 {{ end }} {
@@ -8,9 +6,10 @@
 }
 </style>
 <div class="content tabs">
+   {{ $group := (delimit (shuffle (split "abcdefghijklmnozqrstuvwxyz" "")) "") }}
     {{ range .Params }}
-        <input class="tab-{{ . }}" type="radio" name="tabs" checked>
-        <label>{{ . }}</label>
+        <input id="tab-{{ . }}-{{ $group }}" class="tab tab-{{ . }}" type="radio" name="tabs-{{ $group }}" checked>
+        <label for="tab-{{ . }}-{{ $group }}" class="tab">{{ . }}</label>
     {{ end }}
 {{ .Inner }}
 </div>
