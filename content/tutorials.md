@@ -32,6 +32,10 @@ OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To pr
 
 You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight, but you can sign up for early iOS access [on our website](http://status.im).
 
+<aside class="success">
+ Please note that these documents are intended for the latest version of `status-dev-cli` and the nightly developer builds of Status itself. To update `status-dev-cli` please run `npm uninstall -g status-dev-cli` and then `npm i -g status-dev-cli`. Our nightly builds can be found [here](http://artifacts.status.im:8081/artifactory/nightlies-local/).
+</aside>
+
 If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator. 
 
 Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
