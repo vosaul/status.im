@@ -33,7 +33,7 @@ OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To pr
 You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight, but you can sign up for early iOS access [on our website](http://status.im).
 
 <aside class="success">
- Please note that these documents are intended for the latest version of `status-dev-cli` and the nightly developer builds of Status itself. To update `status-dev-cli` please run `npm uninstall -g status-dev-cli` and then `npm i -g status-dev-cli`. Our nightly builds can be found [here](http://artifacts.status.im:8081/artifactory/nightlies-local/).
+ Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself. To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
 </aside>
 
 If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator. 
@@ -74,7 +74,7 @@ The important part of the message is your `device IP` address, which we'll be us
 4. Start device
 5. Install status.im apk from nightly builds by dragging onto emulator window
 6. Start status.im app on device
-7. Turn on debugging in console (/debug). Record the ip address to use later as THE_DEVICE_IP. You should be able to ping this ip from your actual os
+7. Turn on debugging in console (/debug). Record the ip address to use later as <DEVICE-IP>. You should be able to ping this ip from your actual os
 8. Forward port 5561 (use genymotion adb!): `/opt/genymotion/tools/adb forward tcp:5561 tcp:5561`
 9. Serve your app over http
 10. `status-dev-cli add [dapp]` where dapp is your json file with `whisper-identity` etc.
@@ -83,11 +83,12 @@ The important part of the message is your `device IP` address, which we'll be us
 
 {{% /tabs %}}
 
-To find out your computer's IP, use `ifconfig` from the command line and look for your internal IPv4 address:
-```shell
-ifconfig | grep inet
+To find out your computer's IP, use `ifconfig` from the command line and look for your internal IPv4 address:  
 
-# Find the line beginning with just inet - this is your IPv4 address
+```shell  
+ifconfig | grep inet  
+
+# Find the line beginning with just inet - this is your IPv4 address  
 inet 10.10.0.216 netmask 0xfffffe00 broadcast 10.10.1.255
 ```
 
@@ -606,7 +607,7 @@ And there you go - we are now capable of greeting and interacting with our bot i
 
 {{% /tab %}}
 
-{{% tab truffle &}}
+{{% tab truffle %}}
 
 ### Truffle
 
@@ -774,7 +775,7 @@ It's also worth knowing about the `fullscreen` option. If your command has `sugg
 
 {{% /tab %}}
 
-{{% tab truffle &}}
+{{% tab truffle %}}
 
 ### Truffle
 
