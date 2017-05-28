@@ -68,7 +68,7 @@ status-dev-cli scan
 
 {{% tab Emulator %}}
 
-We give instructions here for Genymotion (a popular Android emulator). If you want to build Status and run it in XCode and use an iOS simulator, I offer you this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348) though you'll have to either convert to iTerm2 or edit it somewhat. You will also need to run `insturments -s devices` and change the `uuid` in the script to the one that matches the emulator you want to run Status in from XCode.
+We give instructions here for Genymotion (a popular Android emulator). If you want to build Status and run it in XCode and use an iOS simulator, I offer you this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348) though you'll have to either convert to iTerm2 or edit it somewhat. You will also need to run `instruments -s devices` and change the `uuid` in the script to the one that matches the emulator you want to run Status in from XCode.
 
 1. Install genymotion
 2. Create a genymotion virtual device
