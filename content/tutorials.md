@@ -42,32 +42,33 @@ Our wiki guidelines should be all you need, but if you get lost come ask around 
 
 ## Networking and Debugging
 
-{{% tabs Android-Device Genymotion %}}
+{{% tabs Device Emulator %}}
 
-{{% tab Android-Device %}}
+{{% tab Device %}}
 
-First, connect your phone to your development machine. If you are using an android device, you can check that is is connected and then enable port forwarding on `5561` for the debug server.
+First, connect your phone to your development machine and ensure that you are using MTP (Media Transfer Protocol) by tapping on the USB settings option that pops up. Navigate to the Console Bot, select the `/debug` command and choose the `On` suggestion. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want.
+
+You also need to install `status-dev-cli` to make talking between Status and your machine a breeze.
 
 ```shell
-# android only
-adb devices
-adb forward tcp:5561 tcp:5561
-
-# more than one device connected?
-adb -s DEVICE_ID forward tcp:5561 tcp:5561
+npm i -g status-dev-cli
 ```
  
 ![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
 
-*With your phone connected, /debug "On"*
+*With your phone connected, /debug "On"*  
 
-You then need to open Status, navigate to `Console`, hit the `debug` suggestion and turn on the debugging server. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want. 
+The important part of the message is your `device IP` address, which we'll be using throughout. You can check that this is the right address by running the `scan` command in ther terminal.
 
-The important part of the message is your `device IP` address, which we'll be using throughout.
+```shell
+status-dev-cli scan
+```
 
 {{% /tab %}}
 
-{{% tab Genymotion %}}
+{{% tab Emulator %}}
+
+We give instructions here for Genymotion (a popular Android emulator). If you want to build Status and run it in XCode and use an iOS simulator, I offer you this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348) though you'll have to either convert to iTerm2 or edit it somewhat. You will also need to run `insturments -s devices` and change the `uuid` in the script to the one that matches the emulator you want to run Status in from XCode.
 
 1. Install genymotion
 2. Create a genymotion virtual device
@@ -75,10 +76,9 @@ The important part of the message is your `device IP` address, which we'll be us
 4. Start device
 5. Install status.im apk from nightly builds by dragging onto emulator window
 6. Start status.im app on device
-7. Turn on debugging in console (/debug). Record the ip address to use later as THE_DEVICE_IP. You should be able to ping this ip from your actual os
-8. Forward port 5561 (use genymotion adb!): `/opt/genymotion/tools/adb forward tcp:5561 tcp:5561`
-9. Serve your app over http
-10. `status-dev-cli add [dapp]` where dapp is your json file with `whisper-identity` etc.
+7. Turn on debugging in console (/debug). Record the ip address to use later as DEVICE-IP. You should be able to ping this ip from your actual os
+8. Serve your app over http
+9. `status-dev-cli add [dapp] --ip <DEVICE-iP>` where dapp is your json file with `whisper-identity` etc.
 
 {{% /tab %}}
 
@@ -141,7 +141,7 @@ npm install http-server -g
 http-server
 ```
 
-> In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. You should already have enabled adb port forwarding on 5561 if you are using an Android device.
+> In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. 
 
 ```shell
 status-dev-cli add '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>
@@ -169,6 +169,8 @@ That's it! You should be able to see your DApp in the chats, and opening it shou
 
 2) If using a real device, you also need to ensure that it is set to use MTP (media transfer Protocol) in the USB-debugging settings. Open the equivalent of your settings or develop options by pulling down the top menu and clicking in the debugging options.
 
+3) The new version of `status-dev-cli` does not require you to do any `adb` port forwarding any more and will, in fact, fail if you do. Just use the `scan` and `list` commands as and when you need them.
+
 Happy travels!
 
 <aside class="success">
@@ -193,7 +195,7 @@ Firstly, we'll need a network to develop against, so let's go get `testrpc` - a 
 npm install -g ethereumjs-testrpc
 testrpc -p 8546
 
-# If you use android
+# If you're using Android (device only)
 adb reverse tcp:8546 tcp:8546
 ```
 
@@ -202,7 +204,7 @@ That’s it! It will show you a list of available accounts, private keys, your H
 We also need to make sure that our Status client is listening to our new `testrpc` network, rather than Ropsten, so that we can get the information we need about our contracts etc. Luckily, this is as easy as running:
 
 ```shell
-status-dev-cli switch-node http://localhost:8546
+status-dev-cli switch-node "http://localhost:8546" --ip <DEVICE-IP>
 
 # Of course, there are options. You can use go-ethereum instead of TestRPC, and instead of port forwarding you can switch to any other accessible node using its IP address.
 ```
@@ -243,6 +245,7 @@ As you run the `migrate` command - which is what deploys your contracts to the n
 If you're using an Android device, the application won't be accessible automatically, since it runs on port 3000 and your device/emulator knows nothing about it. Execute the following to make web application accessible:
 
 ```shell
+# If you're using Android (device only)
 adb reverse tcp:3000 tcp:3000
 ```
 
@@ -253,7 +256,7 @@ Now we are ready to see our DApp running on Status. From within your DApp direct
 npm run start
 
 #(Remember to set ENV variable if working with real device)
- IP=<IP_of_your_phone> npm run start
+ IP=<DEVICE-IP> npm run start
 ```
 
 This should tell you that the the app is running, and that the DApp has been added to the Status Contacts.
@@ -275,7 +278,7 @@ module.exports = {
   migrations_directory: "./migrations",
   networks: {
     development: {
-      host: "<IP_of_your_computer>",
+      host: "<MACHINE-IP>",
       port: 8546,
       network_id: "*" // Match any network id
     }
