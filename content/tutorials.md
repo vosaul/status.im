@@ -58,10 +58,11 @@ npm i -g status-dev-cli
 
 *With your phone connected, /debug "On"*  
 
-The important part of the message is your `device IP` address, which we'll be using throughout. You can check that this is the right address by running the `scan` command in ther terminal.
+The important part of the message is your `device IP` address, which we'll be using throughout. You can check that this is the right address by running the `scan` command in ther terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
 
 ```shell
 status-dev-cli scan
+status-dev-cli list --ip <DEVICE-IP>       #be sure to use the IPv4 address
 ```
 
 {{% /tab %}}
