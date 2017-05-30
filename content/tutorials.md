@@ -71,8 +71,8 @@ We give instructions here for Genymotion (a popular Android emulator).
 5. Install status.im apk from nightly builds by dragging onto emulator window
 6. Start status.im app on virtual device
 7. Turn on debugging in console (/debug On). 
-8. Open terminal and run `status-dev-cli scan` it returns two <DEVICE-iP> addresses, use 192.168.1.*, and ignore 192.168.56.*
-9. `status-dev-cli add [dapp] --ip <DEVICE-iP>` where dapp is your json file with `whisper-identity` etc.
+8. Open terminal and run `status-dev-cli scan` it returns two <DEVICE-IP> addresses, use 192.168.1.*, and ignore 192.168.56.*
+9. `status-dev-cli add [dapp] --ip <DEVICE-IP>` where dapp is your json file with `whisper-identity` etc.
 
 {{% /tab %}}
 
@@ -87,7 +87,7 @@ We give instructions here for Genymotion (a popular Android emulator).
 
 ```shell
 npm install -g status-dev-cli
-mkdir my-dapp && cd my-dapp
+mkdir ~/my-dapp && cd my-dapp
 touch index.html app.js
 ```
 > In index.html, add:   
@@ -149,7 +149,7 @@ That's it! You should be able to see your DApp in the chats, and opening it shou
 
 * Known Issues
 
-1) You may need to escape the `json` information you are passing into `status-dev-cli` if you are on a windows machine, like so: `status-dev-cli add '{\"whisper-identity\": \"my-dapp5\", \"dapp-url\": \"http://<MACHINE-ip>:8
+1) You may need to escape the `json` information you are passing into `status-dev-cli` if you are on a windows machine, like so: `status-dev-cli add '{\"whisper-identity\": \"my-dapp5\", \"dapp-url\": \"http://<MACHINE-IP>:8
 080\",\"name\": \"My DApp\"}' --ip <DEVICE-IP>`
 
 2) If using a real device, you also need to ensure that it is set to use MTP (media transfer Protocol) in the USB-debugging settings. Open the equivalent of your settings or develop options by pulling down the top menu and clicking in the debugging options.
@@ -199,7 +199,7 @@ Open a new shell (i.e. a new Terminal window or tab) for the next part. You’ll
 Now that you have `testrpc` is going, and a new shell is open, run:
 
 ```shell 
-npm install -g truffle // Version 3.0.5+ required.
+npm install -g truffle # Version 3.0.5+ required.
 ```
 
 This installs the Truffle framework, and you can find its GitHub [page here](https://github.com/trufflesuite/truffle).
@@ -400,7 +400,7 @@ Later we’ll have an easy mechanism to make your DApp available for others to u
 First, we're going to create a new `bots` directory and add file to keep our javascript in. 
 
 ```shell
-cd ~
+cd ~/my-dapp
 mkdir bots && cd bots && touch bot.js
 ```
 
@@ -430,7 +430,7 @@ Then, navigate back to the `bots` directory, do the necessary Android steps if y
 
 ```shell
 #make sure you're in my-dapp or the equivalent
-cd ..
+cd ~/my-dapp
 
 #start the server and then open a new shell window
 http-server
@@ -440,7 +440,7 @@ http-server
 # android only
 adb -s DEVICE_ID reverse tcp:8080 tcp::8080
 
-status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bot.js"}' --ip <DEVICE-IP>
+status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
 
 This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
@@ -547,12 +547,12 @@ The main take away here is that the chat context itself is actually an Otto VM j
 
 ### Do It Yourself with `status-dev-cli`
 
-So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `dapp watch` command to get some live-reloading going) and learned how to start a conversation with a simple javascript chatbot. Now it's time to start using the API proper and start using the provided commands to interact with our users and help them out.
+So, we have set up Status in `debug` mode, added our DApp to it (hopefully run the `status-dev-cli watch` command to get some live-reloading going) and learned how to start a conversation with a simple javascript chatbot. Now it's time to start using the API proper and start using the provided commands to interact with our users and help them out.
 
 Navigate back to your `bots` directory and open the `bot.js` file where we put the `status.addListener` function in the previous tutorials. We will again pass this fils in as a `bot-url` parameter to `status-dev-cli`, which will then execute the code in an Otto VM jail.
 
 ```shell
-cd ~/bots/ && nano bot.js
+cd ~/my-dapp/bots/ && nano bot.js
 
 # or use 'vi bot.js' if that's your preference
 ```
@@ -594,7 +594,7 @@ http-server
 # In another shell if on android
 adb -s DEVICE_ID reverse tcp:8080 tcp:8080
 
-status-dev-cli watch $PWD '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bot.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
 
 And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
@@ -669,7 +669,7 @@ We need to use the `status.command()` method. As usual, we can do this ourselves
 Let's go ahead and make that `hello` command we just created a little bit more clever.
 
 ```shell
-cd ~/my-dapp/bot/ && nano hello.js
+cd ~/my-dapp/bots/ && nano hello.js
 ```
 Instead of the preview parameter we used last time, let's build another `status.command()` and add in a `params` option with a `suggestions` object in it. This will create a suggestions area which - if you refer back to the [Chat Anatomy](#overview) - is what rolls up above the keyboard, such as you see when turning on the debugging server with the options `On` and `Off`.
 
@@ -681,7 +681,7 @@ status.command({
      color: "#0000ff",
      params: [{
               name: "greet",
-              type: status.types.TEXT
+              type: status.types.TEXT,
               suggestions: helloSuggestions
              }]
  })
@@ -725,7 +725,7 @@ function helloSuggestions() {
         return status.components.touchable(
             {onPress: [status.events.SET_VALUE, entry]},
             status.components.view(
-                suggestionContainerStyle,
+                suggestionsContainerStyle,
                 [status.components.view(
                     suggestionSubContainerStyle,
                     [
@@ -755,7 +755,9 @@ The main point of this example is that your `suggestions` parameter should accep
 We have already added this contact to Status, so let's se if we can set up our environment to do some live reloading so that we don't have to revert to the cli every time we want to change something in the process of building all the new things.
 
 ```shell
-status-dev-cli watch $PWD '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://localhost:8080/bot/hello.js"}' --ip <DEVICE-IP>
+http-server
+
+status-dev-cli watch $PWD '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://<MACHINE-IP>:8080/bots/hello.js"}' --ip <DEVICE-IP>
 ```
 
 You can also work with the `suggestionsTrigger` parameter. Now that we’ve covered `params` and the possibility of `suggestions`, it’s easy to see that `suggestionsTrigger` will take a string corresponding to an event that, when triggered, will show all your `suggestions`. If you don’t include this parameter, the default is "on-change", so your suggestions will show when your users selects the command.
