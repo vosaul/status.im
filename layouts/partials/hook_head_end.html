@@ -7,3 +7,40 @@
   ga('create', 'UA-79146816-3', 'auto');
   ga('send', 'pageview');
 </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/e0160a4032.css"><style>
+.tab-content { display: none; }
+
+.tabgroup {
+    padding: 0 28px;
+}
+input.tab {
+    display:none;
+}
+
+label.tab {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+div.tabs > label:first-of-type {
+    margin-left: 28px;
+}
+
+label:before {
+    margin-right: 10px;
+    font-family: FontAwesome;
+}
+label.tab:before { content: '\f19d'; }
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid #2467af;
+}
+</style>

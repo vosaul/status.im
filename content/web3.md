@@ -1,5 +1,5 @@
 ---
-weight: 30
+weight: 40
 title: Web3 API Reference
 ---
 

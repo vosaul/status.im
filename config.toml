@@ -21,9 +21,9 @@ search = true
 [[params.language_tabs]]
 key = "js"
 name = "Javascript"
-[[params.language_tabs]]
-key = "cljs"
-name = "Clojurescript"
+# [[params.language_tabs]]
+# key = "cljs"
+# name = "Clojurescript"
 # [[params.language_tabs]]
 # key = "go"
 # name = "Go" 
@@ -48,9 +48,13 @@ title = "Status Developer Documentation"
 
 # Left sidebar footer items. Use HTMl or Markdown.
 toc_footers = [ 
-"<a href='#'>Sign Up for a Developer Key</a>",
-"Documentation Powered by [DocuAPI](https://github.com/bep/docuapi)",
-"Hugo Theme by [bep](https://github.com/bep)"
+"Android: <a href='http://test.status.im'>Download</a>, <a href='http://artifacts.status.im:8081/artifactory/nightlies-local/'>Nightlies</a>",
+"iOS: Testflight invite required",
+"-------",
+"<a href='https://hackathon.status.im'>Enter our Hackathon</a>",
+"<a href='https://wiki.status.im'>Read the Wiki</a>",
+"<a href='http://slack.status.im'>Join our Slack</a>",
+"<a href='https://github.com/status-im/docs.status.im'>Edit this Documentation</a>",
 ]
 [languages.en.blackfriday]
 angledQuotes = false
