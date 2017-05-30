@@ -22,21 +22,14 @@ Creating all of these native setups is totally possible through the API - just r
 
 ## Installing Status
 
-OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running either:
+OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running.
 
-* on a real phone,
 
-* in an Android simulator, or
-
-* in an iOS simulator.
-
-You can go to [https://test.status.im](https://test.status.im) to download for Android. At the time of writing, we’re out of invitations for Testflight, but you can sign up for early iOS access [on our website](http://status.im).
 
 <aside class="success">
- Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself. To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
+ Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself (available only on Android). To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
 </aside>
 
-If you don’t have a smartphone, or you only have an iPhone but want to get started right away, you can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator. 
 
 Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
 
@@ -58,7 +51,7 @@ npm i -g status-dev-cli
 
 *With your phone connected, /debug "On"*  
 
-The important part of the message is your `device IP` address, which we'll be using throughout. You can check that this is the right address by running the `scan` command in ther terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
+You can check DEVICE-IP by running the `scan` command in the terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
 
 ```shell
 status-dev-cli scan
@@ -69,30 +62,21 @@ status-dev-cli list --ip <DEVICE-IP>       #be sure to use the IPv4 address
 
 {{% tab Emulator %}}
 
-We give instructions here for Genymotion (a popular Android emulator). If you want to build Status and run it in XCode and use an iOS simulator, I offer you this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348) though you'll have to either convert to iTerm2 or edit it somewhat. You will also need to run `instruments -s devices` and change the `uuid` in the script to the one that matches the emulator you want to run Status in from XCode.
+We give instructions here for Genymotion (a popular Android emulator). 
 
 1. Install genymotion
 2. Create a genymotion virtual device
-3. Switch to network bridge mode
-4. Start device
+3. Switch to network bridge mode (in settings of virtual device)
+4. Start virtual device
 5. Install status.im apk from nightly builds by dragging onto emulator window
-6. Start status.im app on device
-7. Turn on debugging in console (/debug). Record the ip address to use later as DEVICE-IP. You should be able to ping this ip from your actual os
-8. Serve your app over http
+6. Start status.im app on virtual device
+7. Turn on debugging in console (/debug On). 
+8. Open terminal and run `status-dev-cli scan` it returns two <DEVICE-iP> addresses, use 192.168.1.*, and ignore 192.168.56.*
 9. `status-dev-cli add [dapp] --ip <DEVICE-iP>` where dapp is your json file with `whisper-identity` etc.
 
 {{% /tab %}}
 
 {{% /tabs %}}
-
-To find out your computer's IP, use `ifconfig` from the command line and look for your internal IPv4 address:  
-
-```shell  
-ifconfig | grep inet  
-
-# Find the line beginning with just inet - this is your IPv4 address  
-inet 10.10.0.216 netmask 0xfffffe00 broadcast 10.10.1.255
-```
 
 
 ## My First DApp
