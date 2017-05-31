@@ -142,7 +142,7 @@ http-server
 status-dev-cli add '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>
 ```
 
-That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch $PWD '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>`
+That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch $PWD hello-bot --ip <DEVICE-IP>`
 
 * Known Issues
 
@@ -593,7 +593,7 @@ http-server
 # In another shell if on android
 adb -s DEVICE_ID reverse tcp:8080 tcp:8080
 
-status-dev-cli watch $PWD '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD botler --ip <DEVICE-IP>
 ```
 
 And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
@@ -650,7 +650,7 @@ truffle serve
 # In another shell
 adb reverse tcp:8080 tcp:8080
 
-status-dev-cli watch $PWD '{"whisper-identity": "truffle-hello",  "name": "Truffle Greeter", "bot-url": "http://<MACHINE-IP>:8080/bot/truffle-hello.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD truffle-hello --ip <DEVICE-IP>
 ```
 
 
@@ -695,7 +695,7 @@ function suggestionsContainerStyle(suggestionsCount) {
     return {
         marginVertical: 1,
         marginHorizontal: 0,
-        keyboardShouldPersistTaps: true,
+        keyboardShouldPersistTaps: "always",
         height: Math.min(150, (56 * suggestionsCount)),
         backgroundColor: "white",
         borderRadius: 5,
@@ -756,7 +756,7 @@ We have already added this contact to Status, so let's se if we can set up our e
 ```shell
 http-server
 
-status-dev-cli watch $PWD '{"whisper-identity":"hello-bot", "dapp-name":"Hello", "bot-url":"http://<MACHINE-IP>:8080/bots/hello.js"}' --ip <DEVICE-IP>
+status-dev-cli watch $PWD hello-bot --ip <DEVICE-IP>
 ```
 
 You can also work with the `suggestionsTrigger` parameter. Now that we’ve covered `params` and the possibility of `suggestions`, it’s easy to see that `suggestionsTrigger` will take a string corresponding to an event that, when triggered, will show all your `suggestions`. If you don’t include this parameter, the default is "on-change", so your suggestions will show when your users selects the command.
