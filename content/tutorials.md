@@ -381,6 +381,8 @@ status-dev-cli add '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-
 
 {{% /tabs %}}
 
+If you want to remove your DApp because you're unhappy with it for some reason, just run `status-dev-cli list --ip <DEVICE-IP>` and then `status-dev-cli remove [my-dapp]` where [my-dapp] is the name returned by the `list` command.
+
 Using Status, you can now develop mobile DApps as easily as developing for MetaMask or Mist! But Status offers extra goodies as well.
 
 In particular, Status will help you allow your users to chat with your DApp! The chat interface will let your users easily and intuitively accomplish tasks. In the future, your users will be able to hold group conversations where all the other participants are DApps, which is kind of amazing.
