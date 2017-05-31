@@ -37,7 +37,7 @@ Our wiki guidelines should be all you need, but if you get lost come ask around 
 
 {{% tab Device %}}
 
-First, connect your phone to your development machine and ensure that you are using MTP (Media Transfer Protocol) by tapping on the USB settings option that pops up. Navigate to the Console Bot, select the `/debug` command and choose the `On` suggestion. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools if you want.
+First, connect your phone to your Wi-Fi network (do not use USB). Development machine and phone should be in the same network. Navigate to the Console, select the `/debug` command and choose the `On` suggestion. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools.
 
 You also need to install `status-dev-cli` to make talking between Status and your machine a breeze.
 
