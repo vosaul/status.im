@@ -49,7 +49,7 @@ npm i -g status-dev-cli
 
 *With your phone connected, /debug "On"*  
 
-You can check DEVICE-IP by running the `scan` command in the terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
+You can check `<DEVICE-IP>` by running the `scan` command in the terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
 
 ```shell
 status-dev-cli scan
@@ -69,7 +69,7 @@ We give instructions here for Genymotion (a popular Android emulator).
 5. Install status.im apk from nightly builds by dragging onto emulator window
 6. Start status.im app on virtual device
 7. Turn on debugging in console (/debug On). 
-8. Open terminal and run `status-dev-cli scan` it returns two <DEVICE-IP> addresses, use 192.168.1.*, and ignore 192.168.56.*
+8. Open terminal and run `status-dev-cli scan` it returns two `<DEVICE-IP>` addresses, use `192.168.1.*`, and ignore `192.168.56.*`
 9. `status-dev-cli add [dapp] --ip <DEVICE-IP>` where dapp is your json file with `whisper-identity` etc.
 
 {{% /tab %}}
