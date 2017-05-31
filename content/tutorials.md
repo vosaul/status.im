@@ -454,6 +454,8 @@ OK, so even though `status-dev-cli` is lightweight and awesome, the frameworks o
 
 First, go back to the `embark_demo/` directory we created [earlier](#my-first-dapp), where we set up the correct configuration for Embark and Status. Essentially, you just want to make sure - as with the Truffle Box example - that you put the javascript file in the right place so that you can reference it correctly.
 
+Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
+
 TODO
 
 {{% /tab %}}
@@ -465,12 +467,12 @@ TODO
  Let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. Navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
 
 ```shell
-# Android only
+# Android device only
 adb forward tcp:5561 tcp:5561
 
 testrpc -p 8546
 
-# Android only
+# Android device only
 adb reverse tcp:8546 tcp:8546
 
 status-dev-cli switch-node "http://localhost:8546"
@@ -481,7 +483,7 @@ cd ~/truffle-box-status
 truffle migrate --reset
 ```
 
-Then, we need to make a new javascript file and put it in a place we can access in the browser. Copy the code provided into another `bot.js` file.
+Then, we need to make a new javascript file and put it in a place we can access in the browser. Copy the code provided into another `bot.js` file. 
 
 ```shell
 cd build/ && mkdir bot/
@@ -507,7 +509,7 @@ status.addListener("on-message-send", function (params, context) {
 });
 ```
 
-This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
+This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader. Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
 
 ```shell
 # Make sure you're in the truflle-box-status/ directory
