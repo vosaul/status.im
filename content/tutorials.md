@@ -29,7 +29,7 @@ OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To pr
 </aside>
 
 
-Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im).
+If you are on Android, please use the `.apk` files linked above. If you're on iOS and can't get a TestFlight invite, you can [build Status yourself](https://wiki.status.im/contributing/development/building-status/). Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im). You can also use and adapt this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348), though you will need to change the UUID by running `instruments -s devices`, choosing the simulator you want to use and replacing the UUID in the script with your own. You will also need iTerm2.
 
 ## Networking and Debugging
 
