@@ -24,10 +24,8 @@ Creating all of these native setups is totally possible through the API - just r
 
 OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running.
 
-
-
 <aside class="success">
- Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself (available only on Android). To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
+ Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself (available only on Android). To update "status-dev-cli" please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
 </aside>
 
 
@@ -85,11 +83,18 @@ We give instructions here for Genymotion (a popular Android emulator).
 {{% tab DIY %}}
 ### Do It Yourself with `status-dev-cli`
 
+First, install the `status-dev-cli` tools globally using NPM. Then, create a directory for your app to live in, switch into it, and create an `index.html` file and an `app.js` file.
+
 ```shell
 npm install -g status-dev-cli
 mkdir ~/my-dapp && cd my-dapp
 touch index.html app.js
 ```
+
+The index.html will be really simple. We are going to add several meta tags to make our DApp look good on the small screens of mobile phones, and add a span that will be used by our JavaScript.
+
+Our `app.js` file will also be simple. We are going to display the information about your account inside a span with `account id`. Status injects `web3.js` automatically, so you have an access to web3 variable from everywhere and you don’t need to care about including `web3.js` manually. However, you can do this and most probably you want to do this if you want to make your DApps work on other platforms.
+
 > In index.html, add:   
 
 ```html
@@ -119,7 +124,12 @@ function onContentLoaded() {
 document.addEventListener("DOMContentLoaded", onContentLoaded);
 ```
 
-> Install and start an HTTP server - we recommend NPM for ease-of-use. Make sure you are still in your my-dapp directory when running the 2nd command.  
+You then need to install a really simple `http-server` from NPM (we recommend it for ease-of-use), and start it in the `my-dapp` directory we just created.
+
+Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
+
+`<MACHINE-IP>` needs to be `localhost` or `127.0.0.1`, if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
+  
 
 ```shell
 npm install http-server -g
@@ -131,19 +141,6 @@ http-server
 ```shell
 status-dev-cli add '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>
 ```
-First, install the `status-dev-cli` tools globally using NPM.
-
-Then, create a directory for your app to live in, switch into it, and create an `index.html` file and an `app.js` file.
-
-The index.html will be really simple. We are going to add several meta tags to make our DApp look good on the small screens of mobile phones, and add a span that will be used by our JavaScript.
-
-Our `app.js` file will also be simple. We are going to display the information about your account inside a span with `account id`. Status injects `web3.js` automatically, so you have an access to web3 variable from everywhere and you don’t need to care about including `web3.js` manually. However, you can do this and most probably you want to do this if you want to make your DApps work on other platforms.
-
-You then need to install a really simple `http-server` from NPM, and start it in the `my-dapp` directory we just created.
-
-Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
-
-`<MACHINE-IP>` needs to be `localhost` or `127.0.0.1`, if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
 
 That's it! You should be able to see your DApp in the chats, and opening it should browse automatically to a page that shows your account information. You can also do live-reloading once you're happy with this by running `status-dev-cli watch $PWD '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>`
 
