@@ -249,7 +249,9 @@ This should tell you that the the app is running, and that the DApp has been add
 
 Again, the DApp should appear in your chats screen, and navigating to it should automatically open a browser that reveals all the goodies hidden in this truffle box. It should also display the stored value of `5` from the SimpleStorage contract that we deployed to `testrpc` by running `truffle migrate` above.
 
-If you would like to change the name that appears for your bot when it gets added to Status, simply edit the `package.json` and update the name there.
+If you would like to change the name that appears for your bot when it gets added to Status, simply edit the `package.json` and update the name there. 
+
+Once everything is running, leave it as is and move on directly to the next truffle tutorial to see the power of the `status-dev-cli watch` command.
 
 *Known problems:*
 
@@ -381,7 +383,7 @@ status-dev-cli add '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-
 
 {{% /tabs %}}
 
-If you want to remove your DApp because you're unhappy with it for some reason, just run `status-dev-cli list --ip <DEVICE-IP>` and then `status-dev-cli remove [my-dapp]` where [my-dapp] is the name returned by the `list` command.
+If you want to remove your DApp because you're unhappy with it for some reason, just run `status-dev-cli list --ip <DEVICE-IP>` and then `status-dev-cli remove [my-dapp]` where [my-dapp] is the `whisper-identity` returned by the `list` command.
 
 Using Status, you can now develop mobile DApps as easily as developing for MetaMask or Mist! But Status offers extra goodies as well.
 
@@ -437,7 +439,7 @@ http-server
 
 ```shell
 # android only
-adb -s DEVICE_ID reverse tcp:8080 tcp::8080
+adb reverse tcp:8080 tcp::8080
 
 status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
@@ -466,12 +468,11 @@ TODO
 
 ### Truffle
 
- Let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. Navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
+ Let's see what it looks like to add the same, flattering little chatbot to Status through the Truffle Box we set up earlier. We assume here that you still have `testrpc` running from the previous tutorial and that you are still running the `npm start` script. If not, navigate back to that directory, ensure that `testrpc` is switched on and that you have opened all the right ports if you're on Android.
+
+ > Only if you have switched off everything from the previous tutorial.
 
 ```shell
-# Android device only
-adb forward tcp:5561 tcp:5561
-
 testrpc -p 8546
 
 # Android device only
@@ -485,10 +486,10 @@ cd ~/truffle-box-status
 truffle migrate --reset
 ```
 
-Then, we need to make a new javascript file and put it in a place we can access in the browser. Copy the code provided into another `bot.js` file. 
+So, all we need to do here is add a `bot` directory in Truffle's `public` directory (i.e. the one accessible from the web) and write some simple javascript and - hey presto! - we'll have a decentralized chatbot. Copy the code provided into another `bot.js` file. The `bot-url` targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
 
 ```shell
-cd build/ && mkdir bot/
+cd ~/truffle-box-status/public/ && mkdir bot/
 touch bot/bot.js
 nano bot/bot.js
 ```
@@ -511,18 +512,22 @@ status.addListener("on-message-send", function (params, context) {
 });
 ```
 
-This time, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader. Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
+If you look on line 42-43 of the `npm start` script, you'll see that we already passed in a `bot-url` when adding the Truffle Box in the previous tutorial. So, all we need to do now is `status-dev-cli watch` that same DApp to activate the live-reloading and start chatting to our bot through the chat, or interacting with our contracts through the webView. However, we need to know what to tell `status-dev-cli` to watch for, so let's try `list` our DApps currently in Status.
 
 ```shell
-# Make sure you're in the truflle-box-status/ directory
-cd ..
+status-dev-cli list --ip <DEVICE-IP>
+# embark (Name: "Embark", DApp URL: "http://localhost:8000/")
+# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
+```
 
-truffle serve
+The first value returned there is the DApp's `whisper-identity`, which is what we need to pass to the `watch` command to tell it what to look for. Using it, we can now tell `status-dev-cli` to watch for our changes and go find that brand new bot.
 
-# In another shell
-adb reverse tcp:8080 tcp:8080
+```shell
+# Make sure you're in the truflle-box-status/ directory as that is what $PWD refers to below
+cd ~/truffle-box-status
 
-status-dev-cli add '{"whisper-identity": "truffle-botler",  "name": "Truffle Botler", "bot-url": "http://<MACHINE-IP>:8080/bot/bot.js"}' --ip <DEVICE-IP>
+# I would use dapp-0x74727566666c652d626f782d737461747573 for <whisper-identity> below, Substitute your own one in.
+status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
 ```
 
 And you're away! You should be able to see your DApp, browse to the same site as before, and chat with the repetitively flattering greeter bot.
@@ -593,9 +598,11 @@ Go ahead and serve your dapp again:
 http-server
 
 # In another shell if on android
-adb -s DEVICE_ID reverse tcp:8080 tcp:8080
+adb reverse tcp:8080 tcp:8080
 
-status-dev-cli watch $PWD botler --ip <DEVICE-IP>
+status-dev-cli list --ip <DEVICE-IP>
+
+status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
 ```
 
 And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
@@ -614,10 +621,10 @@ And there you go - we are now capable of greeting and interacting with our bot i
 ### Truffle
 
 ```shell
-cd ~/truffle-box-status/build/bot/ && nano bot.js
+cd ~/truffle-box-status/public/bot/ && nano bot.js
 ```
 
-Navigate back to the truffle box  `build` directory and open the `bot.js` file we previously created so as to add the code provided and display it through truffle.
+Navigate back to the truffle box  `public` directory and open the `bot.js` file we previously created so as to add the code provided and display it through truffle.
 
 ```js
 status.command({
@@ -641,18 +648,18 @@ status.command({
  });
 ```
 
-we'll do the same as last time and, rather than running the `npm` task, we'll just start a quick server with `truffle` itself. Writing the correct `start` script is left as an exercise for the reader ;)
+Much like we did last time, just find the `whisper-identity` of your DApp and`watch` for changes.
 
 ```shell
-# Make sure you're in the truflle-box-status/ directory
-cd ..
+status-dev-cli list --ip <DEVICE-IP>
+# embark (Name: "Embark", DApp URL: "http://localhost:8000/")
+# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
 
-truffle serve
+# Make sure you're in the truflle-box-status/ directory as that is what $PWD refers to below
+cd ~/truffle-box-status
 
-# In another shell
-adb reverse tcp:8080 tcp:8080
-
-status-dev-cli watch $PWD truffle-hello --ip <DEVICE-IP>
+# I would use dapp-0x74727566666c652d626f782d737461747573 for <whisper-identity> below, Substitute your own one in.
+status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
 ```
 
 
@@ -758,7 +765,7 @@ We have already added this contact to Status, so let's se if we can set up our e
 ```shell
 http-server
 
-status-dev-cli watch $PWD hello-bot --ip <DEVICE-IP>
+status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
 ```
 
 You can also work with the `suggestionsTrigger` parameter. Now that we’ve covered `params` and the possibility of `suggestions`, it’s easy to see that `suggestionsTrigger` will take a string corresponding to an event that, when triggered, will show all your `suggestions`. If you don’t include this parameter, the default is "on-change", so your suggestions will show when your users selects the command.
