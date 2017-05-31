@@ -722,7 +722,7 @@ Now, we need to write the main star of our show - that mysterious `helloSuggesti
 function helloSuggestions() {
     var suggestions = ["Hello", "Goodbye"].map(function(entry) {
         return status.components.touchable(
-            {onPress: [status.events.SET_VALUE, entry]},
+            {onPress: status.components.dispatch([status.events.SET_VALUE, entry])},
             status.components.view(
                 suggestionsContainerStyle,
                 [status.components.view(
