@@ -56,6 +56,15 @@ status-dev-cli scan
 status-dev-cli list --ip <DEVICE-IP>       #be sure to use the IPv4 address
 ```
 
+You will see that these tutorials also use `<MACHINE-IP>` throughout. This refers to the INTERNAL IPv4 address of your development machine. You can find that by running the command provided.
+
+```shell
+ifconfig | grep inet
+
+# Look for this line - i.e. your IPv4 address - and use the equivalent of 192.168.0.103
+--> inet 192.168.0.103 netmask 0xffffff00 broadcast 192.168.0.255
+```
+
 {{% /tab %}}
 
 {{% tab Emulator %}}
@@ -128,7 +137,7 @@ You then need to install a really simple `http-server` from NPM (we recommend it
 
 Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
 
-`<MACHINE-IP>` needs to be `localhost` or `127.0.0.1`, if you are using a simulator, or whatever your PC's (internal) IP is if you are using a connected phone.
+`<MACHINE-IP>` needs to be the internal IPv4 address returned when you run `ifconfig | grep inet`.
   
 
 ```shell
@@ -176,9 +185,6 @@ Firstly, we'll need a network to develop against, so let's go get `testrpc` - a 
 ```shell
 npm install -g ethereumjs-testrpc
 testrpc -p 8546
-
-# If you're using Android (device only)
-adb reverse tcp:8546 tcp:8546
 ```
 
 That’s it! It will show you a list of available accounts, private keys, your HD wallet and mnemonic. Please note that we're running testrpc on (non-default) RPC port 8546, just to avoid potential conflict with the node running inside Status. If using android, you need to open the connection from your PC to your phone on that port, so Status can listen for changes there.
@@ -186,7 +192,7 @@ That’s it! It will show you a list of available accounts, private keys, your H
 We also need to make sure that our Status client is listening to our new `testrpc` network, rather than Ropsten, so that we can get the information we need about our contracts etc. Luckily, this is as easy as running:
 
 ```shell
-status-dev-cli switch-node "http://localhost:8546" --ip <DEVICE-IP>
+status-dev-cli switch-node "http://<MACHINE-IP>:8546" --ip <DEVICE-IP>
 
 # Of course, there are options. You can use go-ethereum instead of TestRPC, and instead of port forwarding you can switch to any other accessible node using its IP address.
 ```
@@ -224,13 +230,6 @@ cd truffle-box-status && npm install
 
 As you run the `migrate` command - which is what deploys your contracts to the network - you can look at the window with `testrpc` running, and you’ll see your transactions being published. If you get `Error: Invalid JSON RPC response`, you probably forgot to run `testrpc`.
 
-If you're using an Android device, the application won't be accessible automatically, since it runs on port 3000 and your device/emulator knows nothing about it. Execute the following to make web application accessible:
-
-```shell
-# If you're using Android (device only)
-adb reverse tcp:3000 tcp:3000
-```
-
 Now we are ready to see our DApp running on Status. From within your DApp directory, run:
 
 ```shell
@@ -253,7 +252,7 @@ If you would like to change the name that appears for your bot when it gets adde
 
 Once everything is running, leave it as is and move on directly to the next truffle tutorial to see the power of the `status-dev-cli watch` command.
 
-*Known problems:*
+*Known problems and Notes:*
 
 1) If you are running on a real iOS device, you need to configure Truffle Box to use the network on your computer. In `truffle.js`, change `host` to the IP of your computer:
 
@@ -269,6 +268,13 @@ module.exports = {
   }
 };
 ``` 
+
+2) You can always use `localhost` instead of `<MACHINE-IP>`, but the application won't be accessible automatically, since it runs on port 3000 and your device/emulator knows nothing about it. Execute the following to induce black magic and make the web application accessible:
+
+```shell
+adb reverse tcp:8546 tcp:8546
+adb reverse tcp:3000 tcp:3000
+```
 
 {{% /tab %}}
 
@@ -318,12 +324,10 @@ nano config/blockchain.json
 cd .. && embark simulator
 ```
 
-Open a new shell tab, navigate to the same DApp directory, and - after ensuring you Android device has access to `testrpc` - install Status Embark:
+Open a new shell tab and switch the RPC node. Once that is done, you need to install the `embark-status` package.
 
 ```shell
-# Android only 
-adb reverse tcp:8546 tcp:8546 
-
+status-dev-cli switch-node "http://<MACHINE-IP>:8546" --ip <DEVICE-IP>
 npm install embark-status --save
 ```
 
@@ -334,7 +338,7 @@ Open the file `embark.json` and edit the `plugins` key to reflects your DEVICE's
 ```js
 "plugins": {
   "embark-status": {
-    "deviceIp": "<your-device-ip>",
+    "deviceIp": "<DEVICE-IP>",
     "whisperIdentity": "dapp-embark-test",
     "name": "MyEmbarkDapp"
   }
@@ -346,15 +350,9 @@ Also, you may need to tell Embark the IP of the DApp host if you're not using `l
 ```js
 {
   "enabled": true,
-  "host": "<your-machines-ip>",
+  "host": "<MACHINE-IP>",
   "port": 8000
 }
-```
-
-If you’re running Status on Android, remember to give your device access to the right ports again:
-
-```shell
-adb reverse tcp:8000 tcp:8000
 ```
 
 Now we’re ready to run the DApp on Status. From within your DApp directory, run:
@@ -375,9 +373,16 @@ status-dev-cli add '{"whisper-identity": "embark", "dapp-url": "http://<MACHINE-
 
 *The Embark simulator runs in one Terminal window on the top, and the Embark console on the bottom*
 
-*Known Issues:*
+*Known Issues and Notes:*
 
 1) To deploy the DApp successfully on a device you may need to patch [this line](https://github.com/status-im/embark-status/blob/master/index.js#L13) in embark-status to include `+ " --dapp-port 5561"`.
+
+2) You can always use `localhost` instead of `<MACHINE-IP>`, but the application won't be accessible automatically, since it runs on port 8000 and your device/emulator knows nothing about it. Execute the following to induce black magic and make the web application accessible:
+
+```shell
+adb reverse tcp:8546 tcp:8546
+adb reverse tcp:8000 tcp:8000
+```
 
 {{% /tab %}}
 
@@ -438,15 +443,20 @@ http-server
 ```
 
 ```shell
-# android only
-adb reverse tcp:8080 tcp:8080
-
 status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
 
 This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
 
 Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
+
+*Known Issues and Notes:*
+
+1) You can always use `localhost` instead of `<MACHINE-IP>`, but the application won't be accessible automatically, since it runs on port 8080 and your device/emulator knows nothing about it. Execute the following to induce black magic and make the web application accessible:
+
+```shell
+adb reverse tcp:8080 tcp:8080
+```
 
 {{% /tab %}}
 
@@ -475,10 +485,7 @@ TODO
 ```shell
 testrpc -p 8546
 
-# Android device only
-adb reverse tcp:8546 tcp:8546
-
-status-dev-cli switch-node "http://localhost:8546"
+status-dev-cli switch-node "http://<MACINE-IP>:8546"
 
 cd ~/truffle-box-status
 
@@ -516,7 +523,7 @@ If you look on line 42-43 of the `npm start` script, you'll see that we already 
 
 ```shell
 status-dev-cli list --ip <DEVICE-IP>
-# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
+# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://<MACINE-IP>:3000")
 ```
 
 The first value returned there is the DApp's `whisper-identity`, which is what we need to pass to the `watch` command to tell it what to look for. Using it, we can now tell `status-dev-cli` to watch for our changes and go find that brand new bot.
@@ -596,9 +603,6 @@ Go ahead and serve your dapp again:
 ```shell
 http-server
 
-# In another shell if on android
-adb reverse tcp:8080 tcp:8080
-
 status-dev-cli list --ip <DEVICE-IP>
 
 status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
@@ -651,7 +655,7 @@ Much like we did last time, just find the `whisper-identity` of your DApp and `w
 
 ```shell
 status-dev-cli list --ip <DEVICE-IP>
-# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
+# dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://<MACHINE-IP>:3000")
 
 # Make sure you're in the truflle-box-status/ directory as that is what $PWD refers to below
 cd ~/truffle-box-status
@@ -771,8 +775,6 @@ You can also work with the `suggestionsTrigger` parameter. Now that we’ve cove
 It's also worth knowing about the `fullscreen` option. If your command has `suggestions`, this `param` controls whether that list of suggestions expands to fill the entire screen. If your command has a lot of suggestions, you might want to set `fullscreen` to `true`, so that your users don’t have to pull the list upwards. On the other hand, if your command has only a few suggestions and you set `fullscreen` to `true`, your users will have to pull the list downwards to keep it from hiding the screen. Choose whichever will be most convenient to your users, considering your command’s suggestions.
 
 OK, so we can build up a basic command, show it to the user and have it do something (like return text) when the user taps it. That's great, but what happens if we want to be a bit more dynamic and interactive and suggest to our users a range of options to choose from when issuing the command? Let's take a look...
-
-
 
 For another full example of an interactive suggestion area, please take a look over our [Demo Bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js), which makes prominent use of the `defineSubscription` method from the API and may be helpful for those looking to waork with things like the `status.component.slider` React Native Component.
 
