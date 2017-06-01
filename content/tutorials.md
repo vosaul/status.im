@@ -439,7 +439,7 @@ http-server
 
 ```shell
 # android only
-adb reverse tcp:8080 tcp::8080
+adb reverse tcp:8080 tcp:8080
 
 status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
@@ -516,7 +516,6 @@ If you look on line 42-43 of the `npm start` script, you'll see that we already 
 
 ```shell
 status-dev-cli list --ip <DEVICE-IP>
-# embark (Name: "Embark", DApp URL: "http://localhost:8000/")
 # dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
 ```
 
@@ -648,11 +647,10 @@ status.command({
  });
 ```
 
-Much like we did last time, just find the `whisper-identity` of your DApp and`watch` for changes.
+Much like we did last time, just find the `whisper-identity` of your DApp and `watch` for changes.
 
 ```shell
 status-dev-cli list --ip <DEVICE-IP>
-# embark (Name: "Embark", DApp URL: "http://localhost:8000/")
 # dapp-0x74727566666c652d626f782d737461747573 (Name: "truffle-box-status", DApp URL: "http://localhost:3000")
 
 # Make sure you're in the truflle-box-status/ directory as that is what $PWD refers to below
