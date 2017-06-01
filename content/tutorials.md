@@ -310,9 +310,9 @@ nano config/blockchain.json
     "mineWhenNeeded": true,
     "nodiscover": true,
     "maxpeers": 0,
-    "rpcHost": "localhost",
+    "rpcHost": "<MACHINE-IP>",
     "rpcPort": 8546,
-    "rpcCorsDomain": "http://localhost:8000",
+    "rpcCorsDomain": "http://<MACHINE-IP>:8000",
     "account": {
       "password": "config/development/password"
     }
@@ -345,7 +345,7 @@ Open the file `embark.json` and edit the `plugins` key to reflects your DEVICE's
 }
 ```
 
-Also, you may need to tell Embark the IP of the DApp host if you're not using `localhost` as a default. Navigate to and change the `config/webserver.js` file so that it reflects your development machine's IP address:
+Navigate to and change the `config/webserver.js` file so that it reflects your development machine's IP address:
 
 ```js
 {
