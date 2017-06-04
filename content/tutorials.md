@@ -22,14 +22,25 @@ Creating all of these native setups is totally possible through the API - just r
 
 ## Installing Status
 
-OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running.
+OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running either:
+ 
+* on a real phone,
+ 
+* in an Android simulator, or
 
-<aside class="success">
- Please note that these documents are intended for the latest version of "status-dev-cli" and the nightly developer builds of Status itself (available only on Android). To update "status-dev-cli" please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli". Our nightly builds can be found here: http://artifacts.status.im:8081/artifactory/nightlies-local/.
-</aside>
+* in an iOS simulator.
+
+You can go to [https://test.status.im](https://test.status.im) to download for Android. 
+Or you can DM @jarradhope with your email in our [Slack](status-im.slack) for ios Testflight.
+ 
+ <aside class="success">
+Please note that these documents are intended for the latest version of "status-dev-cli" (^3.2.8) and the latest release of Status app (^0.9.8). To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli".
+ </aside>
+ 
+You can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator. 
 
 
-If you are on Android, please use the `.apk` files linked above. If you’re on iOS, you can [build Status yourself](https://wiki.status.im/contributing/development/building-status/). Our wiki guidelines should be all you need, but if you get lost come ask around in [our Slack](https://slack.status.im). You can also use and adapt this [gist](https://gist.github.com/andytudhope/a06e1c9916e23909321f6ac427aaf348), though you will need to change the UUID by running `instruments -s devices`, choosing the simulator you want to use and replacing the UUID in the script with your own. You will also need iTerm2.
+
 
 ## Networking and Debugging
 
