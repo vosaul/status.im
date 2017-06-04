@@ -399,7 +399,7 @@ adb reverse tcp:8000 tcp:8000
 
 {{% /tabs %}}
 
-If you want to remove your DApp because you're unhappy with it for some reason, just run `status-dev-cli list --ip <DEVICE-IP>` and then `status-dev-cli remove [my-dapp]` where [my-dapp] is the `whisper-identity` returned by the `list` command.
+If you want to remove your DApp because you're unhappy with it for some reason, just run `status-dev-cli list --ip <DEVICE-IP>` and then `status-dev-cli remove --ip <DEVICE-IP> [my-dapp]` where [my-dapp] is the `whisper-identity` returned by the `list` command.
 
 Using Status, you can now develop mobile DApps as easily as developing for MetaMask or Mist! But Status offers extra goodies as well.
 
