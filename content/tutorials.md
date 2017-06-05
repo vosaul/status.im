@@ -481,7 +481,55 @@ First, go back to the `embark_demo/` directory we created [earlier](#my-first-da
 
 Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
 
-TODO
+Let's create a bot.js in the `/embark_demo/app/js/` directory and put the short snippet of javascript we need into it. 
+
+```shell
+touch ~/embark_demo/app/js/bot.js
+nano ~/embark_demo/app/js/bot.js
+```
+
+```js
+status.addListener("on-message-send", function (params, context) {
+    var result = {
+            err: null,
+            data: null,
+            messages: []
+        };
+
+    try {
+        result["text-message"] = "You're amazing, master!";
+    } catch (e) {
+        result.err = e;
+    }
+
+    return result;
+});
+```
+This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
+
+Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
+
+We now need to update the `config/blockchain.json` so it copies over our bot into a public directory (see the last line inside app object).
+
+```js
+  "contracts": ["app/contracts/**"],
+  "app": {
+    "css/app.css": ["app/css/**"],
+    "images/": ["app/images/**"],
+    "js/app.js": ["embark.js", "app/js/_vendor/jquery.min.js", "app/js/_vendor/bootstrap.min.js", "app/js/**"],
+    "index.html": "app/index.html",
+    "js/bot.js": "app/js/bot.js"   # Add this line in #
+  },
+  "buildDir": "dist/",
+```
+
+That should serve the `js` files you need, so the last thing you'll need to do is add this bot to Status as per usual.
+
+```shell
+status-dev-cli add '{"whisper-identity":"embark-demo-bot", "name":"Embark-Demo-Bot", "bot-url":"http://<MACHINE-IP>:8000/js/bot.js"}' --ip <DEVICE-IP>
+```
+
+Again, you could always use `localhost` instead if you run into issues, and just make sure to run `adb reverse tcp:8000 tcp:8000`.
 
 {{% /tab %}}
 
@@ -627,6 +675,47 @@ And there you go - we are now capable of greeting and interacting with our bot i
 
 ### Embark
 
+```shell
+cd ~/embark_demo/app/js/bot.js && nano bot.js
+```
+Here, we are going to create a simple text response by setting up a variable that we pass to `status.components.text`, which the perceptive will notice is a React Native component - a whole bunch more of which are available and detailed in the formal specification. Beneath the text, we are creating a standard response of "Hello from the other side!", all of which will be returned as json to the markup. Note again the use of another React Native component - `status.components.view`.
+
+```js
+status.command({
+     name: "hello",
+     title: "HelloBot",
+     description: "Helps you say hello",
+     color: "#CCCCCC",
+     preview: function (params) {
+             var text = status.components.text(
+                 {
+                     style: {
+                         marginTop: 5,
+                         marginHorizontal: 0,
+                         fontSize: 14,
+                         fontFamily: "font",
+                         color: "black"
+                     }
+                 }, "Hello from the other side!");
+
+             return {markup: status.components.view({}, [text])};
+         }
+ });
+```
+Go ahead and `run` your Embark application again and watch for changes to your new, interactive bot. We have already made sure that the `js` is built to, and served in, the right place, so we should just be able to list the DApps and bots currently in Status and just watch the "embark-demo-bot" we set up earlier.
+
+```shell
+# Only if using an Android device
+adb reverse tcp:8000 tcp:8000
+
+embark run
+
+status-dev-cli list --ip <DEVICE-IP>
+
+status-dev-cli watch $PWD "<whisper-identity>" --ip 
+```
+
+And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
 
 {{% /tab %}}
 
