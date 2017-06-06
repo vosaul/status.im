@@ -39,16 +39,7 @@ Please note that these documents are intended for the latest version of "status-
 
 You can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator.
 
-
-
-
-## Networking and Debugging
-
-{{% tabs Device Emulator %}}
-
-{{% tab Device %}}
-
-First, connect your phone to your Wi-Fi network (do not use USB). Development machine and phone should be in the same network. Navigate to the Console, select the `/debug` command and choose the `On` suggestion. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools.
+Then, connect your phone to your Wi-Fi network (do not use USB). Development machine and phone should be in the same network. Navigate to the Console, select the `/debug` command and choose the `On` suggestion. You’ll get back a message telling you that debugging is on, and that you can use the [status-dev-cli](https://github.com/status-im/status-dev-cli) tools.
 
 You also need to install `status-dev-cli` to make talking between Status and your machine a breeze.
 
@@ -58,7 +49,16 @@ npm i -g status-dev-cli
 
 ![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
 
-*With your phone connected, /debug "On"*  
+*With your phone connected, /debug "On"*
+
+
+## Networking and Debugging
+
+{{% tabs Device Emulator %}}
+
+{{% tab Device %}}
+
+OK, so Status is installed, but how do we interact with it?
 
 You can check `<DEVICE-IP>` by running the `scan` command in the terminal. Another useful command we will be using a lot later on is `list` which will return a list of all DApps you have added to Status.
 
@@ -75,6 +75,18 @@ ifconfig | grep inet
 # Look for this line - i.e. your IPv4 address - and use the equivalent of 192.168.0.103
 --> inet 192.168.0.103 netmask 0xffffff00 broadcast 192.168.0.255
 ```
+
+Even more importantly though, how can we actually debug the code we write? We know how important this is for good developers and we're still working on it. Currently, the options are limited, but we ask you to work with us here as it will improve rapidly over the next little while. 
+
+The first and the most powerful option is the development tools included in your browser. Chrome supports remote debugging, and you can easily connect to any web view on your mobile and debug it right from the browser. The detailed instructions can be found [here](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+
+If you use iOS, you can use Safari on your Mac to debug any remote web page. [Here](http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/) is a nice guide that will explain everything to you.
+
+Unfortunately, you cannot use your browser's development tools to debug bots, as switching the node only works for DApps currently. So, the option we provide for bots is the ability to extract logs. 
+
+```shell
+status-dev-cli log <DAPP-IDENTITY> --ip <DEVICE-IP>
+``` 
 
 {{% /tab %}}
 
