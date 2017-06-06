@@ -47,16 +47,13 @@ You also need to install `status-dev-cli` to make talking between Status and you
 npm i -g status-dev-cli
 ```
 
-![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
+![With your phone connected, /debug "On"](images/starting.png)
 
 *With your phone connected, /debug "On"*
 
 
-## Networking and Debugging
+## Debugging
 
-{{% tabs Device Emulator %}}
-
-{{% tab Device %}}
 
 OK, so Status is installed, but how do we interact with it?
 
@@ -88,15 +85,16 @@ Unfortunately, you cannot use your browser's development tools to debug bots, as
 status-dev-cli log <DAPP-IDENTITY> --ip <DEVICE-IP>
 ``` 
 
-{{% /tab %}}
+## Networking
 
-{{% tab Emulator %}}
-
-We give instructions here for Genymotion (a popular Android emulator).
+We give instructions here for Genymotion (a popular Android emulator). 
 
 1. Install genymotion
 1. Create a genymotion virtual device
-1. Switch to network bridge mode (in settings of virtual device)
+1. Switch to network bridge mode (in the settings of your virtual device)
+
+![Switch to "Bridge"](images/networking.png)  
+
 1. Start virtual device
 1. Install status.im apk from nightly builds by dragging onto emulator window
 1. Start status.im app on virtual device
@@ -104,9 +102,6 @@ We give instructions here for Genymotion (a popular Android emulator).
 1. Open terminal and run `status-dev-cli scan` it returns two `<DEVICE-IP>` addresses, use `192.168.1.*`, and ignore `192.168.56.*`. Alternately retrieve the device ip from the emulator window `Settings > About phone > Status > IP address`.
 1. Run `status-dev-cli add [dapp] --ip <DEVICE-IP>`. **Replace** `[dapp]` with your dapp details (`whisper-identity`, etc) as stringified json or **remove** `[dapp]` if those details are specified in a `package.json` in the current directory.
 
-{{% /tab %}}
-
-{{% /tabs %}}
 
 
 ## My First DApp
@@ -942,3 +937,151 @@ status.command({
     return result;
 }
 ```
+
+
+## Frequently Asked Questions (FAQ)
+
+### My bot has been deployed but it does not appear to work.
+
+Make sure that the `bot-url` you provided when adding your bot is accessible from your device. For example, open it in mobile browser. 
+
+### Is there a way to debug my bot?
+
+`status-dev-cli log` allows to access outputs from `console.log()`. So, just add in the necessary `console.log()`s and read them in your terminal. The team is working actively to make this easier.
+
+### Can I connect to a different RPC server?
+
+`status-dev-cli switch-node` only works for `dapp-url`s at the moment. Due to the restrictions of the Otto VM jail that the bots `js` is run in, it still connects by default to Ropsten and your Status account. The team is actively working on ways around this.
+
+### Can custom commands be added to normal chat?
+
+Currently they are only available to 1-1 chat with bots. At some stage in the future we will implement group chats and all your dreams will come true.
+
+## Status API FAQs
+
+### How can I set the text input value?
+
+You can use `status.components.dispatch` in tandem with the `SET_VALUE` object. For instance, if you wanted to sugeest a url, you would do the following: `status.components.dispatch([status.events.SET_VALUE, "@browse url"])}`. A more complete example is also given alongside.
+
+```javascript
+return {markup: status.components.touchable(
+            {onPress: status.components.dispatch([status.events.SET_VALUE, "@browse url"])},
+            status.components.view( {},
+                        status.components.text(
+                            {},
+                            "Click me"
+                        )
+            )
+        )};
+```
+
+### How can I send a command a display result back?
+
+This one is fairly self-explanantory, and just reuses code from the above tutorials in a slightly different pattern.
+
+```javascript
+status.command({
+     name: "hello",
+     title: "HelloBot",
+     description: "Helps you say hello",
+     color: "#CCCCCC",
+     onSend: function (params) {
+                 result["text-message"] = "You're amazing, master!";
+     },
+     preview: function (params) {
+             var text = status.components.text(
+                 {
+                     style: {
+                         marginTop: 5,
+                         marginHorizontal: 0,
+                         fontSize: 14,
+                         fontFamily: "font",
+                         color: "black"
+                     }
+                 }, "Hello from the other side!");
+             return {markup: status.components.view({}, [text])};
+         }
+});
+```
+
+### Can I send a message asynchrounously after a request has been sent?
+
+Use the latest nightlies and `status.sendMessage` will now be available.
+
+```javascript
+ status.command({
+    name: "test",
+    icon: "test",
+    title: "test",
+    description: "test",
+    color: "#a187d5",
+    sequentialParams: true,
+    params: [{
+        name: "address",
+        type: status.types.TEXT,
+        placeholder: "address"
+    }],
+    handler: function (params) {
+        status.sendMessage("Address " + params.address);
+    }
+});
+```
+
+## JS and web3 API FAQ
+
+### How can data be stored and retrieved?
+
+Yes it can be, using `localStorage`.
+
+```js
+status.addListener("on-message-send", function (params, context) {
+    var cnt = localStorage.getItem("cnt");
+    if(!cnt) {
+        cnt = 0;
+    }
+
+    cnt++;
+
+    localStorage.setItem("cnt", cnt);
+    if (isNaN(params.message)) {
+        return {"text-message": "Seems that you don't want to send money :(. cnt = " + cnt};
+    }
+
+    var balance = web3.eth.getBalance(context.from);
+    var value = parseFloat(params.message);
+    var weiValue = web3.toWei(value, "ether");
+    if (bn(weiValue).greaterThan(bn(balance))) {
+        return {"text-message": "No way man, you don't have enough money! :)"};
+    }
+    web3.eth.sendTransaction({
+        from: context.from,
+        to: context.from,
+        value: weiValue
+    }, function (error, hash) {
+        if (error) {
+            status.sendMessage("Something went wrong, try again :(");
+            status.showSuggestions(demoSuggestions(params, context).markup);
+        } else {
+            status.sendMessage("You are the hero, you sent " + value + " ETH to yourself!")
+        }
+    });
+});
+```
+
+### Can I interract with `web3` object?
+
+Yes! The snippet provided showcases both `localStrage` and the `web3` object operating in tandem.
+
+
+### Can I parse JSON data?
+
+Yes JSON.parse()is supported. 
+
+### Is XMLHttpRequest supported?
+
+Not yet. 
+
+### Any examples ?
+
+* https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js
+* https://github.com/status-im/status-react/blob/develop/bots/console/bot.js
