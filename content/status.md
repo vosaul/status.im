@@ -606,7 +606,42 @@ It is easiest to show you an example of these two methods at work in our [demo-b
 
 ## status.sendMessage
 
-Not currently implemented, but will be soon to avoid unnecessary complexities for API users wanting to perform simple actions, who currently need to use the `setSuggestions` method.
+This has just been implemented in the latest nightlies! Go and grab one of those and you'll have access to this route, as demonstrated by our updated [demo bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js#L106). The snippet provided also reveals how to work with the javascript concept of `localStorage`.
+
+```js
+status.addListener("on-message-send", function (params, context) {
+    var cnt = localStorage.getItem("cnt");
+    if(!cnt) {
+        cnt = 0;
+    }
+
+    cnt++;
+
+    localStorage.setItem("cnt", cnt);
+    if (isNaN(params.message)) {
+        return {"text-message": "Seems that you don't want to send money :(. cnt = " + cnt};
+    }
+
+    var balance = web3.eth.getBalance(context.from);
+    var value = parseFloat(params.message);
+    var weiValue = web3.toWei(value, "ether");
+    if (bn(weiValue).greaterThan(bn(balance))) {
+        return {"text-message": "No way man, you don't have enough money! :)"};
+    }
+    web3.eth.sendTransaction({
+        from: context.from,
+        to: context.from,
+        value: weiValue
+    }, function (error, hash) {
+        if (error) {
+            status.sendMessage("Something went wrong, try again :(");
+            status.showSuggestions(demoSuggestions(params, context).markup);
+        } else {
+            status.sendMessage("You are the hero, you sent " + value + " ETH to yourself!")
+        }
+    });
+});
+```
 
 ## status.defineSubscription
 
