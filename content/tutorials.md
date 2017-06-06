@@ -208,6 +208,10 @@ status-dev-cli switch-node "http://<MACHINE-IP>:8546" --ip <DEVICE-IP>
 # Of course, there are options. You can use go-ethereum instead of TestRPC, and instead of port forwarding you can switch to any other accessible node using its IP address.
 ```
 
+<aside class="success">
+    Please note that "switch-node" only works for DApps, and NOT for bots. You javascript is still confined to the Otto VM jail for now. We are working on a solution, but please use "dapp-url" if developing against a local network for now.
+</aside>
+
 Open a new shell (i.e. a new Terminal window or tab) for the next part. You’ll leave `testrpc` running in the first window, and use the second window for the rest of the tutorial.
 
 Now that you have `testrpc` is going, and a new shell is open, run:
