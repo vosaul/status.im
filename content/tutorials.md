@@ -16,28 +16,28 @@ Just before we get started, it's well worth acquainting yourself with some of ou
 
 ![Chat Anatomy](images/chat-anatomy.png)
 
-Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the messages appear. 
+Please take some time to familiarize yourself with all the areas and the different configurations possible depending on what you want to do. Missing from the above is what we refer to throughout this documentation as the 'markup', by which we mean the mobile equivalent of the 'view', i.e. where the messages appear.
 
 Creating all of these native setups is totally possible through the API - just read on.
 
 ## Installing Status
 
 OK, let's learn how to build our first DApp on Status (mobile-first ftw!). To progress further, you need to have Status running either:
- 
+
 * on a real phone,
- 
+
 * in an Android simulator, or
 
 * in an iOS simulator.
 
-You can go to [https://test.status.im](https://test.status.im) to download for Android. 
+You can go to [https://test.status.im](https://test.status.im) to download for Android.
 Or you can DM @jarradhope with your email in our [Slack](status-im.slack) for ios Testflight.
- 
+
  <aside class="success">
 Please note that these documents are intended for the latest version of "status-dev-cli" (^3.2.8) and the latest release of Status app (^0.9.8). To update `status-dev-cli` please run "npm uninstall -g status-dev-cli" and then "npm i -g status-dev-cli".
  </aside>
- 
-You can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator. 
+
+You can build Status yourself for either Android or iOS by following [these guidelines](https://wiki.status.im/contributing/development/building-status/). There, you will find instructions for installing an Android simulator, or starting up Status in the Xcode simulator.
 
 
 
@@ -55,7 +55,7 @@ You also need to install `status-dev-cli` to make talking between Status and you
 ```shell
 npm i -g status-dev-cli
 ```
- 
+
 ![With your phone connected, /debug "On"](images/starting-a-dapp-on-status-with-frameworks_01.png)
 
 *With your phone connected, /debug "On"*  
@@ -80,17 +80,17 @@ ifconfig | grep inet
 
 {{% tab Emulator %}}
 
-We give instructions here for Genymotion (a popular Android emulator). 
+We give instructions here for Genymotion (a popular Android emulator).
 
 1. Install genymotion
-2. Create a genymotion virtual device
-3. Switch to network bridge mode (in settings of virtual device)
-4. Start virtual device
-5. Install status.im apk from nightly builds by dragging onto emulator window
-6. Start status.im app on virtual device
-7. Turn on debugging in console (/debug On). 
-8. Open terminal and run `status-dev-cli scan` it returns two `<DEVICE-IP>` addresses, use `192.168.1.*`, and ignore `192.168.56.*`
-9. `status-dev-cli add [dapp] --ip <DEVICE-IP>` where dapp is your json file with `whisper-identity` etc.
+1. Create a genymotion virtual device
+1. Switch to network bridge mode (in settings of virtual device)
+1. Start virtual device
+1. Install status.im apk from nightly builds by dragging onto emulator window
+1. Start status.im app on virtual device
+1. Turn on debugging in console (/debug On).
+1. Open terminal and run `status-dev-cli scan` it returns two `<DEVICE-IP>` addresses, use `192.168.1.*`, and ignore `192.168.56.*`. Alternately retrieve the device ip from the emulator window `Settings > About phone > Status > IP address`.
+1. Run `status-dev-cli add [dapp] --ip <DEVICE-IP>`. **Replace** `[dapp]` with your dapp details (`whisper-identity`, etc) as stringified json or **remove** `[dapp]` if those details are specified in a `package.json` in the current directory.
 
 {{% /tab %}}
 
@@ -149,14 +149,14 @@ You then need to install a really simple `http-server` from NPM (we recommend it
 Open a new terminal session, navigate back to your `my-dapp` directory, and go ahead and add your dapp to Status! Make sure to pass in the `--ip` flag using the address returned to you by Console, when you [enabled debugging](#enabling-debugging).
 
 `<MACHINE-IP>` needs to be the internal IPv4 address returned when you run `ifconfig | grep inet`.
-  
+
 
 ```shell
 npm install http-server -g
 http-server
 ```
 
-> In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on. 
+> In a new terminal window run the port forwarding and DApp connection stuff. It is important to pass in the `--ip` flag with the IP address listed by Console once you have selected the `debug` option and turned it on.
 
 ```shell
 status-dev-cli add '{"whisper-identity": "hello-bot", "dapp-url": "http://<MACHINE-IP>:8080/", "name": "Hello"}' --ip <DEVICE-IP>
@@ -212,7 +212,7 @@ Open a new shell (i.e. a new Terminal window or tab) for the next part. You’ll
 
 Now that you have `testrpc` is going, and a new shell is open, run:
 
-```shell 
+```shell
 npm install -g truffle # Version 3.0.5+ required.
 ```
 
@@ -230,7 +230,7 @@ cd truffle-box-status && npm install
 
 # Compile the contracts from Solidity (much like JavaScript) into runnable EVM code
  truffle compile
- 
+
 # Publish the compiled contracts to your network. testrpc must already be running
  truffle migrate
 ```
@@ -259,7 +259,7 @@ This should tell you that the the app is running, and that the DApp has been add
 
 Again, the DApp should appear in your chats screen, and navigating to it should automatically open a browser that reveals all the goodies hidden in this truffle box. It should also display the stored value of `5` from the SimpleStorage contract that we deployed to `testrpc` by running `truffle migrate` above.
 
-If you would like to change the name that appears for your bot when it gets added to Status, simply edit the `package.json` and update the name there. 
+If you would like to change the name that appears for your bot when it gets added to Status, simply edit the `package.json` and update the name there.
 
 Once everything is running, leave it as is and move on directly to the next truffle tutorial to see the power of the `status-dev-cli watch` command.
 
@@ -278,7 +278,7 @@ module.exports = {
     }
   }
 };
-``` 
+```
 
 2) You can always use `localhost` instead of `<MACHINE-IP>`, but the application won't be accessible automatically, since it runs on port 3000 and your device/emulator knows nothing about it. Execute the following to induce black magic and make the web application accessible:
 
@@ -328,7 +328,7 @@ nano config/blockchain.json
       "password": "config/development/password"
     }
   }
-  
+
 # ctrl+O will write your changes to file, ctrl+X will exit the file.
 # Now, navigate back to the root of your project and start testrpc
 
@@ -414,7 +414,7 @@ Later we’ll have an easy mechanism to make your DApp available for others to u
 
 ### Do It Yourself
 
-First, we're going to create a new `bots` directory and add file to keep our javascript in. 
+First, we're going to create a new `bots` directory and add file to keep our javascript in.
 
 ```shell
 cd ~/my-dapp
@@ -457,7 +457,7 @@ http-server
 status-dev-cli add '{"whisper-identity": "botler",  "name": "Botler" ,"bot-url": "http://<MACHINE-IP>:8080/bots/bot.js"}' --ip <DEVICE-IP>
 ```
 
-This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
+This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`.
 
 Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
 
@@ -481,7 +481,7 @@ First, go back to the `embark_demo/` directory we created [earlier](#my-first-da
 
 Instead of adding a new DApp, we can now include a `bot-url` parameter in our call to `status-dev-cli`. The chatbot url targets a `js` file, and this file will be loaded in the Otto VM shown in the anatomy. Code in this file сan interact with the input field, messages and react however we program it to.
 
-Let's create a bot.js in the `/embark_demo/app/js/` directory and put the short snippet of javascript we need into it. 
+Let's create a bot.js in the `/embark_demo/app/js/` directory and put the short snippet of javascript we need into it.
 
 ```shell
 touch ~/embark_demo/app/js/bot.js
@@ -505,7 +505,7 @@ status.addListener("on-message-send", function (params, context) {
     return result;
 });
 ```
-This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`. 
+This is pretty much the simplest responsive chatbot we can write, using only the `addListener` function from the API. All it's listening for is a message-send event, to which it will try to respond with the test `You're amazing, master!`.
 
 Obviously, there's much more we can do than simply listen for messages and send flattering responses. All will be revealed in the next tutorial. If you're feeling impatient, you can find a full Demo Bot [here](https://github.com/status-im/status-react/tree/34b77022f7926dbabbb0e8c5e8471eaea5ed812f/bots/demo_bot).
 
@@ -653,7 +653,7 @@ status.command({
  });
 ```
 
-We then set a color for the command to appear in set up our preview function. You can read about exactly what the preview function can achieve in the formal API specififcation but, in a nutshell, the preview defines what the user will see returned in the markup - i.e. where the messages appear. 
+We then set a color for the command to appear in set up our preview function. You can read about exactly what the preview function can achieve in the formal API specififcation but, in a nutshell, the preview defines what the user will see returned in the markup - i.e. where the messages appear.
 
 Here, we are creating a simple text response by setting up a variable that we pass to `status.components.text`, which the perceptive will notice is a React Native component - a whole bunch more of which are available and detailed in the formal specification. Beneath the text, we are creating a standard response of "Hello from the other side!", all of which will be returned as json to the markup. Note again the use of another React Native component - `status.components.view`.
 
@@ -667,7 +667,7 @@ status-dev-cli list --ip <DEVICE-IP>
 status-dev-cli watch $PWD "<whisper-identity>" --ip <DEVICE-IP>
 ```
 
-And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
+And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond.
 
 {{% /tab %}}
 
@@ -712,10 +712,10 @@ embark run
 
 status-dev-cli list --ip <DEVICE-IP>
 
-status-dev-cli watch $PWD "<whisper-identity>" --ip 
+status-dev-cli watch $PWD "<whisper-identity>" --ip
 ```
 
-And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond. 
+And there you go - we are now capable of greeting and interacting with our bot in two ways! You should be able to see your DApp, navigate to it, tap the new `/hello` command you see above the text input field and see your new Dapp respond.
 
 {{% /tab %}}
 
@@ -902,9 +902,9 @@ status.command({
     }]
  })
  ```
- 
+
  Or, even better, can you get some location suggestions to display?
- 
+
  ```js
  function locationsSuggestions (params) {
     var result = {title: "Send location"};
