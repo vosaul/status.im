@@ -977,30 +977,34 @@ return {markup: status.components.touchable(
 
 ### How can I send a command a display result back?
 
-This one is fairly self-explanantory, and just reuses code from the above tutorials in a slightly different pattern.
+Here we use the `onSend` function to direct a user to a website based on their initial input.
 
 ```javascript
 status.command({
-     name: "hello",
-     title: "HelloBot",
-     description: "Helps you say hello",
-     color: "#CCCCCC",
-     onSend: function (params) {
-                 result["text-message"] = "You're amazing, master!";
-     },
-     preview: function (params) {
-             var text = status.components.text(
-                 {
-                     style: {
-                         marginTop: 5,
-                         marginHorizontal: 0,
-                         fontSize: 14,
-                         fontFamily: "font",
-                         color: "black"
-                     }
-                 }, "Hello from the other side!");
-             return {markup: status.components.view({}, [text])};
-         }
+    name: "google_or_yahoo",
+    title: 'TITLE',
+    description: 'DESCRIPTION',
+    fullscreen: true,
+    params: [{
+        name: "option",
+        type: status.types.TEXT,
+        placeholder: "either type G or Y"
+    }],
+    onSend: function(params){
+      console.log('***', params);
+      if (params.option == 'g') {
+        url = 'http://www.google.com'
+      }else{
+        url = 'http://www.yahoo.com'
+      }
+      return {
+              title: "Browser",
+              dynamicTitle: true,
+              singleLineInput: true,
+              actions: [ { type: status.actions.FULLSCREEN } ],
+              markup: status.components.bridgedWebView("http://google.com/")
+      };
+    }
 });
 ```
 
