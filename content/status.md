@@ -470,6 +470,7 @@ function jsSuggestions(params, context) {
 Standard RN component - please see [JSCoach](https://js.coach/react-native) for more.  
 Expects 2 arguments - `options` and `element`.  
 The example provided uses the `touchable` component to make our suggestions that much more native and-feeling and interactive.
+It's worth noting that `touchable` components can only wrap `view` components, so any touchable text for example needs to first be wrapped in a `view`.
 
 ## status.components.scrollView
 
