@@ -1031,6 +1031,14 @@ Use the latest nightlies and `status.sendMessage` will now be available.
 });
 ```
 
+### How can I add an image to my reactive component?
+
+Thanks to @karalabe for this one!
+
+```js
+status.components.image({style: {width: 50, height: 50}, source: {uri: 'https://facebook.github.io/react/img/logo_og.png'}}),
+```
+
 ## JS and web3 API FAQ
 
 ### How can data be stored and retrieved?
