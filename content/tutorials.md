@@ -555,7 +555,7 @@ Again, you could always use `localhost` instead if you run into issues, and just
 ```shell
 testrpc -p 8546
 
-status-dev-cli switch-node "http://<MACINE-IP>:8546"
+status-dev-cli switch-node "http://<MACINE-IP>:8546" --ip <DEVICE-IP>
 
 cd ~/truffle-box-status
 
