@@ -887,7 +887,7 @@ It's also worth knowing about the `fullscreen` option. If your command has `sugg
 
 OK, so we can build up a basic command, show it to the user and have it do something (like return text) when the user taps it. That's great, but what happens if we want to be a bit more dynamic and interactive and suggest to our users a range of options to choose from when issuing the command? Let's take a look...
 
-For another full example of an interactive suggestion area, please take a look over our [Demo Bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js), which makes prominent use of the `defineSubscription` method from the API and may be helpful for those looking to waork with things like the `status.component.slider` React Native Component.
+For another full example of an interactive suggestion area, please take a look over our [Demo Bot](https://github.com/status-im/status-react/blob/develop/bots/demo_bot/bot.js), which makes prominent use of the `defineSubscription` method from the API and may be helpful for those looking to work with things like the `status.component.slider` React Native Component.
 
 You could also build a location bot following a similar pattern. We provide the code for you, just because we can. See if you can get it all working right this time...
 
