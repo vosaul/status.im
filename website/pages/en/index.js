@@ -177,7 +177,7 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'Every time you cried out in anguish over an incomprehensible error; every time you lay awake at night, disturbing your loved ones with sobs over a gas fee induced heisenbug; some secret part of you has known that there has to be a better way. The Status Technikon has the material you need to be united forevermore with the delights of decentralisation.',
+        content: 'Every time you cried out in anguish over an incomprehensible error; every time you lay awake at night, sobbing over a gas fee induced heisenbug; some secret part of you has known that there has to be a better way. The Status Technikon has the material you need to be united forevermore with the delights of decentralisation.',
         image: imgUrl('browse_icon.png'),
         imageAlign: 'right',
         title: 'Welcome to #TheStateOfUs',

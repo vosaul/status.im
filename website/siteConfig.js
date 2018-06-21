@@ -47,6 +47,7 @@ const siteConfig = {
     {search: true},
   ],
 
+  // For search, can be set up once the site is live
   algolia: {
     apiKey: 'my-api-key',
     indexName: 'my-index-name',
