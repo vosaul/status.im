@@ -37,6 +37,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'introduction', label: 'Docs'},
+    {href: 'https://ideas.status.im', label: 'Ideas'},
     {doc: 'testing', label: 'Testing'},
     {doc: 'intro_whisper', label: 'Whisper'},
     {doc: 'userguide', label: 'User Guide'},
