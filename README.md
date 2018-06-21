@@ -11,6 +11,6 @@ npm install
 npm run start
 ```
 
-This site is built with Docusaurus](), go there to learn more.
+This site is built with [Docusaurus](https://docusaurus.io/), go there to learn more.
 
 All you really need to do is add an MD file in `/docs` and then reference it correctly in `website/sidebars.json` in the sidebar of your choice. There are some subtleties with versioning and translations which will be documented here at a later stage.
