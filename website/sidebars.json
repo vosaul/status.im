@@ -6,7 +6,8 @@
     "Status Desktop": ["intro_desktop"],
     "Research": ["intro_research", "nimbus"],
     "SNT Use Cases": ["tribute_to_talk", "ens_usernames", "mail_server_incentives"],
-    "Status Open Bounty": ["intro_openbounty", "faq_openbounty", "status_uses_openbounty", "testing_openbounty", "payout_flow_openbounty"]
+    "Status Open Bounty": ["intro_openbounty", "faq_openbounty", "status_uses_openbounty", "testing_openbounty", "payout_flow_openbounty"],
+    "Architecture": ["status_react_structure", "send_transaction_flow"]
   },
   "testing": {
     "Testing": ["testing", "report_a_bug"]
