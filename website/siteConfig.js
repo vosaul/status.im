@@ -18,10 +18,10 @@ const siteConfig = {
   tagline: 'Decentralised technologies at your fingertips',
   url: 'https://status.im',
   baseUrl: '/',
-  projectName: 'status-docs',
+  projectName: 'docs.status.im',
   organizationName: 'status-im',
   users,
-  editUrl: 'https://github.com/status-im/docs.status.im/edit/NewSite/docs/',
+  editUrl: 'https://github.com/status-im/docs.status.im/edit/develop/docs/',
   headerLinks: [
     {doc: 'introduction', label: 'Docs'},
     {href: 'https://ideas.status.im', label: 'Ideas'},
