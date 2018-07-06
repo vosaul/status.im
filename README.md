@@ -5,7 +5,6 @@ To run the site locally, follow these instructions;
 ```bash
 git clone https://github.com/status-im/docs.status.im.git
 cd docs.status.im
-git checkout NewSite
 cd website/
 npm install
 npm run start
