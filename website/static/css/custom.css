@@ -31,6 +31,14 @@ nav.toc .toggleNav ul li a {
     padding: 0;
 }
 
+.homeContainer .homeWrapper {
+    padding: 3em 10px;
+}
+
+.imageAlignSide .blockImage {
+    flex: none;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
