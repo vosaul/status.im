@@ -26,19 +26,10 @@ const siteConfig = {
     {doc: 'introduction', label: 'Docs'},
     {href: 'https://ideas.status.im', label: 'Ideas'},
     {doc: 'testing', label: 'Testing'},
-    {doc: 'intro_whisper', label: 'Whisper'},
-    {doc: 'userguide', label: 'User Guide'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
-    {languages: true},
-    {search: true},
+    {languages: false}
   ],
-  // For search, can be set up once the site is live
-  algolia: {
-    apiKey: 'my-api-key',
-    indexName: 'my-index-name',
-    algoliaOptions: {} 
-  },
   headerIcon: 'img/logo_white.png',
   footerIcon: 'img/logo_white.png',
   favicon: 'img/favicon.png',

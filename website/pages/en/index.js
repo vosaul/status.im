@@ -99,13 +99,13 @@ const Features = props => (
         content: 'Mobile first. Made for web3',
         image: imgUrl('status_logo_white_blue.svg'),
         imageAlign: 'top',
-        title: '[DApps](intro_dapps.md)',
+        title: '[DApps](docs/intro_dapps.html)',
       },
       {
         content: 'Build the future of a new web',
         image: imgUrl('status_logo_blue.svg'),
         imageAlign: 'top',
-        title: '[Status](build_status_osx.md)',
+        title: '[Status](docs/build_status_osx.html)',
       },
       {
         content: 'Learn what web3 is really all about',
