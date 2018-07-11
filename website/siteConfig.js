@@ -29,8 +29,8 @@ const siteConfig = {
     {href: 'https://github.com/status-im/', label: 'GitHub'}
   ],
   algolia: {
-    apiKey: '78347ae6233a1a7d26038d8f024cfc33',
-    indexName: 'status',
+    apiKey: '8e12bdadff441d3df9f9c77d7d4a3650',
+    indexName: 'status_technikon',
     algoliaOptions: {} 
   },
   headerIcon: 'img/logo_white.png',
