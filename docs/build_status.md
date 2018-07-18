@@ -70,7 +70,7 @@ Do this in the second terminal window:
 react-native start
 ```
 
-## Build and run the application itself!
+## Build and run the application itself
 
 ### iOS (macOS only)
 
