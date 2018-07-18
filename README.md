@@ -14,7 +14,7 @@ Creating a new page requires you to:
 
 It's probably a good idea to locally validate your changes before creating a Pull Request.
 
-To run the site locally, follow these instructions;
+To run the site locally, follow these instructions:
 
 ```bash
 git clone https://github.com/status-im/docs.status.im.git
