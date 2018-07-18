@@ -1,5 +1,9 @@
 /* your custom css */
 
+.mainContainer {
+    padding: 0;
+}
+
 .mainContainer .wrapper .post ol {
     background-color: #fff;
     border-radius: 8px;
@@ -39,7 +43,7 @@ nav.toc .toggleNav ul li a {
     flex: none;
 }
 
-.button {
+.button-main {
     display: block;
     font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -53,7 +57,7 @@ nav.toc .toggleNav ul li a {
     background-color: rgb(74, 90, 181);
 }
 
-.button:hover {
+.button-main:hover {
     background-color: rgba(74, 90, 181, 0.8);
 }
 

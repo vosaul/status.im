@@ -30,7 +30,7 @@ class Button extends React.Component {
   render() {
     return (
       <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
+        <a className="button-main" href={this.props.href} target={this.props.target}>
           {this.props.children}
         </a>
       </div>
@@ -92,7 +92,7 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block layout="fourColumn" background="light">
     {[
       {
         content: 'Mobile first. Made for web3',
