@@ -1,8 +1,7 @@
 {
   "docs": {
     "Introduction": ["introduction", "faqs"],
-    "Contributor Guide": ["contributor_guide"],
-    "Build Status": ["build_status"],
-    "Build DApps": ["intro_dapps", "embark", "dapp_curation"]
+    "Build Status": ["build_status", "contributor_guide"],
+    "Build DApps": ["embark", "dapp_curation"]
   }
 }

@@ -1,6 +1,6 @@
 ---
 id: build_status
-title: Building Status (macOS and Linux)
+title: Quick Start
 ---
 
 ## The easiest way

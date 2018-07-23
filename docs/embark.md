@@ -1,6 +1,6 @@
 ---
 id: embark
-title: Embark
+title: Embark by Status
 ---
 
 [Embark](https://embark.status.im) is a fast, simple and powerful framework to develop and deploy Decentralised Applications.
