@@ -23,7 +23,7 @@ Load up your DApp in the Status browser to test it out. We recommend stepping th
 
 If you find yourself pinching the screen to zoom in or scrolling horizontally to view cut-off content, you know what to do.  Open that CSS file!
 
-#### Detecting Status
+### Detecting Status
 
 The beauty of Status is that any user accessing your DApp through our browser has *already* installed everything they need to access the Ethereum network and make transactions.
 
@@ -33,7 +33,7 @@ Knowing that your users are on a mobile browser means that you can put aside any
 
 You can also provide Status-specific information or show our logo, if you’d like. Our brand assets are available [on GitHub](https://github.com/status-im/design-guides).
 
-#### Technical requirements
+### Technical requirements
 
 We’re always happy to check out projects that are still in development on testnet. Ping us in the #dapps chat on Status or in the [#dev-status channel](https://chat.status.im/#/room/#dev-status:status.im) on Riot with URLs for us to try out.
 
