@@ -3,6 +3,8 @@ id: status_web_api
 title: Status JavaScript API
 ---
 
+On top of regular `web3` access, Status offers a set of API available to DApps developers. This API follows the [EIP1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md) standard that will soon be used for web3 injection.
+
 If Dapp was opened in Status web browser, Dapp's developers can request access to Status specific data using the Status JavaScript API
 
 Dapps should request a Status JavaScript API by sending a message using the `window.postMessage` API. This message must be sent with a payload object containing a type property with a value of `'STATUS_API_REQUEST'` and `permissions` property corresponding to requested permissions, such as `“CONTACT_CODE”`.
