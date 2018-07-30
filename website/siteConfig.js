@@ -71,6 +71,7 @@ const siteConfig = {
     zIndex: 100,
   },
   repoUrl: 'https://github.com/status-im/status-react',
+  gaTrackingId: 'UA-79146816-6'
 };
 
 module.exports = siteConfig;
