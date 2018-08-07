@@ -24,7 +24,7 @@ const siteConfig = {
   editUrl: 'https://github.com/status-im/docs.status.im/edit/develop/docs/',
   headerLinks: [
     { search: true },
-    {href: 'https://blog.status.im', label: 'Blog'},
+    {href: 'https://blog.status.im/tag/technikon', label: 'Blog'},
     {href: 'https://chat.status.im/#/register', label: 'Riot'},
     {doc: 'testing', label: 'Test Status'},
     {href: 'https://github.com/status-im/', label: 'GitHub'}
