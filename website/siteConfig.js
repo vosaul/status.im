@@ -70,8 +70,7 @@ const siteConfig = {
   scrollToTopOptions: {
     zIndex: 100,
   },
-  repoUrl: 'https://github.com/status-im/status-react',
-  gaTrackingId: 'UA-79146816-6'
+  repoUrl: 'https://github.com/status-im/status-react'
 };
 
 module.exports = siteConfig;
