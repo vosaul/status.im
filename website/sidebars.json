@@ -2,7 +2,7 @@
   "docs": {
     "Introduction": ["introduction", "faqs"],
     "Build Status": ["build_status", "contributor_guide"],
-    "Build DApps": ["embark", "status_optimized", "status_web_api"]
+    "Build DApps": ["embark", "status_optimized", "status_web_api", "extensions_tutorial_chat_command"]
   },
   "testing": {
     "Testing": ["testing", "report_a_bug"]
