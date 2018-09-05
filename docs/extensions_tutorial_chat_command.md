@@ -5,7 +5,7 @@ title: Extension chat command tutorial
 
 # Write a chat command
 
-One of the main use cases for extensions is to add new chat commands. This tutorial will go step by step through the creation and deployment of a chat command allwong to send NFTs.
+One of the main use case for extensions is to add new chat commands. This tutorial will go step by step through the creation and deployment of a chat command allowing to send NFTs.
 
 ## Add meta data
 
@@ -24,9 +24,13 @@ Metadata will be displayed to the end user before installing an extension.
 Hooks identify what part of status will be extended. Each hook has a unique identifier and a set of key/value elements specific to this hook.
 An extension can implement several hooks.
 
-In this tutorial a chat command is created: it's id is `collectible` and the hook type for a chat command is `commands`.
+In this tutorial a chat command is created: it's specific id is `collectible` and the generic hook type for a chat command is `commands`.
 
-PLACEHOLDER: Overview of `commands` structure here
+A `command` hook requires the following properties to be set:
+
+* scope
+* preview and short-preview
+* parameters
 
 ### Scope
 
@@ -41,22 +45,22 @@ Here we will demonstrate `personal-chats`.
 ```clojure
 {hooks/commands.collectible
  {...
-  :scope #{:personal-chats}}
+  :scope #{:personal-chats}} ;; Could be #{:personal-chats :group-chats}
 ```
 
 ### Previews 
 
-`Previews` are used to display the result of a command in a chat. 
+`Previews` are used to display the result of a command execution in a chat. 
 
-`Short previews` will be displayed in the Home panel of Status.
+`Short previews` will be displayed as last message in the chat item of the Home tab of Status.
 
 Both previews must point to definition of UI in [Hiccup syntax](https://github.com/weavejester/hiccup/wiki/Syntax) using a combination of views, queries and events supported by status host.
 
 More details can be found [here](https://status-im.github.io/pluto/docs/concepts/Anatomy.html).
 
-Previews receive data from status matching the message details. Those can be referenced in a view using the `properties` reference.
+Previews receive data from status encapsulating the parameters provided by the end user and some relevant contextual information. Those can be accessed in a view using the `properties` reference.
 
-Short preview definition:
+Our short preview definition:
 
 ```clojure
 {views/short-preview
@@ -71,7 +75,7 @@ Short preview definition:
 `text` and `view` are view elements available for all hosts.
 `if` is a block providing conditional logic.
 
-Preview definition:
+Our preview definition:
 
 ```clojure
 {views/preview
@@ -81,9 +85,9 @@ Preview definition:
            :align-items    :flex-start}
     [status/nft-token collectible-token]
     [view {:color          (if outgoing "#707caf" "#939ba1")
-        :margin-top     6
-        :font-size      12
-        :flex-direction :row}
+           :margin-top     6
+           :font-size      12
+           :flex-direction :row}
     [text "Sent at "]
     [text timestamp-str]]
     [status/send-status {:tx-hash tx-hash :outgoing outgoing}]])}
@@ -98,8 +102,8 @@ The NFT chat command has 2 required parameters: the NFT type and the specific NF
 Both will use Status UI components to provide a nice visual selection experience.
 
 A parameter is identified by its `id` and must define a `type` and a `placeholder` (any string).
-`type` semantics are documented [here](). In this tutorial `:text` and `:number` will be used.
-`suggestions` can be optionally provided and must points to a `view`. 
+In this tutorial `:text` and `:number` will be used.
+`suggestions` can be optionally provided and must point to a `view`. 
 
 ```clojure
 {hooks/commands.collectible
@@ -179,8 +183,7 @@ You can now use your new extension from within a 1-1 chat.
      [text symbol]])
 
 hooks/commands.collectible
-{:description   "Collectible"
- :scope         #{:personal-chats}
+{:scope         #{:personal-chats}
  :preview       preview
  :short-preview short-preview
  :parameters    [{:id          :symbol
