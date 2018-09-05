@@ -26,6 +26,8 @@ An extension can implement several hooks.
 
 In this tutorial a chat command is created: it's id is `collectible` and the hook type for a chat command is `commands`.
 
+PLACEHOLDER: Overview of `commands` structure here
+
 ### Scope
 
 Scope can be any combination of:
@@ -34,7 +36,7 @@ Scope can be any combination of:
 * group-chats
 * public-chats
 
-Here we will only support `personal-chats`.
+Here we will demonstrate `personal-chats`.
 
 ```clojure
 {hooks/commands.collectible
@@ -44,7 +46,10 @@ Here we will only support `personal-chats`.
 
 ### Previews 
 
-Previews are used to display the result of a command in a chat. Short previews will be displayed in the Home panel.
+`Previews` are used to display the result of a command in a chat. 
+
+`Short previews` will be displayed in the Home panel of Status.
+
 Both previews must point to definition of UI in [Hiccup syntax](https://github.com/weavejester/hiccup/wiki/Syntax) using a combination of views, queries and events supported by status host.
 
 More details can be found [here](https://status-im.github.io/pluto/docs/concepts/Anatomy.html).
