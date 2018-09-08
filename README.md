@@ -26,7 +26,7 @@ npm run start
 
 This site is built with [Docusaurus](https://docusaurus.io/), go there to learn more.
 
-## Continous Deployment
+## Continuous Deployment
 
 To make possible deploying the new version of the page from the `master` branch a Jenkins job is configured at:
 
