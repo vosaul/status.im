@@ -3,9 +3,7 @@ id: build_desktop
 title: Build Desktop
 ---
 
-# Development environment setup
-
-## Prerequisites
+# Prerequisites
 
 lein, node.js v.8, cmake, Qt 5.9.1 (with QtWebEngine components installed), Qt's qmake available in PATH. If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
 
@@ -19,6 +17,18 @@ Note: add qmake to PATH via
 Caveats:
 
 - If npm hangs at some step, check the version. If it's 5.6.0 or higher, try downgrading to 5.5.1 via `npm install -g npm@5.5.1`
+
+# Building a release package
+
+Run the following commands to build a Desktop package for the host environment (Linux or Mac OS):
+
+``` bash
+make setup
+make prepare-desktop
+make release-desktop
+```
+
+# Development environment setup
 
 ## To install react-native-cli with desktop commands support
 
