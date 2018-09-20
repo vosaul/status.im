@@ -19,7 +19,7 @@ The project output can take several forms:
 
 ### 1. Requirements
 
-- Go version 1.10 or higher;
+- Go version 1.10;
 - Docker (only if cross-compiling).
 
 ### 2. Clone the repository
