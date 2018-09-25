@@ -143,3 +143,23 @@ Time to time metro bundler for some reasons doesn't recognize changes in JavaScr
 
 On Linux metro bundler saves cache to the following directories (can be removed manually):
 /tmp/metro-cache-*
+
+### missing opengl dependencies
+
+When trying to run `react-native run-desktop` on Ubuntu the following error happens:
+
+```
+Command failed: ./build.sh -e "node_modules/react-native-i18n/desktop;node_modules/react-native-config/desktop;node_modules/react-native-fs/desktop;node_modules/react-native-http-bridge/desktop;node_modules/react-native-webview-bridge/desktop;node_modules/react-native-keychain/desktop;node_modules/react-native-securerandom/desktop;modules/react-native-status/desktop;node_modules/google-breakpad" -f "../../../../../resources/fonts/SF-Pro-Text-Regular.otf;../../../../../resources/fonts/SF-Pro-Text-Medium.otf;../../../../../resources/fonts/SF-Pro-Text-Light.otf"
+CMake Error at /home/goran/.qt/5.9.1/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake:9 (message):
+  Failed to find "GL/gl.h" in "/usr/include/libdrm".
+Call Stack (most recent call first):
+  /home/goran/.qt/5.9.1/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake:172 (include)
+  /home/goran/.qt/5.9.1/gcc_64/lib/cmake/Qt5Quick/Qt5QuickConfig.cmake:89 (find_package)
+  reportApp/CMakeLists.txt:18 (find_package)
+```
+
+Fixed by installing the missing dependencies:
+
+```
+sudo apt-get install libgl-dev
+```
