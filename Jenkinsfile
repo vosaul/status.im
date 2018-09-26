@@ -51,7 +51,7 @@ pipeline {
         sshagent(credentials: ['jenkins-slave-private-keu']) {
           sh '''
             scp -o StrictHostKeyChecking=no \
-            -r public/. node-01.do-ams3.proxy.misc:/var/www/dev-docs/
+            -r public/. node-01.do-ams3.proxy.misc.statusim.net:/var/www/dev-docs/
           '''
         }
       } }
