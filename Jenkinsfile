@@ -36,10 +36,23 @@ pipeline {
       }
     }
 
-    stage('Publish') {
+    stage('Publish Prod') {
+      when { branch 'master' }
       steps { script {
         sshagent(credentials: ['status-im-auto-ssh']) {
           sh 'npm run deploy'
+        }
+      } }
+    }
+
+    stage('Publish Devel') {
+      when { branch 'develop' }
+      steps { script {
+        sshagent(credentials: ['jenkins-slave-private-keu']) {
+          sh '''
+            scp -o StrictHostKeyChecking=no \
+            -r public/. node-01.do-ams3.proxy.misc:/var/www/dev-docs/
+          '''
         }
       } }
     }
