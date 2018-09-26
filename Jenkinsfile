@@ -1,20 +1,60 @@
-node('linux') {
-  stage('Git Prep') {
-    checkout scm
-    sh 'git config user.name "status-im-auto"'
-    sh 'git config user.email "auto@status.im"'
+pipeline {
+  agent { label 'linux' }
+
+  options {
+    disableConcurrentBuilds()
+    /* manage how many builds we keep */
+    buildDiscarder(logRotator(
+      numToKeepStr: '20',
+      daysToKeepStr: '30',
+    ))
   }
 
-  stage('Install Deps') {
-    sh 'cd website && npm install'
+  environment {
+    GIT_USER = 'status-im-auto'
+    GIT_MAIL = 'auto@status.im'
   }
 
-  stage('Publish') {
-    withCredentials([string(
-      credentialsId: 'jenkins-github-token',
-      variable: 'GITHUB_TOKEN',
-    )]) {
-      sh 'cd website && GIT_USER="status-im-auto:$GITHUB_TOKEN" npm run publish-gh-pages'
+  stages {
+    stage('Git Prep') {
+      steps {
+        sh "git config user.name ${env.GIT_USER}"
+        sh "git config user.email ${env.GIT_MAIL}"
+      }
+    }
+
+    stage('Install Deps') {
+      steps {
+        sh 'npm install'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'npm run clean'
+        sh 'npm run build'
+      }
+    }
+
+    stage('Publish Prod') {
+      when { branch 'master' }
+      steps { script {
+        sshagent(credentials: ['status-im-auto-ssh']) {
+          sh 'npm run deploy'
+        }
+      } }
+    }
+
+    stage('Publish Devel') {
+      when { branch 'develop' }
+      steps { script {
+        sshagent(credentials: ['jenkins-slave-private-keu']) {
+          sh '''
+            scp -o StrictHostKeyChecking=no \
+            -r public/. node-01.do-ams3.proxy.misc:/var/www/dev-docs/
+          '''
+        }
+      } }
     }
   }
 }
