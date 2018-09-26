@@ -17,7 +17,9 @@ per_page: 0
 theme: navy
 deploy:
   type: git
-  repo: git@github.com:hexojs/hexojs.github.io.git
+  branch: gh-pages
+  name: status-im-auto
+  repo: git@github.com:status-im/docs.status.im.git
 
 theme_config:
     favicon: img/logo-32.png
