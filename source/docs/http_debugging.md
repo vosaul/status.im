@@ -1,13 +1,20 @@
+---
+id: http_debugging
+title: Debugging
+---
+
 # General information
 
-For debugging we use HTTP server that uses [react-native-http-bridge](https://github.com/alwx/react-native-http-bridge). 
-We decided to not work on network discovery at the current stage. All the discovery proposals are available [here](https://gist.github.com/alwx/a911408984791e0e9a80d1ac4302443c).
+Status uses HTTP server for debugging. By entering **Development mode** (on **Settings** screen) you start this server.
+After that you're able to communicate to Status by sending HTTP requests. 
 
-All the request examples below are given for [HTTPie](https://httpie.org).
+These document describes all possible requests and expected responses. All the examples here are given for HTTPie. 
+Of course, you can use any other tool for HTTP communication instead.
 
 # Technical details
 * The server runs on port 5561;
-* It runs only if **Development mode** (on **Settings** screen) is switched on;
+* It runs only if **Development mode** (on **Settings** screen) is switched on
+* Its settings are linked to your account — the server stops when you log out and starts when you log in;
 * The content type for both requests and responses is always `application/json`.
 
 # API description
