@@ -48,10 +48,10 @@ pipeline {
     stage('Publish Devel') {
       when { expression { env.GIT_BRANCH ==~ /.*develop/ } }
       steps { script {
-        sshagent(credentials: ['jenkins-slave-private-keu']) {
+        sshagent(credentials: ['jenkins-ssh']) {
           sh '''
-            scp -o StrictHostKeyChecking=no \
-            -r public/. node-01.do-ams3.proxy.misc:/var/www/dev-docs/
+            scp -o StrictHostKeyChecking=no -r public/. \
+            jenkins@node-01.do-ams3.proxy.misc.statusim.net:/var/www/dev-docs/
           '''
         }
       } }
