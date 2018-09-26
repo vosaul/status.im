@@ -37,7 +37,7 @@ pipeline {
     }
 
     stage('Publish Prod') {
-      when { branch 'master' }
+      when { expression { env.GIT_BRANCH ==~ /.*master/ } }
       steps { script {
         sshagent(credentials: ['status-im-auto-ssh']) {
           sh 'npm run deploy'
@@ -46,7 +46,7 @@ pipeline {
     }
 
     stage('Publish Devel') {
-      when { branch 'develop' }
+      when { expression { env.GIT_BRANCH ==~ /.*develop/ } }
       steps { script {
         sshagent(credentials: ['jenkins-slave-private-keu']) {
           sh '''
