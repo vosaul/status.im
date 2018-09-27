@@ -120,33 +120,35 @@
                     </div>
                 </div>
             </div>
-            <div class="features">
-        <div class="features-wrap-2">
-            <div class="features-item features-two">
-                <div class="features-item-inner">
-                    <div class="features-item-top">
-                        <h2>Testing</h2>
-                        <p>So you'd like to help us make sure we ship the best products consistently and that we maintain, 
-                        as an open source community, the highest security and privacy standards we can? Learn how to get involved here.
-                        </p>
-                    </div>
-                    <div class="features-button-wrap">
-                        <a class="button button--features button--light" href="/docs/testing.html">Test Status</a>
+        </div>
+        <div class="features">
+            <div class="features-wrap-2">
+                <div class="features-item features-two">
+                    <div class="features-item-inner">
+                        <div class="features-item-top">
+                            <h2>Testing</h2>
+                            <p>So you'd like to help us make sure we ship the best products consistently and that we maintain, 
+                            as an open source community, the highest security and privacy standards we can? Learn how to get involved here.
+                            </p>
+                        </div>
+                        <div class="features-button-wrap">
+                            <a class="button button--features button--light" href="/docs/testing.html">Test Status</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="features-item features-three">
-                <div class="features-item-inner">
-                    <div class="features-item-top">
-                        <h2>WIP</h2>
-                        <p>We have a very fast-moving codebase. As a decentralised and remote community of people, 
-                        there are often new <a href="https://ideas.status.im" target="_blank">ideas</a> being worked on 
-                        by various different people. Follow the latest developments, research efforts, and open questions 
-                        we have to answer in oder to deliver the mobile window onto Ethereum we all need.
-                        </p>
-                    </div>
-                    <div class="features-button-wrap">
-                        <a class="button button--features button--light" href="/wip/">Get Involved!</a>
+                <div class="features-item features-three">
+                    <div class="features-item-inner">
+                        <div class="features-item-top">
+                            <h2>WIP</h2>
+                            <p>We have a very fast-moving codebase. As a decentralised and remote community of people, 
+                            there are often new <a href="https://ideas.status.im" target="_blank">ideas</a> being worked on 
+                            by various different people. Follow the latest developments, research efforts, and open questions 
+                            we have to answer in oder to deliver the mobile window onto Ethereum we all need.
+                            </p>
+                        </div>
+                        <div class="features-button-wrap">
+                            <a class="button button--features button--light" href="/wip/">Get Involved!</a>
+                        </div>
                     </div>
                 </div>
             </div>
