@@ -139,7 +139,7 @@
                 <div class="features-item-inner">
                     <div class="features-item-top">
                         <h2>WIP</h2>
-                        <p>We have an very fast-moving codebase. As a decentralised and remote community of people, 
+                        <p>We have a very fast-moving codebase. As a decentralised and remote community of people, 
                         there are often new <a href="https://ideas.status.im" target="_blank">ideas</a> being worked on 
                         by various different people. Follow the latest developments, research efforts, and open questions 
                         we have to answer in oder to deliver the mobile window onto Ethereum we all need.
