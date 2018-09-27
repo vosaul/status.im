@@ -33,4 +33,5 @@
   <!-- RSS -->
   {{ feed_tag('atom.xml') }}
   <meta property="og:image" content="/img/share.png?v=0.0.5" />
+  <meta property="og:title" content="Status, a Mobile Ethereum OS" />
 </head>
