@@ -16,20 +16,7 @@
             <div class="mail-inner">
                 <h3>Download Status</h3>
                 <p>If you have an Android, you can easily get Status <a href="https://get.status.im" target="_blank" class="download">here</a>. You can also download our desktop builds there ;)</p>
-                <p>If you're on iOS, you'll need to sign up below in order to receive an automated TestFlight invitation while we're still in Beta.</p>
-                <div class="email-form ">
-                    <!--[if lte IE 8]>
-                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                    <![endif]-->
-                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                    <script>
-                      hbspt.forms.create({
-                        css: '',
-                        portalId: "3954379",
-                        formId: "c1eac0b5-5723-47e6-9d66-87a783c38d82"
-                      });
-                    </script>
-                </div>
+                <p>If you're on iOS, you'll need to use <a href="https://testflight.apple.com/join/J8EuJmey" target="_blank" class="download">this form</a> to sign up easily and get TestFlight while we're still in Beta.</p>
             </div>
         </div>
     </div>
