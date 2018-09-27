@@ -12,3 +12,13 @@ If you want to add a page, rather than just edit, you'll need to make sure it ap
 2. In `source/_data/sidebars.yml` add the appropriate text to the appropriate place.
 3. In `themes/navy/languages/en.yml` edit the sidebars section to make sure that your new text in `sidebars.yml` is rendered correctly.
 
+## Testing locally
+
+Make sure you have node.js installed first.
+
+1. Open Terminal and navigate to the project root directory,
+2. Run `npm install`,
+3. Run `npm run build`,
+4. Go to `public/` directory,
+5. Start a simple HTTP server serving files, for example: `python -m SimpleHTTPServer 8000`,
+6. Open http://localhost:8000 in a browser.
