@@ -5,17 +5,27 @@ title: Build Desktop
 
 # Prerequisites
 
-lein, node.js v.8, cmake, Qt 5.9.1 (with QtWebEngine components installed), Qt's qmake available in PATH. If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
+You will need the following tools installed:
+  - Leiningen (Clojure build tool, get it from https://leiningen.org)
+  - Node.js v.8
+  - CMake 3.1.0 or higher
+  - Qt 5.9.1 or higher. You'll only need macOS and QtWebEngine components installed. 
+
+
+## Qt setup
+Set Qt's environment variables: 
+  - `QT_PATH` should point to the location of Qt's distribution, e.g. `/Users/<user_name>/Qt/5.11.2`. It should not end with a slash.
+  - add qmake to PATH via 
+    - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
+    - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
+
+OS-specific notes:
+  - If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
+  - Note that building on macOS Mojave requires Qt 5.11.2, lower versions will not work.
 
 Qt 5.9.1 for Linux is available here: https://download.qt.io/archive/qt/5.9/5.9.1/qt-opensource-linux-x64-5.9.1.run
 
-Note: add qmake to PATH via
-
-- On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
-- On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
-
-Caveats:
-
+## Caveats
 - If npm hangs at some step, check the version. If it's 5.6.0 or higher, try downgrading to 5.5.1 via `npm install -g npm@5.5.1`
 
 # Building a release package
@@ -23,6 +33,8 @@ Caveats:
 Run the following commands to build a Desktop package for the host environment (Linux or Mac OS):
 
 ``` bash
+git clone https://github.com/status-im/status-react.git
+cd status-react
 make setup
 make prepare-desktop
 make release-desktop
@@ -45,11 +57,7 @@ npm install -g
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
-    scripts/prepare-for-platform.sh desktop
-    npm install
-    ln -sf './node_modules/re-natal/index.js' './re-natal'
-    ./re-natal use-figwheel
-    ./re-natal enable-source-maps
+    make dev-desktop
     ```
 1. In separate terminal tab: `npm start` (note: it starts react-native packager )
 1. In separate terminal tab: `node ./ubuntu-server.js`
