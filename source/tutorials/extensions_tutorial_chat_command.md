@@ -128,30 +128,14 @@ A universal link pointing to an extension would then look like: `https://get.sta
 
 ## Use
 
-The simplest option is to scan a QR code pointing to your extension. You can also navigate to status user profile and open the `Extensions` item in the `Advanced` section.
-This option is only available in developer mode.
+The simplest option is to scan a QR code pointing to your extension. You can also navigate to status user profile and open the `Extensions` item in the `Advanced` section. This option is only available in developer mode.
 
-![alt-text](assets/extensions/profile.jpg)
+Once loaded, details about an extension are available. An extension can then be installed. Once installed all hooks are `active`. Any extension can then be `deactivated` or re-`activated`. Associated hooks will then be removed/added from Status. 
 
-![alt-text](assets/extensions/add.jpg)
+You can now use your new extension from within a 1-1 chat!
 
-Once loaded, details about an extension are available.
+![collectibles in chat](/tutorials/thumbnails/collectible-chat-command.gif)
 
-![alt-text](assets/extensions/install.jpg)
-
-An extension can then be installed. Once installed all hooks are `active`.
-
-Any extension can then be `deactivated` or re-`activated`. Associated hooks will then be removed/added from Status.
-
-![alt-text](assets/extensions/list.jpg)
-
-You can now use your new extension from within a 1-1 chat.
-
-![alt-text](assets/extensions/collectible-type.jpg)
-
-![alt-text](assets/extensions/collectible-token.jpg)
-
-![alt-text](assets/extensions/collectible-preview.jpg)
 
 ## Full extension code
 
