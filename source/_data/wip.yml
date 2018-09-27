@@ -1,0 +1,19 @@
+- name: PFS
+  description: Perfect Forward Secrecy and Group Chats
+  link: https://github.com/status-im/status-react/pull/5646
+  thumbnail: secrecy.jpg
+  tags:
+    - security
+    - key exchange
+    - privacy
+    - secrecy
+    - communication
+    - chat
+- name: Mail Servers
+  description: Cryptoeconomics and Whisper Messages, oh my!
+  link: https://github.com/status-im/ideas/tree/master/ideas/280-discoverable-trusted-server-nodes
+  thumbnail: mail.jpg
+  tags:
+    - chat
+    - NFTs
+    - collectibles
