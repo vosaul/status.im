@@ -33,7 +33,4 @@
   <!-- RSS -->
   {{ feed_tag('atom.xml') }}
   <meta property="og:image" content="/img/share.png?v=0.0.5" />
-  <!-- Google Analytics -->
-  {{ partial('google_analytics') }}
-  <link rel="stylesheet" href="/js/styles/railscasts.css" />
 </head>

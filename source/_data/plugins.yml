@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - name: embark-bamboo
   description: Plugin to add Bamboo support to embark
   link: https://www.npmjs.com/package/embark-bamboo
@@ -56,3 +57,20 @@
   tags:
     - haml
     - templates
+=======
+- name: pluto
+  description: A grammar for data manipulation
+  link: https://status-im.github.io/pluto/
+  thumbnail: pluto.jpg
+  tags:
+    - grammar
+    - data
+- name: collectibles-chat
+  description: Extension for sending NFTs through Chat
+  link: https://gist.github.com/janherich/92747e730b2e115bcbe145114d024e66
+  thumbnail: cryptokitty.jpg
+  tags:
+    - chat
+    - NFTs
+    - collectibles
+>>>>>>> develop

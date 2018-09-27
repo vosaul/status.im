@@ -1,5 +1,5 @@
 <li class="plugin on">
-  <img src="/plugins/thumbnails/{{ plugin.thumbnail }}" style="display: block" />
+  <img src="/extensions/thumbnails/{{ plugin.thumbnail }}" style="display: block; width: 200px; height: 160px; margin-bottom: 20px;" />
   <a href="{{ plugin.link }}" class="plugin-name" target="_blank">{{ plugin.name }}</a>
   <p class="plugin-desc">{{ plugin.description }}</p>
   <div class="plugin-tag-list">
