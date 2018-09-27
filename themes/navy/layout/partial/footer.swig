@@ -15,7 +15,7 @@
         <div class="mail">
             <div class="mail-inner">
                 <h3>Download Status</h3>
-                <p>If you have an Android, you can easily get Status <a href="https://get.status.im" target="_blank" class="download">here</a>. You can also download our desktop builds there ;)</p>
+                <p>If you have an Android, you can easily get Status <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" target="_blank" class="download">here</a>. You can also download our nightlies and desktop builds <a  href="https://status-im.github.io/nightly/" target="_blank" class="download">here</a>.</p>
                 <p>If you're on iOS, you'll need to use <a href="https://testflight.apple.com/join/J8EuJmey" target="_blank" class="download">this form</a> to sign up easily and get TestFlight while we're still in Beta.</p>
             </div>
         </div>
