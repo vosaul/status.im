@@ -25,7 +25,7 @@ docs:
   status_extensions:
     add_your_dapp: add_your_dapp.html
     js_api: status_web_api.html
-    http_debugging: http-debugging.html
+    http_debugging: http_debugging.html
     manifesto: intro_dapps.html
     extensions_spec: extensions_spec.html
     embark: embark.html
