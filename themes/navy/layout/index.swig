@@ -5,11 +5,48 @@
                 <a class="logo" href="/"></a>
             </div>
 
-            <ul class="main-nav">
-                <li><a href="/docs/build_status.html">Build Status</a></li>
-                <li><a href="/tutorials/">Tutorials</a></li>
-                <li><a href="/extensions/">Extensions</a></li>
-            </ul>
+            <header class="dropdown">
+                <nav>
+                    <ul>
+                    <li class="current"><a href="#">Status App</a>
+                        <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Desktop</a></li>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Embark</a>
+                        <ul>
+                        <li><a href="https://embark.status.im">About</a></li>
+                        <li><a href="https://embark.status.im/docs">Docs</a></li>
+                        <li><a href="https://our.status.im/tag/embark">Blog</a></li>
+                        <li><a href="https://gitter.im/embark-framework/Lobby">Contribute</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="https://our.status.im/tag/studio">Studio</a></li>
+
+                    <li><a href="https://status.im/incubate">Incubate</a></li>
+
+                    <li><a href="/">Nimbus</a>
+                        <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/docs/">Docs</a></li>
+                        <li><a href="https://our.status.im/tag/research">Blog</a></li>
+                        <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
+
+                    <li><a href="https://our.status.im">Community</a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
 
         <div class="secondary-nav">
@@ -19,9 +56,9 @@
                 </div>
                 <input type="search" id="search-input" placeholder="Search...">
             </div>
-            <span><a href="http://get.status.im/chat/public/developers" class="main-nav-link">Developers Chat</a></span>
-            <span class="social-link social-link--github"><a href="https://github.com/status-im"
-                                                             target="_blank"></a></span>
+            <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Chat</a></span>
+            <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
+            <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
         </div>
     </div>
 
