@@ -13,6 +13,7 @@ You will need the following tools installed:
 
 
 ## Qt setup
+
 Set Qt's environment variables: 
   - `QT_PATH` should point to the location of Qt's distribution, e.g. `/Users/<user_name>/Qt/5.11.2`. It should not end with a slash.
   - add qmake to PATH via 
@@ -26,6 +27,7 @@ OS-specific notes:
 Qt 5.9.1 for Linux is available here: https://download.qt.io/archive/qt/5.9/5.9.1/qt-opensource-linux-x64-5.9.1.run
 
 ## Caveats
+
 - If npm hangs at some step, check the version. If it's 5.6.0 or higher, try downgrading to 5.5.1 via `npm install -g npm@5.5.1`
 
 # Building a release package
