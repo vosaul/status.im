@@ -28,14 +28,14 @@
                         </ul>
                     </li>
 
-                    <li><a href="https://our.status.im/tag/studio">Studio</a></li>
+                    <li><a href="#">Studio</a></li>
 
                     <li><a href="https://status.im/incubate">Incubate</a></li>
 
-                    <li><a href="/">Nimbus</a>
+                    <li><a href="#">Nimbus</a>
                         <ul>
                         <li><a href="#">About</a></li>
-                        <li><a href="/docs/">Docs</a></li>
+                        <li><a href="#">Docs</a></li>
                         <li><a href="https://our.status.im/tag/research">Blog</a></li>
                         <li><a href="https://gitter.im/status-im/nimbus">Contribute</a></li>
                         </ul>
@@ -43,7 +43,7 @@
 
                     <li><a href="https://our.status.im/tag/hardwallet">Hardwallet</a></li>
 
-                    <li><a href="https://our.status.im">Community</a></li>
+                    <li><a href="https://our.status.im/tag/community">Community</a></li>
                     </ul>
                 </nav>
             </header>
