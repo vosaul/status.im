@@ -1,10 +1,7 @@
 ---
-id: intro_dapps
-title: DApps in Status
+id: intro_extensions
+title: Status Extensions
 ---
-
-## Status Extensions
-
 We are working hard to make sure our next iteration of 3rd party developer tools gets shipped soon. Lightweight, they provide native feeling and have access to the full ethereum decentralized experience, augmented by the Status app's unique features.
 
 ### Goals

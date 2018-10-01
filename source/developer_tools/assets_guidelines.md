@@ -1,4 +1,5 @@
 ---
+id: assets_guidelines
 title: Optimize Your DApp for Status
 ---
 

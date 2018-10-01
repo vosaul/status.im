@@ -1,5 +1,7 @@
-# Adding your DApp to Status
-
+---
+id: add_your_dapp
+title: Adding your DApp to Status
+---
 ## Instructions
 
 If you’ve tested your DApp on Status and are satisfied with the experience, please [fill out this form](https://docs.google.com/forms/d/1YeYi5MC6LaJJR8iso52cLwSqQPJpmnqIfAWTT6bwTDE/edit).

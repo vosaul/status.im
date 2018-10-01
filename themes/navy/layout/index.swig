@@ -10,7 +10,7 @@
                     <ul>
                     <li class="current"><a href="#">Status App</a>
                         <ul>
-                            <li><a href="https://status/im">About</a></li>
+                            <li><a href="https://status.im">About</a></li>
                             <li><a href="https://status.im">Features</a></li>
                             <li><a href="https://status.im">Desktop</a></li>
                             <li><a href="https://docs.status.im">Docs</a></li>
@@ -66,7 +66,7 @@
         <h1>Build A Better Web</h1>
         <p>Begin your journey to a more equitable and secure internet here.</p>
         <div class="intro-buttons">
-            <a class="button button--main" href="/tutorials/extensions_tutorial_chat_command.html">Extend Your DApp</a>
+            <a class="button button--main" href="/developer_tools/">Extend Your DApp</a>
             <a class="button button--secondary" href="/docs/build_status.html">Build Status</a>
         </div>
     </div>
@@ -146,14 +146,14 @@
             <div class="features-item features-three">
                 <div class="features-item-inner">
                     <div class="features-item-top">
-                        <h2>Technical Specifications</h2>
+                        <h2>Research</h2>
                         <p>We work on low level protocols like Whisper and clients like Nimbus. We do this because we care about
                             privacy and want to ensure the robustness of the distributed networks we use. Read all about Whisper, 
                             Perfect Forward Secrecy, X3DH key exchange and all the other really fun stuff here.
                         </p>
                     </div>
                     <div class="features-button-wrap">
-                        <a class="button button--features button--light" href="/docs/nimbus.html">Technical specs</a>
+                        <a class="button button--features button--light" href="https://nimbus.status.im">Technical specs</a>
                     </div>
                 </div>
             </div>
