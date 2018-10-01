@@ -13,8 +13,8 @@
                             <li><a href="https://status/im">About</a></li>
                             <li><a href="https://status.im">Features</a></li>
                             <li><a href="https://status.im">Desktop</a></li>
-                            <li><a href="https://docs.status/im">Docs</a></li>
-                            <li><a href="https://our.status/im">Blog</a></li>
+                            <li><a href="https://docs.status.im">Docs</a></li>
+                            <li><a href="https://our.status.im">Blog</a></li>
                             <li><a href="https://people-ops.status.im/">Contribute</a></li>
                         </ul>
                     </li>
