@@ -66,6 +66,49 @@ $ ./build/bin/statusd -c ./development.json
 
 Check out [this directory](https://github.com/status-im/status-go/tree/develop/config/cli) for more examples.
 
+### Running with docker
+
+If you have some experience with Docker and would like to run it without building, you can use [our Status Node Docker images](https://hub.docker.com/r/statusteam/status-go/).
+
+The simplest command looks like this:
+
+```bash
+$ docker run --rm statusteam/status-go:0.16.0
+```
+
+Let's see a more advanced option with a custom config. First, you need to create a file with a custom config:
+
+```json
+# this file is named http-enabled.json and
+# created in the current working directory
+{
+	"HTTPEnabled": true,
+	"HTTPHost": "0.0.0.0",
+	"APIModules": "admin,debug"
+}
+```
+
+Then, just run a docker container:
+
+```bash
+docker run --rm \
+    -p 8545:8545 \
+    -v $(pwd)/http-enabled.json:/config/config.json \
+    statusteam/status-go:0.16.0 \
+    -register \
+    -log DEBUG \
+    -c /config/config.json
+```
+
+Finally, test if everything works as expected making an HTTP request to the Status Node running in Docker:
+
+```bash
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"jsonrpc":"2.0","method":"admin_peers","params":[],"id":1}' \
+    localhost:8545
+```
+
 ## Run Nodes For Community
 
 If you want to provide additional nodes for the Status community, we recommend running them in Docker or as a daemon so that it keeps running after system restart or a runtime node error.
