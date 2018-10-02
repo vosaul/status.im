@@ -7,16 +7,16 @@ title: How To Help With Testing
 
 | Summary                |	Detailed Explanation                                  |
 | -------------------- | ---------------------------------------------------------|
-| It's best to use 2 devices for testing | This is app with lot's of messaging functionality, so you need at least 2 devices to fully test it. Ideally, it's 2 real devices. Ok: 1 real and 1 emulator like Android emulator or Genymotion. You can still use single device to test wallet and dapps. |
-| Test on wifi | Current versions consume lots of traffic and battery, make sure you are using wifi for testing. |
+| It's best to use 2 devices for testing | This is an app with lots of messaging functionality, so you need at least 2 devices to test it fully. Ideally, it's 2 real devices. Ok: 1 real and 1 emulator like the Android emulator or [Genymotion](https://www.genymotion.com/). You can still use a single device to test the wallet and dapps. |
+| Test on wifi | Current versions consume a fair amount of traffic and battery, make sure you are using wifi for testing. |
 | Do not send real ETH or SNT to the app | We test mostly on Testnets (Ropsten and Rinkeby). Test ether should be used to check transactions are working. We will never ask you to send real SNT or ETH for testing. |
 | Test all features in the nightly develop build | The most useful would be to check nightly develop build on Android. We expect that features merged in the develop build are stable enough and this build is free of obvious bugs. This is of course just an assumption and should be verified. There are end-to-end tests that cover some common scenarios. |
 
-If this sounds good, we test manually once in 2-3 days, so anyone who can find and report not-known issue is welcome to the club. 
+If this sounds good, we test manually once ever 2-3 days, so anyone who can find and report unknown issue is welcome to join the club. 
 
-Each European night there is a new nightly build created and it’s very important to take the latest because issues you will find in 2-days old build might be already fixed in the recent build. The [list of the builds](http://artifacts.status.im:8081/artifactory/nightlies-local/) is not sorted by the latest date, so to find the latest search by the date, e.g. 06-dec
+Each European night there is a new nightly build created and it’s very important to take the latest because issues you will find in a 2-days old build might be  fixed in the most recent build. The [list of the builds](http://artifacts.status.im:8081/artifactory/nightlies-local/) is not sorted by the latest date, so to find the latest search by the date, e.g. 06-dec
 
-When you report an issue it’s also important to mention that nightly build X was used. Just add an info about the date and link to the apk you’ve used in section Additional Information of the issue. When reporting an issue, please follow the guidelines from [How to report a Bug](report_a_bug.md).
+When you report an issue it’s also important to mention that nightly build X was used. Just add info about the date and link to the apk you’ve used in the section `Additional Information` of your issue. When reporting an issue, please follow the guidelines from [How to report a Bug](report_a_bug.md).
 
 ## Suggestions on the procedure to check dev build:
 
