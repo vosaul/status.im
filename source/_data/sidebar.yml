@@ -1,7 +1,6 @@
 docs:
   use_status:
     who_we_are: introduction.html
-    user_guide: userguide.html
     contributor_guide: contributor_guide.html
     ens_usernames: ens_usernames.html
     FAQs: FAQs.html
@@ -22,18 +21,6 @@ docs:
   status_node:
     run_status_node: run_status_node.html
 
-  status_extensions:
-    add_your_dapp: add_your_dapp.html
-    js_api: status_web_api.html
-    http_debugging: http_debugging.html
-    manifesto: intro_dapps.html
-    extensions_spec: extensions_spec.html
-    embark: embark.html
-    optimised_for_status: status_optimized.html
-
-  research:
-    nimbus: nimbus.html
-
   testing:
     introduction_testing: testing.html
     report_a_bug: report_a_bug.html
@@ -46,6 +33,25 @@ docs:
     security_threat_modeling: security_threat_modeling.html
     security_github_labels: security_github_labels.html
     security_sensitive_data: security_sensitive_data.html
+
+
+developer_tools:
+  connecting_to_web3:
+    access_an_ethereum_provider: access_eth_provider.html
+    detecting_status: detecting_status.html
+  
+  optimised_for_status:
+    assets_guidelines: assets_guidelines.html
+    js_api: status_web_api.html
+    http_debugging: http_debugging.html
+  
+  submitting_to_status: 
+    submit_to_status: add_your_dapp.html
+    troubleshooting_dapps: troubleshooting_dapps.html
+  
+  status_extensions:
+    intro_extensions: intro_extensions.html
+
 
 tutorials:
   extensions:
