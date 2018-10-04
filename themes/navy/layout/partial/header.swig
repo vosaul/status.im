@@ -2,7 +2,7 @@
     <div class="header-left">
         <div class="logo-wrap">
             <span class="logo-span"><a class="logo" href="/"></a></span>
-            <span class="logo-span"><a class="logo-text" href="/">nimbus</a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
         </div>
         <header class="dropdown">
             <nav>
@@ -62,7 +62,6 @@
         </div>
         <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Public Chat</a></span>
         <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
-        <span class="social-link social-link--gitter"><a href="https://gitter.im/status-im/nimbus" target="_blank"></a></span>
         <span class="social-link social-link--github"><a href="https://github.com/status-im" target="_blank"></a></span>
     </div>
     <a href="#" class="mobile-menu-trigger">

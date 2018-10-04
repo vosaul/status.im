@@ -20,7 +20,7 @@
         <div class="more">
             <h3>More</h3>
             <ul>
-                <li><a href="http://docs.status.im/">Status Docs</a></li>
+                <li><a href="/docs/">Status Docs</a></li>
                 <li><a href="https://our.status.im/">Our Status</a></li>
                 <li><a href="https://status.im/open-positions.html">Jobs</a></li>
                 <li><a href="https://status.im/incubate">Incubate</a></li>
