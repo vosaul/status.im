@@ -100,7 +100,7 @@ In order to get REPL working, use the below elisp code:
   (let ((status-desktop-params "with-profile +figwheel repl"))
     (set-variable 'cider-lein-parameters status-desktop-params)
     (message "setting 'cider-lein-parameters")
-    (cider-jack-in)))
+    (cider-jack-in '())))
 
 (defun start-figwheel-cljs-repl ()
   (interactive)
@@ -114,6 +114,9 @@ In order to get REPL working, use the below elisp code:
 
 `custom-cider-jack-in` sets the correct profile for leiningen, and can be run as soon as emacs is open.
 run `start-figwheel-cljs-repl` once you already have a cider repl session from the jack-in
+
+Note: on my setup I had to rename the repl buffer with `rename-buffer` to "*cider-repl status-react*", then
+rename it again after running `start-figwheel-cljs-repl`.
 
 ### vim-fireplace
 
