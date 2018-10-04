@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div class="more">
-            <h3>More</h3>
+            <h3>More </h3>
             <ul>
                 <li><a href="/docs/">Status Docs</a></li>
                 <li><a href="https://our.status.im/">Our Status</a></li>
