@@ -7,7 +7,7 @@
         <header class="dropdown">
             <nav>
                 <ul>
-                    <li class="has-submenu">
+                    <li class="current has-submenu">
                         <a href="#" class="main-link">Status App</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
@@ -35,7 +35,7 @@
                     </li>
                     <li><a href="#">Studio</a></li>
                     <li><a href="https://status.im/incubate">Incubate</a></li>
-                    <li class="current has-submenu">
+                    <li class="has-submenu">
                         <a href="/" class="main-link">Nimbus</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">

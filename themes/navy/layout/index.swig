@@ -2,7 +2,7 @@
      {{ partial('partial/header') }}
     <div class="intro">
         <h1>Your portal to the decentralized web</h1>
-        <p>Status is an open source community building the tools to drive the mass adoption of ethereum. </p>
+        <p>Status is an open source community building the tools to drive the mass adoption of Ethereum. </p>
         <div class="intro-buttons">
             <a class="button button--main" href="/developer_tools/">EXTEND YOUR DAPP</a>
             <a class="button button--secondary" href="/docs/">BUILD STATUS</a>
