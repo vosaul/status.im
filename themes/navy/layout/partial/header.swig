@@ -2,12 +2,12 @@
     <div class="header-left">
         <div class="logo-wrap">
             <span class="logo-span"><a class="logo" href="/"></a></span>
-            <span class="logo-span"><a class="logo-text" href="/">incubate</a></span>
+            <span class="logo-span"><a class="logo-text" href="/">status</a></span>
         </div>
         <header class="dropdown">
             <nav>
                 <ul>
-                    <li class="current has-submenu">
+                    <li class="has-submenu">
                         <a href="#" class="main-link">Status App</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
@@ -22,7 +22,7 @@
                         </div>
                     </li>
                     <li class="has-submenu">
-                        <a href="#" class="main-link">Embark</a>
+                        <a href="https://embark.status.im" class="main-link">Embark</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
