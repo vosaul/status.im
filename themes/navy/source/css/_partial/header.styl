@@ -12,30 +12,34 @@ logo-size = 50px
   display: flex
   flex-flow: row nowrap
   align-items: center
+  width: 1190px
+  margin-left: -120px
   @media mq-mobile
     justify-content: center
 
-#logo-wrap
-  flex: 0 logo-size
-  margin-top: 19px
+.button--header
+  margin-top: 7px
+
+#logo-wrap-page
+  flex: 0
+  -webkit-flex: none
+  margin-top: 8px
+  width: 200px
 
 #logo
   hide-text()
   display: block
-  width: 40px;
-  height: 40px;
-  background-image: url(../img/status_logo.svg);
+  width: 56px;
+  height: 56px;
+  background-image: url(../img/logo_blue.svg);
   text-decoration: none;
   margin: -20px 0 0 30px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(255,255,255,1);
   border-radius: 50%;
   background-size: 22px;
   background-position: center;
   background-repeat: no-repeat;
 
-.button--header
-  margin-top: 7px
-  
 .dropdown
     display: flex
     align-items: center
@@ -54,8 +58,6 @@ logo-size = 50px
                         opacity: .7
                     &:focus
                         color: rgba(255, 255,255,1)
-                &.current
-                    text-decoration: underline
                     a
                         color: rgba(255,255,255,0.7)
                 &:hover
@@ -90,7 +92,7 @@ logo-size = 50px
   display: none
   height: 40px
   width: 180px
-  background-color: #2B2C4F
+  background-color: #4564dc
   border-radius: 22px
   padding: 0 12px
   align-items: center

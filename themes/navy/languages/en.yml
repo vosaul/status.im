@@ -1,8 +1,8 @@
 menu:
   docs: Docs
   developer_tools: Developer Tools
-  plugins: Plugins
-  themes: Themes
+  extensions: Extensions
+  wip: WIP
   search: Search
   blog: Blog
   tutorials: Tutorials

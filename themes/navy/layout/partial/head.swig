@@ -12,7 +12,7 @@
     {% endfor %}
   {% endif %}
   <!-- Icon -->
-  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileColor" content="#ff9c00">
   <meta name="msapplication-TileImage" content="{{ url_for('icon/mstile-144x144.png') }}">
 
   <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
@@ -32,6 +32,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
   {{ feed_tag('atom.xml') }}
-  <meta property="og:image" content="/img/share.png" />
-  <meta property="og:title" content="Status, a Mobile Ethereum OS" />
+  <meta property="og:image" content="/img/graphic-licensing.png" />
+  <meta property="og:title" content="Nimbus, a Light Client for Ethereum 2.0" />
 </head>
