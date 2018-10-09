@@ -9,6 +9,14 @@ You will need the following tools installed:
   - Leiningen (Clojure build tool, get it from https://leiningen.org)
   - Node.js v.8
   - CMake 3.1.0 or higher
+  - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
+  ```
+  Linux:
+sudo apt install extra-cmake-modules libgnome-keyring0
+
+MacOS:
+brew install kde-mac/kde/kf5-extra-cmake-modules
+  ```
   - Qt 5.9.1 or higher. You'll only need macOS and QtWebEngine components installed. 
 
 
