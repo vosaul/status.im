@@ -9,15 +9,7 @@ You will need the following tools installed:
   - Leiningen (Clojure build tool, get it from https://leiningen.org)
   - Node.js v.8
   - CMake 3.1.0 or higher
-  - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
-  ```
-  Linux:
-sudo apt install extra-cmake-modules libgnome-keyring0
-
-MacOS:
-brew install kde-mac/kde/kf5-extra-cmake-modules
-  ```
-  - Qt 5.9.1 or higher. You'll only need macOS and QtWebEngine components installed. 
+  - Qt 5.11.2. You'll only need macOS and QtWebEngine components installed. 
 
 
 ## Qt setup
@@ -28,11 +20,7 @@ Set Qt's environment variables:
     - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
     - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
 
-OS-specific notes:
-  - If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
-  - Note that building on macOS Mojave requires Qt 5.11.2, lower versions will not work.
-
-Qt 5.9.1 for Linux is available here: https://download.qt.io/archive/qt/5.9/5.9.1/qt-opensource-linux-x64-5.9.1.run
+Qt 5.11.2 for Linux is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
 ## Caveats
 
@@ -73,6 +61,17 @@ npm install -g
 1. In separate terminal tab: `node ./ubuntu-server.js`
 1. In separate terminal tab: `lein figwheel-repl desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
+
+### Notes: ###
+ - in order to run both release and dev versions of Status Desktop, please specify a value for `REACT_SERVER_PORT` environment variable that will be different from default 5000. E.g.:
+   ```
+   export REACT_SERVER_PORT=5001
+   ```
+  - for complete cleanup of generated files and Realm data, issue:
+    ```
+    git clean -fdx
+    rm -rf desktop/modules
+    ```
 
 ## Clean up data
 
