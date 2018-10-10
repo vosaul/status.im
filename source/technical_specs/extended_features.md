@@ -3,7 +3,7 @@ id: extended_features
 title: Whisper - Extended Features
 ---
 
-## Deeper Down The Rabbit Hole
+# Deeper Down The Rabbit Hole
 
 If you're up for it, you can instead dive directly into the [protocol specification](https://github.com/ethereum/wiki/wiki/Whisper-Wire-Protocol).
 
@@ -11,7 +11,7 @@ Whisper is an identity-based messaging system which provides a non-application-s
 
 Alternatively, Whisper may be likened to a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) with a per-entry configurable time-to-live (`ttl`) and conventions for the signing and encryption of values. Through this lense, Whisper allows for the same entry to have multiple keys, some or all of which may be the same as other entries.
 
-### Envelopes
+## Envelopes
 
 Envelopes are like items should you think of Whisper as a DHT. Should Whisper be considered a datagram messaging system, then envelopes become the packet format which house the potentially encrypted datagrams. Envelopes are necessarily comprehensible by any node (i.e. they themselves are unencrypted).
 
@@ -30,7 +30,7 @@ Envelopes are transmitted as RLP-encoded structures. The precise definition is g
 
 While envelopes are not encrypted, Whisper nodes know nothing about content of envelopes which they cannot decrypt.
 
-### Topics
+## Topics
 
 Topics are short strings - hashes to be precise - which are set by the sender (or at the application layer) and help categorize messages. In more technical language: topics are cryptographically secure, probabilistic, partial-classifications of the message. 
 
@@ -40,7 +40,7 @@ Upon receipt of a message, if the node detects a known `topic`, it tries to decr
 
 Four bytes was chosen to minimise space should a large number of topics be mentioned, while still keeping a sufficiently amount of space to avoid large-scale topic-collision (though it may yet be reviewed and possibly made dynamic in later revisions of the protocol).
 
-### Messages
+## Messages
 
 A message is formed as the concatenation of a single byte for flags, followed by any additional data (as stipulated by the flags) and finally the actual payload (i.e. message). This series of bytes is what forms the data item of the envelope and is always encrypted.
 
@@ -78,7 +78,7 @@ Here's a picture for those who don't like so many words:
 
 ![Whisper envelope](../technical_specs/thumbnails/whisper_envelope.jpg)
 
-### Bloom Filters
+## Bloom Filters
 
 [Bloom filters](https://en.wikipedia.org/wiki/Bloom_filter) are a probabilistic data structure that we can use to verify the presence - or absence - of an item within a list, or collection. To be more specific, it can **verify with certainty that an item is NOT** in the list, and it can **say with probability that item IS** in the list. It can do this in a fairly fast and space-efficient way.
 
@@ -99,7 +99,7 @@ END FOR
 
 Further information can be found in [EIP 627](https://eips.ethereum.org/EIPS/eip-627).
 
-### PoW Actual Calculation
+## PoW Actual Calculation
 
 The Proof of Work for Whisper envelope is defined as the average number of iterations required to find the current BestBit (the number of leading zero bits in the hash), divided by message size and `ttl`:
 
@@ -114,7 +114,7 @@ fn pow(pow_hash, size, ttl) = 2**leading_zeros(pow_hash) / (size * ttl)
 ```
 where `size` is the size of the full RLP-encoded envelope.
 
-### What Does It All Mean?
+## What Does It All Mean?
 
 All the above features combine into a **`dark`** system: i.e. one that is uncompromising when it comes to information leakage from metadata. In its most secure mode of operation, Whisper can (at a considerable cost of bandwidth and latency) deliver 100% dark operation. Even better, this applies not only for metadata collection from inter-peer conduits (i.e. backbone dragnet devices), but even against a much more arduous `100% - 2 attack`; i.e. **where every node in the network is compromised** (though functional) save a pair running ÐApps for people that wanted to communicate without anybody else knowing.
 

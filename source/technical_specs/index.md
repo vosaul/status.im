@@ -3,7 +3,7 @@ id: index
 title: Whisper - Do You Want to Know a Secret?
 ---
 
-## Introduction
+# Introduction
 
 Whisper is not a typical communications system. 
 
@@ -20,7 +20,7 @@ Whisper is designed to be a building block in next generation ÐApps which requi
 
 In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossip protocol we use to communicate securely.
 
-### Basic Outline
+# Basic Outline
 
 1. **`peer-to-peer`** refers to the fact that Whisper uses Ethereum's [ÐΞV-p2p wire protocol](https://github.com/ethereum/devp2p/blob/master/devp2p.md) to gossip messages around the network.
     
