@@ -13,7 +13,7 @@ Alternatively, Whisper may be likened to a [DHT](https://en.wikipedia.org/wiki/D
 
 ## Envelopes
 
-Envelopes are like items should you think of Whisper as a DHT. Should Whisper be considered a datagram messaging system, then envelopes become the packet format which house the potentially encrypted datagrams. Envelopes are necessarily comprehensible by any node (i.e. they themselves are unencrypted).
+Envelopes are like items should you think of Whisper as a DHT. Should Whisper be considered a datagram messaging system, then envelopes become the packet format which house encrypted datagrams. Envelopes are necessarily comprehensible by any node (i.e. they themselves are unencrypted).
 
 Envelopes are transmitted as RLP-encoded structures. The precise definition is given by:
 
