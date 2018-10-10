@@ -103,10 +103,9 @@ Further information can be found in [EIP 627](https://eips.ethereum.org/EIPS/eip
 
 The Proof of Work for Whisper envelope is defined as the average number of iterations required to find the current BestBit (the number of leading zero bits in the hash), divided by message size and `ttl`:
 
-```
-PoW = (2**BestBit) / (size * TTL)
+`PoW = (2**BestBit) / (size * TTL)`
+
 PoW calculation:
-```
 
 ```
 fn short_rlp(envelope) = rlp of envelope, excluding nonce field.
