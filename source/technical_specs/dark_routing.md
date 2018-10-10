@@ -17,7 +17,7 @@ If you've read the previous articles, you'll notice that Whisper is designed to 
 
 # Working in the Dark
 
-Distributed systems must confront a trade off between the efficiency of deterministic (and thus supposedly optimal) routing and `darkness` (or, put another way, routing privacy). This is why user-configurability matters: the people who use the technology ought to be the ones deciding between routing privacy and efficiency, and ought to be able to do so in a granular and editable way.
+Distributed systems must make a trade off between the efficiency of deterministic routing and `darkness` (i.e. routing privacy). This is why user-configurability matters: the people who use the technology ought to be the ones deciding between routing privacy and efficiency, and ought to be able to do so in a granular and editable way.
 
 At its most `dark`, Whisper nodes are entirely reactive - they receive and record pieces of data and forward them trying to maximise the utility of information transmission to the peers.
 
