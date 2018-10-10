@@ -34,7 +34,7 @@ While envelopes are not encrypted, Whisper nodes know nothing about content of e
 
 Topics are short strings - hashes to be precise - which are set by the sender (or at the application layer) and help categorize messages. In more technical language: topics are cryptographically secure, probabilistic, partial-classifications of the message. 
 
-Nodes pass envelopes around regardless of their ability to decode the message (or indeed their interest in it at all) as this is an important component in Whisper's dark communications strategy (detailed in the next page).
+Nodes pass envelopes around regardless of their ability to decode the message as this is an important component in Whisper's dark communications strategy (detailed in the next page).
 
 Upon receipt of a message, if the node detects a known `topic`, it tries to decrypt the message with the corresponding key. In case of failure, the node assumes that a `topic` collision has occurred, e.g. the message was encrypted with another key, and should be just forwarded further. **Collisions are not only expected, they are necessary for plausible deniability.**
 
