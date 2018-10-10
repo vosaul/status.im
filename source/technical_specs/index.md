@@ -16,7 +16,7 @@ Whisper is designed expressly for a new paradigm of application development. The
 2. Low-level partially-asynchronous communications; and 
 3. Low-value traffic reduction or retardation. 
 
-Whisper is designed to be a building block in next generation ÐApps which require large-scale many-to-many data-discovery, signal negotiation, and modest transmissions with reasonable assurances of complete privacy.
+Whisper is designed to be a building block in next generation ÐApps which require large-scale many-to-many data-discovery, signal negotiation, and transmissions with reasonable assurance of privacy for users.
 
 In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossip protocol we use to communicate securely.
 
