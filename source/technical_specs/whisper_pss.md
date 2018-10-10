@@ -1,6 +1,6 @@
 ---
 id: whisper_pss
-title: Whisper - Comparison with the Post Service over Swarm (PSS)
+title: Whisper - Comparison with the Postal Service over Swarm (PSS)
 ---
 
 ## Overview

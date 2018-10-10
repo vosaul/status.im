@@ -11,7 +11,7 @@ Whisper is not a typical communications system.
 2. It is not designed to provide a connection oriented system, nor for simply delivering data between a pair of specific network endpoints. 
 3. It is not designed to maximise bandwidth or minimise latency (though as with any transmission system, these are concerns).
 
-Whisper is designed expressly for a new paradigm of application development. The design goals include: 
+Whisper is designed expressly for a [new paradigm](https://our.status.im/do-you-want-to-know-a-secret/) of application development. The design goals include: 
 1. Easy and efficient multi-casting and broadcasting; 
 2. Low-level partially-asynchronous communications; and 
 3. Low-value traffic reduction or retardation. 
