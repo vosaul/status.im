@@ -35,6 +35,6 @@ In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossi
 
 3. **`end-to-end encrypted`** refers to the fact that Whisper uses it's own public-private key pairs to encrypt messages. It supports both symmetric and asymmetric encryption.
 
-4. **`dark`** refers to the fact above that, in certain modes of operation, messages/packets cannot be tracked/inspected and do not leak metadata. Due to the `ttl` and the fact that clients rebroadcast even messages intended for them until it is over, as well as the ways in which messages are padded (for instance), it is very difficult to identify unique senders and receivers.
+4. **`dark`** means that, in certain modes of operation, messages/packets cannot be tracked/inspected and do not leak metadata. Because clients rebroadcast even messages intended for them until the `ttl` is up, as well as the ways in which messages are padded (for instance), it is very difficult to identify unique senders and receivers.
 
 In the next article, we'll discuss Whisper's key features, the actual technical specification, and look at it both through the lens of datagram messaging systems (like UDP) and [Distributed Hash Tables](https://en.wikipedia.org/wiki/Distributed_hash_table).
