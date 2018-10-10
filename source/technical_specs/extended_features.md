@@ -38,7 +38,7 @@ Nodes pass envelopes around regardless of their ability to decode the message as
 
 Upon receipt of a message, if the node detects a known `topic`, it tries to decrypt the message with the corresponding key. In case of failure, the node assumes that a `topic` collision has occurred, e.g. the message was encrypted with another key, and should be just forwarded further. **Collisions are not only expected, they are necessary for plausible deniability.**
 
-Four bytes was chosen to minimise space should a large number of topics be mentioned, while still keeping a sufficiently amount of space to avoid large-scale topic-collision (though it may yet be reviewed and possibly made dynamic in later revisions of the protocol).
+Four bytes was chosen to minimise space should a large number of topics be mentioned, while still keeping a sufficient amount of space to avoid large-scale topic-collision (though it may yet be reviewed and possibly made dynamic in later revisions of the protocol).
 
 ## Messages
 
