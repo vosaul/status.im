@@ -7,13 +7,18 @@ title: Whisper - Do You Want to Know a Secret?
 
 Whisper is not a typical communications system. 
 
-It is not designed to replace or substitute TCP/IP, UDP, HTTP or any other traditional protocols; it is not designed to provide a connection oriented system, nor for simply delivering data between a pair of specific network endpoints; it does not have a primary goal of maximising bandwidth or minimising latency (though as with any transmission system, these are concerns).
+1. It is not designed to replace or substitute TCP/IP, UDP, HTTP or any other traditional protocols. 
+2. It is not designed to provide a connection oriented system, nor for simply delivering data between a pair of specific network endpoints. 
+3. It is not designed to maximise bandwidth or minimise latency (though as with any transmission system, these are concerns).
 
-Whisper is designed expressly for a new paradigm of application development. The design goals include: easy and efficient multi-casting and broadcasting; low-level partially-asynchronous communications; and low-value traffic reduction or retardation. 
+Whisper is designed expressly for a new paradigm of application development. The design goals include: 
+1. Easy and efficient multi-casting and broadcasting; 
+2. Low-level partially-asynchronous communications; and 
+3. Low-value traffic reduction or retardation. 
 
-Whisper is designed to be a building block in next generation ÐApps which require large-scale many-to-many data-discovery, signal negotiation and modest transmissions with an absolute minimum of fuss and the expectation that one has a very reasonable assurance of complete privacy.
+Whisper is designed to be a building block in next generation ÐApps which require large-scale many-to-many data-discovery, signal negotiation, and modest transmissions with reasonable assurances of complete privacy.
 
-In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossip protocol we use to send messages securely.
+In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossip protocol we use to communicate securely.
 
 ### Basic Outline
 
