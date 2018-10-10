@@ -22,16 +22,16 @@ In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossi
 
 # Basic Outline
 
-1. **`peer-to-peer`** refers to the fact that Whisper uses Ethereum's [ÐΞV-p2p wire protocol](https://github.com/ethereum/devp2p/blob/master/devp2p.md) to gossip messages around the network.
+1. **`peer-to-peer`** refers to the fact that Whisper uses Ethereum's [ÐΞVp2p wire protocol](https://github.com/ethereum/devp2p/blob/master/devp2p.md) to gossip messages around the network.
     
-    **a.** ÐΞV-p2p is an application-layer networking protocol for communication among nodes in a distributed network.
-    **b.** ÐΞV-p2p handles negotiation of supported sub-protocols on both sides and carries their messages over a single connection.
+    **a.** ÐΞVp2p is an application-layer networking protocol for communication among nodes in a distributed network.
+    **b.** ÐΞVp2p handles negotiation of supported sub-protocols on both sides and carries their messages over a single connection.
 
-2. **`multicast`** means that, when I want to send a message to Bob, I actually broadcast that message to basically the whole network, though it is encrypted with the intended recipient's public key, or the #topic of the public chat for which it is intended.
+2. **`multicast`** means that, when I want to send a message to Bob, I actually broadcast that message to basically the whole network, though it is encrypted with the intended recipient's public key, or the #topic of the public chat for which it is intended. The use of public-private key pairs in why Whisper is sometimes called an "identity based messaging system".
 
-    **a.** This requires setting a Proof-of-Work that is unique to Whisper, in order to prevent DDoS attacks on the network. 
+    **a.** This requires setting a Proof-of-Work that is unique to Whisper, in order to prevent DoS attacks on the network. 
     **b.** Currently, Status sets a lower `PoW` value for Whisper messages than other clients default to, as higher `PoW` uses too much battery and compute power for most mobile phones. This is an active area of our research.
-    **c.** Each message gets sent with a Time To Live (`ttl`), and - even when you receive a message intended for you - you re-encrypt it and carry on broadcasting it until the `ttl` has expired to ensure that there is [plausible deniability](https://en.wikipedia.org/wiki/Plausible_deniability#Freenet_file_sharing) for recipients (a concept that has been used before, e.g. filesharing). 
+    **c.** Each message gets sent with a Time-to-Live (`ttl`), and - even when you receive a message intended for you - you re-encrypt it and carry on broadcasting it until the `ttl` has expired to ensure that there is plausible deniability for recipients (a concept that has been used before, for example in some [filesharing networks](https://en.wikipedia.org/wiki/Plausible_deniability#Freenet_file_sharing)). 
 
 3. **`end-to-end encrypted`** refers to the fact that Whisper uses it's own public-private key pairs to encrypt messages. It supports both symmetric and asymmetric encryption.
 
