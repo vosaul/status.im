@@ -9,7 +9,7 @@ If you're up for it, you can instead dive directly into the [protocol specificat
 
 Whisper is an identity-based messaging system which provides a non-application-specific, but easily-accessible API without being  prejudiced by low-level hardware attributes and characteristics - particularly the notion of singular endpoints.
 
-Alternatively, Whisper may be likened to a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) with a per-entry configurable time-tol-live (`ttl`) and conventions for the signing and encryption of values. Through this lense, Whisper allows for the same entry to have multiple keys, some or all of which may be the same as other entries.
+Alternatively, Whisper may be likened to a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) with a per-entry configurable time-to-live (`ttl`) and conventions for the signing and encryption of values. Through this lense, Whisper allows for the same entry to have multiple keys, some or all of which may be the same as other entries.
 
 ### Envelopes
 
