@@ -26,7 +26,7 @@ In short, Whisper is a peer-to-peer, multicast, end-to-end encrypted, dark gossi
 
     **a.** This requires setting a Proof-of-Work that is unique to Whisper, in order to prevent DDoS attacks on the network. 
     **b.** Currently, Status sets a lower `PoW` value for Whisper messages than other clients default to, as higher `PoW` uses too much battery and compute power for most mobile phones. This is an active area of our research.
-    **c.** Each message gets sent with a Time To Live (`ttl`), and - even when you receive a message intended for you - you re-encrypt it and carry on broadcasting it until the `ttl` has expired to ensure that there is [`plausible deniability`](https://en.wikipedia.org/wiki/Plausible_deniability#Freenet_file_sharing) for recipients (a concept that has been used before, e.g. filesharing). 
+    **c.** Each message gets sent with a Time To Live (`ttl`), and - even when you receive a message intended for you - you re-encrypt it and carry on broadcasting it until the `ttl` has expired to ensure that there is [plausible deniability](https://en.wikipedia.org/wiki/Plausible_deniability#Freenet_file_sharing) for recipients (a concept that has been used before, e.g. filesharing). 
 
 3. **`end-to-end encrypted`** refers to the fact that Whisper uses it's own public-private key pairs to encrypt messages. It supports both symmetric and asymmetric encryption.
 
