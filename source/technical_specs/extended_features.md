@@ -7,7 +7,7 @@ title: Whisper - Deeper Down The Rabbit Hole
 
 If you're up for it, you can instead dive directly into the [protocol specification](https://github.com/ethereum/wiki/wiki/Whisper-Wire-Protocol).
 
-Whisper is an identity-based messaging system which provides a non-application-specific, but easily-accessible API without being based upon or prejudiced by the low-level hardware attributes and characteristics - particularly the notion of singular endpoints.
+Whisper is an identity-based messaging system which provides a non-application-specific, but easily-accessible API without being  prejudiced by low-level hardware attributes and characteristics - particularly the notion of singular endpoints.
 
 Alternatively, Whisper may be likened to a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) with a per-entry configurable time-tol-live (`ttl`) and conventions for the signing and encryption of values. Through this lense, Whisper allows for the same entry to have multiple keys, some or all of which may be the same as other entries.
 
@@ -21,29 +21,26 @@ Envelopes are transmitted as RLP-encoded structures. The precise definition is g
 
 | param | Description |
 | -------- | -------- | 
-| Version     | Up to 4 bytes (currently one byte containing zero). The version indicates the encryption method. If it is higher than your current version, the envelope won't be decrypted, and therefore only forwarded to your peers.  | 
-| Expiry time | 4 bytes (the intended expiry UNIX time for the envelope in seconds). |
-| TTL | 4 bytes (time-to-live in seconds). |
-| Topic | 4 bytes of arbitrary data. Can be an array. |
-| Data | byte array of arbitrary size (contains encrypted message). |
+| expiry | 4 bytes (the intended expiry UNIX time for the envelope in seconds). |
+| ttl | 4 bytes (time-to-live in seconds). |
+| topic | 4 bytes of arbitrary data. Can be an array. |
+| data | byte array of arbitrary size (contains encrypted message). |
 | nonce | 8 bytes of arbitrary data. This is used for the PoW calculation, calculated by taking the SHA3 of the concatenation of the `nonce` with the RLP packet less the nonce. The smaller it is, the higher the work proved. |
 | AESNonce | 12 bytes of random data (only present in case of symmetric encryption). |
 
-Whisper nodes know nothing about content of envelopes which they can not decrypt. The nodes pass envelopes around regardless of their ability to decrypt the message, or their interest in it. This is an important component in Whisper's dark communications strategy.
+While envelopes are not encrypted, Whisper nodes know nothing about content of envelopes which they cannot decrypt.
 
 ### Topics
 
-Topics are short strings - hashes to be precise - which are set by the sender (or at the application layer) and help categorize messages. In more technical language: topics are cryptographically secure, probabilistic partial-classifications of the message. 
+Topics are short strings - hashes to be precise - which are set by the sender (or at the application layer) and help categorize messages. In more technical language: topics are cryptographically secure, probabilistic, partial-classifications of the message. 
 
-It's important to note that nodes pass envelopes around regardless of their ability to decode the message (or indeed their interest in it at all) as this is an important component in Whisper's dark communications strategy (detailed in the next page).
+Nodes pass envelopes around regardless of their ability to decode the message (or indeed their interest in it at all) as this is an important component in Whisper's dark communications strategy (detailed in the next page).
 
-Upon receipt of a message, if the node detects a known `topic`, it tries to decrypt the message with the corresponding key. In case of failure, the node assumes that `topic` collision has occurred, e.g. the message was encrypted with another key, and should be just forwarded further. **Collisions are not only expected, they are necessary for plausible deniability.**
+Upon receipt of a message, if the node detects a known `topic`, it tries to decrypt the message with the corresponding key. In case of failure, the node assumes that a `topic` collision has occurred, e.g. the message was encrypted with another key, and should be just forwarded further. **Collisions are not only expected, they are necessary for plausible deniability.**
 
-Four bytes was chosen to minimise space should a large number of topics be mentioned while still keeping a sufficiently large space to avoid large-scale topic-collision (though it may yet be reviewed and possibly made dynamic in later revisions of the protocol).
+Four bytes was chosen to minimise space should a large number of topics be mentioned, while still keeping a sufficiently amount of space to avoid large-scale topic-collision (though it may yet be reviewed and possibly made dynamic in later revisions of the protocol).
 
 ### Messages
-
-All messages are encrypted. Asymmetric encryption uses the standard Elliptic Curve Integrated Encryption Scheme with `SECP-256k1` public key. Symmetric encryption uses `AES GCM` algorithm with random 96-bit nonce.
 
 A message is formed as the concatenation of a single byte for flags, followed by any additional data (as stipulated by the flags) and finally the actual payload (i.e. message). This series of bytes is what forms the data item of the envelope and is always encrypted.
 
@@ -59,7 +56,13 @@ Any determination that the message is indeed from a particular sender is left fo
 
 Bit `0` of the flags determines whether the signature exists. All other bits are not yet given a purpose and should be set randomly. A message is invalid if bit 0 is set but the total data is less than 66 bytes (since this wouldn't allow it to contain a signature).
 
+**Encrypting**
+
+All messages are encrypted. Asymmetric encryption uses the standard Elliptic Curve Integrated Encryption Scheme with a `SECP-256k1` public key. Symmetric encryption uses `AES GCM` algorithm with random 96-bit nonce.
+
 Payloads are encrypted in one of two ways. If the message has a specific recipient, then it is encrypted using `ECIES` with the specific recipient's `SECP-256k1` public key. If the message has no recipient, then we use `AES-256` with a randomly generated key. This key is then `XORed` with each of the full topics to form a salted topic. Each salted topic is stored prior to the encrypted data in the same order as the corresponding topics are in the envelope header.
+
+**Decrypting**
 
 Recipients decrypt messages in one of two ways. Through the use of topics, it should be known whether the envelope is meant for a specific recipient (in which case, use the private key to decrypt) or to a general multicast audience. If intended for a general audience, we assume that at least one topic is known (since otherwise, the envelope could not be properly "identified"). In this case, we match the known full topic to one of the abridged topics in the envelope, determine the index and de-salt the according salted-key at the beginning of the data segment in order to retrieve the final key.
 
