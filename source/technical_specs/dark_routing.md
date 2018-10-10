@@ -1,9 +1,9 @@
 ---
 id: dark_routing
-title: Whisper - Some Routes Can't Be Discovered Without Getting Lost
+title: Whisper - Dark Routing
 ---
 
-## Encryption and Darkness
+## Some Routes Can't Be Discovered Without Getting Lost
 
 To understand information leakage, it is important to distinguish between mere encryption, and `darkness`. Many protocols, both p2p and more traditional client/server models, provide a level of encryption. However, even with encrypted communications, well-funded attackers are still able to compromise your privacy. 
 
