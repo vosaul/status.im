@@ -140,3 +140,27 @@ for the build process — just make sure that `ANDROID_SDK_ROOT` points to a rig
 
 Unfortunately, Realm doesn't support Node.js v10. Which means that you need to use Node < 10 to build Status.
 One of the best ways to install any older version of Node.js is to use `nvm`.
+
+### I have issues compiling on Xcode 10
+
+Some developers are experiencing errors compiling for iOS on Xcode 10 on MacOs Mojave:
+
+```
+error: Build input file cannot be found: 'status-react/node_modules/react-native/third-party/double-conversion-1.1.6/src/cached-powers.cc'
+```
+
+To fix similar errors run the following commands:
+
+```shell
+make clean
+
+cd ios
+pod update
+cd ..
+
+cd node_modules/react-native/scripts && ./ios-install-third-party.sh && cd ../../../
+
+cd node_modules/react-native/third-party/glog-0.3.4/ && ../../scripts/ios-configure-glog.sh && cd ../../../../
+```
+
+Now you should be able to compile again. The issue reference is [here](ttps://github.com/facebook/react-native/issues/21168#issuecomment-422431294).
