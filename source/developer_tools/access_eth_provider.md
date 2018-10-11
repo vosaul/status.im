@@ -32,7 +32,7 @@ window.addEventListener('load', async () => {
         // Request full provider if needed
         await ethereum.enable();
         // Full provider exposed
-        await ethereum.send('eth_sendTransaction', [/* ... */]);
+        web3.eth.sendTransaction(transactionObject [/* ... */]);
     } catch (error) {
         // User denied full provider access
     }
@@ -41,7 +41,20 @@ window.addEventListener('load', async () => {
 
 Note the read-only provider in the first line, which is exposed by default. Accessing the user's address and initiating transactions or signing messages requires the `ethereum.enable()` call to be accepted by the user.
 
-Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md).
+Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md). You can see that they suggest there using `await ethereum.send('eth_sendTransaction', [/* ... */]);` but we like handling things as above as we feel there is less room for error. Constructing the `transactionObject` is, again, heavily dependent on what you're trying to do, but here is a super simple example of what it might look like if you just plugged the required values straight in:
+
+```js
+// using the promise
+web3.eth.sendTransaction({
+    from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
+    to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+    value: '1000000000000000',
+    gas: gasLimit // use web3.eth.estimateGas() to get this amount, and add a little for extra safety.
+})
+.then(function(receipt){
+    ...
+});
+```
 
 
 
