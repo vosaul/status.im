@@ -5,15 +5,14 @@ title: Debugging
 
 # General information
 
-Status uses HTTP server for debugging. By entering **Development mode** (on **Settings** screen) you start this server.
-After that you're able to communicate to Status by sending HTTP requests. 
+Status uses an HTTP server for debugging. When you turn on **Development mode** (`Profile` -> `Advanced` -> `Development Mode`) you start this server.
+After that, you're able to communicate to Status by sending HTTP requests. 
 
-These document describes all possible requests and expected responses. All the examples here are given for HTTPie. 
-Of course, you can use any other tool for HTTP communication instead.
+This document describes all the possible requests and expected responses. All the examples here are given for HTTPie.  Of course, you can use any other tool for HTTP communication instead.
 
-# Technical details
+## Technical details
 * The server runs on port 5561;
-* It runs only if **Development mode** (on **Settings** screen) is switched on
+* It runs only if **Development mode** is switched on
 * Its settings are linked to your account — the server stops when you log out and starts when you log in;
 * The content type for both requests and responses is always `application/json`.
 

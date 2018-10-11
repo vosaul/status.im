@@ -43,13 +43,22 @@
                 <img class="work-item-image" src="../img/padlock.svg" />
             </div>
             <div class="work-item">
-                <img class="work-item-image work-item-image-right" src="../img/padlock.svg" />
+                <img class="work-item-image work-item-image-right" src="../img/dapps.svg" />
+                <div class="work-item-inner">
+                    <h2>Technical Specifications</h2>
+                    <p>The best documentation available on low-level protocol work happening on parts of the stack like Whisper, and the Light Ethereum Service (LES) or Ultra Light Clients (ULC).
+                    </p>
+                    <a href="/technical_specs/">See specifications <img src="../img/arrow.svg" /></a>
+                </div>
+            </div>
+            <div class="work-item">
                 <div class="work-item-inner">
                     <h2>Work In Progress</h2>
                     <p>We have a very fast-moving codebase. As a decentralised and remote community of people, there are often new <a href="https://ideas.status.im" target="_blank">ideas</a> being worked on by various different people. Follow the latest developments, research efforts, and open questions we have to answer in oder to deliver the mobile window onto Ethereum we all need.
                     </p>
                     <a href="/wip/">Get Involved <img src="../img/arrow.svg" /></a>
                 </div>
+                <img class="work-item-image" src="../img/padlock.svg" />
             </div>
         </div>
     </div>

@@ -56,3 +56,11 @@ developer_tools:
 tutorials:
   extensions:
     your_first_chat_extension: extensions_tutorial_chat_command.html
+
+technical_specs:
+  whisper:
+    introduction_whisper: index.html
+    extended_features: extended_features.html
+    dark_routing: dark_routing.html
+    whisper_pss: whisper_pss.html
+    whisper_faqs: whisper_faqs.html

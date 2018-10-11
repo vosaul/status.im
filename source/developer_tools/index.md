@@ -2,6 +2,8 @@
 title: DApp Developer Tools
 id: index
 ---
+# Developer Tools for the Future
+
 At Status, we work hard to make sure that developers anywhere and everywhere have access to the tools they need to build the next generation of truly distributed tools.
 
 Whether this means investing in frameworks like Embark, leading development of best practices across the Ethereum ecosystem, or building our own set of unique extensions and tools that allow people like you and me to build unstoppable applications - you'll find it all here.

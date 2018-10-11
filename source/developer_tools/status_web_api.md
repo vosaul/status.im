@@ -26,9 +26,9 @@ window.web3.currentProvider.status
  })
 ```
 
-## Others API
+## Other APIs
 
-Status also implements a number of API standardized by EIPs.
+Status also implements a number of APIs standardized by EIPs.
 
 ### ERC945
 
