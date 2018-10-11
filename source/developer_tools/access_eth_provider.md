@@ -42,28 +42,38 @@ Note the read-only provider in the first line, which is exposed by default. Acce
 
 Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md).
 
+### Setting the default account
+
+web3.js uses web3.eth.defaultAccount for any transaction that does not specify a `from`. In order to be able to create transactions, you must set a valid address. The following code can only be executed once `ethereum.enable();` has been executed successfully:
+```
+web3.eth.getAccounts().then(accounts => {
+    web3.eth.defaultAccount = accounts[0];
+});
+```
+
 ### Using Web3 Rather Than the Provider
 
-You can see that the EIP suggests using `await ethereum.send('eth_sendTransaction', [/* ... */]);`, after being granted full access, but we feel this is likely confusing. Most developers already use `web3` when sending transactions (of any kind - i.e. it could be `web3.eth.defaultBlock` or `web3.eth.estimateGas` etc.). 
+You can see that the EIP suggests using `await ethereum.send('eth_sendTransaction', [/* ... */]);`, after being granted full access, but we feel this is likely confusing. Most developers already use web3 when sending transactions (of any kind - i.e. it could be `web3.eth.defaultBlock` or `web3.eth.estimateGas` etc.).
 
-This is why we suggest importing `web3` from the appropriate library for your Dapp, instantiating it, adding the new provider block above, and then handling transactions through `web3` as your normally would before the November 2, 2018 breaking changes.
+This is why we suggest importing web3 from the appropriate library for your Dapp, instantiating it, adding the new provider block above, and then handling transactions through web3 as your normally would before the November 2, 2018 breaking changes.
 
 This works exactly like it always has:
 
-`web3.eth.sendTransaction(transactionObject [, callback])`
+`web3.eth.sendTransaction(transactionObject)`
 
-Constructing the `transactionObject` is, again, heavily dependent on what you're trying to do, but here is a super simple example of what it might look like if you just plugged the required values straight in:
+Constructing the transactionObject is, again, heavily dependent on what you’re trying to do, but here is a super simple example of what it might look like if you just plugged the required values straight in:
 
-```js
-// using a callback because we only support web3.js 0.20 currently.
+```
+// using web3.js 1.0.0-beta
 web3.eth.sendTransaction({
-    from: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe',
+    from: web3.eth.defaultAccount,
     to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
     value: '1000000000000000',
     gas: gasLimit // use web3.eth.estimateGas() to get this amount, and add a little for extra safety.
-}, function(err, transactionHash) {
- if (!err)
-   console.log(transactionHash); // "0xe7991ac8107a2dd70f996ea0cd867a828b2f228b39436506271d6a53587eff16"
+}).then(receipt => {
+    console.log(receipt.transactionHash); // "0xe7991ac8107a2dd70f996ea0cd867a828b2f228b39436506271d6a53587eff16"
+}).catch(function(err){
+    console.error(err);
 });
 ```
 
