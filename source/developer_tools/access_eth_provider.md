@@ -42,9 +42,9 @@ Note the read-only provider in the first line, which is exposed by default. Acce
 
 Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md).
 
-### Using web3 Rather Than the Provider
+### Using Web3 Rather Than the Provider
 
-You can see that the EIP suggests using `await ethereum.send('eth_sendTransaction', [/* ... */]);`, after being granted full access, but we feel this is likely confusing. Most developers already use `web3` when sending transactions (of any kind - i.e. it could be `web3.eth.defaultBlock` or `web3.eth.estimateGas`). While it is possible to use the provider without using `web3`, we just don't think many people will want to do that.
+You can see that the EIP suggests using `await ethereum.send('eth_sendTransaction', [/* ... */]);`, after being granted full access, but we feel this is likely confusing. Most developers already use `web3` when sending transactions (of any kind - i.e. it could be `web3.eth.defaultBlock` or `web3.eth.estimateGas` etc.). While it is possible to use the provider without using `web3`, we just don't think many people will want to do that.
 
 This is why we suggest importing `web3` from the appropriate library for your Dapp, instantiating it, adding the new provider block above, and then handling transactions through `web3` as your normally would before the November 2, 2018 breaking changes.
 
