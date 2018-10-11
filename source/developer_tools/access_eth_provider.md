@@ -32,7 +32,6 @@ window.addEventListener('load', async () => {
         // Request full provider if needed
         await ethereum.enable();
         // Full provider exposed
-        web3.eth.sendTransaction(transactionObject [/* ... */]);
     } catch (error) {
         // User denied full provider access
     }
@@ -41,7 +40,19 @@ window.addEventListener('load', async () => {
 
 Note the read-only provider in the first line, which is exposed by default. Accessing the user's address and initiating transactions or signing messages requires the `ethereum.enable()` call to be accepted by the user.
 
-Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md). You can see that they suggest there using `await ethereum.send('eth_sendTransaction', [/* ... */]);` but we like handling things as above as we feel there is less room for error. Constructing the `transactionObject` is, again, heavily dependent on what you're trying to do, but here is a super simple example of what it might look like if you just plugged the required values straight in:
+Further details around the structure we have all settled on together can be found in [EIP 1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md).
+
+### Using web3 Rather Than the Provider
+
+You can see that the EIP suggests using `await ethereum.send('eth_sendTransaction', [/* ... */]);`, after being granted full access, but we feel this is likely confusing. Most developers already use `web3` when sending transactions (of any kind - i.e. it could be `web3.eth.defaultBlock` or `web3.eth.estimateGas`). While it is possible to use the provider without using `web3`, we just don't think many people will want to do that.
+
+This is why we suggest importing `web3` from the appropriate library for your Dapp, instantiating it, adding the new provider block above, and then handling transactions through `web3` as your normally would before the November 2, 2018 breaking changes.
+
+This works exactly like it always has:
+
+`web3.eth.sendTransaction(transactionObject [/* ... */])`
+
+Constructing the `transactionObject` is, again, heavily dependent on what you're trying to do, but here is a super simple example of what it might look like if you just plugged the required values straight in:
 
 ```js
 // using the promise
