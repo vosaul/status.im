@@ -1,0 +1,12 @@
+- name: What is Fiddle?
+  description: A playground to solve bounties, learn functional programming and participate in building a better web
+  link: 
+  thumbnail: placeholder.png
+- name: Use Fiddle
+  description: Get Your hands dirty and start learning by playing!
+  link: 
+  thumbnail: placeholder.png
+- name: Learn More
+  description: Dive deeper into how to make the most of this awesome tool...
+  link: 
+  thumbnail: placeholder.png
