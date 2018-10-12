@@ -67,5 +67,4 @@ technical_specs:
 
 fiddle:
   fiddle:
-    introduction_fiddle: index.html
-    fiddle: fiddle.html
+    introduction_fiddle: intro_fiddle.html
