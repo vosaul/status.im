@@ -1,19 +1,19 @@
 ---
-id: security_process
-title: Security Process
+id: index
+title: Status Security Processes
 ---
 
 # High-level overview
 
-Security Process is based on the best practices recommended by
+The Status security process is based on the best practices recommended by
 [OWASP](https://www.owasp.org).
 
-The process is based on the practice called [Security Champions
+Specifically, we use a practice called [Security Champions
 2.0](./security_champions.md).
 
-The idea is to have a person, called a Security Champion in each team and area.
-This person is responsible for supporting security process in the particular
-team and area as well as supporting security initiative throghout the
+The idea is to have a person called a `Security Champion` in each team and area.
+This person is responsible for supporting security processes in the particular
+team and area as well as supporting security initiatives throghout the
 organization. 
 
 The person doesn't have to have security background, but should be interested
