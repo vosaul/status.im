@@ -64,3 +64,8 @@ technical_specs:
     dark_routing: dark_routing.html
     whisper_pss: whisper_pss.html
     whisper_faqs: whisper_faqs.html
+
+fiddle:
+  fiddle:
+    introduction_fiddle: index.html
+    fiddle: fiddle.html
