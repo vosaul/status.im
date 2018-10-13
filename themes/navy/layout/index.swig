@@ -45,12 +45,12 @@
     <div class="ecosystem-wrap">
         <div class="ecosystem-item">
             <h2><a href="/docs/" class="app">Status App</a></h2>
-            <p>Our collective goal is the mass adoption of Ethereum. Find out more about our mobile and desktop products here.</p>
+            <p>The Status application enables you to browse, chat and make payments entirely on the ethereum public blockchain</p>
             <a class="app more" href="/docs/">Learn More <img src="../img/icon_dropdown-status.svg"></a>
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://status.im/incubate" class="incubate">Status Incubate</a></h2>
-            <p>e are incubating a handful of startups each quarter, across a wide cross section of areas — from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more. Our goal is to foster a thriving Web3 ecosystem.</p>
+            <p>We are incubating a handful of startups each quarter, across a wide cross section of areas — from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more. Our goal is to foster a thriving Web3 ecosystem</p>
             <a class="incubate more" href="https://status.im/incubate">Learn More <img src="../img/icon_dropdown-incubate.svg"></a>
         </div>
         <div class="ecosystem-item">
@@ -60,17 +60,17 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="#" class="studio">Status Studio</a></h2>
-            <p>An Integrated Developer Environment and Education Platform for all Ethereum Blockchain developers that addresses the current pain points of the Ethereum community with the goal to grow the Ethereum ecosystem and foster one-stop-shop development and learning.</p>
+            <p>An Integrated Developer Environment and Education Platform for all Ethereum Blockchain developers that addresses the current pain points of the Ethereum community with the goal to grow the Ethereum ecosystem and foster one-stop-shop development and learning</p>
             <a class="studio more" href="#">Learn More <img src="../img/icon_dropdown-studio.svg"></a>
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://nimbus.status.im/" class="nimbus">Nimbus</a></h2>
-            <p>Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware.</p>
+            <p>Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware</p>
             <a class="nimbus more" href="https://nimbus.status.im/">Learn More <img src="../img/icon_dropdown-nimbus.svg"></a>
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://hardwallet.status.im/" class="hardwallet">Status Hardwallet</a></h2>
-            <p>A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online. Isolate your private keys into the safety of your Status Hardwallet offline.</p>
+            <p>A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online. Isolate your private keys into the safety of your Status Hardwallet offline</p>
             <a class="hardwallet more" href="https://hardwallet.status.im/">Learn More <img src="../img/icon_dropdown-hardwallet.svg"></a>
         </div>
     </div>
