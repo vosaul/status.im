@@ -567,16 +567,17 @@ select[multiple] {
   margin-right: 0;
 }
 
-.home-cover {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EEF2F5;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 3;
-}
+.home-cover
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: #EEF2F5
+  flex-direction: column
+  justify-content: flex-start
+  height: 390px
+  @media (max-width: 991px)
+    height: auto
 
 .intro {
   display: -webkit-box;
