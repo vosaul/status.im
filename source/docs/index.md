@@ -1,4 +1,4 @@
----
+layout: first_page
 id: introduction
 title: Welcome to Status
 ---
