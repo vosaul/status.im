@@ -3,7 +3,7 @@ id: introduction
 title: Welcome to Status
 ---
 
-## What We're All About
+## Who We Are
 
 Status is an open source community of people committed to building better decentralised tools for web3, and making sure that everyone across the world can access these tools directly from their pockets.
 
