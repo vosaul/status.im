@@ -56,11 +56,11 @@
           </p>
         </div>
       </a>
-      <a href="../fiddle/">
+      <a href="https://embark.status.im/">
         <div class="first-page-link">
-          <h3>Status Fiddle</h3>
-          <p>Play and learn!
-            <a href="/fiddle/">
+          <h3>Embark</h3>
+          <p>Better Ðapps for everyone
+            <a href="https://embark.status.im/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
