@@ -85,28 +85,6 @@
                     </div>
                     <div class="nightly-builds-wrap">
                         <div class="box">
-                            <h2>Android</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
-                                <img src="../nightly/img/qr-apk.png" width="80%" />
-                            </a>
-                            <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk
-                            </a>
-                        </div>
-                        <div class="box">
-                            <h2>iOS</h2>
-                            <a href="https://i.diawi.com/aXAoyg" >
-                                <img src="../nightly/img/qr-ios.png" width="80%" />
-                            </a>
-                            <p>Link:</p>
-                            <a href="https://i.diawi.com/aXAoyg" target="_blank">
-                                https://i.diawi.com/aXAoyg
-                            </a>
-                        </div>
-                    </div>
-                    <div class="nightly-builds-wrap">
-                        <div class="box">
                             <h2>Linux</h2>
                             <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.AppImage" target="_blank">
                                 <img src="../nightly/img/linux.png" width="150" />
@@ -124,6 +102,28 @@
                             <p>Link:</p>
                             <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg" target="_blank">
                                 https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nightly-builds-wrap">
+                        <div class="box">
+                            <h2>Android</h2>
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
+                                <img src="../nightly/img/qr-apk.png" width="80%" />
+                            </a>
+                            <p>Link:</p>
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
+                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk
+                            </a>
+                        </div>
+                        <div class="box">
+                            <h2>iOS</h2>
+                            <a href="https://i.diawi.com/aXAoyg" >
+                                <img src="../nightly/img/qr-ios.png" width="80%" />
+                            </a>
+                            <p>Link:</p>
+                            <a href="https://i.diawi.com/aXAoyg" target="_blank">
+                                https://i.diawi.com/aXAoyg
                             </a>
                         </div>
                     </div>
