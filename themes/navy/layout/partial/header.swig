@@ -14,9 +14,6 @@
                         <a href="/docs/" class="main-link">Docs</a>
                     </li>
                     <li>
-                        <a href="/desktop/" class="main-link">Desktop</a>
-                    </li>
-                    <li>
                         <a href="#" class="main-link">Contribute</a>
                     </li>
                     <li>
