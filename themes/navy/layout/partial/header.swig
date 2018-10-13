@@ -57,8 +57,6 @@
             <input type="search" id="search-input" placeholder="Search...">
         </div>
         <span><a href="http://get.status.im/chat/public/status" class="button button--secondary">Status Chat</a></span>
-        <span class="social-link social-link--twitter"><a href="https://twitter.com/ethstatus" target="_blank"></a></span>
-        <span class="social-link social-link--github"><a href="https://github.com/status-im/nimbus" target="_blank"></a></span>
     </div>
     <a href="#" class="mobile-menu-trigger">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
