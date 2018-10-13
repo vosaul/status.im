@@ -58,10 +58,14 @@ sidebar:
     submit_to_status: How To Submit
     troubleshooting_dapps: Troubleshooting
     embark: Embark
-    status_extensions: Status Extensions [WIP]
+    status_extensions: Extensions [WIP]
     intro_extensions: Introduction
     example_extensions: Existing Examples
     extensions_tutorial: Tutorials
+    status_fiddle: Fiddle
+    fiddle: Status Fiddle
+    status_storybook: Storybook
+    storybook: Status React Storybook
 
   tutorials:
     extensions: Extensions
