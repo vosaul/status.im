@@ -60,7 +60,7 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="#" class="studio">Studio</a></h2>
-            <p>An IDE and Education Platform for developers the goal to grow our ecosystem and foster one-stop-shop development and learning</p>
+            <p>An IDE and Education Platform for developers with the goal to grow our ecosystem and foster one-stop-shop development and learning</p>
             <a class="studio more" href="#">Learn More <img src="../img/icon_dropdown-studio.svg"></a>
         </div>
         <div class="ecosystem-item">
