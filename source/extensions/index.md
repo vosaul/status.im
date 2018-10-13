@@ -1,6 +1,7 @@
-layout: plugins
+---
+layout: extensions
 title: Extensions
-data: plugins
-partial: plugin
+data: extensions
+partial: extensions
 comments: false
 ---
