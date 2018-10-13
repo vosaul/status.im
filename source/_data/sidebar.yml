@@ -1,6 +1,6 @@
 docs:
   use_status:
-    who_we_are: introduction.html
+    who_we_are: index.html
     contributor_guide: contributor_guide.html
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
@@ -12,7 +12,9 @@ docs:
     report_a_bug: report_a_bug.html
 
 developer_tools:
-  connecting_to_web3:
+  web3_for_everyone:
+    introduction_tools: index.html
+  connecting_to_web3: 
     access_an_ethereum_provider: access_eth_provider.html
     detecting_status: detecting_status.html
   optimised_for_status:
@@ -26,7 +28,7 @@ developer_tools:
     intro_extensions: intro_extensions.html
 
 build_status:
-  build_status:  
+  build_status:
     introduction_build: index.html
     build_status_go: status_go.html
   build_status_desktop:
@@ -37,11 +39,11 @@ build_status:
     jenkins_pipeline: desktop_jenkins.html
 
 tutorials:
-  extensions:
+  extensions: 
     your_first_chat_extension: extensions_tutorial_chat_command.html
 
 technical_specs:
-  whisper:
+  whisper: 
     introduction_whisper: index.html
     extended_features: extended_features.html
     dark_routing: dark_routing.html

@@ -44,6 +44,8 @@ sidebar:
     jenkins_pipeline: Jenkins Setup
 
   developer_tools:
+    web3_for_everyone: Web3 For Everyone
+    introduction_tools: Status Developer Tools
     connecting_to_web3: Connecting to web3
     access_an_ethereum_provider: Accessing Web3 Providers
     detecting_status: Detecting Status
