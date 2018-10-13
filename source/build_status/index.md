@@ -1,9 +1,10 @@
 ---
+layout: first_page
 id: index
 title: Build Status Yourself
 ---
 
-# Buidl Status Yourself and Particpate in a Better Web
+# #Buidl Status Yourself and Particpate in a Better Web
 
 ## The easiest way
 

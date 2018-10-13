@@ -1,4 +1,5 @@
 ---
+layout: first_page
 title: DApp Developer Tools
 id: index
 ---

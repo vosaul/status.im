@@ -8,49 +8,40 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="https://status.im" class="main-link">Status Home</a>
+                        <a href="#" class="main-link">About</a>
+                    </li>
+                    <li>
+                        <a href="/docs/" class="main-link">Docs</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-link">Contribute</a>
                     </li>
                     <li class="has-submenu">
-                        <a href="https://embark.status.im/" class="main-link">Embark</a>
+                        <a href="https://embark.status.im/" class="main-link">Projects</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://embark.status.im">About</a></li>
-                                <li><a href="https://embark.status.im/docs">Docs</a></li>
-                                <li><a href="https://our.status.im/tag/embark">Blog</a></li>
-                                <li><a href="https://gitter.im/embark-framework/Lobby">Contribute</a></li>
+                                <li><a href="https://status.im/incubate">Incubate</a></li>
+                                <li><a href="https://embark.status.im/docs">Embark</a></li>
+                                <li><a href="https://nimbus.status.im/">Nimbus</a></li>
+                                <li><a href="#">Studio</a></li>
+                                <li><a href="https://hackathon.status.im/">Hackathon</a></li>
+                                <li><a href="#">Desktop</a></li>
+                                <li><a href="#">Hardwallet</a></li>
+                                <li><a href="#">Analytics</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="has-submenu"><a href="https://status.im/incubate">Incubate</a>
+                    <li class="has-submenu"><a href="https://status.im/incubate">People</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="https://status.im/incubate">Projects</a></li>
-                                <li><a href="https://get.status.im/chat/public/status-incubate">Community</a></li>
-                                <li><a href="https://our.status.im/tag/incubate">Blog</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="https://nimbus.status.im" class="main-link">Nimbus</a>
-                        <i class="mobile-submenu-trigger"></i>
-                        <div class="sub-menu">
-                            <ul>
-                                <li><a href="/">About</a></li>
-                                <li><a href="/docs/">Docs</a></li>
-                                <li><a href="https://our.status.im/tag/nimbus">Blog</a></li>
-                                <li><a href="http://get.status.im/chat/public/status-nimbus">Talk To Us</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="https://hardwallet.status.im/">Hardwallet</a></li>
-                    <li class="has-submenu">
-                        <a href="https://people-ops.status.im">Peopleops</a>
-                        <i class="mobile-submenu-trigger"></i>
-                        <div class="sub-menu">
-                            <ul>
-                                <li><a href="https://our.status.im/tag/people-ops/">Blog</a></li>
+                                <li><a href="https://get.status.im/chat/public/status">Join the Chat</a></li>
+                                <li><a href="https://discuss.status.im/">Discuss in Depth</a></li>
+                                <li><a href="https://github.com/status-im">Contribute to our Repos</a></li>
+                                <li><a href="https://our.status.im/">Read Our Blog</a></li>
+                                <li><a href="#">Life at Status</a></li>
+                                <li><a href="https://twitter.com/ethstatus">Follow us on Twitters</a></li>
                             </ul>
                         </div>
                     </li>

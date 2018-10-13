@@ -1,4 +1,5 @@
 ---
+layout: first_page
 id: index
 title: Security at Status
 ---

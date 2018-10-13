@@ -1,4 +1,5 @@
 ---
+layout: first_page
 id: index
 title: Whisper - Do You Want to Know a Secret?
 ---

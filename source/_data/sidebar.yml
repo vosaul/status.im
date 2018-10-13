@@ -28,7 +28,7 @@ developer_tools:
 build_status:
   build_status:  
     introduction_build: index.html
-    build_status_go: build_status_go.html
+    build_status_go: status_go.html
   build_status_desktop:
     introduction_desktop: intro_desktop.html
     building_desktop: desktop.html
