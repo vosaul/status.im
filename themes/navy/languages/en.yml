@@ -60,6 +60,8 @@ sidebar:
     embark: Embark
     status_extensions: Status Extensions [WIP]
     intro_extensions: Introduction
+    example_extensions: Existing Examples
+    extensions_tutorial: Tutorials
 
   tutorials:
     extensions: Extensions

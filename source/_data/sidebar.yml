@@ -27,6 +27,8 @@ developer_tools:
     troubleshooting_dapps: troubleshooting_dapps.html
   status_extensions:
     intro_extensions: intro_extensions.html
+    example_extensions: ../extensions/index.html
+    extensions_tutorial: ../tutorials/index.html
 
 build_status:
   build_status:
