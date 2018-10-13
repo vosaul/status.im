@@ -1,7 +1,7 @@
 <div class="page-intro wrapper">
   <header class="article-header-first-page">
     <div class="first-page-intro">
-      <h1>Build a Better Web</h1><br/>
+      <h1>Build a Better Web</h1>
       <p>Begin your journey to a more secure and distributed internet here.</p>
       <br/>
     </div>
@@ -41,6 +41,26 @@
           <h3>Security</h3>
           <p>Status best practices
             <a href="/security/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+      <a href="../wip/">
+        <div class="first-page-link">
+          <h3>Work in Progress</h3>
+          <p>All our WIP items
+            <a href="/wip/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+      <a href="../fiddle/">
+        <div class="first-page-link">
+          <h3>Status Fiddle</h3>
+          <p>Play and learn!
+            <a href="/fiddle/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>

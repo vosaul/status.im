@@ -1,10 +1,10 @@
-<li class="plugin on">
+<li class="wip on">
   <img src="/wip/thumbnails/{{ wip.thumbnail }}" style="display: block; width: 200px; height: 200px; margin-bottom: 20px;" />
-  <a href="{{ wip.link }}" class="plugin-name" target="_blank">{{ wip.name }}</a>
-  <p class="plugin-desc">{{ wip.description }}</p>
-  <div class="plugin-tag-list">
+  <a href="{{ wip.link }}" class="wip-name" target="_blank">{{ wip.name }}</a>
+  <p class="wip-desc">{{ wip.description }}</p>
+  <div class="wip-tag-list">
     {% for tag in wip.tags %}
-      <a href="#{{ tag }}" class="plugin-tag">{{ tag }}</a>
+      <a href="#{{ tag }}" class="wip-tag">{{ tag }}</a>
     {% endfor %}
   </div>
 </li>

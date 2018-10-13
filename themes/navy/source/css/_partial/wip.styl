@@ -1,15 +1,15 @@
-#plugin-list-header
+#wip-list-header
   clearfix()
   margin: 40px 0
 
-#plugin-list-title
+#wip-list-title
   font-family: font-title
   font-size: 36px
   font-weight: 300
   line-height: 1
   float: left
 
-#plugin-list-count
+#wip-list-count
   color: color-gray
   padding-top: 1em
   text-align: right
@@ -19,7 +19,7 @@
     padding-top: 0
     padding-right: 15px
 
-#plugin-search-input
+#wip-search-input
   font-size: 16px
   font-family: inherit
   -webkit-appearance: none
@@ -32,14 +32,14 @@
     width: 50%
     margin-top: 0
 
-#plugin-list
+#wip-list
   margin: 40px -20px
   display: flex
   flex-flow: column
   @media mq-tablet
     flex-flow: row wrap
 
-.plugin
+.wip
   display: none
   padding: 20px
   @media mq-tablet
@@ -48,10 +48,10 @@
     flex: 0 0 50%
   &.on
     display: block
-    img
-      height: 100px !important
+    width: 32%;
+    float: left;
 
-.plugin-name
+.wip-name
   font-family: font-title
   font-weight: bold
   color: color-link
@@ -62,15 +62,15 @@
   &:hover
     color: color-link-hover
 
-.plugin-desc
+.wip-desc
   line-height: line-height
   margin: 1em 0
 
-.plugin-tag-list
+.wip-tag-list
   clearfix()
   line-height: 1.3
 
-.plugin-tag
+.wip-tag
   color: color-gray
   font-size: 0.9em
   text-decoration: none
@@ -81,14 +81,14 @@
   &:before
     content: "#"
 
-.plugin-screenshot
+.wip-screenshot
   margin-bottom: 15px
   position: relative
   padding-top: (10 / 16 * 100)% // 16:10 ratio
   height: 0
   overflow: hidden
 
-.plugin-screenshot-img
+.wip-screenshot-img
   position: absolute
   top: 0
   left: 0
@@ -101,7 +101,7 @@
   &.lazyloaded
     opacity: 1
 
-.plugin-preview-link
+.wip-preview-link
   position: absolute
   top: 0
   left: 0
