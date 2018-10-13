@@ -8,7 +8,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#" class="main-link">About</a>
+                        <a href="https://our.status.im" class="main-link">Blog</a>
                     </li>
                     <li>
                         <a href="/docs/" class="main-link">Docs</a>
