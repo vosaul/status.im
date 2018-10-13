@@ -24,10 +24,11 @@ sidebar:
     who_we_are: Who We Are
     contributor_guide: Contributor Guide
     FAQs: FAQs
+    app_structure: App Structure
     status_react_structure: Status-React Structure
     send_transaction_flow: Send Transaction Flow
     status_node: Status Node
-    run_status_node: Run Status Node
+    run_status_node: Run a Status Node
     testing: Testing
     introduction_testing: How We Test
     report_a_bug: Report a Bug

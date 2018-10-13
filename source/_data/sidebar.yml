@@ -2,9 +2,10 @@ docs:
   use_status:
     who_we_are: index.html
     contributor_guide: contributor_guide.html
+    FAQs: FAQs.html
+  app_structure:
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
-    FAQs: FAQs.html
   status_node:
     run_status_node: run_status_node.html
   testing:
