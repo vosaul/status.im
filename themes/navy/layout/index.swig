@@ -3,7 +3,7 @@
     <div class="intro">
         <div class="heading">
             <h1>Your portal to the decentralized web</h1>
-            <p>Status is an open source community building the tools to drive the mass adoption of Ethereum.</p>
+            <p>Status is an open source community building tools to drive the mass adoption of Ethereum.</p>
         </div>
         <div class="intro-buttons">
             <a class="button button--main" href="https://get.status.im">GET STATUS</a>
