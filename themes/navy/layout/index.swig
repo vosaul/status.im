@@ -50,7 +50,7 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://status.im/incubate" class="incubate">Incubate</a></h2>
-            <p>We are incubating a handful of startups each quarter, across a wide cross section of areas — from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more. Our goal is to foster a thriving Web3 ecosystem</p>
+            <p>We are incubating a handful of startups each quarter, from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more.</p>
             <a class="incubate more" href="https://status.im/incubate">Learn More <img src="../img/icon_dropdown-incubate.svg"></a>
         </div>
         <div class="ecosystem-item">
@@ -60,7 +60,7 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="#" class="studio">Studio</a></h2>
-            <p>An Integrated Developer Environment and Education Platform for all developers that addresses the current pain points of the Ethereum community with the goal to grow our ecosystem and foster one-stop-shop development and learning</p>
+            <p>An IDE and Education Platform for developers the goal to grow our ecosystem and foster one-stop-shop development and learning</p>
             <a class="studio more" href="#">Learn More <img src="../img/icon_dropdown-studio.svg"></a>
         </div>
         <div class="ecosystem-item">
@@ -70,7 +70,7 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://hardwallet.status.im/" class="hardwallet">Hardwallet</a></h2>
-            <p>A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online. Isolate your private keys into the safety of your Status Hardwallet offline</p>
+            <p>A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online.</p>
             <a class="hardwallet more" href="https://hardwallet.status.im/">Learn More <img src="../img/icon_dropdown-hardwallet.svg"></a>
         </div>
     </div>
