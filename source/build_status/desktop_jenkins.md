@@ -1,5 +1,5 @@
 ---
-id: build_desktop_jenkins
+id: desktop_jenkins
 title: Jenkins Setup for Desktop
 ---
 

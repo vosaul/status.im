@@ -1,6 +1,6 @@
 ---
-id: build_desktop_troubleshooting
-title: Desktop Troubleshooting
+id: desktop_troubleshooting
+title: Troubleshooting
 ---
 
 ## Initial setup issues

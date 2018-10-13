@@ -1,6 +1,6 @@
 ---
-id: build_desktop_google_breakpad
-title: Google Breakpad integration
+id: google_breakpad
+title: Google Breakpad Integration
 ---
 
 ## Overview

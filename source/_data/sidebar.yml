@@ -2,25 +2,11 @@ docs:
   use_status:
     who_we_are: introduction.html
     contributor_guide: contributor_guide.html
-    ens_usernames: ens_usernames.html
-    FAQs: FAQs.html
-
-  build_status:
-    quick_start: build_status.html
-    build_status_go: build_status_go.html
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
-
-  build_status_desktop:
-    introduction_desktop: intro_desktop.html
-    building_desktop: build_desktop.html
-    troubleshooting: build_desktop_troubleshooting.html
-    using_breakpad: build_desktop_google_breakpad.html
-    jenkins_pipeline: build_desktop_jenkins.html
-
+    FAQs: FAQs.html
   status_node:
     run_status_node: run_status_node.html
-
   testing:
     introduction_testing: testing.html
     report_a_bug: report_a_bug.html
@@ -29,19 +15,26 @@ developer_tools:
   connecting_to_web3:
     access_an_ethereum_provider: access_eth_provider.html
     detecting_status: detecting_status.html
-  
   optimised_for_status:
     assets_guidelines: assets_guidelines.html
     js_api: status_web_api.html
     http_debugging: http_debugging.html
-  
   submitting_to_status: 
     submit_to_status: add_your_dapp.html
     troubleshooting_dapps: troubleshooting_dapps.html
-  
   status_extensions:
     intro_extensions: intro_extensions.html
 
+build_status:
+  build_status:  
+    introduction_build: index.html
+    build_status_go: build_status_go.html
+  build_status_desktop:
+    introduction_desktop: intro_desktop.html
+    building_desktop: desktop.html
+    troubleshooting: desktop_troubleshooting.html
+    using_breakpad: desktop_google_breakpad.html
+    jenkins_pipeline: desktop_jenkins.html
 
 tutorials:
   extensions:

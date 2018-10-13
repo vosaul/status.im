@@ -1,7 +1,9 @@
 ---
-id: build_status
-title: Quick Start
+id: index
+title: Build Status Yourself
 ---
+
+# Buidl Status Yourself and Particpate in a Better Web
 
 ## The easiest way
 

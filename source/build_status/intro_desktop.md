@@ -1,6 +1,6 @@
 ---
 id: intro_desktop
-title: Status Desktop (react-native-qt)
+title: Getting Setup to Work With React-native-qt
 ---
 
 When you create a project with `react-native init SomeProject`, you have ios and android-specific files generated immediately. To add desktop platform files, you have to invoke `react-native desktop` command (in your project folder). `SomeProject/desktop` folder generated then. It contains `CMakeLists.txt` for building desktop Qt application.

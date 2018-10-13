@@ -1,9 +1,11 @@
 ---
-id: build_desktop
+id: desktop
 title: Build Desktop
 ---
 
-# Prerequisites
+# Build Status Desktop for Yourself!
+
+## Prerequisites
 
 You will need the following tools installed:
   - Leiningen (Clojure build tool, get it from https://leiningen.org)

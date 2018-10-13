@@ -1,5 +1,5 @@
 ---
-id: build_status_go
+id: status_go
 title: Build status-go
 ---
 
