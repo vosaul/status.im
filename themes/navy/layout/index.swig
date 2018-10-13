@@ -14,7 +14,7 @@
 
 <div class="home-wrap">
     <div class="intro-graphic">
-        <img src="../img/intro-graphic.png" />
+        <img src="../img/intro-graphic.svg" />
     </div>
     <div class="key-items">
         <div class="key-item">
@@ -45,12 +45,12 @@
     <div class="ecosystem-wrap">
         <div class="ecosystem-item">
             <h2><a href="/docs/" class="app">Status App</a></h2>
-            <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and contributors fostering a rich distributed web.</p>
+            <p>Our collective goal is the mass adoption of Ethereum. Find out more about our mobile and desktop products here.</p>
             <a class="app more" href="/docs/">Learn More <img src="../img/icon_dropdown-status.svg"></a>
         </div>
         <div class="ecosystem-item">
             <h2><a href="https://status.im/incubate" class="incubate">Status Incubate</a></h2>
-            <p>Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects</p>
+            <p>e are incubating a handful of startups each quarter, across a wide cross section of areas — from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more. Our goal is to foster a thriving Web3 ecosystem.</p>
             <a class="incubate more" href="https://status.im/incubate">Learn More <img src="../img/icon_dropdown-incubate.svg"></a>
         </div>
         <div class="ecosystem-item">
@@ -60,7 +60,7 @@
         </div>
         <div class="ecosystem-item">
             <h2><a href="#" class="studio">Status Studio</a></h2>
-            <p>Our collective goal is the mass adoption of Ethereum.</p>
+            <p>An Integrated Developer Environment and Education Platform for all Ethereum Blockchain developers that addresses the current pain points of the Ethereum community with the goal to grow the Ethereum ecosystem and foster one-stop-shop development and learning.</p>
             <a class="studio more" href="#">Learn More <img src="../img/icon_dropdown-studio.svg"></a>
         </div>
         <div class="ecosystem-item">
