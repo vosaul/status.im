@@ -58,12 +58,21 @@ technical_specs:
 security:
   security:
     introduction_security: index.html
-    security_champions: security_champions.html
-    security_existing_features: security_existing_features.html
-    security_experiment: security_experiment.html
-    security_threat_modeling: security_threat_modeling.html
-    security_github_labels: security_github_labels.html
-    security_sensitive_data: security_sensitive_data.html
+  security_status:
+    threat_modeling: sec_threat_modeling.html
+    existing_features: sec_existing_features.html
+    new_features: sec_new_features.html
+    security_week: sec_security_week.html
+    sensitive_data: sec_sensitive_data.html
+    experiment: sec_experiment.html
+  audits:
+    introduction_audits: audits_index.html
+  guides:
+    introduction_guides: guides_index.html
+  organization:
+    introduction_organization: org_index.html
+    security_champions: org_security_champions.html
+    security_github_labels: org_github_labels.html 
 
 fiddle:
   fiddle:

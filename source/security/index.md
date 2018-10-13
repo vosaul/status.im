@@ -1,56 +1,31 @@
 ---
 id: index
-title: Status Security Processes
+title: Security at Status
 ---
 
-# High-level overview
+# Security Matters!
 
-The Status security process is based on the best practices recommended by
-[OWASP](https://www.owasp.org).
+Welcome to the Status security section. Security is a core principle of our organization, and these pages are a collection of resources to inform you on how we put that into practice.  Security, especially in the decentralization space, is an ongoing and endless pursuit that we are dedicated to. If you find something that we should add, tell us! 	
 
-Specifically, we use a practice called [Security Champions
-2.0](./security_champions.md).
+## External Audits
 
-The idea is to have a person called a `Security Champion` in each team and area.
-This person is responsible for supporting security processes in the particular
-team and area as well as supporting security initiatives throghout the
-organization. 
+You can find information on all our external security audits on the [audits](./audits_index.html) page.
 
-The person doesn't have to have security background, but should be interested
-in it.
+## Organizational Policies and Procedures
 
-Security champion works with the security community.
+You can find information about how we as an organization operate to keep everyone involved safe and secure on the [organization](./org_index.html) page.
 
+## One-time Projects
 
-# Activities
-
-1. Champions Sync-Up Calls / Bi-weekly;
-
-2. [Threat-modeling for the new features](./security_new_features.md);
-
-3. Security news email (for champions) / Bi-Weekly.
-
-
-# One-time Projects
-
-[Threat-modeling of existing features](./security_existing_features.md)
-
-
-## Security Champions
-
-DApps: Andrey Shovkoplyas (Slack: `@andrey`)
-
-Wallet: Goran Jovic (Slack: `@goranjovic`)
-
+[Threat-modeling of existing features](./sec_existing_features.html)
+[Security Week](./org_security_week.html)
 
 ## Informaton & Education
 
-[Security Champion Guide](./security_champions.md)
+[Security Champion Guide](./org_security_champions.html)]
 
-[Threat Modeling](./security_threat_modeling.md)
+[Threat Modeling](./sec_threat_modeling.html)
 
-[What Is Sensitive Data?](./security_sensitive_data.md)
+[What Is Sensitive Data?](./sec_sensitive_data.html)
 
-...ask `@mandrigin` or in `#security` on our Slack ;-)
-
-
+For questions / comments / concerns, please email us at [security@status.im](mailto:security@status.im) or join the [#status-security](http://get.status.im/chat/public/status-security) channel in Status.

@@ -1,10 +1,12 @@
 ---
-id: security_sensitive_data
+id: sec_sensitive_data
 title: What Is Sensitive Data?
 ---
 
+# What IS Sensitive Data Anyway?
+
 Sensitive data should be protected from corruption, tampering and disclosure.
-See [CIA](https://developer.mozilla.org/en-US/docs/Web/Security/Information_Security_Basics/Confidentiality,_Integrity,_and_Availability).
+See this [Confidentiality, Integrtiy and Availability guidline from Mozilla](https://developer.mozilla.org/en-US/docs/Web/Security/Information_Security_Basics/Confidentiality,_Integrity,_and_Availability) for more.
 
 ## 1. Personally Identifiable Information (PII)
 

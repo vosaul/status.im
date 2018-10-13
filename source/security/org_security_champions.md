@@ -1,5 +1,5 @@
 ---
-id: security_champions
+id: org_security_champions
 title: Security Champions Guide
 ---
 
@@ -28,7 +28,7 @@ over your day-to-day activities!
 - for new features/issues and PRs - mark them as "no security impact";
 
 - ping the contributor to do a short threat modelling on new features that
- touch [sensitive data](./security_sensitive_data.md);
+ touch [sensitive data](./sec_sensitive_data.md);
 
 - review the threats and risk values;
 

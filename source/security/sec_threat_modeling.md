@@ -1,7 +1,9 @@
 ---
-id: security_threat_modeling
+id: sec_threat_modeling
 title: Threat modeling with STRIDE
 ---
+
+# Threat Modeling with STRIDE
 
 Threat modelling is a way to try to identify risks and threats in the
 application. It usually is done from the _point of view of an attacker_.
@@ -122,6 +124,7 @@ while doing threat modeling!
 
 Read these articles to understand how issues in UX might make security features
 essentially pointless:
+
 - ["Why Johnny Can't Encrypt (PGP 5 1999)"](https://people.eecs.berkeley.edu/%7Etygar/papers/Why_Johnny_Cant_Encrypt/OReilly.pdf)
 - ["Why Johnny Still Can’t Encrypt (PGP 9, 2006)"](https://cups.cs.cmu.edu/soups/2006/posters/sheng-poster_abstract.pdf)
 - ["Why Johnny Still, Still Can’t Encrypt (Mailvelope, 2015)"](https://arxiv.org/pdf/1510.08555.pdf)

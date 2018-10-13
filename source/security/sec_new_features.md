@@ -1,7 +1,9 @@
 ---
-id: security_new_features
-title: Threat-modeling new features
+id: sec_new_features
+title: Threat-modeling New Features
 ---
+
+# Threat-modeling New Features at Status
 
 Prerequisite reads:
 
@@ -66,7 +68,7 @@ The process looks roughly like that:
 The result of this step is either a label "Security: Skip" or a comment about
 necessity of threat modeling.
 
-- The contributor does a short [threat analysis and risk assessment](./security_threat_modeling.md). The result of that is an informal list of threats that are identified.
+- The contributor does a short [threat analysis and risk assessment](./sec_threat_modeling.md). The result of that is an informal list of threats that are identified.
 
     ```
     Example:
@@ -78,7 +80,7 @@ necessity of threat modeling.
 - This list then gets reviewed by the security champion. If the security
 champion isn't sure about that, he/she can ask for help in `#security` channel.
 
-- The change is approved (and stamped with an appropriate [github label](./security_github_labels.md):
+- The change is approved (and stamped with an appropriate [github label](./org_github_labels.md):
     
     - all the CRITICAL/HIGH risks are mitigated;
 appropriate;

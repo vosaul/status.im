@@ -1,7 +1,9 @@
 ---
-id: security_experiment
+id: experiment
 title: Security Process Experiment
 ---
+
+# Experimenting With Better Practices
 
 The Security Experiment consists of a Security Process and potentially a few
 one-time projects, like retroactively threat-modeling the app and setting up
@@ -69,7 +71,3 @@ Next up (if we are satisfied with the results):
 - Mobile-app
 
 - ...
-
-## What exactly we going to do?
-
-See [Security Process](./security_process.md)

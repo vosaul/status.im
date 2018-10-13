@@ -1,15 +1,17 @@
 ---
-id: security_existing_features
-title: Threat-modeling Existing Features Project
+id: existing_features
+title: Threat-modeling Existing Features
 ---
+
+# Threat Modeling Existing Features at Status
 
 Prerequisite reads:
 
-- [Security Champions](./security_champions.md)
+- [Security Champions](./org_security_champions.md)
 
-- [Threat Modeling](./security_threat_modeling.md)
+- [Threat Modeling](./sec_threat_modeling.md)
 
-- [What Is Sensitive Data?](./security_sensitive_data.md)
+- [What Is Sensitive Data?](./sec_sensitive_data.md)
 
 ---
 
@@ -21,9 +23,9 @@ have in the organization.
 The goal is to identify threats in our existing features, risk-assess them and
 document them in GHI.
 
-[Security champions](./security_champions.md) are responsible for doing this job.
+[Security champions](./org_security_champions.md) are responsible for doing this job.
 
-We use [STRIDE threat modeling](./security_threat_modeling.md).
+We use [STRIDE threat modeling](./sec_threat_modeling.md).
 
 # Output
 

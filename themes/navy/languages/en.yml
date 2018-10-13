@@ -69,16 +69,24 @@ sidebar:
     whisper_pss: Comparison with PSS 
     whisper_faqs: Whisper FAQs
 
-  security: 
-    security: Security at Status
-    introduction_security: Status Security Processes
+  security:
+    security: Security
+    introduction_security: Security Matters!
+    security_status: Security at Status
+    threat_modeling: Threat Modeling
+    existing_features: Existing Features Project
+    new_features: New Features Project
+    security_week: Status Security Week
+    sensitive_data: What is Sensitive Data?
+    experiment: Security Experiment
+    audits: Audits
+    introduction_audits: Status External Audits
+    guides: Guides
+    introduction_guides: Security Week Guides
+    organization: Organization
+    introduction_organization: Policy and Prcoedure
     security_champions: Security Champions
-    security_existing_features: Existing Features
-    security_experiment: Security Experiment
-    security_process: Our Process
-    security_threat_modeling: Threat Modeling
-    security_github_labels: Github Labels
-    security_sensitive_data: Sensitive Data
+    security_github_labels: Using Github Labels
 
   fiddle:
     fiddle: Status Fiddle

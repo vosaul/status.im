@@ -1,7 +1,9 @@
 ---
-id: security_github_labels 
+id: org_github_labels 
 title: Security-Related GitHub Labels
 ---
+
+# How We Use GitHub Labels For Security Processes
 
 ---
 
