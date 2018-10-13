@@ -28,8 +28,8 @@
       </a>
       <a href="../technical_specs/">
         <div class="first-page-link">
-          <h3>Whisper</h3>
-          <p>Learn about our research
+          <h3>Research</h3>
+          <p>Dive in! Learn more...
             <a href="/technical_specs/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>

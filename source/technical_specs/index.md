@@ -1,12 +1,12 @@
 ---
 layout: first_page
 id: index
-title: Whisper - Do You Want to Know a Secret?
+title: Research at Status  
 ---
 
-# Introduction
+# Do You Want to Know a Secret?
 
-Whisper is not a typical communications system. 
+Our research began with Whisper, which is not your typical communications system. 
 
 1. It is not designed to replace or substitute TCP/IP, UDP, HTTP or any other traditional protocols. 
 2. It is not designed to provide a connection oriented system, nor for simply delivering data between a pair of specific network endpoints. 
