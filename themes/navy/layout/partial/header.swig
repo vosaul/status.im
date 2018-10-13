@@ -8,13 +8,19 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="https://our.status.im" class="main-link">Blog</a>
+                        <a href="/about/" class="main-link">About</a>
                     </li>
                     <li>
                         <a href="/docs/" class="main-link">Docs</a>
                     </li>
                     <li>
+                        <a href="/desktop/" class="main-link">Desktop</a>
+                    </li>
+                    <li>
                         <a href="#" class="main-link">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="https://our.status.im/" class="main-link">About</a>
                     </li>
                     <li class="has-submenu">
                         <a href="https://embark.status.im/" class="main-link">Projects</a>

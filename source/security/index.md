@@ -1,6 +1,7 @@
 ---
 layout: first_page
 id: index
+partial: first_page
 title: Security at Status
 ---
 

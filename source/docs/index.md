@@ -1,5 +1,7 @@
+---
 layout: first_page
 id: introduction
+partial: first_page
 title: Welcome to Status
 ---
 

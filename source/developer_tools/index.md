@@ -1,6 +1,7 @@
 ---
 layout: first_page
 title: DApp Developer Tools
+partial: first_page
 id: index
 ---
 # Developer Tools for the Future
