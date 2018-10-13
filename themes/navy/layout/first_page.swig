@@ -1,8 +1,8 @@
 <div class="page-intro wrapper">
   <header class="article-header-first-page">
     <div class="first-page-intro">
-      <h1>Status Documentation</h1><br/>
-      <p>Learn about our developer tools, how to run Status yourself, and the technical protocols we share that make it all possible.</p>
+      <h1>Build a Better Web</h1><br/>
+      <p>Begin your journey to a more secure and distributed internet here.</p>
       <br/>
     </div>
     <div class="first-page-link-wrap">
