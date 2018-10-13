@@ -72,7 +72,8 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <ul id="plugin-list">
+      <ul id="fiddle-list">
+      <h1>Status Fiddle, A Playground For You to Learn</h1>
         {% for fiddle in site.data[page.data] %}
           {{ partial('partial/' + page.partial, {fiddle: fiddle}) }}
         {% endfor %}
