@@ -7,7 +7,7 @@
         </div>
         <div class="intro-buttons">
             <a class="button button--main" href="https://get.status.im">GET STATUS</a>
-            <a class="button button--secondary" href="https://status-im.github.io/nightly">GET STATUS DESKTOP</a>
+            <a class="button button--secondary" href="/nightly/">GET STATUS DESKTOP</a>
         </div>
     </div>
 </div>
