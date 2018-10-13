@@ -20,7 +20,7 @@
                         <a href="#" class="main-link">Contribute</a>
                     </li>
                     <li>
-                        <a href="https://our.status.im/" class="main-link">About</a>
+                        <a href="https://our.status.im/" class="main-link">Blog</a>
                     </li>
                     <li class="has-submenu">
                         <a href="https://embark.status.im/" class="main-link">Projects</a>
