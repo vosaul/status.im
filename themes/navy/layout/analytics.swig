@@ -4,8 +4,39 @@
         <h1>Analysing a Better Web</h1>
         <p>A different approach to data, distributed netanalytics, and how we understand them</p>
         <p>
-        <a href="./introduction.html">Learn More<img class="os-arrow" src="../img/arrow_blue.svg" /></a>
-        </p>
+    </div>
+    <div class="build-link-wrap">
+      <a href="../docs/">
+        <div class="build-link">
+          <h3>Documentation</h3>
+          <p>Back to our docs
+            <a href="../docs/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+      <a href="../research/">
+        <div class="build-link">
+          <h3>Research</h3>
+          <p>Dive in! Learn more...
+            <a href="../research/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+      <a href="../developer_tools/">
+        <div class="build-link">
+          <h3>Developer Tools</h3>
+          <p>JS API and Extensions
+            <a href="../developer_tools/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+    </div>
   </header>
 </div>
 <div id="content-wrap">

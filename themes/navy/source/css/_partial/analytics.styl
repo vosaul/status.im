@@ -8,17 +8,12 @@
 .article-header-analytics
   max-width: 1200px
   margin: 0 auto
-  padding: 70px
+  padding: 50px 0
   background-image: url(../img/header_bg.svg)
   background-repeat: no-repeat
   background-position-x: 90%
-  background-size: 22%
-  @media (max-width: 991px)
-    background-image: none
-
-.analytics-intro
-  width: 100%
-  margin: 0 auto
+  background-size: 18%
+  height: 250px
   h1
     font-family: font-title
     font-weight: bold
@@ -26,17 +21,81 @@
     font-size: 32px
     text-decoration: none
     color: #000
-    margin-bottom: 16px
+    transition: 0.2s
+  @media (max-width: 1199px)
+    height: 370px
+  @media (max-width: 991px)
+    height: 340px
+    background-image: none
+  @media (max-width: 767px)
+    height: 450px
+  @media (max-width: 459px)
+    height: 480px
+  @media (max-width: 391px)
+    height: 500px
+
+.analytics-intro
+  width: 80%
   p
     color: #939BA1
-    margin-bottom: 28px
-    a
-        font-weight: bold
-        text-decoration: none
-        color: #4360DF
+
+.analytics-link-wrap
+  width: 100%
+  max-width: 1200px
+  position: absolute;
+  top: 250px;
+  @media (max-width: 1199px)
+    top: 250px
+  @media (max-width: 991px)
+    top: 220px
+  @media (max-width: 459px)
+    top: 260px
+  @media (max-width: 391px)
+    top: 270px
+
+.analytics-link
+  background: #FFFFFF
+  box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124066)
+  border-radius: 8px
+  width: 31%
+  float: left
+  padding: 18px 16px
+  margin: 0 24px 24px 0
+  &:last-child
+    margin-right: 0px
+  h3
+    font-weight: bold
+    line-height: 24px
+    font-size: 16px
+    color: #4360DF
+  p
+    line-height: 24px
+    font-size: 16px
+  a
+    text-decoration: none
+    color: #939BA1
+    img
+      position: relative
+      left: 24px
+  @media (max-width: 1199px)
+    width: 40%
+    padding: 12px
   @media (max-width: 767px)
-    width: 80%
-  
+    width: 55%
+  @media (max-width: 459px)
+    width: 70%
+
+.analytic-item
+  text-align: left
+  display: flex
+  justify-content: space-between
+  @media (max-width: 767px)
+    display: block
+
+.analytics-list
+    @media (max-width: 767px)
+        list-style: none
+
 .analytic-item-inner
     margin-top: 50px
     h2
@@ -46,9 +105,16 @@
         text-decoration: none
         color: #4360DF 
         font-size: 18px
+    @media (max-width: 767px)
+        text-align: center
 
 .analytic-item-image
     width: 75% !important
+    @media (max-width: 767px)
+        display: flex
+        margin: 0 auto
+    @media (max-width: 459px)
+        width: 90% !important
 
 .graph
     margin-bottom: 12px
