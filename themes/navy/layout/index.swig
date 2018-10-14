@@ -6,8 +6,33 @@
             <p>Status is an open source community building tools to drive the mass adoption of Ethereum.</p>
         </div>
         <div class="intro-buttons">
-            <a class="button button--main" href="/get/">GET STATUS</a>
-            <a class="button button--secondary" href="/desktop/">GET STATUS DESKTOP</a>
+            <div class="button--main" href="/get/">
+                <a class="button--ios" href="/get/">
+                    <img src="../img/home_ios.svg" />
+                    GET STATUS FOR IPHONE
+                </a>
+                <a class="button--android" href="/get/">
+                    <img src="../img/home_android.svg" />
+                    GET STATUS FOR ANDROID
+                </a>
+            </div>
+        </div>
+        <div class="intro-buttons-mobile">
+            <button class="button button--mobile-main" href="/get/">
+                <a class="mobile--ios" href="/get/">
+                    <img src="../img/home_ios.svg" />
+                    GET STATUS FOR IPHONE
+                </a>
+            </button>
+            <button class="button button--mobile-main" href="/get/">
+                <a class="mobile--android" href="/get/">
+                    <img src="../img/home_android.svg" />
+                    GET STATUS FOR ANDROID
+                </a>
+            </button>
+        </div>
+        <div class="desktop-link">
+            <p>Or try out the <a href="/desktop/">Desktop App</a></p>
         </div>
     </div>
 </div>
