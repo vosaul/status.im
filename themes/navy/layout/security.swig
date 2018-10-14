@@ -26,11 +26,11 @@
           </p>
         </div>
       </a>
-      <a href="../technical_specs/">
+      <a href="../research/">
         <div class="security-link">
           <h3>Research</h3>
           <p>Dive in! Learn more...
-            <a href="/technical_specs/">
+            <a href="/research/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
