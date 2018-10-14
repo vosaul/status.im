@@ -14,13 +14,13 @@
                 <img class="get-img" src="../img/get_ios.svg" />
                 <h2>Status for iOS</h2>
                 <p>Message your friends securely. Send and receive ETH, any ERC20 or 721 token.
-                <p><a href="">Get Status for iOS <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+                <p><a href="https://testflight.apple.com/join/J8EuJmey">Get Status for iOS <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
             </div>
             <div class="get-mobile">
                 <img class="get-img" src="../img/get_android.svg" />
                 <h2>Status for Android</h2>
                 <p>You can also access ÐApps, browse anywhere you like. Hardwallet coming to Android soon!</p>
-                <p><a href="">Get Status for Android <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+                <p><a href="https://play.google.com/store/apps/details?id=im.status.ethereum">Get Status for Android <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
             </div>
         </div>
     </div>
