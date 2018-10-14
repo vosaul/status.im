@@ -29,7 +29,7 @@
                                 <li><a href="https://nimbus.status.im/">Nimbus</a></li>
                                 <li><a href="#">Studio</a></li>
                                 <li><a href="https://hackathon.status.im/">Hackathon</a></li>
-                                <li><a href="#">Desktop</a></li>
+                                <li><a href="/desktop/">Desktop</a></li>
                                 <li><a href="#">Hardwallet</a></li>
                                 <li><a href="#">Analytics</a></li>
                             </ul>
