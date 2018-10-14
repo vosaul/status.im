@@ -62,7 +62,8 @@ sidebar:
     example_extensions: Existing Examples
     extensions_tutorial: Tutorials
     status_fiddle: Fiddle
-    fiddle: Status Fiddle
+    introduction_fiddle: Fiddle to Your Heart's Content
+    actual_fiddle: Status Fiddle
     status_storybook: Storybook
     storybook: Status React Storybook
 
@@ -98,11 +99,6 @@ sidebar:
     introduction_organization: Policy and Procedure
     security_champions: Security Champions
     security_github_labels: Using Github Labels
-
-  fiddle:
-    fiddle: Status Fiddle
-    introduction_fiddle: An Introduction to Fiddle
-    actual_fiddle: Fiddle!
 
   analytics:
     analytics: Analysing Status

@@ -1,5 +1,9 @@
 ---
 layout: first_page
 title: Fiddle to Your Heart's Content
-comments: false
+id: index
 ---
+
+# Fiddle to Your Heart's Content
+
+Andrey to blow minds here.
