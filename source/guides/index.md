@@ -1,5 +1,5 @@
 ---
-id: guides_index
+id: index
 title: Security Week Guides
 ---
 

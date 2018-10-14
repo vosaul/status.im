@@ -73,11 +73,23 @@ security:
     sensitive_data: sec_sensitive_data.html
     experiment: sec_experiment.html
   audits:
-    introduction_audits: audits_index.html
+    introduction_audits: ../audits/
   guides:
-    introduction_guides: guides_index.html
+    introduction_guides: ../guides/
   organization:
-    introduction_organization: org_index.html
+    introduction_organization: ../org_sec/
+
+audits:
+  audits:
+    introduction_audits: index.html
+
+guides:
+  guides:
+    introduction_guides: index.html
+
+org_sec:
+  org:
+    introduction_organization: index.html
     security_champions: org_security_champions.html
     security_github_labels: org_github_labels.html 
 

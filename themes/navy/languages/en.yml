@@ -97,6 +97,18 @@ sidebar:
     introduction_guides: Security Week Guides
     organization: Organization
     introduction_organization: Policy and Procedure
+
+  audits: 
+    audits: Audits
+    introduction_audits: Status External Audits
+  
+  guides: 
+    guides: Guides
+    introduction_guides: Security Week Guides
+  
+  org_sec: 
+    org: Organization
+    introduction_organization: Policy and Procedure
     security_champions: Security Champions
     security_github_labels: Using Github Labels
 

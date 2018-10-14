@@ -1,5 +1,5 @@
 ---
-id: audits_index
+id: index
 title: Status External Audits
 ---
 
