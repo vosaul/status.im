@@ -1,7 +1,7 @@
 ---
-layout: first_page
+layout: research
 id: index
-partial: first_page
+partial: research
 title: Research at Status  
 ---
 

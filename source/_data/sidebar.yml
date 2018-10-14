@@ -51,9 +51,9 @@ tutorials:
   extensions: 
     your_first_chat_extension: extensions_tutorial_chat_command.html
 
-technical_specs:
+research:
   whisper: 
-    introduction_whisper: index.html
+    secret: secret.html
     extended_features: extended_features.html
     dark_routing: dark_routing.html
     whisper_pss: whisper_pss.html

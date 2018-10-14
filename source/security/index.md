@@ -1,7 +1,7 @@
 ---
-layout: first_page
+layout: security
 id: index
-partial: first_page
+partial: security
 title: Security at Status
 ---
 

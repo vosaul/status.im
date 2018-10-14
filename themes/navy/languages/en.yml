@@ -70,9 +70,9 @@ sidebar:
     extensions: Extensions
     your_first_chat_extension: Your First Chat Extension
 
-  technical_specs:
+  research:
     whisper: Whisper
-    introduction_whisper: Do You Want To Know A Secret?
+    secret: Do You Want To Know A Secret?
     extended_features: Extended Features
     dark_routing: Dark Routing
     whisper_pss: Comparison with PSS 
