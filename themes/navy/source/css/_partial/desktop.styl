@@ -10,7 +10,9 @@
   margin: 0 auto
   height: 725px
   @media (max-width: 767px)
-    height: 225px
+    height: 250px
+  @media (max-width: 459px)
+    height: 300px
 
 .desktop-intro
   width: 100%
@@ -32,6 +34,7 @@
 
 .desktop-buttons
     margin-bottom: 28px
+    display: block
     p
         text-align: center
         max-width: 800px
@@ -46,7 +49,25 @@
             padding: 0 10% 0 0
         &:last-child
             padding: 0 0 0 10%
-    
+    @media (max-width: 880px)
+        display: none
+
+.desktop-buttons-mobile
+    display: none
+    text-align: center
+    p
+        padding-bottom: 12px
+        max-width: 800px
+        margin: 0 auto
+    a
+        padding: 0 10%
+        line-height: 24px
+        font-size: 16px
+        color: #4360DF
+        text-decoration: none
+    @media (max-width: 880px)
+        display: block
+
 .os-img
     margin-right:14px
 

@@ -11,6 +11,11 @@
         <a href="/nightly/"><img class="os-img" src="../img/windows.svg" />Linux<img class="os-arrow" src="../img/arrow_blue.svg" /></a>
         </p>
     </div>
+    <div class="desktop-buttons-mobile">
+        <p><a href="/nightly/"><img class="os-img" src="../img/windows.svg" />Windows<img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+        <p><a href="/nightly/"><img class="os-img" src="../img/macos.svg" />Mac OS<img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+        <p><a href="/nightly/"><img class="os-img" src="../img/windows.svg" />Linux<img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+    </div>
     <div class="desktop-screen">
         <img src="../img/desktop_screen.svg" />
     </div>
