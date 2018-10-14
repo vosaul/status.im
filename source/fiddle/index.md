@@ -1,7 +1,5 @@
 ---
-layout: fiddle
+layout: first_page
 title: Fiddle to Your Heart's Content
-data: fiddle
-partial: fiddle
 comments: false
 ---

@@ -6,7 +6,6 @@
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
 {{ js('js/search') }}
-{{ js('js/fetch_blog_posts') }}
 <!-- endbuild -->
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
@@ -110,3 +109,5 @@ $(document).ready(function() {
     });
 </script>
 {% endif %}
+
+

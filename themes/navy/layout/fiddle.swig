@@ -72,12 +72,17 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <ul id="fiddle-list">
-      <h1>Status Fiddle, A Playground For You to Learn</h1>
-        {% for fiddle in site.data[page.data] %}
-          {{ partial('partial/' + page.partial, {fiddle: fiddle}) }}
-        {% endfor %}
-      </ul>
-    </div>
+      <div class="fiddle">
+        <div id="app"></div>
+      </div>
+      </div>
   </div>
 </div>
+
+<!-- Fiddle -->
+<script src="/js/fiddle/lib/codemirror.js"></script>
+<script src="/js/fiddle/lib/clojure.js"></script>
+<script src="/js/fiddle/lib/parinfer.js"></script>
+<script src="/js/fiddle/lib/parinfer-codemirror.js"></script>
+<script src="/js/fiddle/js/compiled/app.js"></script>
+<script>status_fiddle.core.init();</script>

@@ -102,6 +102,7 @@ sidebar:
   fiddle:
     fiddle: Status Fiddle
     introduction_fiddle: An Introduction to Fiddle
+    actual_fiddle: Fiddle!
 
   analytics:
     analytics: Analysing Status

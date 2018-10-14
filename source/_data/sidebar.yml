@@ -83,6 +83,7 @@ security:
 fiddle:
   fiddle:
     introduction_fiddle: intro_fiddle.html
+    actual_fiddle: fiddle.html
 
 analytics:
   analytics:
