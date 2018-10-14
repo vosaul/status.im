@@ -1,30 +1,40 @@
-<div class="page-intro wrapper">
-  <header class="article-header-desktop">
-    <div class="desktop-intro">
-        <h1>Status Desktop</h1>
-        <p>All the Status whispers, now accessible anywhere!</p>
+<div class="page-intro wrapper get-wrapper">
+  <header class="article-header-get">
+    <div class="get-intro">
+        <h1>Get Status for Mobile</h1>
+        <p>Chat, browse and transact with anyone, and anything! <br/>
+            It's the power of Ethereum, in your pocket...</p>
     </div>
-    <div class="desktop-buttons">
-        <p>
-        <a href="/nightly/"><img class="os-img" src="../img/windows.svg" />Windows<img class="os-arrow" src="../img/arrow_blue.svg" /></a>
-        <a href="/nightly/"><img class="os-img" src="../img/macos.svg" />Mac OS<img class="os-arrow" src="../img/arrow_blue.svg" /></a>
-        <a href="/nightly/"><img class="os-img" src="../img/windows.svg" />Linux<img class="os-arrow" src="../img/arrow_blue.svg" /></a>
-        </p>
-    </div>
-    <div class="desktop-screen">
-        <img src="../img/desktop_screen.svg" />
+    <div class="get-wrap">
+        <div class="get-screen">
+            <img src="../img/get_screen.svg" />
+        </div>
+        <div class="get-buttons">
+            <div class="get-mobile">
+                <img class="get-img" src="../img/get_ios.svg" />
+                <h2>Status for iOS</h2>
+                <p>Message your friends securely. Send and receive ETH, any ERC20 or 721 token.
+                <p><a href="">Get Status for iOS <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+            </div>
+            <div class="get-mobile">
+                <img class="get-img" src="../img/get_android.svg" />
+                <h2>Status for Android</h2>
+                <p>You can also access ÐApps, browse anywhere you like. Hardwallet coming to Android soon!</p>
+                <p><a href="">Get Status for Android <img class="os-arrow" src="../img/arrow_blue.svg" /></a></p>
+            </div>
+        </div>
     </div>
   </header>
 </div>
 <div id="content-wrap">
   <div id="content" class="wrapper">
-    <div id="content-inner">
-      <article class="article-container-desktop" itemscope itemtype="http://schema.org/Article">
+    <div id="content-inner-get">
+      <article class="article-container-get" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <div class="article-content" itemprop="articleBody">
-                <div class="desktop-content">
+                <div class="get-content">
                     <h2>What We Value</h2>
                     <p>A full discussion of our principles can be found here. Successful core contributors passionately embrace them as the foundation for having impact in how they work. We are looking for applicants who:</p>
                     <h2>Subtitle</h2>
