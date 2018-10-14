@@ -16,11 +16,11 @@
           </p>
         </div>
       </a>
-      <a href="../research/">
+      <a href="https://embark.status.im/">
         <div class="dev-tools-link">
-          <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="../research/">
+          <h3>Embark</h3>
+          <p>Build powerful ÐApps
+            <a href="https://embark.status.im/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
