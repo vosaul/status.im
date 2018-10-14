@@ -1,8 +1,8 @@
 <div class="page-intro wrapper">
   <header class="article-header-research">
     <div class="research-intro">
-      <h1>Research is formalized curiosity</h1>
-      <p>Think you know it all? Come and help us implement it...</p>
+      <h1>Researching a Better Web</h1>
+      <p>Research is formalized curiosity...</p>
       <br/>
     </div>
     <div class="research-link-wrap">

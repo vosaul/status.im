@@ -1,6 +1,7 @@
 ---
-layout: first_page
+layout: build
 id: index
+partial: build
 title: Build Status Yourself
 ---
 

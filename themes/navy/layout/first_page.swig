@@ -1,8 +1,8 @@
 <div class="page-intro wrapper">
   <header class="article-header-first-page">
     <div class="first-page-intro">
-      <h1>Build a Better Web</h1>
-      <p>Begin your journey to a more secure and distributed internet here.</p>
+      <h1>Documenting a Better Web</h1>
+      <p>Education is the most powerful gift.</p>
       <br/>
     </div>
     <div class="first-page-link-wrap">
