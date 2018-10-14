@@ -53,7 +53,7 @@ tutorials:
 
 research:
   whisper: 
-    secret: secret.html
+    secret: index.html
     extended_features: extended_features.html
     dark_routing: dark_routing.html
     whisper_pss: whisper_pss.html
