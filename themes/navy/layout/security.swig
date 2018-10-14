@@ -6,61 +6,31 @@
       <br/>
     </div>
     <div class="security-link-wrap">
-      <a href="../developer_tools/">
+      <a href="../guides/">
         <div class="security-link">
-          <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="/developer_tools/">
+          <h3>Guides</h3>
+          <p>Become a security ninja
+            <a href="../guides/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
         </div>
       </a>
-      <a href="../build_status/">
+      <a href="../org_sec/">
         <div class="security-link">
-          <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="/build_status/">
+          <h3>Policy and Procedure</h3>
+          <p>This is how we do!
+            <a href="../org_sec/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
         </div>
       </a>
-      <a href="../research/">
+      <a href="../audits/">
         <div class="security-link">
-          <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="/research/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
-        </div>
-      </a>
-      <a href="../security/">
-        <div class="security-link">
-          <h3>Security</h3>
-          <p>Status best practices
-            <a href="/security/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
-        </div>
-      </a>
-      <a href="../wip/">
-        <div class="security-link">
-          <h3>Work in Progress</h3>
-          <p>All our WIP items
-            <a href="/wip/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
-        </div>
-      </a>
-      <a href="https://embark.status.im/">
-        <div class="security-link">
-          <h3>Embark</h3>
-          <p>Better Ðapps for everyone
-            <a href="https://embark.status.im/">
+          <h3>Audits</h3>
+          <p>See who guards the guards
+            <a href="/audits/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
