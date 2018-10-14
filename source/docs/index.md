@@ -2,14 +2,18 @@
 layout: first_page
 id: introduction
 partial: first_page
-title: Welcome to Status
+title: Status Technical Documentation
 ---
 
-## Who We Are
+# Technical Documentation
+
+Wlecome to our documentation pages! We know it's the most important thing for growing our distributed ecosystem...
 
 Status is an open source community of people committed to building better decentralised tools for web3, and making sure that everyone across the world can access these tools directly from their pockets.
 
-Status the app is how we implement in practical reality our vision of a more open, accessible and equitable internet for everyone: a brand new place where you can 
+> Writing "non-technical" documentation is a little besides the point, because our culture is _technical_. Develeoper discussions and tutorials are an essential part of our community, and should not be obscured or downplayed. Status is building an optimistic future and we are doing it ourselves with skills we are teaching each other. This fact should be celebrated! In fact, the discussions about technical matters can be liberating and self-empowering. Sincere, it is in the slow accumulation of technical knowledge and skills that we can become excited about the future again.
+
+[Status the app](../about/) is how we implement in practical reality our vision of a more open, accessible and equitable internet for everyone: a brand new place where you can 
 
 1. **Say** what's on your mind without fear of censorship.
 2. **Play** with a new world of decentralised applications, creating all kinds of new value.
@@ -20,7 +24,7 @@ If "peer-to-peer electronic payment systems" are really going to change the ways
 
 People everywhere need to be able to connect, transact, explore and create value with as much ease and freedom as bankers on Wall Street. It's as simple as that really.
 
-## Building For Mobile Is An Adventure
+# Building For Mobile Is An Adventure
 
 We give you that broad introduction to our goals here in order to prepare you for some of the rough edges you might run into when exploring web3 and the tooling that currently exists...
 
@@ -30,7 +34,7 @@ Status-react is where most of what might traditionally be called the "frontend" 
 
 Status-react is actually written in Clojure, which is a Lisp-like language that can be compiled down to React Native, so that we only have to maintain one codebase for Android, iOS and our desktop app.
 
-## Why Clojure?
+# Why Clojure?
 
 Well, it's one of the most performant frontend frameworks going, with the [fewest lines of code](https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-2018-update-e5760fb4a962). However, a lot of that is lost in the compilation down to React Native, so what are our real motivations?
 
@@ -51,7 +55,7 @@ Building on any decentralized network, in any language, requires something of a 
 
 Status developers love this kind of thing, especially the Cloud Castle of Mindset, because building truly decentralised applications is really - first and foremost - about approaching the problems you face in fundamentally different ways. 
 
-## What Do I Need To Learn?
+# What Do I Need To Learn?
 
 If you want to contribute to the Status core app, then yes, it's probably a good idea to at least [start with Clojure](https://www.braveclojure.com/introduction/).
 
