@@ -42,17 +42,22 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <div class="fiddle">
-        <div id="app"></div>
-      </div>
-      </div>
+      {{ partial('partial/sidebar') }}
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <div class="article-content" itemprop="articleBody">
+                {{ page_anchor(page.content) }}
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
+              </footer>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </div>
-
-<!-- Fiddle -->
-<script src="/js/fiddle/lib/codemirror.js"></script>
-<script src="/js/fiddle/lib/clojure.js"></script>
-<script src="/js/fiddle/lib/parinfer.js"></script>
-<script src="/js/fiddle/lib/parinfer-codemirror.js"></script>
-<script src="/js/fiddle/js/compiled/app.js"></script>
-<script>status_fiddle.core.init();</script>
