@@ -7,9 +7,6 @@ menu:
   blog: Blog
   tutorials: Tutorials
 
-index:
-  get_started: Get started
-
 page:
   contents: Contents
   back_to_top: Back to Top
@@ -32,6 +29,8 @@ sidebar:
     testing: Testing
     introduction_testing: How We Test
     report_a_bug: Report a Bug
+    analytics: Analytics  
+    analytics_status: Analysing Status
 
   build_status:
     build_status: Build Status Yourself

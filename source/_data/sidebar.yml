@@ -11,6 +11,8 @@ docs:
   testing:
     introduction_testing: testing.html
     report_a_bug: report_a_bug.html
+  analytics:
+    analytics_status: ../analytics/
 
 developer_tools:
   web3_for_everyone:
