@@ -45,6 +45,9 @@
       <div class="fiddle">
         <div id="app"></div>
       </div>
+      <div class="fiddle-mobile">
+        <h2>Please use our Fiddle on your iPad or desktop!</h2>
+      </div>
       </div>
   </div>
 </div>
