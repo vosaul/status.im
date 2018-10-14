@@ -630,6 +630,7 @@ select[multiple] {
   width: 100%
 
 .intro-buttons-mobile
+  display: none
   a
     text-decoration: none
     color: #4360DF
@@ -906,20 +907,66 @@ body {
   padding: 100px 15px 0 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center
   &:nth-of-type(2n)
     .work-item-inner
-      padding-left: 30px;
-      padding-right: 0;
+      padding-left: 30px
+      padding-right: 0
 
-.work-item-inner{
-  max-width: 480px;
-  padding-right: 30px;
-}
+.work-item-inner
+  max-width: 480px
+  padding-right: 30px
+  p
+    margin: 0 0 10px
 
-.work-item-inner p {
-  margin: 0 0 10px;
-}
+.analytic-item
+  text-align: left;
+  display: flex;
+  justify-content: space-between
+
+.contribute-wrap
+  max-width: 912px
+  display: flex
+  width: 100%
+  flex-wrap: wrap
+  min-height: 300px
+
+.contribute
+  display: flex;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-right: 24px;
+  padding: 30px 24px 24px 24px;
+  width: calc(33.33% - 16px);
+  flex-direction: column;
+  margin-bottom: 24px;
+  &:nth-child(3n+3)
+    margin-right: 0
+  h3
+    font-style: normal
+    font-weight: bold
+    line-height: 25px
+    font-size: 18px
+    margin-bottom: 8px
+  p
+    font-style: normal
+    font-weight: normal
+    line-height: 25px
+    font-size: 16px
+    color: #939BA1
+    margin-bottom: 20px
+    overflow hidden
+    &:last-child
+      margin-bottom: 0
+      margin-top: auto
+  a
+    line-height: 24px
+    font-size: 16px
+    color: #4360DF
+    text-decoration: none
+    margin-top: auto
+  span
+    margin-left: 8px
 
 .inner-header {
   margin: 0 auto;
@@ -945,15 +992,16 @@ body {
   max-width: 590px;
 }
 
-.sections {
-  width: 100%;
-  margin: 24px 0 0 0;
-  padding: 0 16px 60px 16px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #F5F3F1;
-}
+.sections
+  width: 100%
+  margin: 24px 0 0 0
+  padding: 0 16px 60px 16px
+  display: flex
+  align-items: center
+  flex-direction: column
+  background-color: #EEF2F5
+  border: 1px solid #EEF2F5
+  border-radius: 16px
 
 .section {
   width: 976px;

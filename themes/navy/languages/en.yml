@@ -103,3 +103,13 @@ sidebar:
   fiddle:
     fiddle: Status Fiddle
     introduction_fiddle: An Introduction to Fiddle
+
+  analytics:
+    analytics: Analysing Status
+    introduction: Better Data for Everyone
+    app_downloads: App Downloads
+    messages: Whisper Messages
+    ens_registration: ENS Registrations
+    crypto_oss: Crypto OSS
+    oss: Regular OSS
+    run_it_yourself: Run Our Analytics Yourself
