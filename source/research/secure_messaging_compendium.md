@@ -1,9 +1,9 @@
 ---
 id: secure_messaging_compendium
-title: Ethereum Secure Messaging Compendium
+title: Secure Messaging Compendium
 ---
 
-# Secure Ethereum messaging study compendium
+# Secure messaging compendium
 
 ## Starting point
 
