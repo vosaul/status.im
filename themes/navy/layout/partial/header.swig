@@ -11,13 +11,10 @@
                         <a href="/about/" class="main-link">About</a>
                     </li>
                     <li>
-                        <a href="/docs/" class="main-link">Docs</a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-link">Contribute</a>
-                    </li>
-                    <li>
                         <a href="https://our.status.im/" class="main-link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/docs/" class="main-link">Docs</a>
                     </li>
                     <li class="has-submenu">
                         <a href="https://embark.status.im/" class="main-link">Projects</a>
@@ -35,7 +32,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="has-submenu"><a href="https://status.im/incubate">People</a>
+                    <li>
+                        <a href="#" class="main-link">Contribute</a>
+                    </li>
+                    <li class="has-submenu"><a href="#">Community</a>
                         <i class="mobile-submenu-trigger"></i>
                         <div class="sub-menu">
                             <ul>
