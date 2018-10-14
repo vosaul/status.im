@@ -1,6 +1,6 @@
 docs:
   use_status:
-    who_we_are: index.html
+    index: index.html
     contributor_guide: contributor_guide.html
     FAQs: FAQs.html
   app_structure:

@@ -17,8 +17,8 @@ page:
 
 sidebar:
   docs:
+    index: Techinal Documentation
     use_status: Use Status
-    who_we_are: Who We Are
     contributor_guide: Contributor Guide
     FAQs: FAQs
     app_structure: App Structure

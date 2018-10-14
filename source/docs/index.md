@@ -7,9 +7,9 @@ title: Status Technical Documentation
 
 # Technical Documentation
 
-Wlecome to our documentation pages! We know it's the most important thing for growing our distributed ecosystem...
+Welcome to our documentation pages! We know it's the most important thing for growing our distributed ecosystem...
 
-Status is an open source community of people committed to building better decentralised tools for web3, and making sure that everyone across the world can access these tools directly from their pockets.
+Status is an open source community of people committed to building better, decentralised tools for web3, and making sure that everyone across the world can access these tools directly from their pockets.
 
 > Writing "non-technical" documentation is a little besides the point, because our culture is _technical_. Develeoper discussions and tutorials are an essential part of our community, and should not be obscured or downplayed. Status is building an optimistic future and we are doing it ourselves with skills we are teaching each other. This fact should be celebrated! In fact, the discussions about technical matters can be liberating and self-empowering. Sincere, it is in the slow accumulation of technical knowledge and skills that we can become excited about the future again.
 
@@ -20,9 +20,9 @@ Status is an open source community of people committed to building better decent
 3. **Pay** whom you want, how you want, with no delays or middlemen.
 4. **Stay** for the community of people committed to direct and private communication without intermediaries and the better world that vision implies.
 
-If "peer-to-peer electronic payment systems" are really going to change the ways we interact and organise as a society, then we need to make sure that as many people can take part in these networks as possible, and that the tools they have ready access to can support web3 without making compromises that might skew once more the playing fields.
+If "peer-to-peer electronic payment systems" are really going to change the ways we interact and organise as a society, then we need to make sure that as many people can take part in these networks as possible. As importantly, the tools they have ready access to must support web3 without making compromises that might keep the playing fields permanently skewed.
 
-People everywhere need to be able to connect, transact, explore and create value with as much ease and freedom as bankers on Wall Street. It's as simple as that really.
+People everywhere need to be able to connect, transact, explore, and create value with as much ease and freedom as bankers on Wall Street. It's as simple as that, really.
 
 # Building For Mobile Is An Adventure
 
