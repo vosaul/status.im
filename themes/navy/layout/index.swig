@@ -70,7 +70,7 @@
     <div class="ecosystem-wrap">
         <div class="ecosystem-item">
             <h2><a href="/docs/" class="app">App</a></h2>
-            <p>The Status application enables you to browse, chat and make payments entirely on the ethereum public blockchain</p>
+            <p>The Status application enables you to browse, chat and make payments directly on the Ethereum public blockchain</p>
             <a class="app more" href="/docs/">Learn More <img src="../img/icon_dropdown-status.svg"></a>
         </div>
         <div class="ecosystem-item">
