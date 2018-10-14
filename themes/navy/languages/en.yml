@@ -62,8 +62,7 @@ sidebar:
     example_extensions: Existing Examples
     extensions_tutorial: Tutorials
     status_fiddle: Fiddle
-    introduction_fiddle: Fiddle to Your Heart's Content
-    actual_fiddle: Status Fiddle
+    fiddle: Status Fiddle
     status_storybook: Storybook
     storybook: Status React Storybook
 
@@ -109,3 +108,8 @@ sidebar:
     crypto_oss: Crypto OSS
     oss: Regular OSS
     run_it_yourself: Run Our Analytics Yourself
+
+  fiddle:
+    fiddle: Status Fiddle
+    introduction_fiddle: Fiddle to Your Heart's Content
+    actual_fiddle: Fiddle

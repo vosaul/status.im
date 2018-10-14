@@ -32,8 +32,7 @@ developer_tools:
     example_extensions: ../extensions/index.html
     extensions_tutorial: ../tutorials/index.html
   status_fiddle:
-    introduction_fiddle: index.html
-    actual_fiddle: fiddle.html
+    fiddle: /fiddle/
   status_storybook: 
     storybook: https://status-im.github.io/storybook/
 
@@ -90,3 +89,8 @@ analytics:
     crypto_oss: crypto_oss.html
     oss: oss.html
     run_it_yourself: run_it_yourself.html
+
+fiddle:
+  fiddle: 
+    introduction_fiddle: index.html
+    actual_fiddle: fiddle.html
