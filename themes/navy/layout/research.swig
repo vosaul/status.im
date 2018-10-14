@@ -1,7 +1,7 @@
 <div class="page-intro wrapper">
   <header class="article-header-research">
     <div class="research-intro">
-      <h1>Research Is Formalized Curiosity</h1>
+      <h1>Research is formalized curiosity</h1>
       <p>Think you know it all? Come and help us implement it...</p>
       <br/>
     </div>

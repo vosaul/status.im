@@ -1,7 +1,7 @@
 <div class="page-intro wrapper">
   <header class="article-header-dev-tools">
     <div class="dev-tools-intro">
-      <h1>Learn with all the Latest Tools</h1>
+      <h1>Learn with all the latest tools</h1>
       <p>Become a master of distributed crafts with all our surprises for developers</p>
       <br/>
     </div>

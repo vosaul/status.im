@@ -1,7 +1,7 @@
 <div class="page-intro wrapper">
   <header class="article-header-wip">
     <div class="wip-intro">
-      <h1>Get Involved</h1>
+      <h1>Get involved</h1>
       <p>Status has the fastest moving codebase of any project in Ethereum. Keep track of all we do here.</p>
       <br/>
     </div>
