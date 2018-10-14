@@ -58,6 +58,7 @@ research:
     dark_routing: dark_routing.html
     whisper_pss: whisper_pss.html
     whisper_faqs: whisper_faqs.html
+    secure_messaging_compendium: secure_messaging_compendium.html
   research_projects:
     nimbus: https://nimbus.status.im/
 
