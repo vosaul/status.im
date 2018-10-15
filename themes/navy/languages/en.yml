@@ -59,8 +59,6 @@ sidebar:
     embark: Embark
     status_extensions: Extensions [WIP]
     intro_extensions: Introduction
-    example_extensions: Existing Examples
-    extensions_tutorial: Tutorials
     status_fiddle: Fiddle
     fiddle: Status Fiddle
     status_storybook: Storybook
@@ -138,3 +136,22 @@ sidebar:
     applicant_privacy: Applicant Privacy
     perks_benefits: Perks and Benefits
     the_future: The Future
+
+  extensions:
+    extensions: Status Extensions
+    introduction: Building a Better Web
+    development: Developing an Extension
+    principles: First Principles
+    try: Try it Yourself
+    examples: See Some Examples
+    roadmap: Roadmap
+    concepts: Important Concepts
+    concept_anatomy: Anatomy
+    concept_block: Block
+    concept_event: Event
+    concept_hook: Hook
+    concept_query: Query
+    concept_reference: Reference
+    concept_registry: Registry
+    concept_view: View
+
