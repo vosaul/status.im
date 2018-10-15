@@ -6,11 +6,11 @@
       <br/>
     </div>
     <div class="extensions-link-wrap">
-      <a href="./try.html">
+      <a href="https://status-im.github.io/pluto/try.html">
         <div class="extensions-link">
           <h3>Try Yourself!</h3>
           <p>Literally, right now...
-            <a href="/developer_tools/">
+            <a href="https://status-im.github.io/pluto/try.html">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
