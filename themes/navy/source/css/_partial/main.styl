@@ -1213,8 +1213,7 @@ footer
   background: #262A39;
   padding: 60px 0;
   position relative;
-  max-height: 750px;
-  height: 100%;
+  height: 750px;
   .container
     max-width: 1200px;
     margin: 0 auto;
@@ -1234,6 +1233,10 @@ footer
     .more
       flex: 0 0 16.666667%;
       max-width: 16.666667%;
+  @media(max-width: 1199px)
+    height: 750px
+  @media(max-width: 459px)
+    height: 970px
 
 .key-items 
   margin: -20px auto 70px auto;
