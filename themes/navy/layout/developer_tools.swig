@@ -6,21 +6,21 @@
       <br/>
     </div>
     <div class="dev-tools-link-wrap">
-      <a href="../build_status/">
-        <div class="dev-tools-link">
-          <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="../build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
-        </div>
-      </a>
       <a href="https://embark.status.im/">
         <div class="dev-tools-link">
           <h3>Embark</h3>
           <p>Build powerful ÐApps
             <a href="https://embark.status.im/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
+      <a href="../extensions/">
+        <div class="dev-tools-link">
+          <h3>Extensions</h3>
+          <p>Extend into the future!
+            <a href="../extensions/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
