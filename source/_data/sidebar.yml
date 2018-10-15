@@ -114,4 +114,9 @@ contribute:
     our_principles: our_principles.html
     working_here: jobs.html
     life_status: life_status.html
+  apply:
+    appyling_to_status: appyling_to_status.html
+    applicant_privacy: applicant_privacy.html
+    perks_benefits: perks_benefits.html
+    the_future: the_future.html
 
