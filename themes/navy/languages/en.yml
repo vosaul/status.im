@@ -140,11 +140,11 @@ sidebar:
   extensions:
     extensions: Status Extensions
     introduction: Extensions Manifesto
-    development: Developing an Extension
     principles: First Principles
     try: Try it Yourself
     examples: See Some Examples
     roadmap: Roadmap
+    development: Get Your Hands Dirty
     concepts: Important Concepts
     concept_anatomy: Anatomy
     concept_block: Block
