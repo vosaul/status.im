@@ -123,7 +123,7 @@ extensions:
     introduction: index.html
     principles: principles.html
     try: https://status-im.github.io/pluto/try.html
-    examples: examples.html
+    examples: https://github.com/status-im/pluto/tree/master/examples
     roadmap: roadmap.html
     development: development.html
   concepts:
