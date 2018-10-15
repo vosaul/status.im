@@ -14,7 +14,7 @@
                 <a href="#">
                 <div class="ecosystem-footer">
                     <h4>nimbus</h4>
-                    <p>An Ethereum 2.0 client for embedded devices</p>
+                    <p>An Ethereum 2.0 client for resource-restricted devices</p>
                 </div>
                 </a>
                 <a href="#">
