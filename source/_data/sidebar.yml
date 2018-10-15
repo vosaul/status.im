@@ -121,11 +121,11 @@ contribute:
 extensions:
   extensions:
     introduction: index.html
-    development: development.html
     principles: principles.html
     try: https://status-im.github.io/pluto/try.html
     examples: examples.html
     roadmap: roadmap.html
+    development: development.html
   concepts:
     concept_anatomy: concept_anatomy.html
     concept_block: concept_block.html
