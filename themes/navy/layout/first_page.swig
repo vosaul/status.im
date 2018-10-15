@@ -26,6 +26,16 @@
           </p>
         </div>
       </a>
+      <a href="https://embark.status.im/">
+        <div class="first-page-link">
+          <h3>Embark</h3>
+          <p>Better Ðapps for everyone
+            <a href="https://embark.status.im/">
+              <img src="../img/arrow_blue_shaded.svg" />
+            </a>
+          </p>
+        </div>
+      </a>
       <a href="../research/">
         <div class="first-page-link">
           <h3>Research</h3>
@@ -51,16 +61,6 @@
           <h3>Work in Progress</h3>
           <p>All our WIP items
             <a href="/wip/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
-        </div>
-      </a>
-      <a href="https://embark.status.im/">
-        <div class="first-page-link">
-          <h3>Embark</h3>
-          <p>Better Ðapps for everyone
-            <a href="https://embark.status.im/">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
