@@ -33,7 +33,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="main-link">Contribute</a>
+                        <a href="/contribute/" class="main-link">Contribute</a>
                     </li>
                     <li class="has-submenu"><a href="#">Community</a>
                         <i class="mobile-submenu-trigger"></i>

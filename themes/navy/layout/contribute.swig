@@ -1,36 +1,36 @@
 <div class="page-intro wrapper">
-  <header class="article-header-dev-tools">
-    <div class="dev-tools-intro">
-      <h1>Tools for a Better Web</h1>
-      <p>Become a master of distributed crafts with all our surprises for developers</p>
+  <header class="article-header-contribute">
+    <div class="contribute-intro">
+      <h1>Contribute to a Better Web</h1>
+      <p>It's all about the people, after all</p>
       <br/>
     </div>
-    <div class="dev-tools-link-wrap">
-      <a href="../build_status/">
-        <div class="dev-tools-link">
-          <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="../build_status/">
+    <div class="contribute-link-wrap">
+      <a href="life_status.html">
+        <div class="contribute-link">
+          <h3>Life at Status</h3>
+          <p>Day-to-day decentralization
+            <a href="life_status.html">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
         </div>
       </a>
-      <a href="https://embark.status.im/">
-        <div class="dev-tools-link">
-          <h3>Embark</h3>
-          <p>Build powerful ÐApps
-            <a href="https://embark.status.im/">
+      <a href="our_principles.html">
+        <div class="contribute-link">
+          <h3>Our Principles</h3>
+          <p>A principled approach
+            <a href="our_principles.html">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>
         </div>
       </a>
-      <a href="../fiddle/">
-        <div class="dev-tools-link">
-          <h3>Fiddle</h3>
-          <p>Play and learn
-            <a href="../security/">
+      <a href="jobs.html">
+        <div class="contribute-link">
+          <h3>Working Here</h3>
+          <p>See our open positions!
+            <a href="jobs.html">
               <img src="../img/arrow_blue_shaded.svg" />
             </a>
           </p>

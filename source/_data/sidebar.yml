@@ -95,7 +95,7 @@ org_sec:
 
 analytics:
   analytics:
-    introduction: introduction.html
+    introduction: index.html
     app_downloads: app_downloads.html
     messages: messages.html
     ens_registration: ens_registration.html
@@ -107,3 +107,11 @@ fiddle:
   fiddle: 
     introduction_fiddle: index.html
     actual_fiddle: fiddle.html
+
+contribute:
+  contribute:
+    introduction_contribute: index.html
+    our_principles: our_principles.html
+    working_here: jobs.html
+    life_status: life_status.html
+
