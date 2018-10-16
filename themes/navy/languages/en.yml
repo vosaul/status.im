@@ -126,16 +126,16 @@ sidebar:
     actual_fiddle: Fiddle
 
   contribute:
-    contribute: Contribute to Status
-    introduction_contribute: People Matter!
-    our_principles: Our Principles
-    working_here: Working Here
-    life_status: Life at Status
-    apply: Get Involved!
-    appyling_to_status: Appyling to Status
-    applicant_privacy: Applicant Privacy
+    get_involved: Get Involved
+    introduction_contribute: Applying to Status
     perks_benefits: Perks and Benefits
+    applicant_privacy: Applicant Privacy
+    apply_now: Apply Now
+    working_status: Working at Status
+    our_principles: Our Principles
+    life_status: Life at Status
     the_future: The Future
+    faqs: FAQs
 
   extensions:
     extensions: Status Extensions

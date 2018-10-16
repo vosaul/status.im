@@ -5,9 +5,8 @@ title: Life at Status
 
 # Life at Status
 # Welcome to #lifeatstatus. It’s going to be a wild ride.
-> @jarrad
 
-> But Status is also more than a product, it is an experiment in organization.
+> But Status is also more than a product, it is an experiment in organization. -- Jarrad Hope
 
 **Level-setting**
 

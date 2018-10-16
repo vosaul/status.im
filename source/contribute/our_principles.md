@@ -3,6 +3,8 @@ id: our_principles
 title: Our Principles
 ---
 
+# A Principled Approach to a Better Web
+
 The goal of Status is widespread adoption of the decentralized web. It’s no small feat and we identified our guiding lights throughout the way -  a set of ideas and principles that as tools for thinking, for communication, for decentralized decision making, and that help us staying true to ourselves when - inevitably - dealing with the daily challenges and confusion.
 
 We spent several weeks and months, to collectively compile a list of what's important to us:
