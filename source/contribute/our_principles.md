@@ -19,7 +19,7 @@ We spent several weeks and months, to collectively compile a list of what's impo
 
 **Openness** - the software we create is a public good.
 
-Decentralization - maximizing the number of individuals who have control.
+**Decentralization** - maximizing the number of individuals who have control.
 
 **Inclusivity** -  ease of use, but also socially - by permissionless participation, investing in education, and more.
 
