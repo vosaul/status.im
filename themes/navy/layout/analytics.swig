@@ -50,6 +50,7 @@
                 <div class="analytics-content">
                     <div class="analytic-items">
                         <div class="analytic-item">
+                            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                             <div class="analytic-item-inner">
                                 <h2>User Analytics</h2>
                                 <ul>
@@ -58,10 +59,12 @@
                                     <li class="analytics-list"><a href="./ens_registration.html">ENS Registrations</a></li>
                                 </ul>
                             </div>
-                            <img class="analytic-item-image" src="./img/whisper_distinct_users_daily.png" />
+                            <div class="analytic-item-image" id="whisper-distinct-users-daily"></div>
+                            <script src="./charts/whisper_distinct_users_daily.js"></script>
                         </div>
                         <div class="analytic-item">
-                            <img class="analytic-item-image analytic-item-image-right" src="./img/whisper_messages_daily.png" />
+                            <div class="analytic-item-image analytic-item-image-right" id="whisper-messages-daily"></div>
+                            <script src="./charts/whisper_messages_daily.js"></script>
                             <div class="analytic-item-inner">
                                 <h2>Other Important Metrics</h2>
                                 <ul>
