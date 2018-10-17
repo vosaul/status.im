@@ -3,70 +3,57 @@
     <div class="first-page-intro">
       <h1>Documenting a Better Web</h1>
       <p>Education is the most powerful gift.</p>
-      <br/>
     </div>
-    <div class="first-page-link-wrap">
-      <a href="../developer_tools/">
-        <div class="first-page-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="/developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-      <a href="../build_status/">
-        <div class="first-page-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/developer_tools/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="/build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>For mobile and desktop</p>
         </div>
-      </a>
-      <a href="https://embark.status.im/">
-        <div class="first-page-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Embark</h3>
-          <p>Better Ðapps for everyone
-            <a href="https://embark.status.im/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Better Ðapps for everyone</p>
         </div>
-      </a>
-      <a href="../research/">
-        <div class="first-page-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="https://embark.status.im/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="/research/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Dive in! Learn more...</p>
         </div>
-      </a>
-      <a href="../security/">
-        <div class="first-page-link">
+        <img  src="../img/arrow_blue_shaded.svg" />
+        <a href="/research/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Security</h3>
-          <p>Status best practices
-            <a href="/security/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Status best practices</p>
         </div>
-      </a>
-      <a href="../wip/">
-        <div class="first-page-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/security/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Work in Progress</h3>
-          <p>All our WIP items
-            <a href="/wip/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>All our WIP items</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/wip/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">
