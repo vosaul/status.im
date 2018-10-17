@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "cheerio": "^0.20.0",
+    "es6-promise": "^4.2.5",
     "hexo": "^3.7.1",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
@@ -22,6 +23,7 @@
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.5.1",
     "lunr": "^2.1.2"
   },

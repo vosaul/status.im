@@ -6,6 +6,8 @@ var pathFn = require('path');
 var _ = require('lodash');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 var localizedPath = ['docs', 'api'];
 
@@ -159,3 +161,23 @@ hexo.extend.helper.register('hexo_version', function() {
   return this.env.version;
 });
 
+function generateMenu(){
+  return fetch('https://raw.githubusercontent.com/status-im/status-global-elements/master/dist/html/header.html')
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(response) {
+      console.log('t2')
+      return 'abc';
+    })
+    .catch(error => console.error(`Fetch Error =\n`, error));
+  console.log('t1');
+}
+
+hexo.extend.helper.register('global_header', function() {
+  generateMenu().then(function(response){
+    console.log(response);
+    return response;
+  });
+  return 'asd';
+});

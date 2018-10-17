@@ -7,7 +7,11 @@
       {{ partial('partial/header') }}
     {% endif %}
     {{ body }}
-    {{ partial('partial/footer') }}
+    {% if page.source == 'index.md' %}
+      {{ partial('partial/footer-home') }}
+    {% else %}
+      {{ partial('partial/footer') }}
+    {% endif %}
   </div>
   {{ partial('partial/after_footer') }}
 </body>
