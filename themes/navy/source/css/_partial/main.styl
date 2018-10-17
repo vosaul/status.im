@@ -174,233 +174,422 @@ select[multiple] {
   vertical-align: top;
 }
 
-.backdrop
-  z-index: -101;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height 100%;
-  background: #000000;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-.mobile-menu-container
-  position: fixed;
-  z-index: -100;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  padding: 16px;
-  overflow: auto;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  display: none;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  max-width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  .mobile-menu-container-inner,
-  .mobile-submenu-container-inner
-    top: 16px;
-    left: 16px;
-    background: #fff;
-    -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    width: calc(100vw - 32px);
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    .title
-      font-size: 14px;
-      text-transform: uppercase;
-      color: #939BA1;
-    .ecosystem
-      padding: 24px 24px 12px 24px
-    .community 
-      padding: 0 24px;
-      border-radius: 0 0 8px 8px;
-      overflow: hidden;
-      .secondary-nav
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
+body
+  background: #eef2f5
+#general-menu
+  position: relative
+  display: flex
+  max-width: 1240px
+  padding: 0 20px
+  height: 56px
+  box-sizing: border-box
+  justify-content: space-between
+  margin: 24px auto
+  width: 100%
+  z-index: 9
+  align-items: center
+  @media screen and (max-width: break-xl)
+    margin: 14px auto
+  .header-left
+    width: 100%
+    display: flex
+    .logo
+      display: flex
+      margin: 0 22px 0 0
+      a
+        font-size: 27px
+        font-weight: bold
+        color: #000
+        text-decoration: none
+        display: flex
+        align-items: center
+        transition: all 0.3s ease-in-out
+        &:before
+          content: ''
+          width: 56px
+          height: 56px
+          display: block
+          background-image: url("../img/logo-status.svg")
+          background-size: cover
+          background-position: center
+          background-repeat: no-repeat
+          transition: all 0.3s ease-in-out
+          @media screen and (max-width: break-xl)
+            width: 44px
+            height: 44px
         span
-          order: 1;
-          margin: 15px 24px 0 0;
-          &.social-link--github a
-            background-image: url(../img/icon-github-mobile.svg);
-            width: 32px;
-            height: 32px;
-          &.social-link--gitter a
-            background-image: url(../img/icon-gitter-mobile.svg);
-            width: 32px;
-            height: 32px;
-          &.social-link--twitter a
-            background-image: url(../img/icon-twitter-mobile.svg);
-            width: 32px;
-            height: 32px;
-          &:not(.social-link)
-            order: 2;
-            background: #EEF2F5;
-            padding: 16px 24px;
-            margin-left: -24px;
-            width: calc(100% + 48px);
-            margin-right: -24px;
-            margin-top: 20px;
-            a
-              background: #FFFFFF;
-              box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124066);
-              border-radius: 20px;
-              text-transform: uppercase;
-              font-size: 14px;
-              letter-spacing: 1px;
-              color: #000000;
-              text-align: center;
-              padding: 10px 23px 7px;
-              font-weight: 500;
+          margin-left: 10px
+          transition: all 0.3s ease-in-out
+          @media screen and (max-width: break-xl)
+            font-size: 22px
+    nav
+      @media screen and (max-width: break-xl)
+        display: none
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        display: flex
+        align-items: center
+        height: 100%
+        li
+          position: relative
+          a
+            text-decoration: none
+            font-weight: normal
+            font-size: 14px
+            padding: 10px
+            display: flex
+            margin-right: 4px
+            color: #000
+            transition: all 0.3s ease-in-out
+            &:hover
+              opacity: .7
+          &.has-popup
+            display: flex
+            align-items: center
+            svg
+              margin-left: -6px
+              margin-right: 6px
+          &.has-submenu
+            &:hover
+              .sub-menu
+                opacity: 1
+                visibility: visible
+                transform: translateY(0) rotateX(0) scale(1)
+          .sub-menu
+            position: absolute
+            top: 100%
+            left: -8px
+            transform: translateY(-20px) rotateX(20deg) scale(0.95)
+            transition: all 0.3s ease-in-out, pointer-events 0s ease-in-out
+            visibility: hidden
+            opacity: 0
+            ul
+              background: #fff
+              box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124)
+              border-radius: 8px
+              list-style-type: none
+              margin: 0
+              padding: 0
+              flex-direction: column
+              align-items: flex-start
+              white-space: nowrap
+              li
+                width: 100%
+                padding-right: 50px
+                &:first-child
+                  margin-top: 20px
+                &:last-child
+                  margin-bottom: 20px
+                a
+                  padding: 8px 20px
+                  display: block
+                  margin: 0
+                  color: #8d99a4
+                  &:hover
+                    background: #fafafa
+                    color: black
+  .btns
+    @media screen and (max-width: break-xl)
+      display: none
+    a
+      display: block
+      text-decoration: none
+      font-size: 14px
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding: 10px 32px 9px
+      border-radius: 22px
+      font-weight: 500
+      line-height: normal
+      background-color: #fff
+      color: status
+      text-align: center
+      white-space: nowrap
+      box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124)
+      transition: all 0.3s ease-in-out
+      &:hover
+        background-color: status
+        color: #fff
+  .mobile-menu-trigger
+    display: flex
+    height: auto
+    align-self: center
+    margin-right: 6px
+    padding: 10px
+    margin-left: auto
+    display: none
+    @media screen and (max-width: break-xl)
+      display: flex
+#general-menu-mobile
+  position: fixed
+  z-index: -100
+  left: 0
+  width: 100%
+  height: 100%
+  top: 0
+  padding: 0
+  overflow: auto
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
+  display: none
+  transition: all 0.3s ease-in-out
+  max-width: 100vw
+  overflow-x: hidden
+  overflow-y: scroll
+  @media screen and (max-width: break-xl)
+    z-index: 9000
+    display: block
+  .mobile-menu-container-inner
+    margin: 16px
+    background: #fff
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2)
+    border-radius: 8px
+    width: calc(100vw - 32px)
     .mobile-menu-header
       position: relative
-      .close, .back
-        position: absolute;
-        top: 50%;
-        display: flex;
-        padding: 10px;
-        margin-top: -22px;
-        right: 14px;
-      .back
-        right: auto;
-        left: 14px;
-      .logo-wrap
-        padding: 16px 24px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        .logo
-          background-image: url(../img/logo_white.png);
-          background-size: 20px;
-          background-color: #4360DF;
-          width: 44px;
-          height: 44px;
-        .logo-text
-            color: #000;
-            font-size: 22px;
-    .dropdown 
-      margin-left: 0
-      nav 
-        width: 100%;
-        ul 
-          display: flex;
-          flex-direction: column;
-          margin-top: 10px;
-          li 
-            margin: 0;
-            .sub-menu
-              display: none;
-            &.current
-              a
-                color: #000;
-            a
-              margin: 0 -24px 0 -24px;
-              padding: 12px 26px;
-              color: #000;
-              &:hover
-                background: rgba(67, 96, 223, 0.2);
-            .mobile-submenu-trigger
-              background-image: url(../img/arrow.svg);
-              width: 24px;
-              top: 0;
-              right: -12px;
-              position: absolute;
-              height: 100%;
-              background-repeat: no-repeat;
-              background-position: center;
-              padding: 0 24px;
-  .mobile-submenu-container-inner
-    position: absolute;
-    margin-bottom: 20px;
-    transform: translateX(100vw);
-    .dropdown
-      padding: 0 24px;
-      margin: 10px 0;
-      nav 
-        ul
-          margin-top: 0;
-    .mobile-menu-header
-      justify-content: center;
-      display: flex;
-      min-height: 77px;
-      align-items: center;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-
-
-.header
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1240px;
-  padding: 0 20px;
-  height: 56px;
-  top: 0;
-  margin: 24px auto;
-  z-index: 9;
-  width: 100%;
-  .mobile-menu-trigger
-    display: flex;
-    height: auto;
-    align-self: center;
-    margin-right: 6px;
-    padding: 10px;
-    margin-left: auto;
-    display: none;
-    svg
-      path
-        fill:#4360df
-
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.logo {
-  display: block;
-  width: 56px;
-  height: 56px;
-  background-image: url(../img/logo_white.png);
-  text-decoration: none;
-  margin: 0;
-  background-color: #4360DF;
-  border-radius: 50%;
-  background-size: 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.logo-text {
-  font-size: 27px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  font-family: "GT Walsheim", sans-serif;
-  margin-left: 10px;
-}
+      padding: 16px 24px
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .logo
+        display: flex
+        margin: 0 22px 0 0
+        a
+          font-size: 27px
+          font-weight: bold
+          color: #000
+          text-decoration: none
+          display: flex
+          align-items: center
+          transition: all 0.3s ease-in-out
+          &:before
+            content: ''
+            width: 44px
+            height: 44px
+            display: block
+            background-image: url("../img/logo-status.svg")
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            transition: all 0.3s ease-in-out
+          span
+            color: #000
+            margin-left: 10px
+            font-size: 22px
+    nav
+      padding: 24px 24px 12px 24px
+      ul
+        display: flex
+        flex-direction: column
+        margin-top: 10px
+        list-style-type: none
+        margin: 0
+        padding: 0
+        li
+          margin: 0
+          position: relative
+          a
+            text-decoration: none
+            font-weight: normal
+            font-size: 14px
+            display: block
+            margin: 0 -24px 0 -24px
+            padding: 16px 26px
+            color: #000
+            &:hover
+              background: rgba(status, 0.2)
+              opacity: .7
+          svg
+            position: absolute
+            top: 50%
+            right: 0
+            margin-top: -3px
+.general-menu-open
+  #general-menu-mobile
+    visibility: visible
+    opacity: 1
+    pointer-events: all
+  #general-menu-backdrop
+    visibility: visible
+    opacity: 0.45
+    pointer-events: all
+    z-index: 8800
+.general-popup-open
+  overflow: hidden
+  .general-menu-popup
+    visibility: visible
+    opacity: 1
+    pointer-events: all
+#general-menu-backdrop
+  z-index: -101
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(120, 135, 148, 0.6)
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
+  display: none
+  transition: opacity 0.3s ease-in-out
+  @media screen and (max-width: break-xl)
+    z-index: 8900
+    display: block
+.general-menu-popup
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 9100
+  top: 0
+  left: 0
+  padding: 0 20px
+  overflow: auto
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
+  transition: all 0.3s ease-in-out
+  @media screen and (max-width: break-xl)
+    width: 100%
+    padding: 0 16px
+  .general-popup-backdrop
+    z-index: 1
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(120, 135, 148, 0.6)
+    opacity: 0.45
+    transition: opacity 0.3s ease-in-out
+  .inner
+    box-sizing: border-box
+    margin: 140px auto 16px
+    width: 100%
+    max-width: 1200px
+    background: #fff
+    border-radius: 16px
+    padding: 30px
+    position: relative
+    z-index: 2
+    @media screen and (max-width: break-md)
+      margin-top: 92px
+    .close
+      position: absolute
+      top: -54px
+      right: 0
+      background: #FFFFFF
+      width: 42px
+      height: 42px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      transition: all 0.3s ease-in-out
+      &:hover
+        opacity: .7
+    h3
+      margin: 0
+      font-size: 20px
+      color: #000000
+      line-height: normal
+    .features
+      display: flex
+      list-style-type: none
+      margin: 16px 0 0 0
+      padding: 0
+      justify-content: center
+      flex-wrap: wrap
+      li
+        background: rgba(status, 0.1)
+        margin-right: 20px
+        flex: 1
+        padding: 30px 30px 15px 30px
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        border-radius: 16px
+        @media screen and (max-width: break-md)
+          flex: auto
+          width: 100%
+          margin: 0 0 20px
+        &:last-child
+          margin-right: 0
+          @media screen and (max-width: break-md)
+            margin: 0
+        h4
+          margin: 25px 0 8px 0
+        p
+          font-weight: normal
+          line-height: 24px
+          font-size: 16px
+          text-align: center
+          color: #939BA1
+          margin: 0
+    h5
+      font-weight: 500
+      line-height: normal
+      font-size: 14px
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: #939BA1
+      margin: 50px 0 24px
+    .more
+      display: flex
+      list-style-type: none
+      margin: 16px 0 0 0
+      padding: 0
+      justify-content: center
+      flex-wrap: wrap
+      li
+        flex: 1
+        margin-right: 20px
+        padding: 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        text-align: left
+        border-radius: 16px
+        @media screen and (max-width: break-md)
+          flex: auto
+          width: 100%
+          margin: 0 0 40px
+        &:last-child
+          margin-right: 0
+          @media screen and (max-width: break-md)
+            margin: 0
+        h4
+          font-style: normal
+          font-weight: bold
+          line-height: 24px
+          font-size: 16px
+          color: #000000
+          margin: 0
+        p
+          font-weight: normal
+          line-height: 24px
+          font-size: 16px
+          color: #939BA1
+          margin: 8px 0
+        a
+          line-height: 24px
+          font-size: 16px
+          text-decoration: none
+          display: flex
+          align-items: center
+          justify-content: center
+          color: status
+          margin-top: auto
+          transition: all 0.3s ease-in-out
+          &:hover
+            opacity: .7
+          svg
+            margin-left: 5px
 
 .logo-sign {
   display: block;
@@ -684,7 +873,8 @@ select[multiple] {
 }
 
 .features {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1289,49 +1479,6 @@ footer
   p:last-child 
     margin-bottom: 0;
     margin-top: auto;
-
-@media (max-width: 1199px)
-  .backdrop
-    z-index: 9998
-    display: block
-  .mobile-menu-container
-    z-index: 9999
-    display: block
-  .open
-    .backdrop
-      visibility: visible;
-      opacity: 0.45;
-      pointer-events: all;
-    .mobile-menu-container
-      visibility: visible;
-      opacity: 1;
-      pointer-events: all;
-  .header
-    margin: 10px 0;
-    padding: 0 16px;
-    .mobile-menu-trigger
-      display: flex;
-    .logo-text
-      font-size: 22px
-    .logo
-      width: 44px
-      height: 44px
-    header
-      display: none
-    .secondary-nav
-      display: none
-    .mobile-menu-container
-      header
-        display: flex
-      .secondary-nav
-        display: flex
-  .open-submenu
-    .mobile-menu-container .mobile-menu-container-inner
-      transform: translateX(-100vw);
-    .mobile-submenu-container-inner
-      transform: translateX(0);
-  .intro-buttons-mobile
-    display: none
 
 @media (max-width: 991px)
 
