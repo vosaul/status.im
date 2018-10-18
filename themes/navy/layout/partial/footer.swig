@@ -2,45 +2,31 @@
     <div class="container-footer">
         <div class="footer-wrap">
             <div class="ecosystem-footer-wrap">
-                <div class="footer-head">
-                    <h3>Ecosystem</h3>
-                </div>
-                <a href="/about/">
+                <h3>Ecosystem</h3>
                 <div class="ecosystem-footer">
-                    <h4>app</h4>
+                    <h4><a href="/about/">app</a></h4>
                     <p>Browse, chat, and make payments on Ethereum</p>
                 </div>
-                </a>
-                <a href="#">
                 <div class="ecosystem-footer">
-                    <h4>nimbus</h4>
+                    <h4><a href="#">nimbus</a></h4>
                     <p>An Ethereum 2.0 client for resource-restricted devices</p>
                 </div>
-                </a>
-                <a href="#">
                 <div class="ecosystem-footer">
-                    <h4>hardwallet</h4>
+                    <h4><a href="#">hardwallet</a></h4>
                     <p>Store your funds and data securely</p>
                 </div>
-                </a>
-                <a href="#">
                 <div class="ecosystem-footer">
-                    <h4>embark</h4>
+                    <h4><a href="#">embark</a></h4>
                     <p>Build powerful decentralized applications easily</p>
                 </div>
-                </a>
-                <a href="#">
                 <div class="ecosystem-footer">
-                    <h4>incubate</h4>
+                    <h4><a href="#">incubate</a></h4>
                     <p>ÐApps, IoT, base-layer protocols, scaling &amp; more</p>
                 </div>
-                </a>
-                <a href="#">
                 <div class="ecosystem-footer">
-                    <h4>studio</h4>
+                    <h4><a href="#">studio</a></h4>
                     <p>An integrated development &amp; education platform</p>
                 </div>
-                </a>
             </div>
             <div class="company">
                 <h3>Company</h3>
@@ -64,12 +50,12 @@
                     <li><a href="https://www.reddit.com/r/statusim/" target="_blank" class="footer-reddit">Reddit</a></li>
                 </ul>
             </div>
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"></a>
-                </div>
-                <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
+        </div>
+        <div class="footer-info">
+            <div class="footer-logo">
+                <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"></a>
             </div>
+            <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
         </div>
     </div>
 </footer>

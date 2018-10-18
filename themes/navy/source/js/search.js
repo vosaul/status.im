@@ -5,6 +5,7 @@
   var searchInput = document.getElementById('search-input');
   var className = 'active';
 
+ if(searchWrap != null){
   searchWrap.onclick = function(e) {
     searchWrap.classList.add(className);
     searchInput.focus();
@@ -13,4 +14,6 @@
   searchInput.onblur = function(e) {
     searchWrap.classList.remove(className);
   };
+ }
+
 }());

@@ -1,136 +1,163 @@
 .container-footer
-  max-width: 1400px
+  max-width: 1240px
   margin: 0 auto
   padding: 0 20px
   display: flex
-
-.footer-info
-  position: absolute
-  bottom: 0
-  left: 46%
-  text-align: center
-  p
-    margin-bottom: 60px
-
-.footer-logo
-  margin-bottom: 6px
-
-.ecosystem-footer-wrap 
-  float: left
-  width: 50%
-  padding: 0 0 0 100px;
-
-.footer-head
-  width: 100%
-  margin-bottom: 10px
-  h3
-    font-size: 16px
-    color: #FFFFFF
-    mix-blend-mode: normal
-    opacity: 0.4
-
-.ecosystem-footer
-  width: 40%
-  text-align: left
-  float: left
-  padding: 20px 60px 20px 0
-  h4
-    color: #fff
-    font-weight: bold
-    font-size: 20px
-    margin: 10px 0
-  p
-    color: rgba(255,255,255,0.4)
-
-.company
-  width: 25%
-  float: left
-  min-height: 380px
-  padding-left: 10%
-  h3
-    margin-bottom: 40px
-  ul
-    li
-      padding-bottom: 24px
+  flex-direction: column
+  .footer-wrap
+    display: flex
+    flex-wrap: wrap;
+    h3
+      margin-bottom: 50px
+      width: 100%
+      @media screen and (max-width: break-sm)
+        margin-bottom: 30px
+    .ecosystem-footer-wrap 
+      flex-direction: row
+      flex-wrap: wrap
+      display: flex
+      max-width: calc(33.333333% + 50px)
+      @media screen and (max-width: break-xl)
+        max-width: calc(50% + 50px)
+      @media screen and (max-width: break-lg)
+        max-width: 100%;
+        margin-bottom: 50px;
+      @media screen and (max-width: break-sm)
+        margin-bottom: 30px
+      .ecosystem-footer
+        width: calc(50% - 25px)
+        margin-bottom: 30px
+        &:nth-of-type(2n)
+          margin-left: auto
+        h4
+          line-height: normal
+          font-size: 20px
+          margin-bottom: 10px
+          font-family: 'GT Walsheim'
+          a
+            color: #FFFFFF
+            font-weight: bold
+            text-decoration: none
+            &:hover
+              opacity: .7
+        p
+          line-height: 20px;
+          font-size: 14px;
+          color: #FFFFFF;
+          opacity: 0.4;
+    .company
+      max-width: 16.666667%
+      margin-left: auto
+      margin-right: 100px
+      @media screen and (max-width: break-lg)
+        margin-left: 0
+        max-width: calc(50% - 25px)
+        width: 100%
+        margin-right: auto
+      @media screen and (max-width: break-sm)
+        max-width: 100%
       a
-        line-height: 24px
-        font-size: 16px
-        color: #FFFFFF
+        line-height: 24px;
+        font-size: 16px;
         text-decoration: none
-
-.social-links
-  float: left
-  h3
-    margin-bottom: 40px
-  ul
-    li
+        color: #FFFFFF;
+    .social-links
+      max-width: 25%
+      @media screen and (max-width: break-lg)
+        max-width: calc(50% - 25px)
+        width: 100%
+      @media screen and (max-width: break-sm)
+        max-width: 100%
+        margin-top: 30px;
       a
-        line-height: 24px
-        font-size: 16px
-        color: #FFFFFF
+        line-height: 24px;
+        font-size: 16px;
         text-decoration: none
-
-.footer-status
-  color: #fff
-  text-decoration: none
-  background: #3C3F4D
-  box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124066)
-  border-radius: 20px 
-  padding: 12px 24px
-
-.chat-footer  
-  margin-bottom: 28px
-
-@media (max-width: 1199px)
-  .ecosystem-footer-wrap
-    width: 55%
-
-@media (max-width: 991px)
-  .ecosystem-footer-wrap
-    width: 50%
-    padding: 0
-  .ecosystem-footer
-    width: 100%
-    padding: 0 20px
+        color: #FFFFFF;
+      .chat-footer
+        margin-bottom: 25px
+        a
+          display: inline-block;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 10px 32px 9px;
+          font-weight: 500;
+          line-height: normal;
+          color: #fff;
+          text-align: center;
+          box-shadow: 0px 2px 4px rgba(43,59,71,0.124);
+          transition: all 0.3s ease-in-out;
+          background: #3C3F4D;
+          box-shadow: 0px 2px 4px rgba(43, 59, 71, 0.124066);
+          border-radius: 20px;
+          &:hover
+            opacity: .7
+  .footer-info
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-top: 30px
     p
-      display: none
-  .footer-head
-    margin-bottom: 30px
-
-@media (max-width: 767px)
-  .ecosystem-footer-wrap
-    width: 40%
-  .footer-info  
-    left: 36%
-
-@media (max-width: 459px)
-  .ecosystem-footer-wrap
-    width: 40%
-  .footer-head
-    margin-bottom: 10px
-  .company
-    width: 40%
-    padding: 0 10%
-    min-height: 100px
-    ul
-      li
-        padding: 0
-  .social-links
-    width: 100%
-    margin-top: 20px
-  .footer-info  
-    left: 28%
-  .chat-footer  
-    margin-left: 26%
-  .community
-    margin-left: 32%
-
-@media (max-width: 459px)
-  .chat-footer  
-    margin-left: 15%
-  .community
-    margin-left: 27%
-
+      line-height: 20px
+      font-size: 14px
+      text-align: center
+      color: #FFFFFF
+      opacity: 0.4
+      margin-top: 5px
+  .features
+    display: flex
+    list-style-type: none
+    margin: 16px 0 0 0
+    padding: 0
+    justify-content: center
+    flex-wrap: wrap
+    max-width: 100%
+    li
+      margin-right: 20px
+      flex: 1
+      padding: 0 30px 15px 30px
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+      border-radius: 16px
+      @media screen and (max-width: break-md)
+        flex: auto
+        width: 100%
+        margin: 0 0 20px
+      &:last-child
+        margin-right: 0
+        @media screen and (max-width: break-md)
+          margin: 0
+      h4
+        margin: 25px 0 8px 0
+        font-weight: bold
+        color: #ffffff
+      p
+        font-weight: normal
+        line-height: 24px
+        font-size: 16px
+        text-align: center
+        margin: 0
+        color: #ffffff;
+        opacity: 0.4;
+  .footer-menu
+    border-top: 1px solid rgba(255,255,255,0.1)
+    display: flex
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    flex-wrap: wrap
+    a
+      font-size: 14px;
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0 13px 13px 13px;
+      &:hover
+        opacity: .7
+      
 footer ul{
   list-style-type: none;
   margin: 0;
