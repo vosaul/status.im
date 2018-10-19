@@ -109,6 +109,7 @@ fiddle:
 contribute:
   get_involved:
     introduction_contribute: index.html
+  jobs: 
     perks_benefits: perks_benefits.html
     apply_now: applying_to_status.html 
     open_positions: open_positions.html 
