@@ -11,7 +11,7 @@ If we feel like there's a good match between your skills & experience and what w
 
 There's no set approach that we have to interviewing - it always depends on you, and the role we're looking to fill.
 
-As well as traditional interviews, there are a variety of ways that we use to get to know you:
+There are a variety of ways that we use to get to know you:
 
 **Interviews**: Interviews are normally conducted over Google Hangouts or Skype, but we also do text-based interviews over messengers as well as more traditional phone interviews. Occasionally, when our worlds collide, we'll also try to meet you in person. Typically, you could expect to meet 3 -5 members of the organisation. 
 
