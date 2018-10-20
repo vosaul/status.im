@@ -80,7 +80,7 @@ ignoring exception: Error: read ECONNRESET
 ```
 In react-native log:
 ```
-./run-app.sh: line 72: 56660 Segmentation fault: 11  /path-to-status-react/desktop/bin/StatusIm $args
+./run-app.sh: line 72: 56660 Segmentation fault: 11  /path-to-status-react/desktop/bin/Status $args
 events.js:183
       throw er; // Unhandled 'error' event
       ^
@@ -94,9 +94,9 @@ Error: spawn gnome-terminal ENOENT
 ```
 or
 ```
-StatusIm(7924,0x70000c1cd000) malloc: *** error for object 0x7f8b1539bd10: incorrect checksum for freed object - object was probably modified after being freed.
+Status(7924,0x70000c1cd000) malloc: *** error for object 0x7f8b1539bd10: incorrect checksum for freed object - object was probably modified after being freed.
 *** set a breakpoint in malloc_error_break to debug
-./run-app.sh: line 72:  7924 Abort trap: 6           /path-to-status-react/desktop/bin/StatusIm $args
+./run-app.sh: line 72:  7924 Abort trap: 6           /path-to-status-react/desktop/bin/Status $args
 events.js:183
       throw er; // Unhandled 'error' event
       ^
