@@ -5,38 +5,32 @@
       <p>Self-reliance is critical in distributed systems. Learn how here.</p>
       <br/>
     </div>
-    <div class="security-link-wrap">
-      <a href="../guides/">
-        <div class="security-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Guides</h3>
-          <p>Become a security ninja
-            <a href="../guides/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Become a security ninja</p>
         </div>
-      </a>
-      <a href="../org_sec/">
-        <div class="security-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../guides/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Policy and Procedure</h3>
-          <p>This is how we do!
-            <a href="../org_sec/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>This is how we do!</p>
         </div>
-      </a>
-      <a href="../audits/">
-        <div class="security-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../org_sec/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Audits</h3>
-          <p>See who guards the guards
-            <a href="/audits/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>See who guards the guards</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/audits/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

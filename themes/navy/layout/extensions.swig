@@ -5,38 +5,32 @@
       <p>Status Extensions will literally blow your mind</p>
       <br/>
     </div>
-    <div class="extensions-link-wrap">
-      <a href="https://status-im.github.io/pluto/try.html">
-        <div class="extensions-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Try Yourself!</h3>
-          <p>Literally, right now...
-            <a href="https://status-im.github.io/pluto/try.html">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Literally, right now...</p>
         </div>
-      </a>
-      <a href="../fiddle/">
-        <div class="extensions-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="https://status-im.github.io/pluto/try.html" ></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Fiddle</h3>
-          <p>Play with even more
-            <a href="../fiddle/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Play with even more</p>
         </div>
-      </a>
-      <a href="../developer_tools/">
-        <div class="extensions-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../fiddle/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="../developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../developer_tools/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

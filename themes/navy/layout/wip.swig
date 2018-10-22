@@ -5,38 +5,32 @@
       <p>Status has the fastest moving codebase of any project in Ethereum. Keep track of all we do here.</p>
       <br/>
     </div>
-    <div class="wip-link-wrap">
-      <a href="../developer_tools/">
-        <div class="wip-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="../developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-      <a href="../build_status/">
-        <div class="wip-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/developer_tools/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="../build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>For mobile and desktop</p>
         </div>
-      </a>
-      <a href="../research/">
-        <div class="wip-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="../research/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Dive deeper...</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/research/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

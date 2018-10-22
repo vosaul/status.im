@@ -5,38 +5,32 @@
       <p>Play with our tools and actually learn how to build a better web!</p>
       <br/>
     </div>
-    <div class="fiddle-link-wrap">
-      <a href="../developer_tools/">
-        <div class="fiddle-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="/developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-      <a href="../build_status/">
-        <div class="fiddle-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/developer_tools/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="/build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>For mobile and desktop</p>
         </div>
-      </a>
-      <a href="https://embark.status.im/">
-        <div class="fiddle-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Embark</h3>
-          <p>Better Ðapps for everyone
-            <a href="https://embark.status.im/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Better Ðapps for everyone</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="https://embark.status.im/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

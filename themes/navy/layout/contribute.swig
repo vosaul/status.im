@@ -5,38 +5,32 @@
       <p>It's all about the people, after all</p>
       <br/>
     </div>
-    <div class="contribute-link-wrap">
-      <a href="life_status.html">
-        <div class="contribute-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Life at Status</h3>
-          <p>Day-to-day decentralization
-            <a href="life_status.html">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Day-to-day decentralization</p>
         </div>
-      </a>
-      <a href="our_principles.html">
-        <div class="contribute-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="life_status.html"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Our Principles</h3>
-          <p>A principled approach
-            <a href="our_principles.html">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>A principled approach</p>
         </div>
-      </a>
-      <a href="jobs.html">
-        <div class="contribute-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="our_principles.html"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Working Here</h3>
-          <p>See our open positions!
-            <a href="jobs.html">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>See our open positions!</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="jobs.html"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

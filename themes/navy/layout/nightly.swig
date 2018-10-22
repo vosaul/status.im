@@ -5,38 +5,32 @@
       <p>You can download our nightly builds here. Beware of dragons!</p>
       <br/>
     </div>
-    <div class="nightly-link-wrap">
-      <a href="../docs/">
-        <div class="nightly-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Documentation</h3>
-          <p>Back to our docs
-            <a href="../docs/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-      <a href="../build_status/">
-        <div class="nightly-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/docs/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="/build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>For mobile and desktop</p>
         </div>
-      </a>
-      <a href="../technical_specs/">
-        <div class="nightly-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="/technical_specs/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Dive deeper...</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/research/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

@@ -5,38 +5,32 @@
       <p>Become a master of distributed crafts with all our surprises for developers</p>
       <br/>
     </div>
-    <div class="dev-tools-link-wrap">
-      <a href="https://embark.status.im/">
-        <div class="dev-tools-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Embark</h3>
-          <p>Build powerful ÐApps
-            <a href="https://embark.status.im/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Build powerful ÐApps</p>
         </div>
-      </a>
-      <a href="../extensions/">
-        <div class="dev-tools-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="https://embark.status.im/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Extensions</h3>
-          <p>Extend into the future!
-            <a href="../extensions/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Extend into the future!</p>
         </div>
-      </a>
-      <a href="../fiddle/">
-        <div class="dev-tools-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../extensions/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Fiddle</h3>
-          <p>Play and learn
-            <a href="../security/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Play and learn</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../fiddle/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

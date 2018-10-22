@@ -5,38 +5,32 @@
       <p>Begin your journey to a more secure and distributed internet here.</p>
       <br/>
     </div>
-    <div class="build-link-wrap">
-      <a href="../developer_tools/">
-        <div class="build-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
-            <a href="/developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>JS API and Extensions</p>
         </div>
-      </a>
-      <a href="../research/">
-        <div class="build-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/developer_tools/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Research</h3>
-          <p>Dive in! Learn more...
-            <a href="/research/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Dive in! Learn more...</p>
         </div>
-      </a>
-      <a href="../nightly/">
-        <div class="build-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/research/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Nightlies</h3>
-          <p>Get our latest builds
-            <a href="../nightly/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Get our latest builds</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="../nightly/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

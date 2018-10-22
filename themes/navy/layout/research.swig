@@ -5,38 +5,32 @@
       <p>What we do when we don't know what we're doing...</p>
       <br/>
     </div>
-    <div class="research-link-wrap">
-      <a href="https://nimbus.status.im">
-        <div class="research-link">
+    <ul>
+      <li>
+        <div class="inner">
           <h3>Nimbus</h3>
-          <p>An Ethereum 2.0 client
-            <a href="/developer_tools/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>An Ethereum 2.0 Client</p>
         </div>
-      </a>
-      <a href="../build_status/">
-        <div class="research-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="https://nimbus.status.im/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Build Status</h3>
-          <p>For mobile and desktop
-            <a href="../build_status/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>For mobile and desktop</p>
         </div>
-      </a>
-      <a href="../analytics/">
-        <div class="research-link">
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
           <h3>Analytics</h3>
-          <p>Analysing a better web
-            <a href="/research/">
-              <img src="../img/arrow_blue_shaded.svg" />
-            </a>
-          </p>
+          <p>Analysing a better web</p>
         </div>
-      </a>
-    </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/analytics/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">
