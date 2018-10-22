@@ -96,4 +96,8 @@ gulp.task('build', function(cb) {
     runSequence('generate', 'sass', 'bundle', 'watch')
 });
 
+gulp.task('generate', function(cb) {
+    runSequence('generate', 'sass', 'bundle')
+});
+
 gulp.task('default', [])
