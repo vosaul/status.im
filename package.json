@@ -7,7 +7,7 @@
   },
   "scripts": {
     "clean": "rm -rf public/*",
-    "build": "hexo generate",
+    "build": "gulp build && hexo generate",
     "eslint": "eslint .",
     "deploy": "hexo deploy"
   },
