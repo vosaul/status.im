@@ -1,32 +1,37 @@
-<footer class="site-footer footer-home">
-    <div class="container-footer">
-        <ul class="features">
-            <li>
-                <svg width="35" height="26" viewBox="0 0 35 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0 20.5C0 17.4624 2.46243 15 5.5 15H18.5C21.5376 15 24 17.4624 24 20.5C24 23.5376 21.5376 26 18.5 26H5.5C2.46243 26 0 23.5376 0 20.5Z" fill="white"/> <mask id="path-2-outside-1" maskUnits="userSpaceOnUse" x="16" y="6" width="19" height="19" fill="black"> <rect fill="white" x="16" y="6" width="19" height="19"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M24 20.5C24 21.3284 24.6714 22 25.5 22C26.3286 22 27 21.3284 27 20.5V17H30.5C31.3286 17 32 16.3284 32 15.5C32 14.6716 31.3286 14 30.5 14H27V10.5C27 9.67163 26.3286 9 25.5 9C24.6714 9 24 9.67163 24 10.5V14H20.5C19.6714 14 19 14.6716 19 15.5C19 16.3284 19.6714 17 20.5 17H24V20.5Z"/> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M24 20.5C24 21.3284 24.6714 22 25.5 22C26.3286 22 27 21.3284 27 20.5V17H30.5C31.3286 17 32 16.3284 32 15.5C32 14.6716 31.3286 14 30.5 14H27V10.5C27 9.67163 26.3286 9 25.5 9C24.6714 9 24 9.67163 24 10.5V14H20.5C19.6714 14 19 14.6716 19 15.5C19 16.3284 19.6714 17 20.5 17H24V20.5Z" fill="#7D7F88"/> <path d="M27 17V14H24V17H27ZM27 14H24V17H27V14ZM24 14V17H27V14H24ZM24 17H27V14H24V17ZM25.5 19C26.3286 19 27 19.6718 27 20.5H21C21 22.9849 23.0142 25 25.5 25V19ZM24 20.5C24 19.6718 24.6714 19 25.5 19V25C27.9858 25 30 22.9849 30 20.5H24ZM24 17V20.5H30V17H24ZM30.5 14H27V20H30.5V14ZM29 15.5C29 14.6718 29.6714 14 30.5 14V20C32.9858 20 35 17.9849 35 15.5H29ZM30.5 17C29.6714 17 29 16.3282 29 15.5H35C35 13.0151 32.9858 11 30.5 11V17ZM27 17H30.5V11H27V17ZM24 10.5V14H30V10.5H24ZM25.5 12C24.6714 12 24 11.3282 24 10.5H30C30 8.01509 27.9858 6 25.5 6V12ZM27 10.5C27 11.3282 26.3286 12 25.5 12V6C23.0142 6 21 8.01509 21 10.5H27ZM27 14V10.5H21V14H27ZM20.5 17H24V11H20.5V17ZM22 15.5C22 16.3282 21.3286 17 20.5 17V11C18.0142 11 16 13.0151 16 15.5H22ZM20.5 14C21.3286 14 22 14.6718 22 15.5H16C16 17.9849 18.0142 20 20.5 20V14ZM24 14H20.5V20H24V14ZM27 20.5V17H21V20.5H27Z" fill="#262A39" mask="url(#path-2-outside-1)"/> <circle cx="13" cy="5" r="5" fill="white"/> </svg>
-                <h4>Join the chat in Status</h4>
-                <p>Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
-            </li>
-            <li>
-                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M27.3333 11C31.5675 11 35 14.377 35 18.5428V31.7428C35 32.2361 34.7068 32.6838 34.2504 32.8876C33.7937 33.0914 33.258 33.0138 32.8809 32.6889L29.2151 29.5332C28.5163 28.9316 27.6191 28.6 26.6907 28.6H18.3889C14.8603 28.6 12 25.7858 12 22.3143V17.2857C12 13.8141 14.8603 11 18.3889 11H27.3333Z" fill="#7D7F88"/> <path d="M3.13804 26.2573L3.13839 26.2575C4.122 26.6964 5.27756 26.532 6.09775 25.8257C6.09786 25.8256 6.09797 25.8255 6.09808 25.8254L9.76356 22.67L8.78494 21.5332L9.76357 22.67C10.188 22.3045 10.7373 22.1 11.3093 22.1H19.6111C23.945 22.1 27.5 18.6372 27.5 14.3143V9.28571C27.5 4.96278 23.945 1.5 19.6111 1.5H10.6667C5.62716 1.5 1.5 5.52568 1.5 10.5428V23.7428C1.5 24.8382 2.15072 25.8164 3.13804 26.2573Z" fill="white" stroke="#262A39" stroke-width="3"/> <circle cx="18" cy="12" r="2" fill="#262A39"/> <circle cx="11" cy="12" r="2" fill="#262A39"/> </svg>
-                <h4>Join the Discussion</h4>
-                <p>Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
-            </li>
-            <li>
-                <svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4495 0C7.36697 0 0 7.11346 0 15.8835C0 22.8995 4.74312 28.8436 11.2018 30.9874C12.0092 31.0848 12.3119 30.5976 12.3119 30.2078C12.3119 29.8181 12.3119 28.8436 12.3119 27.4794C7.77064 28.4538 6.76147 25.3356 6.76147 25.3356C6.05505 23.4842 4.94495 22.9969 4.94495 22.9969C3.43119 22.0225 5.04587 22.0225 5.04587 22.0225C6.66055 22.1199 7.56881 23.679 7.56881 23.679C9.08257 26.1152 11.4037 25.4331 12.3119 25.0433C12.4128 23.9714 12.9174 23.2893 13.3211 22.8995C9.68807 22.5097 5.85321 21.1455 5.85321 15.0065C5.85321 13.2525 6.45872 11.8882 7.56881 10.7189C7.46789 10.4266 6.86239 8.77002 7.77064 6.62624C7.77064 6.62624 9.18349 6.23646 12.3119 8.28279C13.6239 7.89302 15.0367 7.79557 16.4495 7.79557C17.8624 7.79557 19.2752 7.99046 20.5872 8.28279C23.7156 6.23646 25.1284 6.62624 25.1284 6.62624C26.0367 8.77002 25.4312 10.4266 25.3303 10.8164C26.3395 11.8882 27.0459 13.3499 27.0459 15.1039C27.0459 21.2429 23.211 22.5097 19.578 22.8995C20.1835 23.3867 20.6881 24.3612 20.6881 25.8228C20.6881 27.9666 20.6881 29.6232 20.6881 30.2078C20.6881 30.5976 20.9908 31.0848 21.7982 30.9874C28.3578 28.8436 33 22.8995 33 15.8835C32.8991 7.11346 25.5321 0 16.4495 0Z" fill="white"/> </svg>
-                <h4>Contribute to our Repos</h4>
-                <p>Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
-            </li>
-        </ul>
-        <div class="footer-menu">
-            <a href="#">Open Positions</a>
-            <a href="#">Principles</a>
-            <a href="#">Something else</a>
-        </div>
-        <div class="footer-info">
-            <div class="footer-logo">
-                <a href="https://status.im/" ><img src="../img/logo-footer.svg" alt="Status"></a>
+<footer class="footer footer--homepage">
+    <div class="footer-inner">
+        <div class="cards cards--three cards--three--even cards--community cards--community--dark">
+            <div class="card">
+                <a href="#" class="card-inner">
+                    <h4>Join the chat in Status</h4>
+                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                </a>
             </div>
-            <p>Status Holdings Pte. Ltd. <br>6 Ubi Road Singapore </p>
+            <div class="card">
+                <a href="#" class="card-inner">
+                    <div class="community-icon community-icon--discussion"></div>
+                    <h4>Join the Discussion</h4>
+                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-inner">
+                    <div class="community-icon community-icon--contrubute"></div>
+                    <h4>Contribute to our Repos</h4>
+                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                </a>
+            </div>
+        </div>
+        <ul class="footer-nav">
+            <li><a href="#">Open Positions</a></li>
+            <li><a href="#">Principles</a></li>
+            <li><a href="#">Something else</a></li>
+        </ul>
+        <div class="footer-logo-wrap">
+            <div class="footer-logo-wrap__inner">
+                <a class="footer-logo" href="https://status.im" target="_blank"></a>
+                <div class="footer-address secondary-text">Status Research & Development GmbH<br/>Baarerstrasse 10<br/>Zug, Switzerland</div>
+            </div>
         </div>
     </div>
 </footer>
