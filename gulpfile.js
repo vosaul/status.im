@@ -96,8 +96,13 @@ gulp.task('build', function(cb) {
     runSequence('generate', 'sass', 'bundle', 'watch')
 });
 
+gulp.task('exit', function(cb) {
+    process.exit(0);
+});
+
 gulp.task('run', function(cb) {
-    runSequence('sass', 'bundle', 'generate')
+    runSequence('sass', 'bundle', 'generate', 'exit')
+    
 });
 
 gulp.task('default', [])
