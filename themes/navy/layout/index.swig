@@ -2,7 +2,7 @@
     {{ partial('partial/header') }}
     <div class="intro">
         <h1>Acess Ethereum, Anywhere</h1>
-        <p>Status is an app and open source community committed to bring the power of a more secure and distibuted internet to your pocket.</p>
+        <p>Status is an app and open source community committed to bringing the power of a more secure and distibuted internet to your pocket.</p>
         <div class="intro-buttons">
             <a class="button button-part button-get-ios" href="/get/">
                 <span class="button-icon button-icon--ios"></span>
