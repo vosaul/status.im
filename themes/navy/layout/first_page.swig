@@ -1,5 +1,5 @@
 <div class="page-intro wrapper">
-  <header class="docs-header">
+  <header class="docs-header docs-header-first-page">
     <div class="docs-intro">
       <h1>Documenting a Better Web</h1>
       <p>Education is the most powerful gift.</p>
