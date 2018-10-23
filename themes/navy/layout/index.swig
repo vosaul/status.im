@@ -1,8 +1,8 @@
 <div class="home-cover">
     {{ partial('partial/header') }}
     <div class="intro">
-        <h1>Your portal to Ethereum</h1>
-        <p>Status is an open source community building a more distributed, secure internet.</p>
+        <h1>Acess Ethereum, Anywhere</h1>
+        <p>Status is an app and open source community committed to bring the power of a more secure and distibuted internet to your pocket.</p>
         <div class="intro-buttons">
             <a class="button button-part button-get-ios" href="/get/">
                 <span class="button-icon button-icon--ios"></span>
