@@ -12,7 +12,7 @@
                 <a href="https://discuss.status.im" class="card-inner">
                     <div class="community-icon community-icon--discussion"></div>
                     <h4>Join the Discussion</h4>
-                    <p class="secondary-text">Get involved with longer form discussions, workk in progress, and our research here.</p>
+                    <p class="secondary-text">Get involved with longer form discussions, work in progress, and our research here.</p>
                 </a>
             </div>
             <div class="card">
