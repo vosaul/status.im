@@ -191,8 +191,7 @@ a.article-title:hover {
 .article-content dl,
 .article-content table,
 .article-content blockquote,
-.article-content iframe,
-.article-content .highlight {
+.article-content iframe {
     margin: 1em 0;
     line-height: 26px;
     font-size: 16px;
@@ -200,6 +199,23 @@ a.article-title:hover {
     font-style: normal;
     font-weight: normal;
     font-family: $InterUI;
+}
+
+.article-content .highlight {
+	border: 1px solid #EEF2F5;
+	border-radius: 8px;
+	background: #EEF2F5;
+	margin: 24px 0;
+}
+
+.article-content .highlight table {
+	border: 0 !important;
+}
+
+.article-content .highlight span {
+	font-size: 16px;
+	color: $colorBlack;
+	font-weight: 500;
 }
 
 .article-content h1 {
