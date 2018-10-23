@@ -1,6 +1,6 @@
-let ScrollOver = require("./lib/ScrollOver.js")
-let animateScroll = require("./lib/animatescroll.js")
-let d3 = require("d3")
+// let ScrollOver = require("./lib/ScrollOver.js")
+// let animateScroll = require("./lib/animatescroll.js")
+// let d3 = require("d3")
 
 let heroImage = document.querySelectorAll(".hero-image")[0]
 
