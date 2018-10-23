@@ -45,21 +45,21 @@
                     <a href="" class="card-inner">
                         <div class="community-icon community-icon--join"></div>
                         <h4>Join the chat in Status</h4>
-                        <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                        <p class="secondary-text">Whisper sweet, encrypted nothings on a distributed network that no-one owns.</p>
                     </a>
                 </div>
                 <div class="card">
                     <a href="" class="card-inner">
                         <div class="community-icon community-icon--discussion"></div>
                         <h4>Join the Discussion</h4>
-                        <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                        <p class="secondary-text">Get involved with longer form discussions, workk in progress, and our research here.</p>
                     </a>
                 </div>
                 <div class="card">
                     <a href="" class="card-inner">
                         <div class="community-icon community-icon--contrubute"></div>
                         <h4>Contribute to our Repos</h4>
-                        <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                        <p class="secondary-text">Help us #buidl the future by getting involved in the most active code base in Ethereum.</p>
                     </a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <div class="card-inner">
                         <div class="card-content">
                             <h4>Read our Blog</h4>
-                            <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                            <p class="secondary-text">Latest blog post to go in here with RSS</p>
                         </div>
                         <div class="card-community-more__link"><a href="#" class="link-arrow">Learn More</a></div>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="card-inner">
                         <div class="card-content">
                             <h4>Life at Status</h4>
-                            <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                            <p class="secondary-text">What's it like to live the decentralized lifestyle? Find out here.</p>
                         </div>
                         <div class="card-community-more__link"><a href="#" class="link-arrow">Learn More</a></div>
                     </div>
@@ -87,7 +87,7 @@
                     <div class="card-inner">
                         <div class="card-content">
                             <h4>Follow us on Twitter</h4>
-                            <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                            <p class="secondary-text">Join the conversation on our social channels to learn more.</p>
                         </div>
                         <div class="card-community-more__link"><a href="#" class="link-arrow">Learn More</a></div>
                     </div>
