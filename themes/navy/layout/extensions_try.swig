@@ -25,7 +25,7 @@
       <li>
         <div class="inner">
           <h3>Developer Tools</h3>
-          <p>JS API and Extensions
+          <p>#MakeCodingGreatAgain</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
         <a href="../developer_tools/"></a>
