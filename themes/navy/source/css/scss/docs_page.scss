@@ -14,13 +14,13 @@
     margin: 0 auto;
 }
 
-@media mq-normal {
+@media screen and (min-width: 820px) {
 	#content-inner-full {
 		margin-left: 0;
 	}
 }
 
-@media mq-normal {
+@media screen and (min-width: 820px) {
 	.article-container {
 		float: right;
 		width: 70%;
@@ -52,7 +52,7 @@
 	opacity: 0.8;
 }
 
-@media mq-normal {
+@media screen and (min-width: 820px) {
 	#article-toc {
 		display: block;
 	}
@@ -86,26 +86,25 @@
 	margin-top: 2em;
 	font-size: 0.9em;
 	text-decoration: none;
-	color: color-default;
+	color: $colorBlack;
 	display: block;
 	margin-bottom: 40px;
-	font-family: font-title;
+	font-family: $InterUI;
 }
 
 #article-toc-top:hover {
-	color: color-link-hover;
+	color: c$colorDarkBlue;
 }
 
 .article-header {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 90px 0 20px;
+	max-width: 1280px;
+	margin: 170px auto 20px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .article-title {
-	font-family: font-title;
+	font-family: $InterUI;
 	font-size: 26px;
 	line-height: 32px;
 	font-weight: 300;
@@ -117,7 +116,7 @@
 }
 
 a.article-title:hover {
-	color: color-link-hover;
+	color: $colorDarkBlue;
 }
 
 .post .article-title {
@@ -125,14 +124,14 @@ a.article-title:hover {
 }
 
 .article-date {
-	color: color-gray;
+	color: $colorGray;
 	text-decoration: none;
 	display: inline-block;
 	margin-top: 1em;
 }
 
 .article-date:hover {
-	color: color-link-hover;
+	color: $colorDarkBlue;
 }
 
 .article-edit-link {
@@ -150,7 +149,7 @@ a.article-title:hover {
 	opacity: 0.7;
 }
 
-@media mq-normal {
+@media screen and (min-width: 820px) {
 	.article-edit-link {
 		display: flex;
 	}
@@ -177,7 +176,7 @@ a.article-title:hover {
 
 .article-content {
 	line-height: line-height;
-	color: color-default;
+	color: $colorBlack;
 }
 
 @media print {
@@ -380,7 +379,7 @@ a.article-title:hover {
 	}
 }
 
-.article-footer-link, .article-footer-previous, .article-footer-next {
+.article-footer-link, .article-footer-prev, .article-footer-next {
 	color: $colorBlue;
 	text-decoration: none;
 	font-weight: bold;
@@ -389,11 +388,11 @@ a.article-title:hover {
 	position: absolute;
 }
 
-.article-footer-link:hover, .article-footer-previous:hover, .article-footer-next:hover {
+.article-footer-link:hover, .article-footer-prev:hover, .article-footer-next:hover {
 	color: $colorDarkBlue;
 }
 
-.article-footer-previous, {
+.article-footer-prev {
     left: 0;
 }
 
