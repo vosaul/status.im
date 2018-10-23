@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-contribute">
-    <div class="contribute-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Contribute to a Better Web</h1>
       <p>It's all about the people, after all</p>
       <br/>
