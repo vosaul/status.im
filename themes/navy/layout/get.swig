@@ -24,7 +24,7 @@
             <a href="#" class="get-link">
               <div class="get-link-icon get-link-icon--android"></div>
               <h4>Status for Android</h4>
-              <p class="secondary-text">Do the same on Android, and access more features like our upcoming <a href="https://hardwallet.status.im/">hardwallet</a>.</p>
+              <p class="secondary-text">Do the same on Android, and access more features like our upcoming hardwallet.</p>
               <p class="get-link-text--mobile">Get on Google Play</p>
               <span class="link-arrow" href="https://play.google.com/store/apps/details?id=im.status.ethereum">Get Status for Android</span>
             </a>
