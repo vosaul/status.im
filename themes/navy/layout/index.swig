@@ -133,7 +133,7 @@
             <a href="/docs/" class="card-inner">
                 <div class="card-content">
                     <h3>App</h3>
-                    <p class="secondary-text">The Status application enables you to browse, chat and make payments directly on the Ethereum public blockchain</p>
+                    <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps. Test the mobile beta or get started with the desktop alpha.</p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
@@ -142,7 +142,7 @@
             <a href="https://status.im/incubate" class="card-inner">
                 <div class="card-content">
                     <h3>Incubate</h3>
-                    <p class="secondary-text">We are incubating a handful of startups each quarter, from Ethereum-based applications, to DApps, IoT plays, base-layer protocols, scaling solutions, and more.</p>
+                    <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
@@ -151,7 +151,7 @@
             <a href="https://embark.status.im" class="card-inner">
                 <div class="card-content">
                     <h3>Embark</h3>
-                    <p class="secondary-text">Embark is a fast, simple and powerful framework to help you develop and deploy Decentralized Applications</p>
+                    <p class="secondary-text">Embark is a simple and easy to use development framework that enables you to build and deploy your own decentralized applications smoothly.</p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
@@ -160,7 +160,7 @@
             <a href="#" class="card-inner">
                 <div class="card-content">
                     <h3>Studio</h3>
-                    <p class="secondary-text">An IDE and Education Platform for developers with the goal to grow our ecosystem and foster one-stop-shop development and learning</p>
+                    <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
@@ -169,7 +169,7 @@
             <a href="https://nimbus.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Nimbus</h3>
-                    <p class="secondary-text">Nimbus is a research project and a client implementation for Ethereum 2.0. It's designed to perform on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware</p>
+                    <p class="secondary-text">Nimbus is a research project and light client implementation for Ethereum 2.0 designed to perform well on embedded systems and resource-restricted hardware. </p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
@@ -178,7 +178,7 @@
             <a href="https://hardwallet.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Hardwallet</h3>
-                    <p class="secondary-text">A hardware wallet with a safe, contactless transaction experience. Forget leaving your assets in the vulnerable hands of exchanges or hot wallets online.</p>
+                    <p class="secondary-text">A hardware wallet in the form of a card with a safe, contactless transaction experience </p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
