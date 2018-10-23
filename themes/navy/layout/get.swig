@@ -18,7 +18,7 @@
               <h4>Status for IOS</h4>
               <p class="secondary-text">Status is a community of people all over the world connected by a set of</p>
               <p class="get-link-text--mobile">Request Beta access</p>
-              <span class="link-arrow" href="#">Ges Status for IOS</span>
+              <span class="link-arrow" href="https://testflight.apple.com/join/J8EuJmey">Ges Status for IOS</span>
             </a>
 
             <a href="#" class="get-link">
@@ -26,14 +26,14 @@
               <h4>Status for Android</h4>
               <p class="secondary-text">Status is a community of people all over the world connected by a set of</p>
               <p class="get-link-text--mobile">Get on Google Play</p>
-              <span class="link-arrow" href="#">Ges Status for Android</span>
+              <span class="link-arrow" href="https://play.google.com/store/apps/details?id=im.status.ethereum">Ges Status for Android</span>
             </a>
 
           </div>
           <div class="get-status-links-bottom">
             <a href="#" class="get-link">
               <p class="secondary-text">Status is also available for Desktop</p>
-              <span class="link-arrow" href="#">Ges Status for Desktop</span>
+              <span class="link-arrow" href="/desktop/">Ges Status for Desktop</span>
             </a>
           </div>
         </div>
