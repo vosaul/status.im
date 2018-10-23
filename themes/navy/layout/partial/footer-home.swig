@@ -5,7 +5,7 @@
                 <a href="https://status.im/get/" class="card-inner">
                     <div class="community-icon community-icon--join"></div>
                     <h4>Join the chat in Status</h4>
-                    <p class="secondary-text">Come and whisper sweet, encrypted nothings with us on a distributed network that ensures greater privacy for you.</p>
+                    <p class="secondary-text">Whisper sweet, encrypted nothings on a distributed network that ensures greater privacy.</p>
                 </a>
             </div>
             <div class="card">
@@ -19,7 +19,7 @@
                 <a href="https://github.com/status-im" class="card-inner">
                     <div class="community-icon community-icon--contribute"></div>
                     <h4>Contribute to our Repos</h4>
-                    <p class="secondary-text">Help us #buidl the future by getting involved in the most active code base in Ethereum</p>
+                    <p class="secondary-text">Help us #buidl the future by getting involved in the most active code base in Ethereum.</p>
                 </a>
             </div>
         </div>
