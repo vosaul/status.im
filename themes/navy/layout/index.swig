@@ -169,7 +169,7 @@
             <a href="https://nimbus.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Nimbus</h3>
-                    <p class="secondary-text">Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware</p>
+                    <p class="secondary-text">Nimbus is a research project and a client implementation for Ethereum 2.0. It's designed to perform on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware</p>
                 </div>
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>

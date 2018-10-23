@@ -2,24 +2,24 @@
     <div class="footer-inner">
         <div class="cards cards--three cards--three--even cards--community cards--community--dark">
             <div class="card">
-                <a href="#" class="card-inner">
+                <a href="https://status.im/get/" class="card-inner">
                     <div class="community-icon community-icon--join"></div>
                     <h4>Join the chat in Status</h4>
-                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                    <p class="secondary-text">Come and whisper sweet, encrypted nothings with us on a distributed network that ensures greater privacy for you.</p>
                 </a>
             </div>
             <div class="card">
-                <a href="#" class="card-inner">
+                <a href="https://discuss.status.im" class="card-inner">
                     <div class="community-icon community-icon--discussion"></div>
                     <h4>Join the Discussion</h4>
-                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                    <p class="secondary-text">Get involved with longer form discussions, workk in progress, and our research here.</p>
                 </a>
             </div>
             <div class="card">
-                <a href="#" class="card-inner">
+                <a href="https://github.com/status-im" class="card-inner">
                     <div class="community-icon community-icon--contribute"></div>
                     <h4>Contribute to our Repos</h4>
-                    <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
+                    <p class="secondary-text">Help us #buidl the future by getting involved in the most active code base in Ethereum</p>
                 </a>
             </div>
         </div>
