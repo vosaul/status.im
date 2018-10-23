@@ -1,7 +1,6 @@
 ---
 layout: build
 id: index
-partial: build
 title: Build Status Yourself
 ---
 

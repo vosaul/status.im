@@ -1,17 +1,18 @@
 <div class="page-intro wrapper">
-  <header class="article-header-about">
-    <div class="about-intro">
+  <header class="article-header">
+    <div class="intro">
       <h1>What's Your Status?</h1>
       <p>Learn more about our app, Ethereum, web3 and the decentralized future</p>
     </div>
-    <div class="about-screen">
+    <div class="screen">
         <img src="../img/get_screen.svg" />
     </div>
   </header>
 </div>
 <div id="content-wrap">
   <div id="content" class="wrapper">
-      <article class="article-container-about" itemscope itemtype="http://schema.org/Article">
+    <div class="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
@@ -34,5 +35,6 @@
           </div>
         </div>
       </article>
+      </div>
     </div>
 </div>

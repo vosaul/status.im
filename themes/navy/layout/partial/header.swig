@@ -2,7 +2,7 @@
     <div class="header-left">
         <a class="logo" href="/"></a>
         <ul class="main-nav">
-            <li><a href="/about/" class="">About</a></li>
+            <li><a href="/app/" class="">App</a></li>
             <li><a href="https://our.status.im/">Blog</a></li>
             <li><a href="/docs/">Docs</a></li>
             <li class="item--dropdown item--to-show"><a href="#" class="">Projects</a></li>
