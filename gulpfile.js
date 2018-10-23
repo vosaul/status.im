@@ -99,7 +99,7 @@ gulp.task('bundle', function() {
 
 
 gulp.task('sass', function() {
-    return gulp.src("./themes/navy/source/css/scss/main.scss")
+    return gulp.src("./themes/navy/source/scss/main.scss")
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest(config.paths.dist.css))
