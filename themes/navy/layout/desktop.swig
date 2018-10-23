@@ -2,7 +2,7 @@
   <header class="article-header-desktop">
      <div class="get-status-intro get-status-intro--desktop">
           <h2>Get Status for Desktop</h2>
-          <p>Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and ERC-20 tokens with Status Hardwallet</p>
+          <p>Because making Ethereum accessible from anywhere also means it should be easy to use from where you work.</p>
       </div>
 
       <div class="get-status-desktop">

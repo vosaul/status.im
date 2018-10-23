@@ -125,7 +125,7 @@
 <div class="home-wrap">
     <div class="section-header section-header--main">
         <h2 id="top-header">The Status Ecosystem</h2>
-        <p class="secondary-text">Our collective goal is the mass adoption of Ethereum. Status is a growing ecosystem of projects and projects fostering a rich distributed web.</p>
+        <p class="secondary-text">Status is more than an app - it's a community of people building all the tools and infrastructure we all need to secure a more distributed, private, and secure internet. Our collective goal is the mass adoption of Ethereum. Find out about all the different ways we're achieving that below...</p>
     </div>
 
     <div class="cards cards--projects cards--three">
