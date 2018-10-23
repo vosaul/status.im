@@ -5,7 +5,7 @@
                 <a href="https://status.im/get/" class="card-inner">
                     <div class="community-icon community-icon--join"></div>
                     <h4>Join the chat in Status</h4>
-                    <p class="secondary-text">Whisper sweet, encrypted nothings on a distributed network that ensures greater privacy.</p>
+                    <p class="secondary-text">Whisper sweet, encrypted nothings on a distributed network that no-one owns.</p>
                 </a>
             </div>
             <div class="card">
