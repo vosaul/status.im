@@ -11,6 +11,9 @@ var imagemin = require('gulp-imagemin')
 var gutil = require('gulp-util');
 var Hexo = require('hexo');
 var runSequence = require('run-sequence');
+var minify = require('gulp-minify');
+let cleanCSS = require('gulp-clean-css');
+var rename = require("gulp-rename");
 
 // generate html with 'hexo generate'
 var hexo = new Hexo(process.cwd(), {});
@@ -75,6 +78,21 @@ function bundle() {
         .pipe(browserSync.stream({ once: true }))
 }
 
+gulp.task('compress', ['sass'], function() {
+    gulp.src('./themes/navy/source/js/vendor.js')
+        .pipe(minify({
+            ext: {
+                min: '.min.js'
+            },
+        }))
+        .pipe(gulp.dest('./public/js/'))
+
+    gulp.src('./public/css/main.css')
+        .pipe(cleanCSS())
+        .pipe(rename("main.min.css"))
+        .pipe(gulp.dest('./public/css/'));
+});
+
 gulp.task('bundle', function() {
     return bundle()
 })
@@ -89,11 +107,11 @@ gulp.task('sass', function() {
 })
 
 gulp.task('watch', function() {
-    gulp.watch(config.paths.src.scss, ['sass'])
+    gulp.watch(config.paths.src.scss, ['compress'])
 });
 
 gulp.task('build', function(cb) {
-    runSequence('generate', 'sass', 'bundle', 'watch')
+    runSequence('generate', 'bundle', 'compress', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -101,7 +119,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('sass', 'bundle', 'generate', 'exit')
+    runSequence('bundle', 'compress', 'generate', 'exit')
     
 });
 
