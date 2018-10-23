@@ -2,7 +2,7 @@
     {{ partial('partial/header') }}
     <div class="intro">
         <h1>Access a Better Web, Anywhere</h1>
-        <p>Chat, browse and transact securely in an open source community committed to bringing the power of Ethereum and a more distibuted internet to your pocket.</p>
+        <p>Chat, browse and transact securely in an open source community committed to bringing the power of Ethereum and a more distributed internet to your pocket.</p>
         <div class="intro-buttons">
             <a class="button button-part button-get-ios" href="/get/">
                 <span class="button-icon button-icon--ios"></span>
