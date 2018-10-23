@@ -1,7 +1,6 @@
 ---
 layout: first_page
 title: Tutorials
-partial: first_page
 comments: false
 ---
 

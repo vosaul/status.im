@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-research">
-    <div class="research-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Research a Better Web</h1>
       <p>What we do when we don't know what we're doing...</p>
       <br/>

@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-extensions">
-    <div class="extensions-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Extend into a Better Web</h1>
       <p>Status Extensions will literally blow your mind</p>
       <br/>

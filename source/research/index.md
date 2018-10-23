@@ -1,7 +1,6 @@
 ---
 layout: research
 id: index
-partial: research
 title: Research at Status  
 ---
 

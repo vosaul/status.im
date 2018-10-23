@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-dev-tools">
-    <div class="dev-tools-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Tools for a Better Web</h1>
       <p>Become a master of distributed crafts with all our surprises for developers</p>
       <br/>

@@ -6,6 +6,9 @@
 
 @import "intro";
 @import "get-status-intro";
+@import "docs_header";
+@import "docs_page";
+@import "sidebar";
 
 @import "hero-image";
 @import "projects";
@@ -321,6 +324,17 @@ h5 {
   }
 
 
+}
+
+pre {
+  background-color: white;
+  padding: 0px;
+
+  code {
+    padding: 1em !important;
+    border-radius: 8px;
+    font-size: 1em;
+  } 
 }
 
 

@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-build">
-    <div class="build-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Build a Better Web</h1>
       <p>Begin your journey to a more secure and distributed internet here.</p>
       <br/>

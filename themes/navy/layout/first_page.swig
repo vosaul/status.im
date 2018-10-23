@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-first-page">
-    <div class="first-page-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Documenting a Better Web</h1>
       <p>Education is the most powerful gift.</p>
     </div>

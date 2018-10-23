@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-nightly">
-    <div class="nightly-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Get the latest web</h1>
       <p>You can download our nightly builds here. Beware of dragons!</p>
       <br/>

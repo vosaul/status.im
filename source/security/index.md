@@ -1,7 +1,6 @@
 ---
 layout: security
 id: index
-partial: security
 title: Security at Status
 ---
 

@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-security">
-    <div class="security-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Securing a Better Web</h1>
       <p>Self-reliance is critical in distributed systems. Learn how here.</p>
       <br/>

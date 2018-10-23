@@ -3,6 +3,7 @@
         <div class="cards cards--three cards--three--even cards--community cards--community--dark">
             <div class="card">
                 <a href="#" class="card-inner">
+                    <div class="community-icon community-icon--join"></div>
                     <h4>Join the chat in Status</h4>
                     <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
                 </a>
@@ -16,7 +17,7 @@
             </div>
             <div class="card">
                 <a href="#" class="card-inner">
-                    <div class="community-icon community-icon--contrubute"></div>
+                    <div class="community-icon community-icon--contribute"></div>
                     <h4>Contribute to our Repos</h4>
                     <p class="secondary-text">Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and</p>
                 </a>
@@ -25,7 +26,7 @@
         <ul class="footer-nav">
             <li><a href="#">Open Positions</a></li>
             <li><a href="#">Principles</a></li>
-            <li><a href="#">Something else</a></li>
+            <li><a href="#">Get Status</a></li>
         </ul>
         <div class="footer-logo-wrap">
             <div class="footer-logo-wrap__inner">

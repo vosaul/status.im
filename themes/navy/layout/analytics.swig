@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-analytics">
-    <div class="analytics-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
         <h1>Analysing a Better Web</h1>
         <p>A different approach to data, distributed netanalytics, and how we understand them</p>
         <p>

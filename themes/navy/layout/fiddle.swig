@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-fiddle">
-    <div class="fiddle-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Fiddle with Functional Components</h1>
       <p>Play with our tools and actually learn how to build a better web!</p>
       <br/>

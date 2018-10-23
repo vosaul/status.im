@@ -1,6 +1,6 @@
 <div class="page-intro wrapper">
-  <header class="article-header-wip">
-    <div class="wip-intro">
+  <header class="docs-header">
+    <div class="docs-intro">
       <h1>Work on a Better Web</h1>
       <p>Status has the fastest moving codebase of any project in Ethereum. Keep track of all we do here.</p>
       <br/>

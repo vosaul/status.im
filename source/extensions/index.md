@@ -1,8 +1,6 @@
 ---
 layout: extensions
 title: Extensions Manifesto
-data: extensions
-partial: extensions
 comments: false
 ---
 

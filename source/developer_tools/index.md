@@ -1,7 +1,6 @@
 ---
 layout: developer_tools
 title: DApp Developer Tools
-partial: developer_tools
 id: index
 ---
 # Developer Tools for the Future
