@@ -2,7 +2,7 @@
     {{ partial('partial/header') }}
     <div class="intro">
         <h1>Your portal to Ethereum</h1>
-        <p>Status is an open source community building tools for a more distributed internet.</p>
+        <p>Status is an open source community building a more distributed, secure internet.</p>
         <div class="intro-buttons">
             <a class="button button-part button-get-ios" href="/get/">
                 <span class="button-icon button-icon--ios"></span>
