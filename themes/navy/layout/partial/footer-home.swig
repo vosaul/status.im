@@ -24,9 +24,9 @@
             </div>
         </div>
         <ul class="footer-nav">
-            <li><a href="#">Open Positions</a></li>
-            <li><a href="#">Principles</a></li>
-            <li><a href="#">Get Status</a></li>
+            <li><a href="/contribute/open_positions.html">Open Positions</a></li>
+            <li><a href="/contribute/our_principles.html">Principles</a></li>
+            <li><a href="/get/">Get Status</a></li>
         </ul>
         <div class="footer-logo-wrap">
             <div class="footer-logo-wrap__inner">
