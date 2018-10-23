@@ -16,7 +16,7 @@
             <a href="#" class="get-link">
               <div class="get-link-icon get-link-icon--ios"></div>
               <h4>Status for IOS</h4>
-              <p class="secondary-text">Status is a community of people all over the world connected by a set of</p>
+              <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps.</p>
               <p class="get-link-text--mobile">Request Beta access</p>
               <span class="link-arrow" href="https://testflight.apple.com/join/J8EuJmey">Get Status for IOS</span>
             </a>
@@ -24,7 +24,7 @@
             <a href="#" class="get-link">
               <div class="get-link-icon get-link-icon--android"></div>
               <h4>Status for Android</h4>
-              <p class="secondary-text">Status is a community of people all over the world connected by a set of</p>
+              <p class="secondary-text">Do the same on Android, and access more features like our upcoming <a href="https://hardwallet.status.im/">hardwallet</a>.</p>
               <p class="get-link-text--mobile">Get on Google Play</p>
               <span class="link-arrow" href="https://play.google.com/store/apps/details?id=im.status.ethereum">Get Status for Android</span>
             </a>
@@ -33,7 +33,7 @@
           <div class="get-status-links-bottom">
             <a href="#" class="get-link">
               <p class="secondary-text">Status is also available for Desktop</p>
-              <span class="link-arrow" href="/desktop/">Ges Status for Desktop</span>
+              <span class="link-arrow" href="/desktop/">Get Status for Desktop</span>
             </a>
           </div>
         </div>
