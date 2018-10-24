@@ -7,7 +7,6 @@ title: Build Desktop
 
 You will need the following tools installed:
   - Leiningen (Clojure build tool, get it from https://leiningen.org)
-  - Clojure CLI tool `clj` https://clojure.org/guides/getting_started#_installation_on_mac_via_code_brew_code
   - Node.js v.8
   - CMake 3.1.0 or higher
   - Qt 5.11.2. You'll only need macOS and QtWebEngine components installed. 
@@ -50,17 +49,17 @@ npm update
 npm install -g
 ```
 
-## To setup dev builds of status-react for Desktop
+## To setup re-natal dev builds of status-react for Desktop
 
 1. Run the following commands:
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
-    make prepare-desktop
+    make dev-desktop
     ```
 1. In separate terminal tab: `npm start` (note: it starts react-native packager )
 1. In separate terminal tab: `node ./ubuntu-server.js`
-1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
+1. In separate terminal tab: `lein figwheel-repl desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
 
 ### Notes: ###
