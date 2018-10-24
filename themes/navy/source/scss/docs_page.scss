@@ -1,9 +1,5 @@
 #content-wrap {
 	background: $colorWhite;
-	max-width: 1400px;
-    width: 100%;
-	margin: 0 auto;
-	border-radius: 10px;
 }
     
 #content {
@@ -14,18 +10,19 @@
     display: flex;
     width: 100%;
     max-width: 1200px;
-    margin: 50px auto 0px;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (min-width: 820px) {
 	#content-inner-full {
 		margin-left: 0;
 	}
 }
 
-@media (max-width: 820px) {
+@media screen and (min-width: 820px) {
 	.article-container {
 		width: 100%;
+		float: right;
 	}
 }
 
@@ -33,9 +30,6 @@
 	float: left;
 	width: 100%;
 	margin-top: 24px;
-	background: #fff;
-    max-width: 1200px;
-    padding: 0 20px
 }
 
 @media print {
@@ -175,9 +169,6 @@ a.article-title:hover {
 
 .article-content {
 	color: $colorBlack;
-	float: left;
-	width: 100%;
-	margin-top: 24px;
 }
 
 @media print {
@@ -428,9 +419,5 @@ a.article-title:hover {
 
 .article-footer-link span {
 	padding: 0 6px;
-}
-
-.page-intro {
-	background: #eef2f5
 }
 
