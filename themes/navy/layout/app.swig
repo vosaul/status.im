@@ -2,7 +2,7 @@
   <header class="article-header-desktop">
      <div class="get-status-intro get-status-intro--desktop">
           <h2>What's Your Status?</h2>
-          <p>The internet is controlled by poweful corporations who do not always have our best interests at heart. We want to change that. Find out what it really means to chat, transact and browse securely on web3.</p>
+          <p>The internet is controlled by powerful corporations who do not always have our best interests at heart. We want to change that. Find out what it really means to express yourself securely on web3.</p>
       </div>
 
       <div class="get-status-info">
