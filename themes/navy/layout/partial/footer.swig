@@ -18,22 +18,22 @@
                 <div class="footer-table__column">
                   <p class="footer-header">More</p>
                   <ul class="footer-list">
-                    <li class="footer-link"><a href="https://docs.status.im" target="_blank">Status Docs</a></li>
+                    <li class="footer-link"><a href="/docs/" target="_blank">Status Docs</a></li>
                     <li class="footer-link"><a href="https://our.status.im/" target="_blank">Status Blog</a></li>
-                    <li class="footer-link"><a href="https://status.im/open-positions.html" target="_blank">Jobs</a></li>
+                    <li class="footer-link"><a href="/contribute/open-positions.html" target="_blank">Jobs</a></li>
                     <li class="footer-link"><a href="https://status.im/incubate" target="_blank">Incubate</a></li>
-                    <li class="footer-link"><a href="https://status.im/projects" target="_blank">Projects</a></li>
-                    <li class="footer-link"><a href="https://status.im/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+                    <li class="footer-link"><a href="#" target="_blank">Projects</a></li>
+                    <li class="footer-link"><a href="/privacy-policy.html" target="_blank">Privacy Policy</a></li>
                   </ul>
                 </div>
 
                 <div class="footer-table__column">
                   <p class="footer-header">Projects</p>
                   <ul class="footer-list">
-                    <li class="footer-link"><a href="https://docs.status.im" target="_blank">Embark</a></li>
-                    <li class="footer-link"><a href="https://our.status.im/" target="_blank">Incubate</a></li>
-                    <li class="footer-link"><a href="https://status.im/open-positions.html" target="_blank">Nimbus</a></li>
-                    <li class="footer-link"><a href="https://status.im/incubate" target="_blank">Studio</a></li>
+                    <li class="footer-link"><a href="https://embark.status.im" target="_blank">Embark</a></li>
+                    <li class="footer-link"><a href="https://status.im/incubate" target="_blank">Incubate</a></li>
+                    <li class="footer-link"><a href="https://nimbus.status.im/" target="_blank">Nimbus</a></li>
+                    <li class="footer-link"><a href="https://studio.status.im/" target="_blank">Studio</a></li>
                   </ul>
                 </div>
 

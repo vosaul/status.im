@@ -1,6 +1,10 @@
 #content-wrap {
 	background: $colorWhite;
 }
+
+#content-wrap-privacy {
+	background: #eef2f5;
+}
     
 #content {
 	position: relative;
@@ -23,6 +27,15 @@
 	.article-container {
 		width: 100%;
 		float: right;
+	}
+
+	.article-container-privacy {
+		width: 100%;
+		float: right;
+		margin-top: -80px;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 4px rgba(43,59,71,.124066);
 	}
 }
 
