@@ -33,7 +33,7 @@ OS-specific notes:
   - If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
   - Note that building on macOS Mojave requires Qt 5.11.2, lower versions will not work.
 
-Qt 5.9.1 for Linux is available here: https://download.qt.io/archive/qt/5.9/5.9.1/qt-opensource-linux-x64-5.9.1.run
+Qt 5.11.2 for Linux is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
 ## Caveats
 
