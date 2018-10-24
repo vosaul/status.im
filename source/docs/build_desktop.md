@@ -100,15 +100,31 @@ Running `lein figwheel-repl desktop` will run a REPL on port 7888 by default. So
 
 ### emacs-cider
 
-In order to get REPL working, put the following config in `.dir-locals.el` :
+In order to get REPL working, use the below elisp code:
 
-``` elisp
-((nil . ((cider-cljs-repl-types . ((figwheel-repl "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))"
-                                                  cider-check-figwheel-requirements)))
-         (cider-default-cljs-repl . figwheel-repl))))
+``` clojure
+(defun custom-cider-jack-in ()
+  (interactive)
+  (let ((status-desktop-params "with-profile +figwheel repl"))
+    (set-variable 'cider-lein-parameters status-desktop-params)
+    (message "setting 'cider-lein-parameters")
+    (cider-jack-in '())))
+
+(defun start-figwheel-cljs-repl ()
+  (interactive)
+  (set-buffer "*cider-repl status-react*")
+  (goto-char (point-max))
+  (insert "(do (use 'figwheel-api)
+           (start [:desktop])
+           (start-cljs-repl))")
+  (cider-repl-return))
 ```
 
-Then connect to the repl with `cider-connect-cljs` (default is localhost on port 7888)
+`custom-cider-jack-in` sets the correct profile for leiningen, and can be run as soon as emacs is open.
+run `start-figwheel-cljs-repl` once you already have a cider repl session from the jack-in
+
+Note: on my setup I had to rename the repl buffer with `rename-buffer` to "*cider-repl status-react*", then
+rename it again after running `start-figwheel-cljs-repl`.
 
 ### vim-fireplace
 
