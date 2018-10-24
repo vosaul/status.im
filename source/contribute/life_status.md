@@ -107,20 +107,6 @@ If you see a project or initiative you’d like to get involved in, drop into th
 
 We encourage you to ask for feedback from other contributors you work with on an ongoing basis, so you can sense check if the work you’re doing is impactful.
 
-
-**Communication**
-Currently, our primary ways of communicating and collaborating are [Status Desktop](https://status-im.github.io/nightly/), Slack (instant messaging, short form discussion), and [Discuss](https://discuss.status.im/) (long-form, more permanent topics for referencing). We’re mid-way through transitioning to Status Desktop as our sole IM client.
-
-Blogging is a way to bring the wider community on the journey with us, and share our unfiltered thoughts, musings, and updates. Everyone is free to blog at our.status.im, and there are no editorial guidelines. 
-
-
-Our bi-weekly [Town Halls](https://our.status.im/tag/town-hall/) are a place where rotating teams will give updates on their work, and Q&A is invited from anyone. You can join in via Zoom, or follow the broadcast via Youtube. We also host regular [Dev Calls](https://our.status.im/status-core-devs-call-2018/), as well as Tech Talks -mini, open source learning sessions organised and hosted by Status core contributors, happening every Friday. 
-
-# And we also meet in person....
-Our annual all-team get together is when we all meet and hang out in person; all core contributors are invited. You can find more info on [this year’s event here](https://our.status.im/prague-all-team-get-together/), Core Contributors expect to travel at least 1-2 weeks in a year for team and all-Status meetups.
-
-Beyond scheduled and more formal meetings, we love catching up with one another, and frequently you might see people coworking or meeting for coffee if passing through the same town.
-
 **Common worries**
 We see people struggling with these so often, we thought they deserved their own heading. In no particular order, here are some of the most common concerns we hear from Status core contributors:
 
