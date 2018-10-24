@@ -149,7 +149,9 @@ One of the best ways to install any older version of Node.js is to use `nvm`.
 Some developers are experiencing errors compiling for iOS on Xcode 10 on MacOs Mojave:
 
 ```
-error: Build input file cannot be found: 'status-react/node_modules/react-native/third-party/double-conversion-1.1.6/src/cached-powers.cc'
+error: Build input file cannot be found:  
+
+'status-react/node_modules/react-native/third-party/double-conversion-1.1.6/src/cached-powers.cc'
 ```
 
 To fix similar errors run the following commands:
