@@ -71,7 +71,11 @@ in order to run both release and dev versions of Status Desktop, please specify 
 
 ```bash
 export REACT_SERVER_PORT=5001
+```
+
 for complete cleanup of generated files and Realm data, issue:
+
+```bash
 git clean -fdx
 rm -rf desktop/modules
 ```
