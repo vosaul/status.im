@@ -1,40 +1,66 @@
 <div class="page-intro wrapper">
-  <header class="article-header">
-    <div class="intro">
-      <h1>What's Your Status?</h1>
-      <p>Learn more about our app, Ethereum, web3 and the decentralized future</p>
-    </div>
-    <div class="screen">
-        <img src="../img/get_screen.svg" />
-    </div>
+  <header class="article-header-desktop">
+     <div class="get-status-intro get-status-intro--desktop">
+          <h2>What's Your Status?</h2>
+          <p>The internet is controlled by poweful corporations who do not always have our best interests at heart. We want to change that. Find out what it really means to chat, transact and browse securely on web3.</p>
+      </div>
+
+      <div class="get-status-info">
+
+        <div class="get-status-phones">
+          <div class="phone-wrap">
+            <div class="phone-inner"></div>
+          </div>
+          <div class="phone-wrap">
+            <div class="phone-inner"></div>
+          </div>
+        </div>
+
+        <div class="get-status-links">
+          <div class="get-status-links-top">
+            <a href="#" class="get-link">
+              <div class="get-link-icon get-link-icon--ios"></div>
+              <h4>Status for IOS</h4>
+              <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps.</p>
+              <p class="get-link-text--mobile">Request Beta access</p>
+              <span class="link-arrow" href="https://testflight.apple.com/join/J8EuJmey">Get Status for IOS</span>
+            </a>
+
+            <a href="#" class="get-link">
+              <div class="get-link-icon get-link-icon--android"></div>
+              <h4>Status for Android</h4>
+              <p class="secondary-text">Do the same on Android, and access more features like our upcoming hardwallet.</p>
+              <p class="get-link-text--mobile">Get on Google Play</p>
+              <span class="link-arrow" href="https://play.google.com/store/apps/details?id=im.status.ethereum">Get Status for Android</span>
+            </a>
+
+          </div>
+          <div class="get-status-links-bottom">
+            <a href="#" class="get-link">
+              <p class="secondary-text">Status is also available for Desktop</p>
+              <span class="link-arrow" href="/desktop/">Get Status for Desktop</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
   </header>
 </div>
 <div id="content-wrap">
   <div id="content" class="wrapper">
-    <div class="content-inner">
+    <div id="content-inner">
       <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <div class="article-content" itemprop="articleBody">
-                <div class="about-content">
-                    <h2>What We Value</h2>
-                    <p>A full discussion of our principles can be found here. Successful core contributors passionately embrace them as the foundation for having impact in how they work. We are looking for applicants who:</p>
-                    <h2>Subtitle</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum 
-                    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam 
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </div>
+                <h1>The Journey to a Better Web Begins Here</h1>
+                <p>Jonny to blow minds.</p>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
-              </footer>
             </div>
           </div>
         </div>
       </article>
-      </div>
     </div>
+  </div>
 </div>
