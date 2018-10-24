@@ -16,8 +16,8 @@ ln -s /usr/local/Cellar/qt/5.9.1/mkspecs /usr/local/mkspecs && ln -s /usr/local/
 If Qt is installed from brew package Qt libraries have rpaths which are not correctly processed by `macdeployqt` tool. To overcome `macdeploy` issues during Mac OS .app bundle creation, it's possible to run `macdeployqtfix.py` tool after `macdeployqt` finishes the work:
 
 ```
-sh ('macdeployqt ' + packageFolder + '/Status.app -always-overwrite -verbose=1 -qmldir="' + scriptPath + '/node_modules/react-native/ReactQt/application/src/" -qmldir="' + scriptPath + '/node_modules/react-native/ReactQt/runtime/src/qml/"')
-sh ('python /Users/administrator/macdeployqtfix/macdeployqtfix/macdeployqtfix.py ' + packageFolder + '/Status.app/Contents/MacOs/Status /usr/local/Cellar/qt/5.9.1')
+sh ('macdeployqt ' + packageFolder + '/StatusIm.app -always-overwrite -verbose=1 -qmldir="' + scriptPath + '/node_modules/react-native/ReactQt/application/src/" -qmldir="' + scriptPath + '/node_modules/react-native/ReactQt/runtime/src/qml/"')
+sh ('python /Users/administrator/macdeployqtfix/macdeployqtfix/macdeployqtfix.py ' + packageFolder + '/StatusIm.app/Contents/MacOs/StatusIm /usr/local/Cellar/qt/5.9.1')
 
 ```
 
