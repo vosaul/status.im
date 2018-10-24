@@ -85,8 +85,8 @@ To completely clean up data from previous development sessions, such as accounts
 killall ubuntu-server
 
 # Then remove data and cache folders
-rm -rf ~/.local/share/StatusIm \
-       ~/.cache/StatusIm \
+rm -rf ~/.local/share/Status \
+       ~/.cache/Status \
        $STATUS_REACT_HOME/status-react/default.realm*
 ```
 
