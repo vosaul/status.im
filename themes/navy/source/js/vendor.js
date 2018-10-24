@@ -4,7 +4,8 @@
 // let d3 = require("d3")
 
 $(document).ready(function () {
-  let url = 'https://our.status.im/ghost/api/v0.1/posts/?order=published_at%20desc&limit=3&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba';
+  var months = { '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr', '05': 'May', '06': 'Jun', '07': 'Jul', '08': 'Aug', '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec' };
+  let url = 'https://our.status.im/ghost/api/v0.1/posts/?order=published_at%20desc&limit=2&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba';
   var urlBase = [location.protocol, '//', location.host, location.pathname].join('');
 
   $.ajax({
@@ -19,15 +20,12 @@ $(document).ready(function () {
         } else {
           excerpt = getWords(val.plaintext);
         }
+        var newDate = new Date(val.published_at);
+        console.log(newDate);
         $('.latest-posts').prepend(' \
-        <div class="info-item"> \
-            <div class="info-item-content"> \
-                <h4><a href="https://our.status.im/' + val.slug + '">' + val.title + '</a></h3> \
-                <p class="secondary-text">' + excerpt + '</p> \
-            </div> \
-            <div class="info-item-link"> \
-                <a href="https://our.status.im/' + val.slug + '" class="link-arrow">Read more </a>  \
-            </div> \
+        <div class="post"> \
+          <time>' + newDate.getDate() + ' ' + months[newDate.getMonth() + 1] + ' at ' + newDate.getHours() + ':' + newDate.getMinutes() + '</time> \
+          <h4><a href="https://our.status.im/' + val.slug + '">' + val.title + '</a></h3> \
         </div> \
         ');
       });

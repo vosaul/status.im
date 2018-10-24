@@ -114,8 +114,7 @@
         <div class="info-item">
             <div class="info-item-content">
                 <h5>LATEST NEWS</h5>
-                <h4>Join the #CryptoLife hackathon</h4>
-                <p class="secondary-text">Book you ticket for Devcon a weekend early and join us from the 26th - 28th October in Prague to #build the distributed future!</p>
+                <div class="latest-posts"></div>
             </div>
             <div class="info-item-link"><a href="https://our.status.im/" class="link-arrow">Read the blog</a></div>
         </div>
@@ -183,13 +182,6 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-    </div>
-    <div class="info">
-        <div class="section-header section-header--main latest-posts-header">
-            <h2 id="top-header">Read our Blog</h2>
-            <p class="secondary-text">Check out our latest news and blog posts.</p>
-        </div>
-        <div class="info__inner latest-posts"></div>
     </div>
 </div>
 
