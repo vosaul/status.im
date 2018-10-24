@@ -72,6 +72,17 @@ npm install -g
 1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
 
+### Notes
+
+in order to run both release and dev versions of Status Desktop, please specify a value for `REACT_SERVER_PORT` environment variable that will be different from default 5000. E.g.:
+
+```bash
+export REACT_SERVER_PORT=5001
+for complete cleanup of generated files and Realm data, issue:
+git clean -fdx
+rm -rf desktop/modules
+```
+
 ## Clean up data
 
 To completely clean up data from previous development sessions, such as accounts, you need to do the following:
