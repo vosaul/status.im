@@ -25,12 +25,6 @@
     <div id="content-inner-get">
       <article class="article-container-get" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
-          <div class="article">
-            <div class="inner">
-              <div class="article-content" itemprop="articleBody">
-              </div>
-            </div>
-          </div>
         </div>
       </article>
     </div>
