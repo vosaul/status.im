@@ -12,15 +12,10 @@ You will need the following tools installed:
   - Node.js v.8
   - CMake 3.1.0 or higher
   - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
-  ```
-  Linux:
-sudo apt install extra-cmake-modules libgnome-keyring0
-
-MacOS:
-brew install kde-mac/kde/kf5-extra-cmake-modules
-  ```
+    - Linux: `sudo apt install extra-cmake-modules libgnome-keyring0`
+    - MacOS: `brew install kde-mac/kde/kf5-extra-cmake-modules`
   - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
-
+    - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
 ## Qt setup
 
@@ -29,8 +24,6 @@ Set Qt's environment variables:
   - add qmake to PATH via 
     - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
     - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
-
-Qt 5.11.2 for Linux is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
 ## Caveats
 
@@ -71,6 +64,21 @@ npm install -g
 1. In separate terminal tab: `node ./ubuntu-server.js`
 1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
+
+### Notes
+
+in order to run both release and dev versions of Status Desktop, please specify a value for `REACT_SERVER_PORT` environment variable that will be different from default 5000. E.g.:
+
+```bash
+export REACT_SERVER_PORT=5001
+```
+
+for complete cleanup of generated files and Realm data, issue:
+
+```bash
+git clean -fdx
+rm -rf desktop/modules
+```
 
 ## Clean up data
 

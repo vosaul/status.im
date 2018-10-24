@@ -15,3 +15,5 @@ title: Frequently Asked Questions When Joining Status
 **Will I be an employee?** It depends on the work you do, and the primary location you're based in. In some locations (Switzerland and Germany) we do have employees, whereas in most other circumstances we'll set up a contract agreement with you for the services you provide. 
 
 **Will I be paid in cryptocurrency?** Our success depends on mainstream adoption of blockchain technology and cryptocurrency so where possible, we'd like to pay our contributors in crypto. At the same time we recognise there are still legal and administrative challenges to be overcome, so we can pay in fiat also. Right now, all we ask is that everyone accepts at least part of their salary in crypto. 
+
+Still have a question? Reach us: talent@status.im OR in the #talent Channel on the Status app. 

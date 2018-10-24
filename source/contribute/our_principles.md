@@ -26,3 +26,5 @@ For each function and project, putting our values in practice directs the decisi
 We have made a deliberate decision to eschew costly perks and benefits in favour of competitive base remuneration to give each contributor the economic freedom to allocate their finances in a way that best fits their circumstances.*
 
 You can read more about the principles [on our blog here](https://our.status.im/our-principles/). You can also listen in to our principles discussions [on YouTube](https://www.youtube.com/watch?v=18HwQkLWqL4&list=PLbrz7IuP1hriACSQ7furdCUFkcSAJ68F4).  If you believe in what we do and in how we do it, we’d love to hear from you. 
+
+If these principles resonate with you, then [APPLY NOW to contribute](https://status.im/open-positions.html).
