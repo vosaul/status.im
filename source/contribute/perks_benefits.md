@@ -22,6 +22,6 @@ title: Perks & Benefits
 
 **Travel**
  - Each contributor has a budget to attend conferences and meetups of their choice. 
- - Twice per year the whole organisation gets together to connect (Bangkok and Prague in 2018). 
+ - Twice per year the whole organisation gets together to connect (in 2018, we visited Bangkok and Prague). 
 
 **Note:** We don't offer traditional benefits like medical/dental insurance - we'd rather pay you well and give you the freedom to select your own benefits, on your terms.
