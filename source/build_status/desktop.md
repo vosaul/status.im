@@ -18,7 +18,7 @@ sudo apt install extra-cmake-modules libgnome-keyring0
 MacOS:
 brew install kde-mac/kde/kf5-extra-cmake-modules
   ```
-  - Qt 5.9.1 or higher. You'll only need macOS and QtWebEngine components installed. 
+  - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
 
 
 ## Qt setup
@@ -28,10 +28,6 @@ Set Qt's environment variables:
   - add qmake to PATH via 
     - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
     - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
-
-OS-specific notes:
-  - If building on Ubuntu newer than 16.10, then Qt 5.10.1 is recommended (although not fully tested).
-  - Note that building on macOS Mojave requires Qt 5.11.2, lower versions will not work.
 
 Qt 5.11.2 for Linux is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
@@ -68,10 +64,11 @@ npm install -g
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
+    make prepare-desktop
     ```
 1. In separate terminal tab: `npm start` (note: it starts react-native packager )
 1. In separate terminal tab: `node ./ubuntu-server.js`
-1. In separate terminal tab: `clj -m clj-rn.main watch --platform desktop` (note: wait until sources are compiled)
+1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
 
 ## Clean up data
@@ -96,7 +93,7 @@ Go to `~/Library/Application Support/` and delete any Status directories. Delete
 
 ## Editor setup
 
-Running `clj -m clj-rn.main watch --platform desktop` will run a REPL on port 7888 by default. Some additional steps might be needed to connect to it.
+Running `make watch-desktop` will run a REPL on port 7888 by default. Some additional steps might be needed to connect to it.
 
 ### emacs-cider
 
