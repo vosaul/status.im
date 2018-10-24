@@ -5,7 +5,7 @@ title: Running Status Node
 
 Status Node is an Ethereum client usually running on a server supporting the Status app. As we operate in a decentralized model, we need some peers scattered around the globe to provide a reliable service.
 
-Status Node can run as a Whisper node (providing only Whisper protocol) or a Whisper node with permanent message storage (Mail Server) capability.
+Status Node can be run in such a way that it supports only Whisper messages (ie. it helps propagate them), or as a permanent message store (Mail Server).
 
 ## Requirements
 
@@ -13,27 +13,27 @@ Linux or macOS is required.
 
 ### Status Node With Whisper Only
 
-You can run Status Node on your laptop or PC. It does need high uptime to join the network. Actually, Status Node works just fine on mobile devices in our mobile app.
+You can run Status Node on your laptop or PC. It does need high uptime to join the network. Status Node also works just fine on mobile devices in our app, though it consumes a lot of bandwidth.
 
 ### Status Node With Mail Server
 
-The additional requirement for Status Nodes with Mail Server capability enabled is a disk storage. The current data volume collected by a Mail Server within a month is around 600 MB.
+The additional requirement for Status Nodes with Mail Server capability enabled is disk storage. The current data volume collected by a Mail Server within a month is around 600 MB.
 
 ### Cloud Providers
 
 Mail Servers need high uptime to collect as many envelopes as possible for later retrieval.
 
-A single server with 1GB of RAM and 1 vCPU should be enough to run Status Node.
+A single server with 1GB of RAM and 1 vCPU should be enough to run Status Node reliably.
 
-## Why To Run Status Node?
+## Why Run Status Node?
 
-Currently, we don't provide any incentivizations for running Status Nodes. We are working hard to solve this problem. Our intent is to increase the size of the Whisper network, hence improve decentralization and safety of our platform.
+Currently, we don't provide any incentives for running Status Nodes. We are working hard to solve this problem. Our intent is to increase the size of the Whisper network, thereby improving how "decentralized" and safe our platform is.
 
-Another reason is privacy. In the current setup, nodes with Mail Server capability are trusted. That means that such a node can communicate directly with the Status app using p2p connection and some metadata might leak. If one wants to avoid that, the best option is to run a Mail Server on your own and configure it in the Status app.
+Another reason is privacy. In the current setup, nodes that are running as Mail Servers are `trusted`. This means that such a node can communicate directly with the Status app using a p2p connection and some metadata might leak. If one wants to avoid that, the best option is to run a Mail Server on your own and configure it in the Status app.
 
 ## How To Run It
 
-First, visit [Build status-go](https://docs.status.im/docs/build_status_go.html) in order to compile a binary.
+First, visit [build status-go](/build/status_go.html) in order to compile a binary.
 
 When you get it, open a Terminal window and run
 ```bash
@@ -44,9 +44,9 @@ to learn more about available options.
 ```bash
 $ ./build/bin/statusd
 ```
-will run a regular Whisper node that joins Status production network.
+This will run a regular Whisper node that joins Status production network.
 
-If you need more control, you need to provide a JSON file with a custom configuration. The provided file will override default options.
+If you need more control, you will need to provide a JSON file with a custom configuration. The provided file will override any default options.
 
 For example, if you'd like to expose HTTP and IPC interfaces, you need to create a JSON file:
 
@@ -58,7 +58,7 @@ For example, if you'd like to expose HTTP and IPC interfaces, you need to create
 }
 ```
 
-and the run
+and then run
 
 ```bash
 $ ./build/bin/statusd -c ./development.json
