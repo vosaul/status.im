@@ -8,6 +8,8 @@ title: Frequently Asked Questions When Joining Status
 
 **Do you have any offices?** No - we're an entirely remote organization. That means you're free to work from wherever you like. We have regular meetings together, and find that our contributors tend to self-organise and get together in groups. If this is your first time working remotely we have a range of helpful tips and hints on how to make the transition to location freedom! 
 
+**How do people at Status communicate?** We use Status (Mobile & Desktop versions) as our messaging platform, and our [Discuss platform](https://discuss.status.im/) for more long form communication. We have phone/video calls every day, and we stream lots of our bigger meetings live for anyone to watch. 
+
 **Is Status a company, an organization or a non-profit?** Whilst we do have a legal entitity we prefer to think of ourselves  a networked group of individuals working towards a common aim. Eventually we have aspirations to be a Decentralized Autonomous Organization (DAO). 
 
 **Will I have a manager?** No, there's no hierarchy here. You'll get a buddy assigned to you to help you navigate the first few months, and our People Operations team will also be there to look after you. You'll likely work within a small team where your priorities will be decided by consensus. 
