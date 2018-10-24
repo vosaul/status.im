@@ -21,10 +21,14 @@ $(document).ready(function () {
           excerpt = getWords(val.plaintext);
         }
         var newDate = new Date(val.published_at);
-        console.log(newDate);
+        var minutes = newDate.getMinutes();
+        minutes = minutes + "";
+        if (minutes.length == 1) {
+          minutes = '0' + minutes;
+        }
         $('.latest-posts').prepend(' \
         <div class="post"> \
-          <time>' + newDate.getDate() + ' ' + months[newDate.getMonth() + 1] + ' at ' + newDate.getHours() + ':' + newDate.getMinutes() + '</time> \
+          <time>' + newDate.getDate() + ' ' + months[newDate.getMonth() + 1] + ' at ' + newDate.getHours() + ':' + minutes + '</time> \
           <h4><a href="https://our.status.im/' + val.slug + '">' + val.title + '</a></h3> \
         </div> \
         ');
