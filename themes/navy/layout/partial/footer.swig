@@ -21,8 +21,6 @@
                     <li class="footer-link"><a href="/docs/" target="_blank">Status Docs</a></li>
                     <li class="footer-link"><a href="https://our.status.im/" target="_blank">Status Blog</a></li>
                     <li class="footer-link"><a href="/contribute/" target="_blank">Jobs</a></li>
-                    <li class="footer-link"><a href="https://status.im/incubate" target="_blank">Incubate</a></li>
-                    <li class="footer-link"><a href="#" target="_blank">Projects</a></li>
                     <li class="footer-link"><a href="/privacy-policy.html" target="_blank">Privacy Policy</a></li>
                   </ul>
                 </div>
