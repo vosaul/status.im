@@ -8,6 +8,7 @@ title: Build Desktop
 ## Prerequisites
 
 You will need the following tools installed:
+  - Clojure CLI tool `clj` https://clojure.org/guides/getting_started#_installation_on_mac_via_code_brew_code
   - Node.js v.8
   - CMake 3.1.0 or higher
   - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
@@ -58,7 +59,7 @@ npm update
 npm install -g
 ```
 
-## To setup re-natal dev builds of status-react for Desktop
+## To setup dev builds of status-react for Desktop
 
 1. Run the following commands:
     ``` bash
