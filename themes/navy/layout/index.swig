@@ -4,11 +4,11 @@
         <h1>Access a Better Web, Anywhere</h1>
         <p>Chat, browse and transact securely in an open source community committed to bringing the power of Ethereum and a more distributed internet to your pocket.</p>
         <div class="intro-buttons">
-            <a class="button button-part button-get-ios" href="/get/">
+            <a class="button button-part button-get-ios" href="https://testflight.apple.com/join/J8EuJmey">
                 <span class="button-icon button-icon--ios"></span>
                 GET STATUS FOR IPHONE
             </a>
-            <a class="button button-part button-get-android" href="/get/">
+            <a class="button button-part button-get-android" href="https://play.google.com/store/apps/details?id=im.status.ethereum">
                 <span class="button-icon button-icon--android"></span>
                 GET STATUS FOR ANDROID
             </a>
@@ -129,7 +129,7 @@
 
     <div class="cards cards--projects cards--three">
         <div class="card card--app">
-            <a href="/docs/" class="card-inner">
+            <a href="/get/" class="card-inner">
                 <div class="card-content">
                     <h3>App</h3>
                     <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps. Test the mobile beta or get started with the desktop alpha.</p>
