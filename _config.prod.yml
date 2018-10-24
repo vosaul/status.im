@@ -24,10 +24,6 @@ deploy:
 theme_config:
     favicon: img/logo-32.png
 
-highlight:
-  enable: true
-  line_number: false
-
 disqus_shortname: hexojs
 twitter: ethstatus
 github: staus-im
