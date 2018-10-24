@@ -36,7 +36,7 @@ gulp.task('generate', function(cb) {
 var config = {
     paths: {
         src: {
-            scss: './themes/navy/source/css/scss/*.scss',
+            scss: './themes/navy/source/scss/*.scss',
             js: './themes/navy/source/js/main.js',
         },
         dist: {

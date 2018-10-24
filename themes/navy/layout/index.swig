@@ -184,6 +184,13 @@
             </a>
         </div>
     </div>
+    <div class="info">
+        <div class="section-header section-header--main latest-posts-header">
+            <h2 id="top-header">Read our Blog</h2>
+            <p class="secondary-text">Check out our latest news and blog posts.</p>
+        </div>
+        <div class="info__inner latest-posts"></div>
+    </div>
 </div>
 
     

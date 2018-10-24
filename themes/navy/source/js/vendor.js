@@ -3,6 +3,42 @@
 // let animateScroll = require("./lib/animatescroll.js")
 // let d3 = require("d3")
 
+$(document).ready(function () {
+  let url = 'https://our.status.im/ghost/api/v0.1/posts/?order=published_at%20desc&limit=3&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba';
+  var urlBase = [location.protocol, '//', location.host, location.pathname].join('');
+
+  $.ajax({
+    type: "get",
+    url: url,
+    success: function (response) {
+      response.posts = response.posts.reverse();
+      $.each(response.posts, function (index, val) {
+        var excerpt = '';
+        if (val.custom_excerpt != null) {
+          excerpt = val.custom_excerpt;
+        } else {
+          excerpt = getWords(val.plaintext);
+        }
+        $('.latest-posts').prepend(' \
+        <div class="info-item"> \
+            <div class="info-item-content"> \
+                <h4><a href="https://our.status.im/' + val.slug + '">' + val.title + '</a></h3> \
+                <p class="secondary-text">' + excerpt + '</p> \
+            </div> \
+            <div class="info-item-link"> \
+                <a href="https://our.status.im/' + val.slug + '" class="link-arrow">Read more </a>  \
+            </div> \
+        </div> \
+        ');
+      });
+    }
+  });
+
+  function getWords(str) {
+    return str.split(/\s+/).slice(0, 25).join(" ");
+  }
+});
+
 let heroImage = document.querySelectorAll(".hero-image")[0];
 
 if (heroImage) {

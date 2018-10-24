@@ -13,7 +13,12 @@
   },
   "dependencies": {
     "cheerio": "^0.20.0",
+    "d3": "^5.1.0",
+    "d3-ease": "^1.0.2",
+    "d3-interpolate": "^1.1.2",
+    "d3-scale": "^1.0.4",
     "es6-promise": "^4.2.5",
+    "gulp": "^3.9.1",
     "hexo": "^3.7.1",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
@@ -25,17 +30,12 @@
     "hexo-server": "^0.2.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.5.1",
-    "lunr": "^2.1.2",
-    "d3": "^5.1.0",
-    "d3-ease": "^1.0.2",
-    "d3-interpolate": "^1.1.2",
-    "d3-scale": "^1.0.4",
-    "gulp": "^3.9.1",
     "lodash.assign": "^4.2.0",
     "lodash.clone": "^4.0.1",
     "lodash.foreach": "^4.0.0",
     "lodash.isempty": "^4.0.0",
-    "lodash.isequal": "^4.0.0"
+    "lodash.isequal": "^4.0.0",
+    "lunr": "^2.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
