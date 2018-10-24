@@ -136,6 +136,34 @@ function closeActivePopup() {
   activePopup = null;
 }
 
+/* Code highlighting */
+
+function highlight() {
+  $('pre code').each(function (i, block) {
+    hljs.highlightBlock(block);
+  });
+}
+$(document).ready(function () {
+  try {
+    highlight();
+  } catch (err) {
+    console.log("retrying...");
+    setTimeout(function () {
+      highlight();
+    }, 2500);
+  }
+
+  var clipboard = new ClipboardJS(".btn");
+  clipboard.on('success', function (e) {
+    var id = $(e.trigger).attr("data-clipboard-target");
+    $(id).toggleClass("flash");
+    setTimeout(function () {
+      $(id).toggleClass("flash");
+    }, 200);
+    e.clearSelection();
+  });
+});
+
 /* Mobile Nav */
 
 let moreLink = document.querySelectorAll(".item--more")[0];
