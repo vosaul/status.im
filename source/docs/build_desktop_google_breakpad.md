@@ -15,19 +15,19 @@ After crash occurs and intercepted by breakpad it creates `minidump` file with u
 
 1. Original breakpad repository should be checked out on dev machine and built locally. ( https://github.com/google/breakpad#getting-started-from-master )
 
-2. Use `dump_syms` tool to generate symbols file from StatusIm binary file submitted by user:
+2. Use `dump_syms` tool to generate symbols file from `Status` binary file submitted by user:
 
-`$google-breakpad/src/tools/linux/dump_syms/dump_syms ./StatusIm > StatusIm.sym`  
-`$head -n1 StatusIm.sym`
+`$google-breakpad/src/tools/linux/dump_syms/dump_syms ./Status > Status.sym`  
+`$head -n1 Status.sym`
 
 Above command output may looks something like:
 
-`MODULE Linux x86_64 6EDC6ACDB282125843FD59DA9C81BD830 StatusIm`
+`MODULE Linux x86_64 6EDC6ACDB282125843FD59DA9C81BD830 Status`
 
 To structure symbols file correctly you can do following next:
 
-`$mkdir -p ./symbols/StatusIm/6EDC6ACDB282125843FD59DA9C81BD830`  
-`$mv StatusIm.sym ./symbols/StatusIm/6EDC6ACDB282125843FD59DA9C81BD830`
+`$mkdir -p ./symbols/Status/6EDC6ACDB282125843FD59DA9C81BD830`  
+`$mv Status.sym ./symbols/Status/6EDC6ACDB282125843FD59DA9C81BD830`
 
 3. Generate readable stack trace pointing to the place with crash by running `minidump_stackwalk` tool on minidump file submitted by user with passing the path to previously generated symbol files:
 
