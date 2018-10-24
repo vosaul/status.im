@@ -13,11 +13,11 @@ There's no set approach that we have to interviewing - it always depends on you,
 
 There are a variety of ways that we use to get to know you:
 
+**Introductory period:** If you're interested, we can offer variety of paid part time or project based work to complete. If this goes, well and it works for you, we could offer to make that full time. 
+
 **Interviews**: Interviews are normally conducted over Google Hangouts or Skype, but we also do text-based interviews over messengers as well as more traditional phone interviews. Occasionally, when our worlds collide, we'll also try to meet you in person. Typically, you could expect to meet 3 -5 members of the organisation. 
 
 **Work samples:** If you're a designer: we may ask to complete a design challenge. If you're an engineer: we may ask you to complete one of our bounties, or submit some work on github for review.
-
-**Introductory period:** If you're interested, we can also offer variety of paid part time or project based work to complete. If this goes, well and it works for you, we could offer to make that full time.
 
 Typically, we use a mix of methods to determine whether we think you should join Status. But we're flexible - if there's a particular method you think would work, please let us know.
 
