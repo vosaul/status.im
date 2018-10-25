@@ -22,9 +22,9 @@ We spent several weeks and months, to collectively compile a list of what's impo
 
 Importantly, we try and actually practice the relevant principles in each individual team or part of our community. For example, our [People Team](https://people-ops.status.im/applying-our-principles-to-people-ops/) supports **Liberty** by:
 
-*... working to enable a culture of free and asynchronous work. We support autonomy and ownership of projects, and empower contributors to make their own judgment calls. We will invest in continuous learning, and offer a variety of compensation models to ensure flexibility for contributors and encourage as many people to get involved in whichever ways suit them best. 
+*Working to enable a culture of free and asynchronous work. We support autonomy and ownership of projects, and empower contributors to make their own judgment calls. We will invest in continuous learning, and offer a variety of compensation models to ensure flexibility for contributors and encourage as many people to get involved in whichever ways suit them best.*
 
-We have made a deliberate decision to eschew costly perks and benefits in favour of competitive base remuneration to give each contributor the economic freedom to allocate their finances in a way that best fits their circumstances.*
+*We have made a deliberate decision to eschew costly perks and benefits in favour of competitive base remuneration to give each contributor the economic freedom to allocate their finances in a way that best fits their circumstances.*
 
 You can read more about the principles [on our blog](https://our.status.im/our-principles/). You can also listen in to our principles discussions [on YouTube](https://www.youtube.com/watch?v=18HwQkLWqL4&list=PLbrz7IuP1hriACSQ7furdCUFkcSAJ68F4).  If you believe in what we do and in how we do it, we’d love to hear from you. 
 
