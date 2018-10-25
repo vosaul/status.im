@@ -109,7 +109,7 @@
                 <h4>A Principled Approach</h4>
                 <p class="secondary-text">Status is a community of people all over the world connected by a set of values and principles.</p>
             </div>
-            <div class="info-item-link"><a href="https://our.status.im/our-principles" class="link-arrow">See the full set of principles</a></div>
+            <div class="info-item-link"><a href="/contribute/our_principles.html" class="link-arrow">See the full set of principles</a></div>
         </div>
         <div class="info-item">
             <div class="info-item-content">
