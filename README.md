@@ -1,6 +1,6 @@
 # Status - Access a Better Web, Anywhere
 
-This repo hosts the code for both [status.im](https://docs.status.im) on the `master` branch (which builds and serves through `gh-pages`), and [dev-status.im](https://dev-docs.status.im) on the `develop` branch.
+This repo hosts the code for both [status.im](https://status.im) on the `master` branch (which builds and serves through `gh-pages`), and [dev.status.im](https://dev.status.im) on the `develop` branch.
 
 There is an `edit` button on each page, which will take you directly to the document you need to edit on the `develop` branch. Please make sure that any changes you make are against `develop`. The idea is that we can merge recklessly to `develop`, then anyone see if the changes look OK on `dev-status.im`. 
 
