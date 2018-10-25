@@ -405,10 +405,24 @@
 }
 
 
+.desktop-link--windows-dropwdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+	min-width: 160px;
+	border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
 
+.windows:hover .desktop-link--windows-dropwdown {
+	display: block;
+}
 
-
-
+.window:active .desktop-link--windows-dropwdown {
+	display: block;
+}
 
 
 

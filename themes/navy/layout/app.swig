@@ -38,7 +38,7 @@
           <div class="get-status-links-bottom">
             <a href="#" class="get-link">
               <p class="secondary-text">Status is also available for Desktop</p>
-              <span class="link-arrow" href="/desktop/">Get Status for Desktop</span>
+              <span class="link-arrow" href="/get_desktop/">Get Status for Desktop</span>
             </a>
           </div>
         </div>
