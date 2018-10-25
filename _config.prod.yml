@@ -14,6 +14,9 @@ new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
 per_page: 0
 
+highlight:
+  enable: false
+
 theme: navy
 deploy:
   type: git
