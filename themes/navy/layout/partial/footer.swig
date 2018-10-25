@@ -29,9 +29,9 @@
                   <p class="footer-header">Projects</p>
                   <ul class="footer-list">
                     <li class="footer-link"><a href="https://embark.status.im" target="_blank">Embark</a></li>
-                    <li class="footer-link"><a href="https://status.im/incubate" target="_blank">Incubate</a></li>
+                    <li class="footer-link"><a href="https://incubate.status.im/" target="_blank">Incubate</a></li>
                     <li class="footer-link"><a href="https://nimbus.status.im/" target="_blank">Nimbus</a></li>
-                    <li class="footer-link"><a href="https://dev-studio.status.im/" target="_blank">Studio</a></li>
+                    <li class="footer-link"><a href="https://studio.status.im/" target="_blank">Studio</a></li>
                   </ul>
                 </div>
 

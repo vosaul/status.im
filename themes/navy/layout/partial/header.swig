@@ -26,10 +26,10 @@
             <li class="item--dropdown item--to-show">
               <span>Projects</span>
               <ul class="mobile-sub-nav">
-                <li><a href="https://dev-incubate.status.im/" class="">Incubate</a></li>
+                <li><a href="https://incubate.status.im/" class="">Incubate</a></li>
                 <li><a href="https://nimbus.status.im/" class="">Nimbus</a></li>
                 <li><a href="https://embark.status.im/" class="">Embark</a></li>
-                <li><a href="https://dev-studio.status.im/" class="">Studio</a></li>
+                <li><a href="https://studio.status.im/" class="">Studio</a></li>
                 <li><a href="https://hardwallet.status.im/" class="">Hardwallet</a></li>
               </ul>
             </li>
@@ -117,7 +117,7 @@
                             <h4>Incubate</h4>
                             <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
                         </div>
-                        <div class="card-community-more__link"><a href="https://dev-incubate.status.im/" class="link-arrow">Learn More</a></div>
+                        <div class="card-community-more__link"><a href="https://incubate.status.im/" class="link-arrow">Learn More</a></div>
                     </div>
                 </div>
                 <div class="card">
@@ -148,7 +148,7 @@
                             <h4>Status Studio</h4>
                             <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
                         </div>
-                        <div class="card-community-more__link"><a href="https://dev-studio.status.im" class="link-arrow">Learn More</a></div>
+                        <div class="card-community-more__link"><a href="https://studio.status.im" class="link-arrow">Learn More</a></div>
                     </div>
                 </div>
                 <div class="card">
