@@ -143,12 +143,13 @@ sidebar:
     extensions: Status Extensions
     introduction: Extensions Manifesto
     principles: First Principles
-    try: Try it Yourself
-    examples: See Some Examples
-    roadmap: Roadmap
-    development: Get Your Hands Dirty
     build: Build
-    concepts: Important Concepts
+    important_concepts: Important Concepts
+    building_blocks: Building Blocks
+    chat_command: Extend Chat Commands
+    tutorial_chat_command: Chat Command Tutorial
+    try: Try It Yourself
+    concepts: Other Concepts
     concept_anatomy: Anatomy
     concept_block: Block
     concept_event: Event
@@ -157,6 +158,7 @@ sidebar:
     concept_reference: Reference
     concept_registry: Registry
     concept_view: View
-    building_blocks: Building blocks
-    chat_command: Chat command hook
-    tutorial_chat_command: Chat command tutorial
+    contribute: Contribute
+    examples: Examples
+    roadmap: Roadmap
+    development: Development

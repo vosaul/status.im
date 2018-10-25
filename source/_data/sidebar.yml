@@ -125,7 +125,7 @@ extensions:
     introduction: index.html
     principles: principles.html
   build:  
-    concepts: concepts.html
+    important_concepts: important_concepts.html
     building_blocks: building_blocks.html
     chat_command: chat_command.html
     tutorial_chat_command: tutorial_chat_command.html
