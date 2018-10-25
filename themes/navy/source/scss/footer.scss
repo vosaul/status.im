@@ -4,7 +4,6 @@
   justify-content: center;
   background-color: #262A39;
   position: relative;
-  z-index: 998;
   margin: 0 0 0 0;
 }
 
@@ -100,7 +99,7 @@ a.footer-logo:hover {
 }
 
 .footer-table {
-  display: flex; 
+  display: flex;
 }
 
 .footer-table__column {
@@ -111,18 +110,18 @@ a.footer-logo:hover {
 .footer-header {
   color: white;
   opacity: .5;
-  margin: 0 0 40px 0; 
+  margin: 0 0 40px 0;
 }
 
 .footer-link {
   height: 32px;
   line-height: 32px;
-  margin: 0 0 15px 0; 
+  margin: 0 0 15px 0;
 }
 
 .footer-link a {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .footer-icon {
@@ -134,7 +133,7 @@ a.footer-logo:hover {
   margin: 0 15px 0 0;
   background-repeat: no-repeat;
   background-size: 24px;
-  background-position: center; 
+  background-position: center;
 }
 
 .footer-link--fb .footer-icon {
@@ -163,11 +162,11 @@ a.footer-logo:hover {
 }
 
 .footer-link a {
-  color: white; 
+  color: white;
 }
 
 .footer-link a:hover {
-  opacity: .8; 
+  opacity: .8;
 }
 
 .language-switcher {
@@ -179,11 +178,11 @@ a.footer-logo:hover {
   background-image: url(../img/new-site/icon_dropdown-white.svg);
   background-size: 24px;
   background-repeat: no-repeat;
-  background-position: right center; 
+  background-position: right center;
 }
 
 .language-switcher:focus {
-  outline: none; 
+  outline: none;
 }
 
 
@@ -205,7 +204,7 @@ a.footer-logo:hover {
   .cards--community.cards--community--dark .card-inner {
     height: auto;
     min-height: 180px;
-  } 
+  }
 
 
   .footer-inner {
@@ -221,11 +220,11 @@ a.footer-logo:hover {
   .cards--community.cards--community--dark {
     margin: 0 auto;
     max-width: 375px;
-  } 
+  }
 
   .cards--community.cards--community--dark .card-inner {
     padding: 0 12px;
-  } 
+  }
 
 
 }

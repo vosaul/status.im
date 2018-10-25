@@ -21,7 +21,6 @@
         <a class="logo" href="/"></a>
         <a class="icon-close mobile-nav-close" href="#"></a>
         <ul class="mobile-nav">
-            <li><a href="/about/" class="">About</a></li>
             <li><a href="https://our.status.im/">Blog</a></li>
             <li><a href="/docs/">Docs</a></li>
             <li class="item--dropdown item--to-show">
@@ -35,7 +34,6 @@
               </ul>
             </li>
             <li><a href="/contribute/" class="">Contribute</a></li>
-            <li class="item--dropdown item--to-show"><a href="#" class="item--dropdown-community">Community</a></li>
         </ul>
         <div class="mobile-nav-footer">
             <a href="#" class="button button--blue">Join Status Chat</a>
