@@ -12,7 +12,7 @@
         </ul>
     </div>
     <div class="header-right">
-        <a href="#" class="button">Join Status Chat</a>
+        <a href="/get/" class="button">Join Status Chat</a>
     </div>
 </div>
 
