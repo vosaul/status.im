@@ -25,7 +25,7 @@
             <li><a href="https://our.status.im/">Blog</a></li>
             <li><a href="/docs/">Docs</a></li>
             <li class="item--dropdown item--to-show">
-              <a href="#" class="">Projects</a>
+              <span>Projects</span>
               <ul class="mobile-sub-nav">
                 <li><a href="#" class="">Incubate</a></li>
                 <li><a href="#" class="">Nimbus</a></li>

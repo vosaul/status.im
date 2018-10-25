@@ -110,7 +110,8 @@
 	padding: 0 24px 16px 24px;
 }
 
-.mobile-nav li a {
+.mobile-nav li a,
+.mobile-nav li span {
 	color: $colorBlack;
 	display: block;
 	padding: 16px 0;
