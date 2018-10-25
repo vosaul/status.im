@@ -18,7 +18,7 @@
 
         <div class="get-status-links">
           <div class="get-status-links-top">
-            <a href="#" class="get-link">
+            <a href="https://testflight.apple.com/join/J8EuJmey" class="get-link">
               <div class="get-link-icon get-link-icon--ios"></div>
               <h4>Status for IOS</h4>
               <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps.</p>
@@ -26,7 +26,7 @@
               <span class="link-arrow" href="https://testflight.apple.com/join/J8EuJmey">Get Status for IOS</span>
             </a>
 
-            <a href="#" class="get-link">
+            <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" class="get-link">
               <div class="get-link-icon get-link-icon--android"></div>
               <h4>Status for Android</h4>
               <p class="secondary-text">Do the same on Android, and access more features like our upcoming hardwallet.</p>
