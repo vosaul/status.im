@@ -25,7 +25,7 @@
 }
 
 .button.button-part {
-	border-radius: 0;	
+	border-radius: 0;
 }
 
 .button.button-part:first-child {
@@ -81,7 +81,7 @@
 .info-item {
 	width: 33.3%;
 	padding: 32px;
-	border-right: 1px solid rgba(232, 235, 236, 1) 
+	border-right: 1px solid rgba(232, 235, 236, 1)
 }
 
 .info-item:last-child {
@@ -125,7 +125,7 @@
 
 
 @media (max-width: 1080px) {
-	
+
 	.info {
 		width: 100%;
 		padding: 0 24px;
@@ -154,7 +154,7 @@
 	.intro {
 		margin: 120px auto 64px;
 	}
-	
+
 	.intro h1 {
 		font-weight: 700;
   		font-size: 32px;
@@ -203,21 +203,21 @@
 @media (max-width: 640px) {
 
 	.intro {
-		margin: 168px auto 32px;
+		margin: 148px auto 32px;
 	}
 
 	.intro h1 {
   		font-size: 24px;
   		line-height: 1.4em;
 	}
-	
+
 	.intro-buttons {
 		flex-direction: column
 	}
 
 	.button.button-part {
-		border-radius: 20px;	
-	}	
+		border-radius: 20px;
+	}
 
 	.button.button-part:first-child {
 		border-radius: 20px;
@@ -229,14 +229,3 @@
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-

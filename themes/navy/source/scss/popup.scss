@@ -82,7 +82,7 @@
 .popup__button {
   position: absolute;
 
-  top: -56px;
+  top: -69px;
   width: 42px;
   height: 42px;
   background-color: #ffffff;
@@ -149,6 +149,17 @@
   color: rgba(67, 96, 223, .6);
 }
 
+.separator {
+  border-bottom: 1px solid #e8ebec;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+}
+
+.popup--projects .separator {
+  margin: 24px 0;
+}
+
 .community-icon {
   width: 32px;
   height: 32px;
@@ -175,9 +186,15 @@
 
 .cards-community-more .card-content {
     height: auto;
-    min-height: 140px;
+    min-height: 112px;
     overflow: hidden;
-  } 
+}
+
+.popup--projects .cards-community-more .card-content {
+    height: auto;
+    min-height: 142px;
+    overflow: hidden;
+}
 
 @media (max-width: 1008px) {
 
@@ -203,13 +220,13 @@
   .cards--community.cards--community--light .card-inner {
     height: auto;
     min-height: 0
-  } 
+  }
 
   .cards-community-more .card-content {
     height: auto;
     min-height: 0;
     padding: 0 0 8px 0;
-  } 
+  }
 
   .cards-community-more .card-content h4 {
     padding: 8px 0 4px 0;

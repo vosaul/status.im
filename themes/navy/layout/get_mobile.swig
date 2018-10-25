@@ -1,6 +1,11 @@
 <div class="page-intro wrapper get-wrapper">
-  <header class="article-header-get">
-          <div class="get-status-info">
+
+        <div class="get-status-intro get-status-intro--mobile">
+            <h2>Get Status for Mobile</h2>
+            <p>Store, send & receive Eth and ERC-20 tokens with Status Store, send & receive Eth and ERC-20 tokens with Status Hardwallet</p>
+        </div>
+
+        <div class="get-status-info">
 
         <div class="get-status-phones">
           <div class="phone-wrap">
@@ -39,7 +44,6 @@
         </div>
 
       </div>
-  </header>
 </div>
 <div id="content-wrap">
   <div id="content" class="wrapper">
