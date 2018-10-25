@@ -75,9 +75,23 @@
 	margin-right: 0;
 }
 
-@media screen and (max-width: break-xl) {
+@media screen and (max-width: 820px) {
+	.docs-header {
+		background-image: none;
+	}
+	
+	.docs-header li {
+		width: 100%;
+		padding: 12px;
+		margin-left: 20px;
+	}
+	
 	.docs-header li:nth-child(3n) {
 		margin-right: 24px;
+	}
+
+	.docs-intro {
+		margin-left: 20px;
 	}
 }
 

@@ -36,10 +36,9 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      {{ partial('partial/sidebar') }}
       <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
-          <div class="article">
+          <div class="nightly-page">
             <div class="inner">
                 <div class="article-content" itemprop="articleBody">
                     <div class="nightly-headings">
@@ -68,8 +67,7 @@
                                 https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg
                             </a>
                         </div>
-                    </div>
-                    <div class="nightly-builds-wrap">
+                        <div class="clear"></div>
                         <div class="box">
                             <h2>Android</h2>
                             <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
@@ -77,7 +75,7 @@
                             </a>
                             <p>Link:</p>
                             <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk
+                                Android Nightly Build
                             </a>
                         </div>
                         <div class="box">
@@ -87,10 +85,11 @@
                             </a>
                             <p>Link:</p>
                             <a href="https://i.diawi.com/aXAoyg" target="_blank">
-                                https://i.diawi.com/aXAoyg
+                                iOS Nightly Build (requires diawi access)
                             </a>
                         </div>
                     </div>
+                  </div>
                </div>
             </div>
           </div>
