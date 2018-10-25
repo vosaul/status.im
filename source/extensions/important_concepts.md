@@ -1,8 +1,13 @@
-# Building blocks
+---
+id: important_concepts
+title: Important Concepts for Extensions
+---
+
+# Wrap Your Head Around a Better Web
 
 ## Meta data
 
-First step is to create the skeleton extension with some relevant metadata:
+The first step when extending Status is to create a skeleton extension with some relevant metadata:
 
 ```clojure
 {meta {:name          "My extension name"
