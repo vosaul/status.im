@@ -1,66 +1,145 @@
 docs:
   use_status:
-    who_we_are: introduction.html
+    index: index.html
     contributor_guide: contributor_guide.html
-    ens_usernames: ens_usernames.html
     FAQs: FAQs.html
-
-  build_status:
-    quick_start: build_status.html
-    build_status_go: build_status_go.html
+  app_structure:
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
-
-  build_status_desktop:
-    introduction_desktop: intro_desktop.html
-    building_desktop: build_desktop.html
-    troubleshooting: build_desktop_troubleshooting.html
-    using_breakpad: build_desktop_google_breakpad.html
-    jenkins_pipeline: build_desktop_jenkins.html
-
   status_node:
     run_status_node: run_status_node.html
-
   testing:
     introduction_testing: testing.html
     report_a_bug: report_a_bug.html
-
-  security:
-    security_champions: security_champions.html
-    security_existing_features: security_existing_features.html
-    security_experiment: security_experiment.html
-    security_process: security_process.html
-    security_threat_modeling: security_threat_modeling.html
-    security_github_labels: security_github_labels.html
-    security_sensitive_data: security_sensitive_data.html
-
+  analytics:
+    analytics_status: ../analytics/
 
 developer_tools:
-  connecting_to_web3:
+  web3_for_everyone:
+    introduction_tools: index.html
+  connecting_to_web3: 
     access_an_ethereum_provider: access_eth_provider.html
     detecting_status: detecting_status.html
-  
   optimised_for_status:
     assets_guidelines: assets_guidelines.html
     js_api: status_web_api.html
     http_debugging: http_debugging.html
-  
   submitting_to_status: 
     submit_to_status: add_your_dapp.html
     troubleshooting_dapps: troubleshooting_dapps.html
-  
   status_extensions:
-    intro_extensions: intro_extensions.html
+    intro_extensions: ../extensions/
+  status_fiddle:
+    fiddle: /fiddle/
+  status_storybook: 
+    storybook: https://status-im.github.io/storybook/
 
+build_status:
+  build_status:
+    introduction_build: index.html
+    build_status_go: status_go.html
+  build_status_desktop:
+    introduction_desktop: intro_desktop.html
+    building_desktop: desktop.html
+    troubleshooting: desktop_troubleshooting.html
+    using_breakpad: desktop_google_breakpad.html
+    jenkins_pipeline: desktop_jenkins.html
 
 tutorials:
-  extensions:
+  extensions: 
     your_first_chat_extension: extensions_tutorial_chat_command.html
 
-technical_specs:
-  whisper:
-    introduction_whisper: index.html
+research:
+  whisper: 
+    secret: index.html
     extended_features: extended_features.html
     dark_routing: dark_routing.html
     whisper_pss: whisper_pss.html
     whisper_faqs: whisper_faqs.html
+    secure_messaging_compendium: secure_messaging_compendium.html
+  research_projects:
+    nimbus: https://nimbus.status.im/
+
+security:
+  security:
+    introduction_security: index.html
+  security_status:
+    threat_modeling: sec_threat_modeling.html
+    existing_features: sec_existing_features.html
+    new_features: sec_new_features.html
+    security_week: sec_security_week.html
+    sensitive_data: sec_sensitive_data.html
+    experiment: sec_experiment.html
+  audits:
+    introduction_audits: ../audits/
+  guides:
+    introduction_guides: ../guides/
+  organization:
+    introduction_organization: ../org_sec/
+
+audits:
+  audits:
+    introduction_audits: index.html
+
+guides:
+  guides:
+    introduction_guides: index.html
+
+org_sec:
+  org:
+    introduction_organization: index.html
+    security_champions: org_security_champions.html
+    security_github_labels: org_github_labels.html 
+
+analytics:
+  analytics:
+    introduction: index.html
+    app_downloads: app_downloads.html
+    messages: messages.html
+    ens_registration: ens_registration.html
+    crypto_oss: crypto_oss.html
+    oss: oss.html
+    run_it_yourself: run_it_yourself.html
+
+fiddle:
+  fiddle: 
+    introduction_fiddle: index.html
+    actual_fiddle: fiddle.html
+
+contribute:
+  get_involved:
+    introduction_contribute: index.html
+  jobs: 
+    perks_benefits: perks_benefits.html
+    apply_now: applying_to_status.html 
+    open_positions: open_positions.html 
+    applicant_privacy: applicant_privacy.html
+  working_status:
+    our_principles: our_principles.html
+    life_status: life_status.html 
+    the_future: the_future.html
+    faqs: faqs.html
+
+extensions:
+  extensions:
+    introduction: index.html
+    principles: principles.html
+  build:  
+    important_concepts: important_concepts.html
+    building_blocks: building_blocks.html
+    chat_command: chat_command.html
+    tutorial_chat_command: tutorial_chat_command.html
+    try: https://status-im.github.io/pluto/try.html
+  concepts:
+    concept_anatomy: concept_anatomy.html
+    concept_block: concept_block.html
+    concept_event: concept_event.html
+    concept_hook: concept_hook.html
+    concept_query: concept_query.html
+    concept_reference: concept_reference.html
+    concept_registry: concept_registry.html
+    concept_view: concept_view.html
+  contribute:
+    examples: https://github.com/status-im/pluto/tree/master/examples
+    roadmap: roadmap.html
+    development: development.html

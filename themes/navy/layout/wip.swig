@@ -1,7 +1,36 @@
 <div class="page-intro wrapper">
-  <header class="article-header">
-    <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-    <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}">Edit on Github</a>
+  <header class="docs-header">
+    <div class="docs-intro">
+      <h1>Work on a Better Web</h1>
+      <p>Status has the fastest moving codebase of any project in Ethereum. Keep track of all we do here.</p>
+      <br/>
+    </div>
+    <ul>
+      <li>
+        <div class="inner">
+          <h3>Developer Tools</h3>
+          <p>#MakeCodingGreatAgain</p>
+        </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/developer_tools/"></a>
+      </li>
+      <li>
+        <div class="inner">
+          <h3>Build Status</h3>
+          <p>For mobile and desktop</p>
+        </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/build_status/"></a>
+      </li>
+      <li>
+        <div class="inner">
+          <h3>Research</h3>
+          <p>Dive deeper...</p>
+        </div>
+        <img src="../img/arrow_blue_shaded.svg" />
+        <a href="/research/"></a>
+      </li>
+    </ul>
   </header>
 </div>
 <div id="content-wrap">

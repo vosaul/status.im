@@ -7,10 +7,12 @@
       {{ partial('partial/header') }}
     {% endif %}
     {{ body }}
-    {{ partial('partial/footer') }}
+    {% if page.source == 'index.md' %}
+      {{ partial('partial/footer-home') }}
+    {% else %}
+      {{ partial('partial/footer') }}
+    {% endif %}
   </div>
-  <div id="mobile-nav-dimmer"></div>
-  {{ partial('partial/mobile_nav') }}
   {{ partial('partial/after_footer') }}
 </body>
 </html>
