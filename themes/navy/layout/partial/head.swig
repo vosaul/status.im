@@ -15,8 +15,8 @@
   <meta name="msapplication-TileColor" content="#ff9c00">
   <meta name="msapplication-TileImage" content="{{ url_for('icon/mstile-144x144.png') }}">
 
-  <link rel="icon" type="image/png" href="/img/logo-16.png?v=0.0.5" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/img/logo-32.png?v=0.0.5" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./img/logo-16.png?v=1.1.6" sizes="16x16" />
+  <link rel="icon" type="image/png" href="./img/logo-32.png?v=1.1.6" sizes="32x32" />
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76.png?v=0.0.5">
   <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120.png?v=0.0.5">
@@ -25,5 +25,6 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon-1024.png?v=0.0.5">
   {{ css('css/main.min.css') }}
   {{ feed_tag('atom.xml') }}
+  <meta property="og:image" content="/img/share.png" />
   <meta property="og:title" content="Status, a Mobile Client for Ethereum 2.0" />
 </head>
