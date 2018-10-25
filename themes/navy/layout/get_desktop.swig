@@ -7,8 +7,8 @@
       <div class="get-status-desktop">
         <div class="get-status-desktop-links">
           <ul>
-            <li><a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181024-025922-82c399-nightly.dmg " class="desktop-link desktop-link--mac link-arrow">Get for Mac OS</a></li>
-            <li><a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181024-025922-82c399-nightly.AppImage " class="desktop-link desktop-link--linux link-arrow">Get for Linux</a></li>
+            <li><a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg" class="desktop-link desktop-link--mac link-arrow">Get for Mac OS</a></li>
+            <li><a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.AppImage" class="desktop-link desktop-link--linux link-arrow">Get for Linux</a></li>
             <li><span class="desktop-link desktop-link--windows link-arrow desktop-link--disabled">Get for Windows</span></li>
           </ul>
         </div>

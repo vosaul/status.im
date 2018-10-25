@@ -53,38 +53,38 @@
                                 <img src="../nightly/img/linux.png" width="150" />
                             </a>
                             <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.AppImage" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.AppImage
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.AppImage" target="_blank">
+                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.AppImage
                             </a>
                         </div>
                         <div class="box">
                             <h2>macOS</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg" target="_blank">
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg" target="_blank">
                                 <img src="../nightly/img/macos.png" width="150" />
                             </a>
                             <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.dmg
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg" target="_blank">
+                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg
                             </a>
                         </div>
                         <div class="clear"></div>
                         <div class="box">
                             <h2>Android</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.apk" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
                             </a>
                             <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.apk" target="_blank">
+                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.apk" target="_blank">
                                 Android Nightly Build
                             </a>
                         </div>
                         <div class="box">
                             <h2>iOS</h2>
-                            <a href="https://i.diawi.com/aXAoyg" >
+                            <a href="https://i.diawi.com/go6FP9" >
                                 <img src="../nightly/img/qr-ios.png" width="80%" />
                             </a>
                             <p>Link:</p>
-                            <a href="https://i.diawi.com/aXAoyg" target="_blank">
+                            <a href="https://i.diawi.com/go6FP9" target="_blank">
                                 iOS Nightly Build (requires diawi access)
                             </a>
                         </div>
