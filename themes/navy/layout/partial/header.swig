@@ -114,10 +114,10 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-content">
-                            <h4>Incubate</h4>
-                            <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
+                            <h4>Embark</h4>
+                            <p class="secondary-text">Embark is a simple and easy to use development framework that enables you to build and deploy your own decentralized applications smoothly.</p>
                         </div>
-                        <div class="card-community-more__link"><a href="https://incubate.status.im/" class="link-arrow">Learn More</a></div>
+                        <div class="card-community-more__link"><a href="https://embark.status.im/" class="link-arrow">Learn More</a></div>
                     </div>
                 </div>
                 <div class="card">
@@ -132,23 +132,23 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-content">
-                            <h4>Embark</h4>
-                            <p class="secondary-text">Embark is a simple and easy to use development framework that enables you to build and deploy your own decentralized applications smoothly.</p>
-                        </div>
-                        <div class="card-community-more__link"><a href="https://embark.status.im/" class="link-arrow">Learn More</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="separator"></div>
-            <h5>Use and Learn</h5>
-            <div class="cards cards-community-more cards--three cards--three--even">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-content">
                             <h4>Status Studio</h4>
                             <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
                         </div>
                         <div class="card-community-more__link"><a href="https://studio.status.im" class="link-arrow">Learn More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <h5>Tools for Everyone</h5>
+            <div class="cards cards-community-more cards--three cards--three--even">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-content">
+                            <h4>Incubate</h4>
+                            <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
+                        </div>
+                        <div class="card-community-more__link"><a href="https://incubate.status.im/" class="link-arrow">Learn More</a></div>
                     </div>
                 </div>
                 <div class="card">
