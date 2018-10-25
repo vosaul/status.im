@@ -140,6 +140,10 @@
   background-color: rgba(67, 96, 223, .14);
 }
 
+.popup .card h4 {
+  padding: 0 0 4px 0;
+}
+
 .cards--community a h4 {
   color: $colorBlack;
   padding: 0 0 8px 0;
@@ -157,7 +161,7 @@
 }
 
 .popup--projects .separator {
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 .community-icon {
@@ -180,7 +184,8 @@
   background-image: url(../img/icon-contribute-blue.svg);
 }
 
-.popup--community h5 {
+.popup--community h5,
+.popup--projects h5 {
   padding: 0 0 24px 0;
 }
 
@@ -205,6 +210,10 @@
   .popup {
     width: 100%;
   }
+
+  .card-community-more__link {
+    margin: 8px 0 0 0;
+  }
 }
 
 @media (max-width: 800px) {
@@ -227,6 +236,13 @@
     min-height: 0;
     padding: 0 0 8px 0;
   }
+
+  .popup--projects .cards-community-more .card-content {
+    height: auto;
+    min-height: 0;
+    padding: 0 0 8px 0;
+  }
+
 
   .cards-community-more .card-content h4 {
     padding: 8px 0 4px 0;
