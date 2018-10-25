@@ -21,9 +21,6 @@ deploy:
   name: status-im-auto
   repo: git@github.com:status-im/docs.status.im.git
 
-theme_config:
-    favicon: img/status-logo-symbol.svg
-
 disqus_shortname: hexojs
 twitter: ethstatus
 github: staus-im
