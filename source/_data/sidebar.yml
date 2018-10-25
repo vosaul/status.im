@@ -101,11 +101,6 @@ analytics:
     oss: oss.html
     run_it_yourself: run_it_yourself.html
 
-fiddle:
-  fiddle: 
-    introduction_fiddle: index.html
-    actual_fiddle: fiddle.html
-
 contribute:
   get_involved:
     introduction_contribute: index.html

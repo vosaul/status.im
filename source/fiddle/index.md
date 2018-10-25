@@ -1,9 +1,5 @@
 ---
-layout: fiddle_info
+layout: fiddle
 title: Fiddle to Your Heart's Content
 id: index
 ---
-
-# Fiddle to Your Heart's Content
-
-Andrey to blow minds here.
