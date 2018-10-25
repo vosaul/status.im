@@ -36,42 +36,33 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      <article class="article-container-analytics" itemscope itemtype="http://schema.org/Article">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <div class="article-content" itemprop="articleBody">
-                <div class="analytics-content">
-                    <div class="analytic-items">
+                <div class="analytic-items">
                         <div class="analytic-item">
-                            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                            <div class="analytic-item-inner">
-                                <h2>User Analytics</h2>
-                                <ul>
-                                    <li class="analytics-list"><a href="./app_downloads.html">App Downloads</a></li>
-                                    <li class="analytics-list"><a href="./messages.html">Messages</a></li>
-                                    <li class="analytics-list"><a href="./ens_registration.html">ENS Registrations</a></li>
-                                </ul>
-                            </div>
-                            <div class="analytic-item-image" id="whisper-distinct-users-daily"></div>
-                            <script src="./charts/whisper_distinct_users_daily.js"></script>
-                        </div>
+                              <h2>User Analytics</h2>
+                              <p class="analytics-list"><a href="./app_downloads.html">App Downloads</a></p>
+                              <p class="analytics-list"><a href="./messages.html">Messages</a></p>
+                              <p class="analytics-list"><a href="./ens_registration.html">ENS Registrations</a></p>
+                          </div>
+                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                        <div class="analytic-item-image" id="whisper-distinct-users-daily"></div>
+                        <script src="./charts/whisper_distinct_users_daily.js"></script>
+                        <div class="analytic-item-image analytic-item-image-right" id="whisper-messages-daily"></div>
+                        <script src="./charts/whisper_messages_daily.js"></script>
                         <div class="analytic-item">
-                            <div class="analytic-item-image analytic-item-image-right" id="whisper-messages-daily"></div>
-                            <script src="./charts/whisper_messages_daily.js"></script>
-                            <div class="analytic-item-inner">
-                                <h2>Other Important Metrics</h2>
-                                <ul>
-                                    <li class="analytics-list"><a href="./crypto_oss.html">Crypto OSS Contributions</a></li>
-                                    <li class="analytics-list"><a href="./oss.html">OSS Contributions</a></li>
-                                    <li class="analytics-list"><a href="./run_it_yourself.html">Run It Yourself</a></li>
-                                </ul>
-                            </div>
+                            <h2>Other Important Metrics</h2>
+                            <p class="analytics-list"><a href="./crypto_oss.html">Crypto OSS Contributions</a></p>
+                            <p class="analytics-list"><a href="./oss.html">OSS Contributions</a></p>
+                            <p class="analytics-list"><a href="./run_it_yourself.html">Run It Yourself</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="sections">
-                    <div class="inner-header">
+                    <div class="inner-header analytics-content">
                         <h2>Other Relevant Graphs</h2>
                         <p>Just in case you don't want to wander through this whole site, here are the most relevant analytics charts we look at:</p>
                     </div>
@@ -83,7 +74,7 @@
                             <img src="./img/netnewinstalls_daily.png" />
                         </div>
                     </div>
-                    <div class="inner-header">
+                    <div class="inner-header analytics-content">
                         <h2>Read our Blog</h2>
                         <p>Check out the latest analytics news and blog posts:</p>
                     </div>
