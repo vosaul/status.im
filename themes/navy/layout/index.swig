@@ -138,11 +138,7 @@
             </a>
         </div>
         <div class="card card--incubate">
-<<<<<<< HEAD
             <a href="https://incubate.status.im/" class="card-inner">
-=======
-            <a href="https://incubate.status.im" class="card-inner">
->>>>>>> 7f36b14b345d1e770f2c29e7537a9aedba79b8ee
                 <div class="card-content">
                     <h3>Incubate</h3>
                     <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
