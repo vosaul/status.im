@@ -107,7 +107,7 @@ In this case you have to do the following:
 * Run `sdkmanager` from your machine and install the latest Android SDKs;
 * *Optional:* If you want to use AVD (Android Virtual Device, emulator), please, check [this documentation](https://developer.android.com/studio/run/emulator);
 * *Optional:* If you don't like AVD, you can also use [Genymotion](https://genymotion.com);
-* Execute `react-native run-android`.
+* Execute `make run-android`.
 
 Errors like `android-sdk-16 not found` usually mean that you simply need to install missing SDKs. Run `sdkmanager` for that.
 
