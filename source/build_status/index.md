@@ -4,7 +4,7 @@ id: index
 title: Build Status Yourself
 ---
 
-# #Buidl Status Yourself and Particpate in a Better Web
+# #Build Status Yourself and Particpate in a Better Web
 
 ## The easiest way
 
@@ -40,7 +40,7 @@ This script prepares and installs the following:
 * Maven
 * Cocoapods
 
-*Note 1:* it can take up to 20 minutes depending on your machine and internet connection speed.
+*Note 1:* It can take up to 20 minutes depending on your machine and internet connection speed.
 
 *Note 2:* If you don't have `nvm`, `node@8` will be installed from Homebrew.
 If you don't have `nvm` AND already have `node` installed on your machine then nothing will happen.
@@ -134,7 +134,7 @@ nvm use status-im
 
 ### Custom Android SDK location
 
-Some of developers prefer to use Android SDK integrated to Android Studio. Of course, it doesn't matter
+Some developers prefer to use Android SDK integrated in Android Studio. Of course, it doesn't matter
 for the build process — just make sure that `ANDROID_SDK_ROOT` points to a right location and you have all the SDKs installed.
 
 ## Troubleshooting
@@ -149,7 +149,7 @@ One of the best ways to install any older version of Node.js is to use `nvm`.
 Some developers are experiencing errors compiling for iOS on Xcode 10 on MacOs Mojave:
 
 ```
-error: Build input file cannot be found:  
+error: Build input file cannot be found:
 
 'status-react/node_modules/react-native/third-party/double-conversion-1.1.6/src/cached-powers.cc'
 ```
