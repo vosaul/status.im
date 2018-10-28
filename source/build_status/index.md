@@ -4,7 +4,7 @@ id: index
 title: Build Status Yourself
 ---
 
-# #Build Status Yourself and Particpate in a Better Web
+# #Buidl Status Yourself and Particpate in a Better Web
 
 ## The easiest way
 
