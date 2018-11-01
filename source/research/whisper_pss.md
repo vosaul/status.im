@@ -12,7 +12,7 @@ Whisper and PSS are two messaging procotols currently being developed in the Eth
 * Online-first protocols - no built-in offline capability / expectation
 * Symmetric and asymmetric encryption available
 * Implemented on top of DevP2P
-    * DevP2P offers encryption between directly connected peers in the underlying overlay network, but this encryption is broken
+    * DevP2P offers encryption between directly connected peers in the underlying overlay network, but this [encryption is broken](https://github.com/ethereum/devp2p/issues/32)
     * A second layer of encryption is done in an end-to-end fashion at the Whisper/PSS level
 * 4-byte topic acts as hint for decryption
     * clients have to agree on topics out-of-band
