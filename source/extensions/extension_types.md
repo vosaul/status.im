@@ -1,14 +1,17 @@
-# Extension types
+---
+id: extension_types
+title: Extension Types
+---
+
+# Understand All the Different Typs
 
 Extension types are determined by the available [hooks](https://dev-docs.status.im/extensions/concept_hook.html).
 
 The first hook supported by Status is the chat command.
 
+# Chat Commands
 
-
-### Chat Commands
-
-#### Identifiers
+## Identifiers
 
 The root identifier for any chat command is `hooks/commands`. Use this to build a chat command extension.
 
@@ -18,7 +21,7 @@ In the case of a chat command, the unique identifier is what a user is required 
 
 This unique ID must be _unique from all other command IDs_. It is recommended to use the DApp or company's name in the ID to ensure this.
 
-#### Properties
+## Properties
 
 Once declared, a chat command requires the following properties to be mapped:
 
@@ -43,7 +46,7 @@ hooks/command.collectible
                     :placeholder   "Collectible name"}]}
 ```
 
-##### Scope
+## Scope
 
 A chat command can be executed within any combination of the following scopes:
 
@@ -51,7 +54,7 @@ A chat command can be executed within any combination of the following scopes:
 - `group-chats`: a private chat between multiple users
 - `public-chats`: a public chat open to any user
 
-##### Description
+## Description
 
 The description is a short phrase exposed in the interface after the unique identifier, e.g. `Send collectible`.
 
@@ -61,7 +64,7 @@ A user sees:
 /collectible Send collectible
 ```
 
-##### Preview
+## Preview
 
 The preview is a `view` that a user sees as the result of a command's execution within a chat. It is declared with `views/[name-of-my-preview]`.
 
@@ -98,7 +101,7 @@ Previews also come with an injected payload, accessible via a `properties` symbo
  ```
 
 
-##### Short preview
+## Short preview
 
 The short preview is a `view` that a user sees on the chat screen when the last message in a given item is a chat command. It is declared with `views/[name-of-my-short-preview]`.
 
@@ -121,7 +124,7 @@ Short previews also come with an injected payload, accessible via a `properties`
  :outgoing true}
  ```
 
-##### Parameters
+## Parameters
 
 Parameters prompt the user to make selections or input data.
 
@@ -140,7 +143,7 @@ Declare parameters like this:
 
 This example allows a user to select between their various collectibles, either by typing in the "Collectible name" or using the UI's suggestions.
 
-##### on-send and on-receive
+## on-send and on-receive
 
 `on-send` and `on-receive` allow a command to fire events when a message is sent or received.
 

@@ -1,8 +1,14 @@
+---
+id: index
+title: Status Extensions
+layout: extensions
+---
+
 # What are extensions?
 
 Extensions are a tool for developers to integrate DApp functionality with Status in a native way.
 
-With the building blocks(key concepts) provided, a developer can re-use Status features for their own purposes. 
+With the [building blocks](key_concepts.html) provided, a developer can re-use Status features for their own purposes. 
 
 
 ### Not a language
@@ -36,7 +42,7 @@ Status does not whitelist particular extensions, nor does it limit their creatio
 
 Although extensions are permissionless in nature and allow developers freedom to customize Status features, the available feature set is limited.
 
-Status determines  potential extension points via hooks(link), and these hooks provide a sandbox for developers to work within.
+Status determines  potential [extension points](extension_types.html) via hooks, and these hooks provide a sandbox for developers to work within.
 
 
 ### Private and Secure

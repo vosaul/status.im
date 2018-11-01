@@ -125,7 +125,7 @@ extensions:
     tutorial_chat_command: tutorial_chat_command.html
   references:
     reference_views: reference_views.html
-    reference_queries: reference_queries.md
-    reference_events: reference_queries.md
+    reference_queries: reference_queries.html
+    reference_events: reference_events.html
   installation:
     install_guide: installation.html

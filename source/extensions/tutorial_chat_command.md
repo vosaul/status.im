@@ -1,3 +1,8 @@
+---
+id: tutorial_chat_command
+title: Extensions Tutorial - Chat Command
+---
+
 This tutorial will go step by step through the creation and deployment of a [chat command](chat_command.html) allowing to interact with a smart contract.
 
 # Add meta data

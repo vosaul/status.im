@@ -28,7 +28,7 @@
           <p>See our open positions!</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="jobs.html"></a>
+        <a href="open_positions.html"></a>
       </li>
     </ul>
   </header>
