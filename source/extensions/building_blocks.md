@@ -1,3 +1,8 @@
+---
+id: building_blocks
+title: Building Blocks for Extensions
+---
+
 # Hooks
 
 The only hook available currently is the [chat command](chat_command) hook.

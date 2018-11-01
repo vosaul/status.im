@@ -1,3 +1,10 @@
+---
+id: reference_events
+title: Extension Reference - Events
+---
+
+# Events in Extensions
+
 An event is defined by a name and an optional map of arguments.
 
 # Events

@@ -1,4 +1,9 @@
-# Syntax
+---
+id: syntax
+title: Extensions Syntax
+---
+
+# Speak The Language
 
 Extensions are implemented using the EDN format. EDN is similar to JSON, but it is extensible and has additional data types.
 

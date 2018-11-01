@@ -1,4 +1,9 @@
-# Key concepts
+---
+id: key_concepts
+title: Key Concepts
+---
+
+# Understand All the Important Details
 
 Every extension begins with a [hook](hook) into some part of the Status application. Status is the `host` application, and hooks define which of the host's capabilities can be extended.
 
