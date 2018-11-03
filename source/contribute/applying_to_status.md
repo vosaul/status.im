@@ -11,6 +11,8 @@ If we feel like there's a good match between your skills & experience and what w
 
 There's no set approach that we have to interviewing - it always depends on you, and the role we're looking to fill.
 
+----
+
 There are a variety of ways that we use to get to know you:
 
 **Introductory period:** If you're interested, we can offer variety of paid part time or project based work to complete. If this goes, well and it works for you, we could offer to make that full time. 
@@ -20,5 +22,7 @@ There are a variety of ways that we use to get to know you:
 **Work samples:** If you're a designer: we may ask to complete a design challenge. If you're an engineer: we may ask you to complete one of our bounties, or submit some work on github for review.
 
 Typically, we use a mix of methods to determine whether we think you should join Status. But we're flexible - if there's a particular method you think would work, please let us know.
+
+----
 
 If everything goes well (woohoo!), you can expect to receive an offer to work for Status. We'll offer you a salary (in a fix of fiat and crypto) as well as a Contributor Bonus that will be paid in Status Network Tokens (SNT).
