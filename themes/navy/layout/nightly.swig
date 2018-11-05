@@ -44,6 +44,9 @@
                     <div class="nightly-headings">
                         <h1>Status Nightly Builds - Beware the Dragons!</h1>
                         <h5>Updated: 2018/10/12 03:24:26 UTC</h5>
+                        <p><strong>Warning:</strong> Nightly builds are intended for development testing and may include bugs and other issues.</p>
+                        <p>By downloading and installing these builds you assume the full responsibility for all risks concerning your data and funds. 
+                        Status makes no claims of security or integrity of funds in these builds. Status advises the use of different recovery phrases in nightlies and stable builds.</p>
                         <a href="../build_status/desktop.html" target="_blank">Desktop FAQ</a>
                     </div>
                     <div class="nightly-builds-wrap">
