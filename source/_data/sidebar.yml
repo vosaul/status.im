@@ -27,6 +27,9 @@ developer_tools:
   submitting_to_status: 
     submit_to_status: add_your_dapp.html
     troubleshooting_dapps: troubleshooting_dapps.html
+  adapt_status:
+    enable_chat: enable_chat.html
+    add_your_own_network: add_your_own_network.html
   status_extensions:
     intro_extensions: ../extensions/
   status_fiddle:
