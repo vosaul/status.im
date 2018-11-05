@@ -59,7 +59,7 @@ Status developers love this kind of thing, especially the Cloud Castle of Mindse
 
 If you want to contribute to the Status core app, then yes, it's probably a good idea to at least [start with Clojure](https://www.braveclojure.com/introduction/).
 
-However, if you want to build awesome and amazing DApps, there is absolutely no need for all that. Just use [Embark](https://embark.status.im), plugin to the Status [JS API](status_web_api.html) and perhaps even [extend your DApp](../tutorials/extensions_tutorial_chat_command.html) to watch the magic happen from people's pockets all around the world.
+However, if you want to build awesome and amazing DApps, there is absolutely no need for all that. Just use [Embark](https://embark.status.im), plugin to the Status [JS API](/developer_tools/) and perhaps even [extend your DApp](/extensions/) to watch the magic happen from people's pockets all around the world.
 
 Building great DApps that live up to high standards of security, censorship-resistance, and smooth user experience is absolutely vital to creating a thriving decentralised economy.
 
