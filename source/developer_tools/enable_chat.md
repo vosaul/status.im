@@ -3,7 +3,7 @@ id: enable_chat
 title: Enable Chat By Default For Your DApp
 ---
 
-# Conversational and Social Spaces as a Means of Sustainable Community-Building
+# Conversation as a Means of Sustainable Community-Building
 
 At Status, we really care about building a better web and this starts with a deep understanding of ["The Web That Wasn't"](https://www.youtube.com/watch?v=72nfrhXroo8) and all the great ideas that we seem to have lost along the way, most often in the name of convenience or simply because they were at odds with corporate or shareholder or state interests.
 
