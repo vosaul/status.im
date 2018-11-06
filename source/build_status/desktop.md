@@ -130,4 +130,4 @@ After Figwheel has connected to the app, run the following command inside Vim, a
 - Passing `BUILD_FOR_BUNDLE` preprocessor make flag instructs application to redirect output to predefined log file. On Linux usually it's `~/.local/share/Status/Status.log`; MacOS: `~/Library/Application Support/Status/Status.log`.
 - Setting env var `STATUS_LOG_FILE_ENABLED` to `1` enables redirection of logs into log file by predefined path. On Linux usually it's `~/.local/share/Status/StatusDev.log`; MacOS: `~/Library/Application Support/Status/StatusDev.log`.
 - Setting env var `STATUS_LOG_PATH` (along with `STATUS_LOG_FILE_ENABLED` to `1`) instructs app to write the logs into custom file path. Relative file path can be used.
-- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with the standard `qtlogging.ini` as documented in http://doc.qt.io/qt-5/qloggingcategory.html.
+- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with the standard `QT_LOGGING_RULES` environment variable as documented in http://doc.qt.io/qt-5/qloggingcategory.html.
