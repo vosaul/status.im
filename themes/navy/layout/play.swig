@@ -8,8 +8,8 @@
     <ul>
       <li>
         <div class="inner">
-          <h3>Try Yourself!</h3>
-          <p>Literally, right now...</p>
+          <h3>Developer Tools</h3>
+          <p>#MakeCodingGreatAgain</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
         <a href="/developer_tools/"></a>
@@ -20,15 +20,15 @@
           <p>Play with even more</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="../fiddle/"></a>
+        <a href="/fiddle/"></a>
       </li>
       <li>
         <div class="inner">
-          <h3>Developer Tools</h3>
-          <p>#MakeCodingGreatAgain</p>
+          <h3>Build Status</h3>
+          <p>For Mobile and Desktop</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="../developer_tools/"></a>
+        <a href="/build_status/"></a>
       </li>
     </ul>
   </header>
@@ -48,8 +48,8 @@
                     </main>
                     <aside id="panel">
                         <p>A playground to experiment with extensions and easily publish them on IPFS. <br /> Go ahead, modify the default extension on the left side!</p>
-                        <p>Find more details about building your own extension in this <a href="https://docs.status.im/docs/extensions_tutorial_chat_command.html">tutorial</a></p>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="publish()">Publish</button>
+                        <p>Find more details about building your own extension in this <a href="./tutorial_chat_command.html">tutorial</a></p>
+                        <button class="button button--blue" onclick="publish()">Publish</button>
                         <div id="qr-wrapper"></div>
                     </aside>
                 </div>
