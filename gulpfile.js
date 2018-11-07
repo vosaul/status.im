@@ -124,7 +124,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('bundle', 'genqr', 'compress', 'generate', 'exit')
+    runSequence('generate', 'bundle', 'genqr', 'compress', 'exit')
     
 });
 
