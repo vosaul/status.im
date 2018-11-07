@@ -14,10 +14,11 @@ You will need the following tools installed:
   - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
     - Linux: `sudo apt install extra-cmake-modules libgnome-keyring0`
     - MacOS: `brew install kde-mac/kde/kf5-extra-cmake-modules`
-  - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
-    - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
+  - Linux and MacOS:
+    - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
+      - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
-## Qt setup
+## Qt setup (Linux and MacOS only)
 
 Set Qt's environment variables: 
   - set QT_PATH to point to the location of Qt's distribution. It should not end with a slash.
@@ -36,6 +37,8 @@ cd status-react
 make prepare-desktop
 make release-desktop
 ```
+
+For a Windows build cross-compiled from Linux, replace `make release-desktop` with `make release-windows-desktop`.
 
 # Development environment setup
 
@@ -131,4 +134,4 @@ After Figwheel has connected to the app, run the following command inside Vim, a
 - Passing `BUILD_FOR_BUNDLE` preprocessor make flag instructs application to redirect output to predefined log file. On Linux usually it's `~/.local/share/Status/Status.log`; MacOS: `~/Library/Application Support/Status/Status.log`.
 - Setting env var `STATUS_LOG_FILE_ENABLED` to `1` enables redirection of logs into log file by predefined path. On Linux usually it's `~/.local/share/Status/StatusDev.log`; MacOS: `~/Library/Application Support/Status/StatusDev.log`.
 - Setting env var `STATUS_LOG_PATH` (along with `STATUS_LOG_FILE_ENABLED` to `1`) instructs app to write the logs into custom file path. Relative file path can be used.
-- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with the standard `QT_LOGGING_RULES` environment variable as documented in http://doc.qt.io/qt-5/qloggingcategory.html.
+- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with standard Qt environment variables, as documented in the [react-native-desktop FAQ](https://github.com/status-im/react-native-desktop/blob/master/docs/FAQ.md#how-do-i-control-qt-logging).
