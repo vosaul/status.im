@@ -1,5 +1,5 @@
 var gulp = require('gulp')
-var gutil = require('gulp-util')
+var log = require('fancy-log')
 var source = require('vinyl-source-stream')
 var babelify = require('babelify')
 var watchify = require('watchify')
@@ -8,15 +8,17 @@ var browserify = require('browserify')
 var browserSync = require('browser-sync').create()
 var sass = require('gulp-sass')
 var imagemin = require('gulp-imagemin')
-var gutil = require('gulp-util');
 var Hexo = require('hexo');
 var runSequence = require('run-sequence');
 var minify = require('gulp-minify');
 let cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 
+const gen_qr = require('./scripts/gen-qr');
+
 // generate html with 'hexo generate'
 var hexo = new Hexo(process.cwd(), {});
+
 gulp.task('generate', function(cb) {
     hexo.init().then(function() {
         return hexo.call('generate', {
@@ -63,12 +65,12 @@ bundler.transform(
 bundler.on('update', bundle)
 
 function bundle() {
-    gutil.log('Compiling JS...')
+    log('Compiling JS...')
 
     return bundler
         .bundle()
         .on('error', function(err) {
-            gutil.log(err.message)
+            log(err.message)
             browserSync.notify('Browserify Error!')
             this.emit('end')
         })
@@ -93,15 +95,18 @@ gulp.task('compress', ['sass'], function() {
         .pipe(gulp.dest('./public/css/'));
 });
 
+gulp.task('genqr', function() {
+    gen_qr()
+})
+
 gulp.task('bundle', function() {
     return bundle()
 })
 
-
 gulp.task('sass', function() {
     return gulp.src("./themes/navy/source/scss/main.scss")
         .pipe(sass())
-        .on('error', gutil.log)
+        .on('error', log)
         .pipe(gulp.dest(config.paths.dist.css))
         .pipe(browserSync.stream())
 })
@@ -111,7 +116,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('generate', 'bundle', 'compress', 'watch')
+    runSequence('generate', 'bundle', 'genqr', 'compress', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -119,7 +124,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('bundle', 'compress', 'generate', 'exit')
+    runSequence('bundle', 'genqr', 'compress', 'generate', 'exit')
     
 });
 

@@ -52,44 +52,37 @@
                     <div class="nightly-builds-wrap">
                         <div class="box">
                             <h2>Linux</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181012-025922-02cb5d-nightly.AppImage" target="_blank">
+                            <a href="{{ site.data.nightlies['NIX_URL'] }}" target="_blank">
                                 <img src="../nightly/img/linux.png" width="150" />
-                            </a>
-                            <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.AppImage" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.AppImage
+                                <br><br>
+                                <span>{{ site.data.nightlies['NIX_URL'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="box">
                             <h2>macOS</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg" target="_blank">
+                            <a href="{{ site.data.nightlies['DMG_URL'] }}" target="_blank">
                                 <img src="../nightly/img/macos.png" width="150" />
-                            </a>
-                            <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg" target="_blank">
-                                https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.dmg
+                                <br><br>
+                                <span>{{ site.data.nightlies['DMG_URL'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="clear"></div>
                         <div class="box">
                             <h2>Android</h2>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.apk" target="_blank">
+                            <a href="{{ site.data.nightlies['APK_URL'] }}" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
-                            </a>
-                            <p>Link:</p>
-                            <a href="https://status-im.ams3.digitaloceanspaces.com/StatusIm-181025-083129-0bc9fb-nightly.apk" target="_blank">
-                                Android Nightly Build
+                                <br><br>
+                                <span>{{ site.data.nightlies['APK_URL'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="box">
                             <h2>iOS</h2>
-                            <a href="https://i.diawi.com/go6FP9" >
+                            <a href="{{ site.data.nightlies['IOS_URL'] }}" target="_blank">
                                 <img src="../nightly/img/qr-ios.png" width="80%" />
+                                <br><br>
+                                <span>{{ site.data.nightlies['IOS_URL'] }}</span>
                             </a>
-                            <p>Link:</p>
-                            <a href="https://i.diawi.com/go6FP9" target="_blank">
-                                iOS Nightly Build (requires diawi access)
-                            </a>
+                            <small>(Requires diawi access)</small>
                         </div>
                     </div>
                   </div>
