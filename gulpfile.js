@@ -116,7 +116,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('generate', 'bundle', 'compress', 'genqr', 'watch')
+    runSequence('generate', 'compress', 'bundle', 'genqr', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -124,7 +124,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('generate', 'bundle', 'compress', 'genqr', 'exit')
+    runSequence('generate', 'compress', 'bundle', 'genqr', 'exit')
     
 });
 
