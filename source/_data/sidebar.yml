@@ -130,5 +130,5 @@ extensions:
     reference_views: reference_views.html
     reference_queries: reference_queries.html
     reference_events: reference_events.html
-  installation:
-    install_guide: installation.html
+  create:
+    create_your_own: play.html
