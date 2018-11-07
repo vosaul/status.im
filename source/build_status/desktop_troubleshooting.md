@@ -14,13 +14,17 @@ Create a link:
 
 
 ### `react-native run desktop` complaining about missing `qmldir`:
-```Command failed: ./build.sh -e "node_modules/react-native-i18n/desktop;node_modules/react-native-config/desktop;node_modules/react-native-fs/desktop;node_modules/react-native-http-bridge/desktop;node_modules/react-native-webview-bridge/desktop;modules/react-native-status/desktop"
+
+```
+Command failed: ./build.sh -e "node_modules/react-native-i18n/desktop;node_modules/react-native-config/desktop;node_modules/react-native-fs/desktop;node_modules/react-native-http-bridge/desktop;node_modules/react-native-webview-bridge/desktop;modules/react-native-status/desktop"
 Error copying directory from "/path-to-status-react/node_modules/react-native/ReactQt/runtime/src/qmldir" to "/path-to-status-react/desktop/lib/React".
 make[2]: *** [lib/CMakeFiles/copy-qmldir] Error 1
 make[1]: *** [lib/CMakeFiles/copy-qmldir.dir/all] Error 2
 make: *** [all] Error 2
+
 ```
-Can be solved by re-running `npm install react-native` which put the `ReactQt/runtime/src/qmldir` file back.
+
+Can be solved by re-running `npm install react-native`, which puts the `ReactQt/runtime/src/qmldir` file back.
 
 ### Missing web3 package issue
 
