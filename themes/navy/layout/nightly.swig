@@ -52,35 +52,35 @@
                     <div class="nightly-builds-wrap">
                         <div class="box">
                             <h2>Linux</h2>
-                            <a href="{{ site.data.nightlies['NIX_URL'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['APP'] }}" target="_blank">
                                 <img src="../nightly/img/linux.png" width="150" />
                                 <br><br>
-                                <span>{{ site.data.nightlies['NIX_URL'] | split('/') | last }}</span>
+                                <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="box">
                             <h2>macOS</h2>
-                            <a href="{{ site.data.nightlies['DMG_URL'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['MAC'] }}" target="_blank">
                                 <img src="../nightly/img/macos.png" width="150" />
                                 <br><br>
-                                <span>{{ site.data.nightlies['DMG_URL'] | split('/') | last }}</span>
+                                <span>{{ site.data.nightlies['MAC'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="clear"></div>
                         <div class="box">
                             <h2>Android</h2>
-                            <a href="{{ site.data.nightlies['APK_URL'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['APK'] }}" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
                                 <br><br>
-                                <span>{{ site.data.nightlies['APK_URL'] | split('/') | last }}</span>
+                                <span>{{ site.data.nightlies['APK'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="box">
                             <h2>iOS</h2>
-                            <a href="{{ site.data.nightlies['IOS_URL'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['IOS'] }}" target="_blank">
                                 <img src="../nightly/img/qr-ios.png" width="80%" />
                                 <br><br>
-                                <span>{{ site.data.nightlies['IOS_URL'] }}</span>
+                                <span>{{ site.data.nightlies['IOS'] }}</span>
                             </a>
                             <small>(Requires diawi access)</small>
                         </div>
