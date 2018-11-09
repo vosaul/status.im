@@ -1,4 +1,9 @@
-# Ultra Light Client
+---
+id: ulc_in_details
+title: Ultra Light Client in details
+---
+
+# Ultra Light Client in details
 
 ## Overview
 ULC is a new option in LES that doesn't break capability with LES protocol, but significantly reduces Ethereum client time and resources to sync with the chain.
