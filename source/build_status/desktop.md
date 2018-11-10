@@ -21,9 +21,9 @@ You will need the following tools installed:
 ## Qt setup (Linux and MacOS only)
 
 Set Qt's environment variables: 
-  - set QT_PATH to point to the location of Qt's distribution. It should not end with a slash.
+  - set `QT_PATH` to point to the location of Qt's distribution. It should not end with a slash.
 	- On MacOS and Linux: `export QT_PATH=/Users/<user_name>/Qt/5.11.2`
-  - add qmake to PATH via 
+  - add path to qmake to `PATH` environment variable via 
     - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
     - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
 
