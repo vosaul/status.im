@@ -99,6 +99,16 @@ rm -rf ~/.local/share/Status \
 
 Go to `~/Library/Application Support/` and delete any Status directories. Delete the app in `/Application`. Then reinstall.
 
+### On Windows
+
+``` bash
+# First kill the `ubuntu-server` process because it has a cache of realm db
+tskill ubuntu-server
+
+# Then remove data folder
+rd /S /Q %LOCALAPPDATA%\Status
+```
+
 ## Editor setup
 
 Running `make watch-desktop` will run a REPL on port 7888 by default. Some additional steps might be needed to connect to it.
