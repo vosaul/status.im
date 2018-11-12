@@ -34,6 +34,7 @@ Run the following commands to build a Desktop package for the host environment (
 ``` bash
 git clone https://github.com/status-im/status-react.git
 cd status-react
+npm install -g react-native-cli
 make prepare-desktop
 make release-desktop
 ```
