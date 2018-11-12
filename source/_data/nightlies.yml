@@ -1,4 +1,5 @@
-APK_URL: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181107-131145-43075c-nightly.apk'
-IOS_URL: 'https://i.diawi.com/C1SPoU'
-NIX_URL: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181107-131145-43075c-nightly.AppImage'
-DMG_URL: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181107-131145-43075c-nightly.dmg'
+# WARNING: This file is updated by the 'nightlies' Gulp task during build
+APK: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181110-145010-d2160e-nightly.apk'
+IOS: 'https://i.diawi.com/JQ4eVd'
+APP: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181110-145010-d2160e-nightly.AppImage'
+MAC: 'https://status-im.ams3.digitaloceanspaces.com/StatusIm-181110-145010-d2160e-nightly.dmg'

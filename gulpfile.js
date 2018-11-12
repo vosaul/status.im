@@ -15,6 +15,7 @@ let cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 
 const gen_qr = require('./scripts/gen-qr');
+const nightlies = require('./scripts/nightlies');
 
 // generate html with 'hexo generate'
 var hexo = new Hexo(process.cwd(), {});
@@ -95,6 +96,10 @@ gulp.task('compress', ['sass'], function() {
         .pipe(gulp.dest('./public/css/'));
 });
 
+gulp.task('nightlies', function() {
+    return nightlies()
+})
+
 gulp.task('genqr', function() {
     gen_qr()
 })
@@ -116,7 +121,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('generate', 'compress', 'bundle', 'genqr', 'watch')
+    runSequence('nightlies', 'generate', 'compress', 'genqr', 'bundle', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -124,7 +129,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('generate', 'compress', 'bundle', 'genqr', 'exit')
+    runSequence('nightlies', 'generate', 'compress', 'genqr', 'bundle', 'exit')
     
 });
 

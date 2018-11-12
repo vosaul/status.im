@@ -14,10 +14,10 @@ const gen_qr = () => {
   var nightlies_file = fs.readFileSync(nightlies_path, 'utf8')
   var nightlies = yml.safeLoad(nightlies_file)
   
-  //log(qr_path + 'qr-apk.png (' + nightlies['APK_URL'] + ')')
-  qrc.toFile(qr_path + 'qr-apk.png', nightlies['APK_URL'], {}, err_handler)
-  //log(qr_path + 'qr-ios.png (' + nightlies['IOS_URL'] + ')')
-  qrc.toFile(qr_path + 'qr-ios.png', nightlies['IOS_URL'], {}, err_handler)
+  //log(qr_path + 'qr-apk.png (' + nightlies['APK'] + ')')
+  qrc.toFile(qr_path + 'qr-apk.png', nightlies['APK'], {}, err_handler)
+  //log(qr_path + 'qr-ios.png (' + nightlies['IOS'] + ')')
+  qrc.toFile(qr_path + 'qr-ios.png', nightlies['IOS'], {}, err_handler)
 }
 
 module.exports = gen_qr
