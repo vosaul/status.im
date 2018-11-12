@@ -14,28 +14,32 @@ You will need the following tools installed:
   - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
     - Linux: `sudo apt install extra-cmake-modules libgnome-keyring0`
     - MacOS: `brew install kde-mac/kde/kf5-extra-cmake-modules`
-  - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
-    - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
+  - Linux and MacOS:
+    - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed. 
+      - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
 
-## Qt setup
+## Qt setup (Linux and MacOS only)
 
 Set Qt's environment variables: 
-  - set QT_PATH to point to the location of Qt's distribution. It should not end with a slash.
+  - set `QT_PATH` to point to the location of Qt's distribution. It should not end with a slash.
 	- On MacOS and Linux: `export QT_PATH=/Users/<user_name>/Qt/5.11.2`
-  - add qmake to PATH via 
+  - add path to qmake to `PATH` environment variable via 
     - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
     - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
 
 # Building a release package
 
-Run the following commands to build a Desktop package for the host environment (Linux or Mac OS):
+Run the following commands to build a Desktop package for the host environment:
 
 ``` bash
 git clone https://github.com/status-im/status-react.git
 cd status-react
+npm install -g react-native-cli
 make prepare-desktop
 make release-desktop
 ```
+
+For a Windows build cross-compiled from Linux, replace `make release-desktop` with `make release-windows-desktop`.
 
 # Development environment setup
 
@@ -84,7 +88,7 @@ To completely clean up data from previous development sessions, such as accounts
 
 ``` bash
 # First kill the `ubuntu-server` process because it has a cache of realm db
-killall ubuntu-server
+pkill -f ubuntu-server
 
 # Then remove data and cache folders
 rm -rf ~/.local/share/Status \
@@ -95,6 +99,16 @@ rm -rf ~/.local/share/Status \
 ### On a Mac
 
 Go to `~/Library/Application Support/` and delete any Status directories. Delete the app in `/Application`. Then reinstall.
+
+### On Windows
+
+``` bash
+# First kill the `ubuntu-server` process because it has a cache of realm db
+tskill ubuntu-server
+
+# Then remove data folder
+rd /S /Q %LOCALAPPDATA%\Status
+```
 
 ## Editor setup
 
@@ -127,8 +141,12 @@ After Figwheel has connected to the app, run the following command inside Vim, a
 
 ## Configure logging output destination
 
-- Be default, application adds debug output into standard process output stream.
-- Passing `BUILD_FOR_BUNDLE` preprocessor make flag instructs application to redirect output to predefined log file. On Linux usually it's `~/.local/share/Status/Status.log`; MacOS: `~/Library/Application Support/Status/Status.log`.
-- Setting env var `STATUS_LOG_FILE_ENABLED` to `1` enables redirection of logs into log file by predefined path. On Linux usually it's `~/.local/share/Status/StatusDev.log`; MacOS: `~/Library/Application Support/Status/StatusDev.log`.
-- Setting env var `STATUS_LOG_PATH` (along with `STATUS_LOG_FILE_ENABLED` to `1`) instructs app to write the logs into custom file path. Relative file path can be used.
-- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with the standard `QT_LOGGING_RULES` environment variable as documented in http://doc.qt.io/qt-5/qloggingcategory.html.
+- By default, application adds debug output into standard process output stream.
+- The app data folder location varies per platform. It's usually at:
+  - Linux: `~/.local/share/Status/`;
+  - MacOS: `~/Library/Application Support/Status/`;
+  - Windows: `%LOCALAPPDATA%\Status\`.
+- Passing `BUILD_FOR_BUNDLE` preprocessor make flag instructs application to redirect output to predefined log file. The log file is named `Status.log` in the app data folder;
+- Setting env var `STATUS_LOG_FILE_ENABLED` to `1` enables redirection of logs into log file by predefined path. The log file is named `StatusDev.log` in the app data folder.
+- Setting env var `STATUS_LOG_PATH` (along with `STATUS_LOG_FILE_ENABLED` to `1`) instructs app to write the logs into custom file path. Relative file paths can be used.
+- Specific [react-native-desktop](https://github.com/status-im/react-native-desktop) output can be controlled with standard Qt environment variables, as documented in the [react-native-desktop FAQ](https://github.com/status-im/react-native-desktop/blob/master/docs/FAQ.md#how-do-i-control-qt-logging).
