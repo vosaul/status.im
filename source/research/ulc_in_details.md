@@ -5,6 +5,12 @@ title: Ultra Light Client in details
 
 # Ultra Light Client in details
 
+## Definitions
+* TD - the total difficulty of the chain until a given block
+* LES - light Ethereum subprotocol
+* ULC - ultra light client, an option of LES
+* CHT - Canonical Hash Trie which maps historical block numbers to their canonical hashes in a merkle trie. This allows us to discard the block headers themselves in favor of a trie root which encompasses the accumulation of their hashes and to fetch proofs that a specific block hash is in fact the one we verified earlier [\[1\]][1]
+
 ## Overview
 ULC is a new option in LES that doesn't break capability with LES protocol, but significantly reduces Ethereum client time and resources to sync with the chain.
 The main idea is about reducing an amount of messages and doing less validations on client side.
@@ -69,11 +75,11 @@ Note left of ULC: header:\nblock announce, logsBloom,\nMerkle trees roots:\nstat
 ```
 
 ## ULC in Roles
-### Trusted LES servers 
-are needed only to send announces (block hash, td, number) to LES(ULC) clients. All announces should be signed. Trusted servers don't know anything about were they choosen as trusted or not by any client. Can be started with `onlyAnnounce` flag, that switches LES server to the mode "only send announces to my peers, do not process any other requests".
+### Trusted LES servers
+Trusted LES servers are needed only to send announces (block hash, td, number) to LES(ULC) clients. All announces should be signed. Trusted servers don't know anything about were they choosen as trusted or not by any client. Can be started with `onlyAnnounce` flag, that switches LES server to the mode "only send announces to my peers, do not process any other requests".
 
 ### LES servers (untrusted)
-usual LES servers, a header chain is synchronized with them. Helps to prevent attacks on trusted servers.
+LES servers - usual LES servers, a header chain is synchronized with them. Helps to prevent attacks on trusted servers.
 
 ### ULC client
 1. has some CHT root at the start; has a CHTs "chain", that can be syncked from LES servers; CHT chain allows to request any historical information (block, transaction, receipt) from LES server
@@ -84,7 +90,7 @@ usual LES servers, a header chain is synchronized with them. Helps to prevent at
 6. ULC client validates:
 6.1. announces checking are there M the same announces from N received from Trusted LES servers
 6.2. doesn't validates CHT, if we get incorrect CHT it'll be clear later after receiving block headers.
-6.3. validates headers as usual LES client except of VerifySeal (https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L491). ULC doen't run `VerifySeal` at all.
+6.3. validates headers as usual LES client except of [VerifySeal](https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L491). ULC doen't run `VerifySeal` at all.
 
 ## ULC client resources
 ### Network
@@ -208,23 +214,14 @@ It's obvious that scaling due to server expansion inside the service is strictly
 At the moment there're 15000 nodes, if 30% of them will use LES server, more than 300.000 ULC users can be handled simultaneously.
 
 ## Benchmarks
-Our beta test showed that ULC sync is ~10x times faster than LES - https://youtu.be/Z6UUT1TqdTs?t=623
+Our beta test showed that ULC sync is ~10x times [faster than LES](https://youtu.be/Z6UUT1TqdTs?t=623)
 
 ## Future plans
 ### Short-Term
-We want for the LES server to have separate connection and requests number limits for users who don't pay for LES server resources and for those who pay for their requests to the server.
-
-A pool for free requests is already done in https://github.com/ethereum/go-ethereum/pull/16899.
-
-We can make a simple contract where users can deposit money to secure a limit at LES servers, and servers can also deposit money to add themselves to the trusted list.
-
-For PoC, we want to make a monthly subscription with a simple mechanism for proving malicious actions. The user should be able to present the received announcement, which is considered malicious. As far as any announce for ULC client must be signed by the server, anyone can verify does the announcement correct or not.
-
-That is, any LES server will have in addition to the free pool a prepaid pool also.
-
-### Medium-Term
-1. https://hackmd.io/vXp2x4NsRZq0iRR-wtaRzg
-2. ULC can use any trusted list of LES servers. So it's possible to get a such list using services like VIP node.
+Status.im is going to start using ULC to have more censorship resistance and enable all web3 features for DApps.
 
 ### Long-Term
-Ethereum services are going to have microtransactions and it will make possible to make a market of LES servers quotas: https://github.com/zsfelfoldi/ethereum-docs/blob/master/les/service_model.md#continous-auction
+* [On ULC incentives](https://hackmd.io/6IhsF6zRSqmtggvNnp1sHQ)
+* Ethereum services are going to have microtransactions and it will make possible to make a market of LES servers quotas using [LES service model](https://github.com/zsfelfoldi/ethereum-docs/blob/master/les/service_model.md#continous-auction)
+
+[1]: https://wiki.parity.io/The-Parity-Light-Protocol-(PIP)
