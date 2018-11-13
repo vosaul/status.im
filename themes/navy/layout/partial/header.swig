@@ -1,12 +1,12 @@
 <div class="header">
     <div class="header-left">
-        <a class="logo" href="/"></a>
+        <a class="logo" href={{url_for_lang('/')}}></a>
         <ul class="main-nav">
-            <li class="item--to-show"><a href="/get/" class="">App</a></li>
+            <li class="item--to-show"><a href={{url_for_lang('get')}} class="">App</a></li>
             <li class="item--to-show"> <a href="https://our.status.im/">Blog</a> </li>
-            <li class="item--to-show"> <a href="/docs/">Docs</a></li>
+            <li class="item--to-show"> <a href={{url_for_lang('docs')}}>Docs</a></li>
             <li class="item--dropdown item--dropdown-projects"> <a href="#" class="">Projects</a></li>
-            <li><a href="/contribute/">Contribute</a></li>
+            <li><a href={{url_for_lang('contribute')}}>Contribute</a></li>
             <li class="item--dropdown"><a href="#" class="item--dropdown-community">Community</a></li>
             <li class="item--more"><a href="#" class="item--more">More</a></li>
         </ul>
@@ -18,11 +18,11 @@
 
 <div class="mobile-nav-wrap">
     <div class="mobile-nav-inner">
-        <a class="logo" href="/"></a>
+        <a class="logo" href={{url_for_lang('/')}}></a>
         <a class="icon-close mobile-nav-close" href="#"></a>
         <ul class="mobile-nav">
             <li><a href="https://our.status.im/">Blog</a></li>
-            <li><a href="/docs/">Docs</a></li>
+            <li><a href={{url_for_lang('docs')}}>Docs</a></li>
             <li class="item--dropdown item--to-show">
               <span>Projects</span>
               <ul class="mobile-sub-nav">
@@ -33,7 +33,7 @@
                 <li><a href="https://hardwallet.status.im/" class="">Hardwallet</a></li>
               </ul>
             </li>
-            <li><a href="/contribute/" class="">Contribute</a></li>
+            <li><a href={{url_for_lang('contribute')}} class="">Contribute</a></li>
         </ul>
         <div class="mobile-nav-footer">
             <a href="https://get.status.im/chat/public/status" class="button button--blue">Join Status Chat</a>
@@ -86,7 +86,7 @@
                             <h4>Life at Status</h4>
                             <p class="secondary-text">What's it like to live the decentralized lifestyle? Find out here.</p>
                         </div>
-                        <div class="card-community-more__link"><a href="/contribute/" class="link-arrow">Learn more</a></div>
+                        <div class="card-community-more__link"><a href={{url_for_lang('contribute')}} class="link-arrow">Learn more</a></div>
                     </div>
                 </div>
                 <div class="card">

@@ -1,0 +1,158 @@
+menu:
+  docs: Docs
+  developer_tools: Developer Tools
+  extensions: Extensions
+  wip: WIP
+  search: Search
+  blog: Blog
+  tutorials: Tutorials
+
+page:
+  contents: Contents
+  back_to_top: Back to Top
+  improve: Improve this doc
+  prev: Prev
+  next: Next
+  last_updated: "Last updated: %s"
+
+sidebar:
+  docs:
+    index: Spanish Documentation
+    use_status: Use Status
+    contributor_guide: Contributor Guide
+    FAQs: FAQs
+    app_structure: App Structure
+    status_react_structure: Status-React Structure
+    send_transaction_flow: Send Transaction Flow
+    status_node: Status Node
+    run_status_node: Run a Status Node
+    testing: Testing
+    introduction_testing: How We Test
+    report_a_bug: Report a Bug
+    analytics: Analytics  
+    analytics_status: Analysing Status
+
+  build_status:
+    build_status: Build Status Yourself
+    introduction_build: Be a Part of a Better Web
+    build_status_go: Build Status-Go
+    build_status_desktop: Status Desktop
+    introduction_desktop: Getting Setup
+    building_desktop: Build Desktop
+    troubleshooting: Troubleshooting
+    using_breakpad: Google Breakpad Integration
+    jenkins_pipeline: Jenkins Setup
+
+  developer_tools:
+    web3_for_everyone: Web3 For Everyone
+    introduction_tools: Status Developer Tools
+    connecting_to_web3: Connecting to web3
+    access_an_ethereum_provider: Accessing Web3 Providers
+    detecting_status: Detecting Status
+    optimised_for_status: Optimizing for Mobile
+    assets_guidelines: Assets and Guidelines
+    js_api: JavaScript API
+    http_debugging: How to Test & Debug
+    submitting_to_status: Submitting Your DApp
+    submit_to_status: How To Submit
+    troubleshooting_dapps: Troubleshooting
+    embark: Embark
+    adapt_status: Adapt Status To Your Needs
+    enable_chat: Add Your Own Chat
+    add_your_own_network: Add Your Own Network
+    status_extensions: Extensions [WIP]
+    intro_extensions: Introduction
+    status_fiddle: Fiddle
+    fiddle: Status Fiddle
+    status_storybook: Storybook
+    storybook: Status React Storybook
+
+  tutorials:
+    extensions: Extensions
+    your_first_chat_extension: Your First Chat Extension
+
+  research:
+    whisper: Whisper
+    secret: Do You Want To Know A Secret?
+    extended_features: Extended Features
+    dark_routing: Dark Routing
+    whisper_pss: Comparison with PSS 
+    whisper_faqs: Whisper FAQs
+    secure_messaging_compendium: Secure Messaging Compendium
+    research_projects: Research Projects
+    nimbus: Nimbus (Ethereum 2.0 Client)
+
+  security:
+    security: Security
+    introduction_security: Security Matters!
+    security_status: Security at Status
+    threat_modeling: Threat Modeling
+    existing_features: Existing Features Project
+    new_features: New Features Project
+    security_week: Status Security Week
+    sensitive_data: What is Sensitive Data?
+    experiment: Security Experiment
+    audits: Audits
+    introduction_audits: Status External Audits
+    guides: Guides
+    introduction_guides: Security Week Guides
+    organization: Organization
+    introduction_organization: Policy and Procedure
+
+  audits: 
+    audits: Audits
+    introduction_audits: Status External Audits
+  
+  guides: 
+    guides: Guides
+    introduction_guides: Security Week Guides
+  
+  org_sec: 
+    org: Organization
+    introduction_organization: Policy and Procedure
+    security_champions: Security Champions
+    security_github_labels: Using Github Labels
+
+  analytics:
+    analytics: Analysing Status
+    introduction: Better Data for Everyone
+    app_downloads: App Downloads
+    messages: Whisper Messages
+    ens_registration: ENS Registrations
+    crypto_oss: Crypto OSS
+    oss: Regular OSS
+    run_it_yourself: Run Our Analytics Yourself
+
+  fiddle:
+    fiddle: Status Fiddle
+    introduction_fiddle: Fiddle to Your Heart's Content
+    actual_fiddle: Fiddle
+
+  contribute:
+    get_involved: Get Involved
+    introduction_contribute: Contribute to Status
+    perks_benefits: Perks and Benefits
+    applicant_privacy: Applicant Privacy
+    apply_now: Applying to Status
+    open_positions: Open Positions 
+    working_status: Working at Status
+    our_principles: Our Principles
+    life_status: Life at Status
+    the_future: The Future
+    faqs: FAQs
+    jobs: Jobs at Status
+
+  extensions:
+    extensions: Introduction
+    introduction: What are extensions?
+    concepts: Key concepts
+    build: Build
+    syntax: Syntax
+    extension_types: Extension types
+    tutorial_chat_command: Tutorial
+    references: References
+    reference_views: Views
+    reference_queries: Queries
+    reference_events: Events
+    installation: Installation
+    install_guide: Install an extension
