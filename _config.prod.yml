@@ -4,14 +4,10 @@ description: "Status is the mobile windown onto Ethereum, the platform with whic
 author: Status
 timezone: UTC
 
-language:
-  - en
-  - es
-  - kr
+language: [en, es, kr]
 locale: en
 i18n:
   type: [page, post]
-  generator: [index, archive, category, tag]
 permalink_defaults:
   lang: en
 i18n_dir: :lang
