@@ -46,11 +46,17 @@ hexo.extend.helper.register('page_nav', function() {
 });
 
 hexo.extend.helper.register('doc_sidebar', function(className) {
-  var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
-  var path = pathFn.basename(this.path);
-  var result = '';
   var self = this;
+  var canonicalPathToSplit = 0;
+
+  if (this.page.lang !== 'en') {
+    canonicalPathToSplit = 1;
+  }
+
+  var type = this.page.canonical_path.split('/')[canonicalPathToSplit];
+  var sidebar = this.site.data.sidebar[type];
+  var path = this.path;
+  var result = '';
   var prefix = 'sidebar.' + type + '.';
 
   _.each(sidebar, function(menu, title) {
@@ -58,7 +64,7 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
 
     _.each(menu, function(link, text) {
       var itemClass = className + '-link';
-      if (link === path) itemClass += ' current';
+      if (link === pathFn.basename(path)) itemClass += ' current';
 
       result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
     });
