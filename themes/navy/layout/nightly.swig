@@ -67,7 +67,7 @@
                             </a>
                         </div>
                         <div class="clear"></div>
-                        <div>
+                        <div class="box">
                             <h2>Windows</h2>
                             <a href="{{ site.data.nightlies['WIN'] }}" target="_blank">
                                 <img src="../nightly/img/windows.png" width="150" />
