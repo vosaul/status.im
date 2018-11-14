@@ -20,6 +20,8 @@ pipeline {
       steps {
         sh "git config user.name ${env.GIT_USER}"
         sh "git config user.email ${env.GIT_MAIL}"
+        /* necessary to have access to the theme partials */
+        sh 'git submodule update --init --recursive'
       }
     }
 
