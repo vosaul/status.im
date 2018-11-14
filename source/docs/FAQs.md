@@ -8,7 +8,7 @@ When looking at how to achieve mass adoption for a client, we looked at how peop
 
 Ultimately what we're building is a hybrid browser and messenger, this allows us to have the best chance at casting the widest net which permits us to focus on user acquisition, staying agnostic and as close as possible to the principles that Ethereum embodies.
 
-## Does Status support DApps that have their own web page ?
+## Does Status support DApps that have their own web page?
 Yes, we absolutely support DApps on their own webpage and are striving for SWARM support also. Chances are, if a DApp works in Mist or MetaMask it is likely to work in Status!
 
 If your web-based DApp renders on mobile, use the big "+" button on the homepage, navigate to the DApps page type in the web URL where your DApp is being hosted. You can also debug any issues by using Chrome dev tools very easily.
