@@ -68,6 +68,15 @@
                         </div>
                         <div class="clear"></div>
                         <div class="box">
+                            <h2>Windows</h2>
+                            <a href="{{ site.data.nightlies['WIN'] }}" target="_blank">
+                                <img src="../nightly/img/windows.png" width="150" />
+                                <br><br>
+                                <span>{{ site.data.nightlies['WIN'] | split('/') | last }}</span>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="box">
                             <h2>Android</h2>
                             <a href="{{ site.data.nightlies['APK'] }}" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
