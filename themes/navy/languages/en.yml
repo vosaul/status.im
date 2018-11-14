@@ -81,6 +81,8 @@ sidebar:
     secure_messaging_compendium: Secure Messaging Compendium
     research_projects: Research Projects
     nimbus: Nimbus (Ethereum 2.0 Client)
+    tutorials: Tutorials
+    basic_cli: Whisper in Your CLI
 
   security:
     security: Security
