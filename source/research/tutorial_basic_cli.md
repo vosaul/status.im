@@ -10,7 +10,7 @@ We understand that not many DApp developers want to use Whisper in the way Statu
 
 We have created [a repository](https://github.com/status-im/whisper-tutorial) specially for this tutorial. Please feel free to add additional tutorials if you would like to help the community out.
 
-Before we clone that repository though, let's make sure all our dependencies are properly set up, especially NodeJS and Go-Ethereum. We'll be using the latest versions of Geth, Whisper and EmbarkJS to get you up to speed on what Whisper looks like today.
+Before we clone that repository though, let's make sure all our dependencies are properly set up, especially NodeJS and Go-Ethereum. We'll be using the latest version of Geth to get you up to speed on what Whisper looks like today.
 
 #### NodeJS 8.10+
 ```
@@ -22,18 +22,6 @@ If you need to update Node, please [install `nvm`](https://github.com/creationix
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 nvm install --lts
 nvm use lts
-```
-#### IPFS 0.4.17+
-```
-ipfs version
-> 0.4.17+
-```
-Download the appropriate package [from here](https://docs.ipfs.io/introduction/install/). Then you can follow the macOS/Linux instructions provided for you below (you can use the exact same steps if you just want to update `ipfs`):
-```
-tar xvfz go-ipfs.tar.gz
-cd go-ipfs
-./install.sh
-ipfs init
 ```
 
 #### Go-ethereum 1.8.17+
