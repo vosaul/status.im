@@ -98,6 +98,8 @@ sidebar:
     introduction_guides: Security Week Guides
     organization: Organization
     introduction_organization: Policy and Procedure
+    tutorials: Tutorials
+    basic_cli: Whisper in Your CLI
 
   audits: 
     audits: Audits

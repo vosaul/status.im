@@ -62,6 +62,8 @@ research:
     secure_messaging_compendium: secure_messaging_compendium.html
   research_projects:
     nimbus: https://nimbus.status.im/
+  tutorials:
+    basic_cli: tutorial_basic_cli.html
 
 security:
   security:
