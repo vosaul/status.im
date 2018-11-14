@@ -1,6 +1,6 @@
 ---
 id: tutorial_basic_cli
-title: Getting Started with Whisper and EmbarkJS
+title: Getting Started with Whisper
 ---
 
 ## Intro
