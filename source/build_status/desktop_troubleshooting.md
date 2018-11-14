@@ -141,6 +141,14 @@ echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 |
 watchman shutdown-server && sudo sysctl -p
 ```
 
+To persist the changes on Linux edit `/etc/sysctl.conf` by adding the following lines
+```
+fs.inotify.max_user_watches = 999999
+fs.inotify.max_queued_events = 999999
+fs.inotify.max_user_instances = 999999
+```
+then refresh the config with `sudo sysctl -p`
+
 ### metro bundler caching issue
 
 Time to time metro bundler for some reasons doesn't recognize changes in JavaScript sources and returns old version of the files on react-native app request. Cleaning of cache should help to solve the issue (usually running `react-native start --reset-cache` to start the bundler should work) .
