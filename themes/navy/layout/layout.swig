@@ -10,9 +10,9 @@
     {% if page.source == 'index.md' %}
       {{ partial('partial/footer-home') }}
     {% else %}
-      {{ partial('partial/footer') }}
+      {{ partial('partial/shared-partials/partials/footer') }}
     {% endif %}
   </div>
-  {{ partial('partial/after_footer') }}
+  {{ partial('partial/shared-partials/partials/after_footer') }}
 </body>
 </html>

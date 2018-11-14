@@ -1,15 +1,7 @@
 <div class="header">
     <div class="header-left">
         <a class="logo" href={{url_for_lang('/')}}></a>
-        <ul class="main-nav">
-            <li class="item--to-show"><a href={{url_for_lang('get')}} class="">App</a></li>
-            <li class="item--to-show"> <a href="https://our.status.im/">Blog</a> </li>
-            <li class="item--to-show"> <a href={{url_for_lang('docs')}}>Docs</a></li>
-            <li class="item--dropdown item--dropdown-projects"> <a href="#" class="">Projects</a></li>
-            <li><a href={{url_for_lang('contribute')}}>Contribute</a></li>
-            <li class="item--dropdown"><a href="#" class="item--dropdown-community">Community</a></li>
-            <li class="item--more"><a href="#" class="item--more">More</a></li>
-        </ul>
+        {{ partial('partial/shared-partials/partials/header-nav') }}
     </div>
     <div class="header-right">
         <a href="https://get.status.im/chat/public/status" class="button">Join Status Chat</a>
