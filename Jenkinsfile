@@ -32,6 +32,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm run clean'
+        sh 'npm run update-submodules'
         sh 'npm run build'
       }
     }

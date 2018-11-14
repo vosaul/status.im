@@ -9,7 +9,7 @@
     "clean": "rm -rf public/*",
     "build": "gulp run && hexo generate",
     "eslint": "eslint .",
-    "deploy": "hexo deploy"
+    "update-submodules": "git submodule update --recursive --remote"
   },
   "dependencies": {
     "cheerio": "^0.20.0",
