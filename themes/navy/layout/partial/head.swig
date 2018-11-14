@@ -12,9 +12,6 @@
     {% endfor %}
   {% endif %}
   <!-- Icon -->
-  <meta name="msapplication-TileColor" content="#ff9c00">
-  <meta name="msapplication-TileImage" content="{{ url_for('icon/mstile-144x144.png') }}">
-
   <link rel="icon" type="image/png" href="/img/logo-16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="/img/logo-32.png" sizes="32x32" />
 

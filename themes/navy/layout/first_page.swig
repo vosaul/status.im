@@ -10,7 +10,7 @@
           <h3>Developer Tools</h3>
           <p>#MakeCodingGreatAgain</p>
         </div>
-        <img src="../img/arrow_blue_shaded.svg" />
+        <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="/developer_tools/"></a>
       </li>
       <li>
@@ -18,7 +18,7 @@
           <h3>Build Status</h3>
           <p>For mobile and desktop</p>
         </div>
-        <img src="../img/arrow_blue_shaded.svg" />
+        <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="/build_status/"></a>
       </li>
       <li>
@@ -26,7 +26,7 @@
           <h3>Embark</h3>
           <p>Better Ðapps for everyone</p>
         </div>
-        <img src="../img/arrow_blue_shaded.svg" />
+        <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="https://embark.status.im/"></a>
       </li>
       <li>
@@ -34,7 +34,7 @@
           <h3>Research</h3>
           <p>Dive in! Learn more...</p>
         </div>
-        <img  src="../img/arrow_blue_shaded.svg" />
+        <img  src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="/research/"></a>
       </li>
       <li>
@@ -42,7 +42,7 @@
           <h3>Security</h3>
           <p>Status best practices</p>
         </div>
-        <img src="../img/arrow_blue_shaded.svg" />
+        <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="/security/"></a>
       </li>
       <li>
@@ -50,7 +50,7 @@
           <h3>Work in Progress</h3>
           <p>All our WIP items</p>
         </div>
-        <img src="../img/arrow_blue_shaded.svg" />
+        <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
         <a href="/wip/"></a>
       </li>
     </ul>

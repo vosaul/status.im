@@ -17,7 +17,7 @@ page:
 
 sidebar:
   docs:
-    index: Technical Documentation
+    index: Spanish Documentation
     use_status: Use Status
     contributor_guide: Contributor Guide
     FAQs: FAQs
@@ -81,8 +81,6 @@ sidebar:
     secure_messaging_compendium: Secure Messaging Compendium
     research_projects: Research Projects
     nimbus: Nimbus (Ethereum 2.0 Client)
-    tutorials: Tutorials
-    basic_cli: Whisper in Your CLI
 
   security:
     security: Security
@@ -100,8 +98,6 @@ sidebar:
     introduction_guides: Security Week Guides
     organization: Organization
     introduction_organization: Policy and Procedure
-    tutorials: Tutorials
-    basic_cli: Whisper in Your CLI
 
   audits: 
     audits: Audits
@@ -158,5 +154,5 @@ sidebar:
     reference_views: Views
     reference_queries: Queries
     reference_events: Events
-    create: Create Your Own
-    create_your_own: Start Now!
+    installation: Installation
+    install_guide: Install an extension
