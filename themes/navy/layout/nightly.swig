@@ -52,7 +52,7 @@
                     <div class="nightly-builds-wrap">
                         <div class="box-desktop">
                             <h2>Linux</h2>
-                            <a href="{{ site.data.nightlies['APP'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download" id="app" target="_blank">
                                 <img src="../nightly/img/linux.png" width="150" />
                                 <br><br>
                                 <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="box-desktop">
                             <h2>macOS</h2>
-                            <a href="{{ site.data.nightlies['MAC'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['MAC'] }}" class="nightly-download" id="mac" target="_blank">
                                 <img src="../nightly/img/macos.png" width="150" />
                                 <br><br>
                                 <span>{{ site.data.nightlies['MAC'] | split('/') | last }}</span>
@@ -69,7 +69,7 @@
                         <div class="clear"></div>
                         <div class="box-desktop">
                             <h2>Windows</h2>
-                            <a href="{{ site.data.nightlies['WIN'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['WIN'] }}" class="nightly-download" id="win" target="_blank">
                                 <img src="../nightly/img/windows.png" width="150" />
                                 <br><br>
                                 <span>{{ site.data.nightlies['WIN'] | split('/') | last }}</span>
@@ -78,7 +78,7 @@
                         <div class="clear"></div>
                         <div class="box-mobile">
                             <h2>Android</h2>
-                            <a href="{{ site.data.nightlies['APK'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['APK'] }}" class="nightly-download" id="apk" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
                                 <br><br>
                                 <span>{{ site.data.nightlies['APK'] | split('/') | last }}</span>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="box-mobile">
                             <h2>iOS</h2>
-                            <a href="{{ site.data.nightlies['IOS'] }}" target="_blank">
+                            <a href="{{ site.data.nightlies['IOS'] }}" class="nightly-download" id="ios" target="_blank">
                                 <img src="../nightly/img/qr-ios.png" width="80%" />
                                 <br><br>
                                 <span>{{ site.data.nightlies['IOS'] }}</span>
@@ -103,6 +103,4 @@
     </div>
   </div>
 </div>
-
-            
-
+<script defer src="./nightly_downloads_counter.js"></script>
