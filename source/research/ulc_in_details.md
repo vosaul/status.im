@@ -108,7 +108,7 @@ _All numbers and the algorithm steps are from [geth code](https://github.com/eth
 
 It runs once per epoch: `epochLength = 30000 blocks ~ each 3.5 days = twice per week`
 
-It needs to generate a verification matrix of pseudo-random values (it called `cache`).
+It needs to generate a verification matrix of pseudo-random values (called `cache`).
 
 Calculate seedHash in `epochNumber steps = 232 sha3 operations`
 Calculate the initial cache in:  `cacheSize/64 steps = 51641792/64 = 806900 sha3 operations`. `CacheSize` can be taken from [table `cacheSizes`](https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/algorithm.go#L821), for `epoch=232` it equals `51641792`.
