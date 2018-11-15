@@ -12,7 +12,7 @@ title: Ultra Light Client in details
 * CHT - Canonical Hash Trie which maps historical block numbers to their canonical hashes in a Merkle trie. This allows us to discard the block headers themselves in favor of a trie root which encompasses the accumulation of their hashes, and to fetch proofs that a specific block hash is in fact the one we verified earlier [\[1\]][1]
 
 ## Overview
-ULC is a new option in LES that doesn't break capability with LES protocol but significantly reduces Ethereum client time and resources to sync with the chain.
+ULC is a new option in LES that doesn't break compatibility with the LES protocol, but does significantly reduce the time and resources required to sync with the main Ethereum chain.
 The main idea is about reducing the amount of messages and doing fewer validations on the client side.
 
 ## What does ULC solves?
