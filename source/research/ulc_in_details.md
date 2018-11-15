@@ -16,9 +16,9 @@ ULC is a new option in LES that doesn't break compatibility with the LES protoco
 The main idea is about reducing the amount of messages and doing less client side validation.
 
 ## What does ULC solves?
-1) CPU&Battery consumption
-2) Time to start the sync
-3) Time to finish the sync
+1) CPU and battery consumption
+2) Time to start sync
+3) Time to finish sync
 
 ## ULC in schemes
 ### Algorithm
