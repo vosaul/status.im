@@ -131,7 +131,7 @@ $hashimotoLight = 64*128/64 *(generateDatasetItem + fnv)$
 $hashimotoLight = 128*(generateDatasetItem + fnv)$
 $hashimotoLight = 256 sha3 + 65664 fnv$
 
-This is the difference between ULC and LES clients for each block. As far as each CHT is generated once per 32767 blocks the total difference will be in $[1; 32767] * Cost(hashimotoLight) = [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)]$. The growth is linear.
+This is the difference between ULC and LES clients for each block. As far as each CHT is generated once per 32767 blocks the total difference is $[1; 32767] * Cost(hashimotoLight) = [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)]$. The growth is linear.
 
 This is theoretical lower bound. As it said in [Ethash article](https://github.com/ethereum/wiki/wiki/Ethash-Design-Rationale) for a single block verification step should take `'0.1 seconds in Python'` in practice it takes `~200ms` in golang Geth code.
 
@@ -198,7 +198,7 @@ There're 2 kinds of security guarantees:
 
 The very mechanism of blockchain synchronisation of the ULC is the same as that of the LES. Therefore, comparing the security guarantees of ULC with full, fast and LES does not make sense. It is more important to compare the guarantees of a private RPC server or Infura with ULC.
 
-If the probability of failure or hacking Infura or RPC server is taken as P, then with the ULC consensus M/N, the probability of its failure will be considered as Bernoulli process:
+If the probability of failure or hacking Infura or RPC server is taken as P, then with the ULC consensus M/N, the probability of its failure can be considered as Bernoulli process:
 
 $$P_{ULC\_failure}=\sum_{i=M}^N C_N^i*P^i*(1-P)^{N-i}$$
 
@@ -255,7 +255,7 @@ So if we want 3(M) out of 4(N) ULC consensus, in avarage we have 1000 users onli
 
 That was the reason why in ULC a new option was announced for LES server: `--onlyAnnounce`. It limits LES server to handle only `get announce` requests, but it increases the number of simultaneous users up to ~250 (should be stress tested).
 
-With `--onlyAnnounce` the formule will looks like:
+With `--onlyAnnounce` the formule looks like:
 $Servers=Max(AvarageUsers*N/LES\_only\_announce\_limit; N)=Max(1000*4/250; 4)=Max(16; 4)=16$
 
 | Users online | N | Server w/o `onlyAnnounce` | With `onlyAnnounce` |
