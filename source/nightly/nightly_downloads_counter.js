@@ -2,6 +2,6 @@
 $(document).ready(function () {
   $('a.nightly-download').click(function (ev) {
     let downloadType = $(this).closest('a').attr('id')
-    $.post(`https://clicks.status.im/clicks/nighty:${downloadType}`)
+    $.post(`https://clicks.status.im/clicks/nightly:${downloadType}`)
   });
 });
