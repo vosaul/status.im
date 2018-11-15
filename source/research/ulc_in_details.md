@@ -282,7 +282,7 @@ Our beta test showed that ULC sync is ~10x times [faster than LES](https://youtu
 
 ## Plans
 ### Short-Term
-Status.im is going to start using ULC to have more censorship resistance and enable all web3 features for DApps.
+Status.im is going to start using ULC to achieve greater censorship resistance and enable all possible `web3` features for DApps and developers.
 
 ### Long-Term
 * [On ULC incentives](https://hackmd.io/6IhsF6zRSqmtggvNnp1sHQ)
