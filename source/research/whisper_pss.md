@@ -126,59 +126,54 @@ https://swarm-guide.readthedocs.io/en/latest/resources.html
 
 ### Whisper message propagation
 
-```graphviz
-
+![Whisper message propagation](https://g.gravizo.com/svg?
 graph nodes {
   00 -- 01; 00 -- 10 ; 10 -- 11; 01 -- 11; 
   01 -- 10;
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
-```graphviz
-
+![Whisper message propagation Step 1](https://g.gravizo.com/svg?
 digraph step1 {
   00 -> 01; 00 -> 10;
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
-```graphviz
-
+![Whisper message propagation Step 2](https://g.gravizo.com/svg?
 digraph step2 {
   00; 01 -> 10; 10 -> 11; 01 -> 11; 10 -> 01;
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
 Notice how `10`, `01` potentially receive message twice (depending on timing) and `11` is guaranteed to recieve twice (in this setup, due to locally limited knowledge in `01`, `10` nodes)
 
 ### PSS message propagation
 
 Example propagation to address `1*`:
-```graphviz
 
+![PSS message propagation](https://g.gravizo.com/svg?
 graph nodes {
   00 -- 01; 00 -- 10 ; 10 -- 11; 01 -- 11; 
   01 -- 10;
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
-```graphviz
-
+![PSS message propagation Step 1](https://g.gravizo.com/svg?
 digraph step1 {
   00 -> 10;
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
-```graphviz
-
-digraph step1 {
+![PSS message propagation Step 2](https://g.gravizo.com/svg?
+digraph step2 {
   00; 10 -> 11; 
   {rank=same; 00 01} {rank=same; 10 11}
 }
+)
 
-```
 Either of `10`, `11` could be recipient, message reaches both!
