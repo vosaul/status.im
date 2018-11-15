@@ -13,7 +13,7 @@ title: Ultra Light Client in details
 
 ## Overview
 ULC is a new option in LES that doesn't break compatibility with the LES protocol, but does significantly reduce the time and resources required to sync with the main Ethereum chain.
-The main idea is about reducing the amount of messages and doing fewer validations on the client side.
+The main idea is about reducing the amount of messages and doing less client side validation.
 
 ## What does ULC solves?
 1) CPU&Battery consumption
