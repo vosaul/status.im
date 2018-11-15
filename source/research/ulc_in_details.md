@@ -273,7 +273,7 @@ $Servers=Max(AvarageUsers*N/LES\_only\_announce\_limit; N)=Max(1000*4/250; 4)=Ma
 | 10000    | 6    | 2400    | 240 | 
 | 10000    | 7    | 2800    | 280 | 
 
-It's obvious that scaling due to server expansion inside the service is strictly limited. A prerequisite for the operation of ULS in large scales is an increase in the percentage of LES of servers relative to all of the Ethereum servers.
+It's obvious that scaling due to server expansion inside the service is strictly limited. A prerequisite for the operation of ULC at large scales is an increase in the percentage of LES of servers relative to all Ethereum servers.
 
 At the moment there're 15000 nodes, if 30% of them will use LES server, more than 300.000 ULC users can be handled simultaneously.
 
