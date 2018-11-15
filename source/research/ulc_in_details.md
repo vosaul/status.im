@@ -83,7 +83,7 @@ Note left of ULC: header:\nblock announce, logsBloom,\nMerkle trees roots:\nstat
     2.2. Checks block timestamp:
         2.2.1. It shouldn't be from future more than 15 secs
         2.2.2. $n_i.Time > n_{i-1}.Time$
-    2.3. verify the block's difficulty based in it's timestamp and parent's difficulty: $n_i.Difficulty = expectedDifficulty(n_i)$
+    2.3. verify the block's difficulty based on it's timestamp and parent block's difficulty: $n_i.Difficulty = expectedDifficulty(n_i)$
     2.4. $n_i.gasLimit$ shouldn't overflow `2^63-1`
     2.5. $n_i.gasUsed <= n_i.gasLimit$
     2.6. checks gas limit:
