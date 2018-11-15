@@ -29,18 +29,18 @@ with ULC options
 op=>operation: Connect to N Trusted LES servers
 Hold these connections
 
-op2=>operation: Ask for signed announces
+op2=>operation: Ask for signed announcements
 for the block with max TD
 
 op3=>operation: Sync CHTs up to known max TD
 
 op4=>operation: Ask for N latest
-signed announces
+signed announcements
 
 op5=>operation: Ask usual LES server (can be different each time)
 for a block header
 
-cond=>condition: Are M of N announces the same?
+cond=>condition: Are M of N announcements the same?
 Are all signs valid?
 
 st->op->op2->op3->op4->cond->op5->op4
@@ -140,19 +140,19 @@ So ULC saves `807133*O(sha3)` at init stage that happens each epoch and [256*O(s
 
 ## ULC in Roles
 ### Trusted LES servers
-Trusted LES servers are needed only to send announces (block hash, TD, number) to LES(ULC) clients. All announces should be signed. Trusted servers don't know anything about were they chosen as trusted or not by any client. Can be started with `onlyAnnounce` flag, that switches LES server to the mode "only send announces to my peers, do not process any other requests".
+Trusted LES servers are needed only to send announcements (in Geth code it has name `announce(block hash, TD, number)`) to LES(ULC) clients. All announcements should be signed. Trusted servers don't know whether they have been chosen as trusted or not by any given client. Such servers can be started with an `onlyAnnounce` flag, which ensures that the LES server operates under the rule "only send announcements to my peers, do not process any other requests".
 
 ### LES servers (untrusted)
 LES servers - usual LES servers, a header chain is synchronised with them. Helps to prevent attacks on trusted servers.
 
 ### ULC client
 1. has some CHT root at the start; has a CHTs "chain", that can be synced from LES servers; CHT chain allows to request any historical information (block, transaction, receipt) from LES server
-2. trusts to announces, that receives from N Trusted LES servers. Announces should be signed by Trusted LES servers. It should be at least M identical announces to trust.
-3. Asks for announces with the biggest TD
+2. trusts to announcements, that receives from N Trusted LES servers. Announcements should be signed by Trusted LES servers. It should be at least M identical announcements to trust.
+3. Asks for announcements with the biggest TD
 4. ULC client starts CHT sync before syncing header chain. ULC client requests newer CHTs from LES servers.
 5. requests headers from untrusted LES server, starting from `the highest block is known to latest CHT + 1` up to latest block number known from trusted announce
 6. ULC client validates:
-6.1. announces checking are there M the same announces from N received from Trusted LES servers
+6.1. announcements checking are there M the same announcements from N received from Trusted LES servers
 6.2. doesn't validate CHT, if we get incorrect CHT, it'll be clear later after receiving block headers.
 6.3. validates headers, as usual, LES client except [VerifySeal](https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L491). ULC doesn't run `VerifySeal` at all.
 
@@ -178,7 +178,7 @@ LES servers - usual LES servers, a header chain is synchronised with them. Helps
 4) DoS on trusted nodes
 
 ### Sybill attack on ULC (client)
-Prevented because it is already prevented in a classic LES model and we only download headers with trusted announces.
+Prevented because it is already prevented in a classic LES model and we only download headers with trusted announcements.
 
 ### Sybill attack on trusted servers
 Even less possible than in LES model because it's needed to attack,k at least M servers.
@@ -187,7 +187,7 @@ Even less possible than in LES model because it's needed to attack,k at least M 
 Possible. ULC makes it much less possible by hiding what nodes are trusted for each user. A user doesn't send any unusual for LES information to LES servers trusted or untrusted. Any trusted for a user LES server doesn't know that it has been chosen by the user to be trusted LES server.
 
 ### MITM
-Prevented because all announces must be signed by according LES server.
+Prevented because all announcements must be signed by according LES server.
 
 ### What other security guarantees does ULC give and what is it comparable with?
 
