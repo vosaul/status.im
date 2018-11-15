@@ -50,7 +50,7 @@
                         <a href="../build_status/desktop.html" target="_blank">Desktop FAQ</a>
                     </div>
                     <div class="nightly-builds-wrap">
-                        <div class="box">
+                        <div class="box-desktop">
                             <h2>Linux</h2>
                             <a href="{{ site.data.nightlies['APP'] }}" target="_blank">
                                 <img src="../nightly/img/linux.png" width="150" />
@@ -58,7 +58,7 @@
                                 <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
                             </a>
                         </div>
-                        <div class="box">
+                        <div class="box-desktop">
                             <h2>macOS</h2>
                             <a href="{{ site.data.nightlies['MAC'] }}" target="_blank">
                                 <img src="../nightly/img/macos.png" width="150" />
@@ -67,7 +67,7 @@
                             </a>
                         </div>
                         <div class="clear"></div>
-                        <div class="box">
+                        <div class="box-desktop">
                             <h2>Windows</h2>
                             <a href="{{ site.data.nightlies['WIN'] }}" target="_blank">
                                 <img src="../nightly/img/windows.png" width="150" />
@@ -76,7 +76,7 @@
                             </a>
                         </div>
                         <div class="clear"></div>
-                        <div class="box">
+                        <div class="box-mobile">
                             <h2>Android</h2>
                             <a href="{{ site.data.nightlies['APK'] }}" target="_blank">
                                 <img src="../nightly/img/qr-apk.png" width="80%" />
@@ -84,7 +84,7 @@
                                 <span>{{ site.data.nightlies['APK'] | split('/') | last }}</span>
                             </a>
                         </div>
-                        <div class="box">
+                        <div class="box-mobile">
                             <h2>iOS</h2>
                             <a href="{{ site.data.nightlies['IOS'] }}" target="_blank">
                                 <img src="../nightly/img/qr-ios.png" width="80%" />
