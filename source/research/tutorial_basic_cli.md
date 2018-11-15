@@ -201,6 +201,6 @@ web3.shh.subscribe("messages", {
 Once you add this code, go ahead and open three instances of our chat application, write a public message in one window, and in the other, copy the public key and send a private message to the account that created the first message. The first and second window will be able to see the message, but the third window will only have received the public message.
 
 ## Final thoughts
-As you can see, using Whisper for descentralized communication is quite easy, and you could leverage the protocol for passing offchain messages that are cryptographically secure. Bloom does this, as did [Project Khoka in South Africa](https://mybroadband.co.za/news/cryptocurrency/265811-how-the-sa-reserve-banks-ethereum-project-works.html), among many others.
+As you can see, using Whisper for decentralized communication is quite easy, and you could leverage the protocol for passing offchain messages that are cryptographically secure. Bloom does this, as did [Project Khoka in South Africa](https://mybroadband.co.za/news/cryptocurrency/265811-how-the-sa-reserve-banks-ethereum-project-works.html), among many others.
 
 However, at the moment there aren't enough online nodes available that have Whisper enabled (probably due to lack of incentives for running this feature), so messages may fail to get delivered unless you bootstrap some nodes like we do here at Status. You can contribute to the number of nodes availables by running your own node with the `--shh` option enabled. We'll <3 you forever.
