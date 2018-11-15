@@ -247,7 +247,7 @@ Values 2/3, 3/4, 3/5, 4/5 look like reasonable values to use in ULC client.
 #### Trusted nodes
 ULC client needs a set of trusted LES servers to get the current Chain state. It should be said that only ULC client knows it's trusted list, LES servers don't know that has been chosen as trusted by someone ULC client. The only difference is ULC client request and accepts only signed announcements to trust nonce (PoW) without check.
 
-We're going to provide predefined in the App trusted LES servers list. E.g. an application wanted to use ULC can define such trusted list for its clients and do load balancing with a simple random choice.
+We're going to provide, predefined in the App, a trusted LES servers list. This also means that an application wanting to use ULC can define their own such trusted list of clients and do load balancing with a simple random choice.
 
 Here comes one of the LES problems is that LES server can handle a limited number of clients. At the moment it's $LES\_limit=25$.
 
