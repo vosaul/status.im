@@ -95,7 +95,7 @@ Note left of ULC: header:\nblock announce, logsBloom,\nMerkle trees roots:\nstat
 #### Verify a seal of a block
 The main improvement of ULC is that a client doesn't need to verify the seal of a block and can skip this step at all.
 
-As it said the Ethereum code `light` (actually `fast` and `light`) client has `slow-but-light PoW verification`, but `full` has `fast-but-heavy`. The main difference is about that `full` client generates all the data needed to verify all block in an epoch, but light client calculates many values on-the-fly.
+Ethereum `light` clients (actually `fast` and `light`) have slow-but-light PoW verification. `Full` clients have fast-but-heavy PoW verification. The main difference is that `full` clients generate all the data needed to verify every block in an epoch, but light clients calculate many values on-the-fly.
 
 The detailed algorithm can be found on the [Ethereum wiki](https://github.com/ethereum/wiki/wiki/Ethash).
 
