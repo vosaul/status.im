@@ -249,7 +249,7 @@ ULC client needs a set of trusted LES servers to get the current Chain state. It
 
 We're going to provide, predefined in the App, a trusted LES servers list. This also means that an application wanting to use ULC can define their own such trusted list of clients and do load balancing with a simple random choice.
 
-Here comes one of the LES problems is that LES server can handle a limited number of clients. At the moment it's $LES\_limit=25$.
+One of the major drawbacks currently, however, is that LES servers can handle only a limited number of clients. At the moment it's $LES\_limit=25$.
 
 So if we want 3(M) out of 4(N) ULC consensus, in avarage we have 1000 users online, so we need minimum $Servers=Max(AvarageUsers*N/LES\_limit; N)=Max(1000*4/25; 4)=160$
 
