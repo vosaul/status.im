@@ -255,7 +255,7 @@ So if we want 3(M) out of 4(N) ULC consensus, in avarage we have 1000 users onli
 
 It is for this reason that a new option was added in ULC for LES servers: `--onlyAnnounce`. This flag ensures LES servers only handle `get announce` requests, which increases the possible number of simultaneous users to about ~250 (should be stress tested).
 
-With `--onlyAnnounce` the formule looks like:
+With `--onlyAnnounce` the formula looks like:
 $Servers=Max(AvarageUsers*N/LES\_only\_announce\_limit; N)=Max(1000*4/250; 4)=Max(16; 4)=16$
 
 | Users online | N | Server w/o `onlyAnnounce` | With `onlyAnnounce` |
