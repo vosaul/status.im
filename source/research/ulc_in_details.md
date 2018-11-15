@@ -9,7 +9,7 @@ title: Ultra Light Client in details
 * TD - the total difficulty of the chain until a given block
 * LES - light Ethereum subprotocol
 * ULC - ultra light client, an option of LES
-* CHT - Canonical Hash Trie which maps historical block numbers to their canonical hashes in a Merkle trie. This allows us to discard the block headers themselves in favour of a trie root which encompasses the accumulation of their hashes and to fetch proofs that a specific block hash is, in fact, the one we verified earlier [\[1\]][1]
+* CHT - Canonical Hash Trie which maps historical block numbers to their canonical hashes in a Merkle trie. This allows us to discard the block headers themselves in favor of a trie root which encompasses the accumulation of their hashes, and to fetch proofs that a specific block hash is in fact the one we verified earlier [\[1\]][1]
 
 ## Overview
 ULC is a new option in LES that doesn't break capability with LES protocol but significantly reduces Ethereum client time and resources to sync with the chain.
