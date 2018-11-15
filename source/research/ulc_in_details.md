@@ -99,7 +99,7 @@ As it said the Ethereum code `light` (actually `fast` and `light`) client has `s
 
 The detailed algorithm can be found on the [Ethereum wiki](https://github.com/ethereum/wiki/wiki/Ethash).
 
-The verification has 2 steps: init caches and verify. Let's describe them in details.
+The verification has 2 steps: init caches and verify. Let's describe them in detail.
 
 ##### Init step
 _All numbers below are given for the Epoch 232 (a current epoch at 12 Nov 2018)_
