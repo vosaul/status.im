@@ -275,7 +275,7 @@ $Servers=Max(AvarageUsers*N/LES\_only\_announce\_limit; N)=Max(1000*4/250; 4)=Ma
 
 It's obvious that scaling due to server expansion inside the service is strictly limited. A prerequisite for the operation of ULC at large scales is an increase in the percentage of LES of servers relative to all Ethereum servers.
 
-At the moment there're 15000 nodes, if 30% of them will use LES server, more than 300.000 ULC users can be handled simultaneously.
+At the moment there are 15000 nodes. If 30% of them would use the LES server option, more than 300 000 ULC users could be handled simultaneously.
 
 ## Benchmarks
 Our beta test showed that ULC sync is ~10x times [faster than LES](https://youtu.be/Z6UUT1TqdTs?t=623)
