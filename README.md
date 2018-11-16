@@ -20,6 +20,14 @@ Make sure you have node.js installed first.
 
 1. Open Terminal and navigate to the project root directory,
 2. Run `npm install`,
+3. We share common elements across our sites using submodules, so you'll need to get those too:
+```bash
+    git submodule update --init --recursive
+    cd themes/navy/layout/partial/shared-partials
+    git checkout master
+    git pull
+    cd ../../../../../
+```
 3. Run `./node_modules/.bin/gulp build`,
 4. In another terminal, run `./node_modules/.bin/hexo serve`,
 5. This prevents the need for any global installs, and will allow you to have live reloading for any changes you are making.
