@@ -167,7 +167,7 @@ Nightlies are available from [here](https://status.im/nightly/)
 
 ### Status crashed and won’t Start. How to fix?
 
-On a mac, kill `ubuntu-server` in activity monitor and restart Status, restarting your machine should also make it boot if it's hanging.
+* On a Mac: open your Activity Monitor (Applications > Utilities > Activity Monitor), search for and kill any `ubuntu-server` process and then restart Status. Restarting your machine should also solve the issue.
 
 ### I see a blank screen on Startup.  How do I fix it?
 
