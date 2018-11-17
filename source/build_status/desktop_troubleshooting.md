@@ -162,7 +162,7 @@ Nightlies are available from [here](https://status.im/nightly/)
 
 ### How do I updgrade?  
 
-On a mac, Quit Status, download a new nightly, and drag to Applications
+* On a Mac: quit Status, download a new nightly, and drag to the Applications Folder when prompted.
 On linux, just download new nightly and make sure it’s named “Status.AppImage”.
 
 ### Status crashed and won’t Start. How to fix?
