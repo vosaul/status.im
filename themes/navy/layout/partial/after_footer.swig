@@ -3,7 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>	
 {{ js('js/vendor.min') }}
 
-<% if (theme.mermaid.enable) { %>
+<% if (theme.graphviz.enable) { %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script>
   <script>
     String.prototype.replaceAll = function(search, replacement) {
