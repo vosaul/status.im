@@ -171,7 +171,7 @@ Nightlies are available from [here](https://status.im/nightly/)
 
 ### I see a blank screen on Startup.  How do I fix it?
 
-On a mac, quit Status, then go to ~/Library/Application Support/ and delete any Status directories. Delete the app in ~/Application. Then reinstall.
+* On a Mac: quit Status, then go to ~/Library/Application Support/ and delete any Status directories. Delete the app in ~/Applications. Then download from the nightlies page and reinstall.
 
 On linux, you should have gnomekeyring package installed to make keychain working. `libgnome-keyring0.so` should be available.  gnome-keyring requires additionally package `libgnome-keyring0` installed on linux system. As alternative currently we also support kWallet keychain, but gnome-keyring was tested more.
 
