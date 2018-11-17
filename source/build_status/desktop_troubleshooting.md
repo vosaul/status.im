@@ -173,7 +173,7 @@ Nightlies are available from [here](https://status.im/nightly/)
 
 * On a Mac: quit Status, then go to ~/Library/Application Support/ and delete any Status directories. Delete the app in ~/Applications. Then download from the nightlies page and reinstall.
 
-On linux, you should have gnomekeyring package installed to make keychain working. `libgnome-keyring0.so` should be available.  gnome-keyring requires additionally package `libgnome-keyring0` installed on linux system. As alternative currently we also support kWallet keychain, but gnome-keyring was tested more.
+* On linux: you should have the `gnome-keyring` package installed to make your keychain work correctly. `libgnome-keyring0.so` should be available.  `gnome-keyring` also requires the package `libgnome-keyring0` to be installed on your system. As an alternative, we currently also support the `kWallet` keychain, but `gnome-keyring` has been tested more.
 
 If you want to delete all Status data to start fresh, do (assuming StatusIm.AppImage is the filename you used to run the app):
 rm -rf ~/.local/share/Status/
