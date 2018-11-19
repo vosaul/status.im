@@ -136,7 +136,7 @@ This is the difference between ULC and LES clients for each block. Because the C
 This is the theoretical lower bound. As noted in the [Ethash Design Rationale](https://github.com/ethereum/wiki/wiki/Ethash-Design-Rationale), a single block verification step should take `'0.1 seconds in Python'`. In practice it takes `~200ms` in Geth.
 
 ## LES vs ULC
-So ULC saves `807133*O(sha3)` at init stage that happens each epoch and [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)] for each block while syncing. As far as difficulty of a block verification grows linear, the total difficulty of syncing N block grows as $N^2$.
+So ULC saves `807133*O(sha3)` at init stage, which happens each epoch and [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)] for each block while syncing. Because the difficulty of block verification grows linearly, the total difficulty of syncing N blocks grows as $N^2$.
 
 ## ULC in Roles
 ### Trusted LES servers
