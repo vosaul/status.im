@@ -120,7 +120,7 @@ For example, for epoch 232 (a current epoch at 12 Nov 2018) $O_{cpu}(initStep) =
 This is theoretical lower bound. The [Ethash Design Rationale](https://github.com/ethereum/wiki/wiki/Ethash-Design-Rationale) mentions that "a light client should become fully operational and be able to verify blocks within 40 seconds in Javascript".
 
 ##### Verify step
-Light mode seal verification doesn't store the entire dataset for block verification, but generates nessusary items on the fly. For a single block it runs `hashimotoLight` algorythm that takes:
+Light mode seal verification doesn't store the entire dataset for block verification, but generates necessary items on-the-fly. For a single block it runs the `hashimotoLight` algorithm which takes:
 
 $generateDatasetItem = (2*sha3 + 512*fnv)$ 
 
