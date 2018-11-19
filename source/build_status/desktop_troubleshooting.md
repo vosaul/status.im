@@ -155,3 +155,29 @@ Time to time metro bundler for some reasons doesn't recognize changes in JavaScr
 
 On Linux metro bundler saves cache to the following directories (can be removed manually):
 /tmp/metro-cache-*
+
+### Where do I get Status Desktop?
+
+Nightlies are available from [here](https://status.im/nightly/)
+
+### How do I updgrade?  
+
+* On a Mac: quit Status, download a new nightly, and drag to the Applications Folder when prompted.
+* On linux: just download new nightly and make sure it’s named “Status.AppImage”.
+
+### Status crashed and won’t Start. How to fix?
+
+* On a Mac: open your Activity Monitor (Applications > Utilities > Activity Monitor), search for and kill any `ubuntu-server` process and then restart Status. Restarting your machine should also solve the issue.
+
+### I see a blank screen on Startup.  How do I fix it?
+
+* On a Mac: quit Status, then go to ~/Library/Application Support/ and delete any Status directories. Delete the app in ~/Applications. Then download from the nightlies page and reinstall.
+
+* On linux: you should have the `gnome-keyring` package installed to make your keychain work correctly. `libgnome-keyring0.so` should be available.  `gnome-keyring` also requires the package `libgnome-keyring0` to be installed on your system. As an alternative, we currently also support the `kWallet` keychain, but `gnome-keyring` has been tested more.
+
+If you want to delete all Status data to start fresh, do (assuming StatusIm.AppImage is the filename you used to run the app):
+rm -rf ~/.local/share/Status/
+rm -rf ~/.cache/Status/
+
+
+
