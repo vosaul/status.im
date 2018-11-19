@@ -133,7 +133,7 @@ $hashimotoLight = 256 sha3 + 65664 fnv$
 
 This is the difference between ULC and LES clients for each block. Because the CHT is generated once per 32767 blocks, the total difference is $[1; 32767] * Cost(hashimotoLight) = [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)]$. The growth is linear.
 
-This is theoretical lower bound. As it said in [Ethash article](https://github.com/ethereum/wiki/wiki/Ethash-Design-Rationale) for a single block verification step should take `'0.1 seconds in Python'` in practice it takes `~200ms` in golang Geth code.
+This is the theoretical lower bound. As noted in the [Ethash Design Rationale](https://github.com/ethereum/wiki/wiki/Ethash-Design-Rationale), a single block verification step should take `'0.1 seconds in Python'`. In practice it takes `~200ms` in Geth.
 
 ## LES vs ULC
 So ULC saves `807133*O(sha3)` at init stage that happens each epoch and [256*O(sha3) + 65664*O(fnv) ; 8.388.352*O(sha3) + 2.151.612.288*O(fnv)] for each block while syncing. As far as difficulty of a block verification grows linear, the total difficulty of syncing N block grows as $N^2$.
