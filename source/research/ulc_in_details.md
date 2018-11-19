@@ -147,7 +147,7 @@ LES servers - usual LES servers, a header chain is synchronised with them. Helps
 
 ### ULC client
 1. has some CHT root at the start; has a CHTs "chain", that can be synced from LES servers; CHT chain allows to request any historical information (block, transaction, receipt) from LES server
-2. trusts to announcements, that receives from N Trusted LES servers. Announcements should be signed by Trusted LES servers. It should be at least M identical announcements to trust.
+2. trusts announcements received from N Trusted LES servers. Announcements should be signed by Trusted LES servers. There should be at least M identical announcements to trust.
 3. Asks for announcements with the biggest TD
 4. ULC client starts CHT sync before syncing header chain. ULC client requests newer CHTs from LES servers.
 5. requests headers from untrusted LES server, starting from `the highest block is known to latest CHT + 1` up to latest block number known from trusted announce
