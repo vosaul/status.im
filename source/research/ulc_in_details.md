@@ -197,7 +197,7 @@ Prevented because all announcements must be signed by according LES server.
 #### Some math
 There're 2 kinds of security guarantees:
 1. reducing the probability of failure to perform a correct request due to the failure of remote servers - failure and censorship resistance
-2. reducing the probability of trust in data coming from malicious nodes
+2. reducing the need to trust in data coming from malicious nodes
 
 The very mechanism of blockchain synchronisation of the ULC is the same as that of the LES. Therefore, comparing the security guarantees of ULC with full, fast and LES does not make sense. It is more important to compare the guarantees of a private RPC server or Infura with ULC.
 
