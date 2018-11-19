@@ -1,8 +1,8 @@
 <div class="page-intro wrapper">
   <header class="docs-header">
     <div class="docs-intro">
-      <h1>Contribute to a Better Web</h1>
-      <p>It's all about the people, after all</p>
+      <h1>Advocate for a Better Web</h1>
+      <p>Feel passionately, #buidl together</p>
       <br/>
     </div>
     <ul>
@@ -24,11 +24,11 @@
       </li>
       <li>
         <div class="inner">
-          <h3>The Statusphere</h3>
-          <p>Become an advocate</p>
+          <h3>Working Here</h3>
+          <p>See our open positions!</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="statusphere.html"></a>
+        <a href="open_positions.html"></a>
       </li>
     </ul>
   </header>
