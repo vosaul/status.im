@@ -184,7 +184,7 @@ LES servers - usual LES servers, a header chain is synchronised with them. Helps
 Prevented because it is already prevented in a classic LES model and we only download headers with trusted announcements.
 
 ### Sybill attack on trusted servers
-Even less possible than in LES model because it's needed to attack,k at least M servers.
+Even less possible than in LES model because it's needed to attack at least M servers.
 
 ### DoS on trusted servers
 Possible. ULC makes it much less possible by hiding what nodes are trusted for each user. A user doesn't send any unusual for LES information to LES servers trusted or untrusted. Any trusted for a user LES server doesn't know that it has been chosen by the user to be trusted LES server.
@@ -201,9 +201,11 @@ There're 2 kinds of security guarantees:
 
 The very mechanism of blockchain synchronisation of the ULC is the same as that of the LES. Therefore, comparing the security guarantees of ULC with full, fast and LES does not make sense. It is more important to compare the guarantees of a private RPC server or Infura with ULC.
 
-If the probability of failure or hacking Infura or RPC server is taken as P, then with the ULC consensus M/N, the probability of its failure can be considered as Bernoulli process:
+If the probability of failure* or hacking Infura or RPC server is taken as P, then with the ULC consensus M/N trusted LES nodes, the probability of its failure can be considered as Bernoulli process:
 
 $$P_{ULC\_failure}=\sum_{i=M}^N C_N^i*P^i*(1-P)^{N-i}$$
+
+_*Failure_ - in the sense of Bezianteene failure so that it can be either node crush or malicious actions. Such a failure for a trusted LES node can be sending fake announcements. So trusted LES node can try to "switch" a user to a malicious chain.
 
 For example, let's calculate the failure probability $P_{ULC\_failure}$ while syncing or getting an incorrect state, given N=10, M=6 and the failure probability of a single node P:
 
