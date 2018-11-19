@@ -152,9 +152,12 @@ LES servers - usual LES servers, a header chain is synchronised with them. Helps
 4. ULC client starts CHT sync before syncing header chain. ULC client requests newer CHTs from LES servers.
 5. requests headers from untrusted LES server, starting from `the highest block is known to latest CHT + 1` up to latest block number known from trusted announce
 6. ULC client validates:
-6.1. announcements checking are there M the same announcements from N received from Trusted LES servers
-6.2. doesn't validate CHT, if we get incorrect CHT, it'll be clear later after receiving block headers.
-6.3. validates headers, as usual, LES client except [VerifySeal](https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L491). ULC doesn't run `VerifySeal` at all.
+
+    6.1. announcements checking are there M the same announcements from N received from Trusted LES servers    
+
+    6.2. validates headers, as usual, LES client except [VerifySeal](https://github.com/ethereum/go-ethereum/blob/master/consensus/ethash/consensus.go#L491). ULC doesn't run `VerifySeal` at all.
+7. doesn't validate CHT. If we get incorrect CHT, it'll be clear later after receiving block headers.
+
 
 ## ULC client resources
 ### Network
