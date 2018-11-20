@@ -4,22 +4,34 @@ title: Adding your DApp to Status
 ---
 ## Instructions
 
-If you’ve tested your DApp on Status and are satisfied with the experience, please [fill out this form](https://docs.google.com/forms/d/1YeYi5MC6LaJJR8iso52cLwSqQPJpmnqIfAWTT6bwTDE/edit).
+We accept submissions to our DApp list via pull request. 
 
-Due to official Store policies, we unfortunately face restrictions on which DApps we can accept. Gambling & pornography DApps are currently not accepted. 
+Once you've tested your DApp thoroughly on Status and addressed any issues, make a pull request to [status-react](https://github.com/status-im/status-react) with the following:
 
-For more details on these restrictions, please read the [Play Store](https://play.google.com/about/restricted-content/) and [Apple Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
+- Add a square icon for your DApp (180x180 png) with a colored (non-white) background to `resources/images/contacts`. The file name should match your DApp, e.g. `my-dapp.png`. Please do not include any text. Note that the icon will be round cropped.
+
+- Add information about your icon to `src/status_im/react_native/resources.cljs`. For example:
+```
+:my-dapp (js/require "./resources/images/contacts/my-dapp.png")
+```
+- Add your DApp to the appropriate category list in  `src/status_im/ui/screens/browser/default_dapps.cljs`:
+
+```
+{:title (i18n/label :t/default-dapps-fun-games)
+ :data [{:name        "CryptoKitties"
+         :dapp-url    "https://www.cryptokitties.co"
+         :photo-path  "contacts://cryptokitties"
+         :description "Collect and breed adorable digital cats."}
+```
 
 ## A note on curation
 
-We want our users to have a great experience of web3 and strive to show them DApps they’ll love, so we do exercise some judgment in curating our list.
+Due to official Store policies, we unfortunately face certain restrictions on which DApps we can accept. Gambling & pornography DApps are not accepted.
 
-Users have the freedom to visit *any* DApp or website they wish in our browser.
+For more details on these restrictions, please read the [Play Store](https://play.google.com/about/restricted-content/) and [Apple Store guidelines](https://developer.apple.com/app-store/review/guidelines/).
 
-We know what you're thinking, and no—it is not in line with our ethos to centralize curation! We plan to solve this with some bonded curves that will give SNT holders the power to decide which DApps belong.
+Users always have the freedom to visit any DApp or website in our browser.
 
 ## Need support?
 
-If you need support, it's best to ping us in [#status-core-dapps](https://get.status.im/chat/public/status-core-dapps) or open an issue [on GitHub](https://github.com/status-im/status-react). 
-
-We’re also reachable on [Twitter](https://twitter.com/ethstatus) and we'd love to hear from you.
+If you have any questions, ping us in [#status](https://get.status.im/chat/public/status).
