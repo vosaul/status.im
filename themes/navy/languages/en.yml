@@ -80,6 +80,7 @@ sidebar:
     whisper_faqs: Whisper FAQs
     secure_messaging_compendium: Secure Messaging Compendium
     research_projects: Research Projects
+    ultra_light_clients: Ultra Light Clients
     nimbus: Nimbus (Ethereum 2.0 Client)
     tutorials: Tutorials
     basic_cli: Whisper in Your CLI

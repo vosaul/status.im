@@ -61,6 +61,7 @@ research:
     whisper_faqs: whisper_faqs.html
     secure_messaging_compendium: secure_messaging_compendium.html
   research_projects:
+    ultra_light_clients: ulc_in_details.html
     nimbus: https://nimbus.status.im/
   tutorials:
     basic_cli: tutorial_basic_cli.html
