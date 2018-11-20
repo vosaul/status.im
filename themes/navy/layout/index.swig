@@ -128,7 +128,7 @@
     </div>
 
     <div class="cards cards--projects cards--three">
-        <div class="card card--app">
+        <div class="card">
             <a href="/get/" class="card-inner">
                 <div class="card-content">
                     <h3>App</h3>
@@ -137,7 +137,7 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-        <div class="card card--incubate">
+        <div class="card">
             <a href="https://incubate.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Incubate</h3>
@@ -146,7 +146,7 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-        <div class="card card--embark">
+        <div class="card">
             <a href="https://embark.status.im" class="card-inner">
                 <div class="card-content">
                     <h3>Embark</h3>
@@ -155,7 +155,7 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-        <div class="card card--studio">
+        <div class="card">
             <a href="https://studio.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Studio</h3>
@@ -164,7 +164,7 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-        <div class="card card--nimbus">
+        <div class="card">
             <a href="https://nimbus.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Nimbus</h3>
@@ -173,7 +173,7 @@
                 <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
             </a>
         </div>
-        <div class="card card--hardwallet">
+        <div class="card">
             <a href="https://hardwallet.status.im/" class="card-inner">
                 <div class="card-content">
                     <h3>Hardwallet</h3>

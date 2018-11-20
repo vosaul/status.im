@@ -2,6 +2,34 @@
 // let animateScroll = require("./lib/animatescroll.js")
 // let d3 = require("d3")
 
+/* global $ */
+
+function retrieveAdvocacyPrograms() {
+  $.ajax({
+    type: 'get',
+    url: 'https://statusphere.status.im/api/v1/boards/public/?is_featured=true&org=375',
+    success: function(response) {
+      console.log('response', response.length);
+
+      $.each(response, function(index, program) {
+        $('#advocacy-programs').prepend(
+          `<div class="card">
+            <a href="https://statusphere.status.im/b/${program.uuid}/view" class="card-inner">
+              <div class="card-content">
+                <h3>${program.title}</h3>
+                <p class="secondary-text">${program.description}</p>
+              </div>
+              <div class="card-projects__link">
+                <span class="link-arrow">Learn More</span>
+              </div>
+            </a>
+          </div>`
+        );
+      });
+    }
+  });
+}
+
 $(document).ready(function () {
   var months = {'01':'Jan', '02':'Feb', '03':'Mar', '04':'Apr', '05':'May', '06':'Jun', '07':'Jul', '08':'Aug', '09':'Sep', '10':'Oct', '11':'Nov', '12':'Dec'};
   let url = 'https://our.status.im/ghost/api/v0.1/posts/?order=published_at%20desc&limit=2&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba';
@@ -39,6 +67,7 @@ $(document).ready(function () {
     return str.split(/\s+/).slice(0,25).join(" ");
   }
 
+  retrieveAdvocacyPrograms();
 });
 
 let heroImage = document.querySelectorAll(".hero-image")[0]
