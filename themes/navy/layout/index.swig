@@ -98,10 +98,9 @@
         <div class="info-item">
             <div class="info-item-content">
                 <h5>ANNOUNCEMENTS</h5>
-                <h4>Join the #CryptoLife hackathon</h4>
-                <p class="secondary-text">Book you ticket for Devcon a weekend early and join us from the 26th - 28th October in Prague to #build the distributed future!</p>
+                <div id="latest-announcements" class="latest-posts"></div>
             </div>
-            <div class="info-item-link"><a href="https://hackathon.status.im" class="link-arrow">Learn more and apply </a> </div>
+            <div class="info-item-link"><a href="https://statusphere.status.im/" class="link-arrow">Learn more</a></div>
         </div>
         <div class="info-item">
             <div class="info-item-content">
@@ -114,7 +113,7 @@
         <div class="info-item">
             <div class="info-item-content">
                 <h5>LATEST NEWS</h5>
-                <div class="latest-posts"></div>
+                <div id="latest-news" class="latest-posts"></div>
             </div>
             <div class="info-item-link"><a href="https://our.status.im/" class="link-arrow">Read the blog</a></div>
         </div>

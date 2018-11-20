@@ -4,13 +4,11 @@
 
 /* global $ */
 
-function retrieveAdvocacyPrograms() {
+function retrieveAdvocacyPrograms(months) {
   $.ajax({
     type: 'get',
     url: 'https://statusphere.status.im/api/v1/boards/public/?is_featured=true&org=375',
     success: function(response) {
-      console.log('response', response.length);
-
       $.each(response, function(index, program) {
         $('#advocacy-programs').prepend(
           `<div class="card">
@@ -25,6 +23,28 @@ function retrieveAdvocacyPrograms() {
             </a>
           </div>`
         );
+
+        if (index < 2) {
+          var newDate = new Date(program.created_at);
+          var minutes = newDate.getMinutes();
+
+          if (minutes.length === 1) {
+            minutes = '0' + minutes;
+          }
+
+          $('#latest-announcements').prepend(
+            `<div class="post">
+              <time>
+                ${newDate.getDate()} ${months[newDate.getMonth() + 1]} at ${newDate.getHours()}:${minutes}
+              </time>
+              <h4>
+                <a href="https://statusphere.status.im/b/${program.uuid}/view">
+                  ${program.title}
+                </a>
+              </h4>
+            </div>`
+          );
+        }
       });
     }
   });
@@ -53,10 +73,10 @@ $(document).ready(function () {
         if(minutes.length == 1){
           minutes = '0' + minutes;
         }
-        $('.latest-posts').prepend(' \
+        $('#latest-news').prepend(' \
         <div class="post"> \
           <time>'+ newDate.getDate() + ' ' + months[(newDate.getMonth()+1)] + ' at ' + newDate.getHours() + ':' + minutes + '</time> \
-          <h4><a href="https://our.status.im/'+ val.slug +'">'+ val.title +'</a></h3> \
+          <h4><a href="https://our.status.im/'+ val.slug +'">'+ val.title +'</a></h4> \
         </div> \
         ');
       });
@@ -67,7 +87,7 @@ $(document).ready(function () {
     return str.split(/\s+/).slice(0,25).join(" ");
   }
 
-  retrieveAdvocacyPrograms();
+  retrieveAdvocacyPrograms(months);
 });
 
 let heroImage = document.querySelectorAll(".hero-image")[0]
