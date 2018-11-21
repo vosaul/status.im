@@ -65,20 +65,22 @@ npm install -g
 1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
 1. In separate terminal tab: `react-native run-desktop`
 
-### Notes
+## Notes
 
-in order to run both release and dev versions of Status Desktop, please specify a value for `REACT_SERVER_PORT` environment variable that will be different from default 5000. E.g.:
+  - in order to run multiple Status Desktop instances, please specify values for the `REACT_SERVER_PORT`, `STATUS_NODE_PORT`, `STATUS_DATA_DIR` environment variables:
 
-```bash
-export REACT_SERVER_PORT=5001
-```
+  ```bash
+  export REACT_SERVER_PORT=5001 # any value different from default 5000 will work; this has to be specified for both the Node.JS server process and the Qt process
+  export STATUS_NODE_PORT=12345 # no need to specify this if just running dev instance alongside release build
+  export STATUS_DATA_DIR=~/status-files/data1 # this is where Realm data files, Geth node data, and logs will reside; also not strictly needed for dev alongside release
+  ```
 
-for complete cleanup of generated files and Realm data, issue:
+  - for complete cleanup of generated files and Realm data, issue:
 
-```bash
-git clean -fdx
-rm -rf desktop/modules
-```
+  ```bash
+  git clean -fdx
+  rm -rf desktop/modules
+  ```
 
 ## Clean up data
 
@@ -146,6 +148,7 @@ After Figwheel has connected to the app, run the following command inside Vim, a
   - Linux: `~/.local/share/Status/`;
   - MacOS: `~/Library/Application Support/Status/`;
   - Windows: `%LOCALAPPDATA%\Status\`.
+- App data folder location can also be specified via `STATUS_DATA_DIR` environment variable
 - Passing `BUILD_FOR_BUNDLE` preprocessor make flag instructs application to redirect output to predefined log file. The log file is named `Status.log` in the app data folder;
 - Setting env var `STATUS_LOG_FILE_ENABLED` to `1` enables redirection of logs into log file by predefined path. The log file is named `StatusDev.log` in the app data folder.
 - Setting env var `STATUS_LOG_PATH` (along with `STATUS_LOG_FILE_ENABLED` to `1`) instructs app to write the logs into custom file path. Relative file paths can be used.
