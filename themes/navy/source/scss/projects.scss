@@ -1,233 +1,252 @@
 
-.cards--projects a.card-inner {
-  display: block;
-  padding: 24px;
-  background-color: $colorWhite;
-  border-radius: 16px;
-  margin: 12px;
-  text-decoration: none;
-}
+.cards--projects {
+  .card {
+    display: flex;
 
-.cards--projects .card-inner:hover {
-  //background-color: rgba(67, 96, 223, .14);
-}
+    .card-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 12px;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: $colorWhite;
 
-.cards--projects .card-content {
-  height: 186px;
-  overflow: hidden;
-}
+      a:hover {
+        text-decoration: none;
+      }
 
-.card--app h3,
-.card--app .link-arrow {
-  color: $colorBlue
-}
+      .card-content {
+        overflow: hidden;
 
-.card--incubate h3,
-.card--incubate .link-arrow {
-  color: $colorIncubate
-}
+        h3 {
+          margin-bottom: 8px;
+        }
 
-.card--embark h3,
-.card--embark .link-arrow {
-  color: $colorEmbark
-}
+        p.secondary-text {
+          word-break: break-word;
+        }
+      }
 
-.card--studio h3,
-.card--studio .link-arrow {
-  color: $colorStudio
-}
+      .card-projects__link {
+        margin-top: 16px;
+      }
+    }
+  }
 
-.card--nimbus h3,
-.card--nimbus .link-arrow {
-  color: $colorNimbus
-}
-
-.card--hardwallet h3,
-.card--hardwallet .link-arrow {
-  color: $colorHardwallet
-}
-
-.card--incubate .link-arrow::after {
-  background-image: url(../img/icon-arrow-right-incubate.svg);
-}
-
-.card--embark .link-arrow::after {
-  background-image: url(../img/icon-arrow-right-embark.svg);
-}
-
-.card--studio .link-arrow::after {
-  background-image: url(../img/icon-arrow-right-studio.svg);
-}
-
-.card--nimbus .link-arrow::after {
-  background-image: url(../img/icon-arrow-right-nimbus.svg);
-}
-
-.card--hardwallet .link-arrow::after {
-  background-image: url(../img/icon-arrow-right-hardwallet.svg);
-}
-
-.cards--projects .card-inner {
-  transition: background-color .1s ease;
-}
-
-.card--app .card-inner:hover {
-  background-color: $colorBlue;
-}
-
-.card--incubate .card-inner:hover {
-  background-color: $colorIncubate;
-}
-
-.card--embark .card-inner:hover {
-  background-color: $colorEmbark;
-}
-
-.card--studio .card-inner:hover {
-  background-color: $colorStudio;
-}
-
-.card--nimbus .card-inner:hover {
-  background-color: $colorNimbus;
-}
-
-.card--hardwallet .card-inner:hover {
-  background-color: $colorHardwallet;
-}
-
-.cards--projects .card-inner:hover h3 {
-  transition: color .1s ease;
-}
-
-.cards--projects .card-inner:hover h3 {
-  color: $colorWhite;
-}
-
-.cards--projects .card-inner:hover p.secondary-text {
-  transition: color .1s ease;
-}
-
-.cards--projects .card-inner:hover p.secondary-text {
-  color: $colorWhite;
-  opacity: .6
-}
-
-.cards--projects .card-inner:hover .link-arrow {
-  transition: color .1s ease;
-}
-
-.cards--projects .card-inner:hover .link-arrow {
-  color: $colorWhite;
-}
-
-
-@media (max-width: 1248px) {
-
-  .cards--projects {
+  @media (max-width: 1248px) {
     padding: 0 24px;
   }
 
-}
-
-@media (max-width: 960px) {
-
-  .cards--projects .card h3 {
-    font-size: 18px;
-    padding: 0 0 8px 0;
+  @media (max-width: 960px) {
+    .card h3 {
+      font-size: 18px;
+      padding: 0 0 8px 0;
+    }
   }
 
-}
+  @media (min-width: 521px) {
+    .card {
+      .card-inner {
+        transition: background-color .1s ease;
 
-@media (max-width: 640px) {
+        &:hover {
+          h3 {
+            color: $colorWhite;
+            transition: color .1s ease;
+          }
 
-  
-}
+          p.secondary-text {
+            color: $colorWhite;
+            opacity: .6;
+            transition: color .1s ease;
+          }
 
-@media (max-width: 520px) {
+          .link-arrow {
+            color: $colorWhite;
+            transition: color .1s ease;
+          }
+        }
 
-  .cards--projects {
+        .card-content {
+          min-height: 186px;
+        }
+      }
+
+      &:nth-child(6n+1) {
+        h3,
+        .link-arrow {
+          color: $colorBlue;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorBlue;
+          }
+        }
+      }
+
+      &:nth-child(6n+2) {
+        h3,
+        .link-arrow {
+          color: $colorIncubate;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorIncubate;
+          }
+        }
+
+        .link-arrow::after {
+          background-image: url(../img/icon-arrow-right-incubate.svg);
+        }
+      }
+
+      &:nth-child(6n+3) {
+        h3,
+        .link-arrow {
+          color: $colorEmbark;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorEmbark;
+          }
+        }
+
+        .link-arrow::after {
+          background-image: url(../img/icon-arrow-right-embark.svg);
+        }
+      }
+
+      &:nth-child(6n+4) {
+        h3,
+        .link-arrow {
+          color: $colorStudio;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorStudio;
+          }
+        }
+
+        .link-arrow::after {
+          background-image: url(../img/icon-arrow-right-studio.svg);
+        }
+      }
+
+      &:nth-child(6n+5) {
+        h3,
+        .link-arrow {
+          color: $colorNimbus;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorNimbus;
+          }
+        }
+
+        .link-arrow::after {
+          background-image: url(../img/icon-arrow-right-nimbus.svg);
+        }
+      }
+
+      &:nth-child(6n+6) {
+        h3,
+        .link-arrow {
+          color: $colorHardwallet;
+        }
+
+        .card-inner {
+          &:hover {
+            background-color: $colorHardwallet;
+          }
+        }
+
+        .link-arrow::after {
+          background-image: url(../img/icon-arrow-right-hardwallet.svg);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
     padding: 0 16px;
-    margin-bottom: -252px;
-  }
 
-  .card--app a.card-inner {
-    background-color: $colorBlue;
-  }
+    .card {
+      &:not(:first-child) {
+        margin-top: -52px;
+      }
 
-  .card--incubate a.card-inner {
-    background-color: $colorIncubate;
-  }
+      &:not(:last-child) {
+        .card-inner {
+          .card-content {
+            padding: 0 0 16px 0;
+          }
+        }
+      }
 
-  .card--embark a.card-inner {
-    background-color: $colorEmbark;
-  }
+      .card-inner {
+        padding-bottom: 32px;
 
-  .card--studio a.card-inner {
-    background-color: $colorStudio;
-  }
+        .card-content {
+          h3,
+          p.secondary-text {
+            color: $colorWhite;
+          }
 
-  .card--nimbus a.card-inner {
-    background-color: $colorNimbus;
-  }
+          h3 {
+            transition: color .1s ease;
+          }
 
-  .card--hardwallet a.card-inner {
-    background-color: $colorHardwallet;
-  }
+          p.secondary-text {
+            opacity: .6;
+          }
+        }
 
-  .cards--projects a.card-inner h3 {
-    transition: color .1s ease;
-  }
+        .card-projects__link {
+          display: none;
+        }
+      }
 
-  .cards--projects a.card-inner h3 {
-    color: $colorWhite;
-  }
+      &:nth-child(6n+1) {
+        .card-inner {
+          background-color: $colorBlue;
+        }
+      }
 
-  .cards--projects a.card-inner p.secondary-text {
-    color: $colorWhite;
-    opacity: .6
-  }
+      &:nth-child(6n+2) {
+        .card-inner {
+          background-color: $colorIncubate;
+        }
+      }
 
-  .cards--projects a.card-inner .link-arrow {
-    display: none;
-    color: $colorWhite;
-  }
+      &:nth-child(6n+3) {
+        .card-inner {
+          background-color: $colorEmbark;
+        }
+      }
 
-  .cards--projects .card:nth-child(2) {
-    transform: translate3d(0, -52px, 0);
-  }
+      &:nth-child(6n+4) {
+        .card-inner {
+          background-color: $colorStudio;
+        }
+      }
 
-  .cards--projects .card:nth-child(3) {
-    transform: translate3d(0, -100px, 0);
-  }
+      &:nth-child(6n+5) {
+        .card-inner {
+          background-color: $colorNimbus;
+        }
+      }
 
-  .cards--projects .card:nth-child(4) {
-    transform: translate3d(0, -148px, 0);
+      &:nth-child(6n+6) {
+        .card-inner {
+          background-color: $colorHardwallet;
+        }
+      }
+    }
   }
-
-  .cards--projects .card:nth-child(5) {
-    transform: translate3d(0, -196px, 0);
-  }
-
-  .cards--projects .card:nth-child(6) {
-    transform: translate3d(0, -244px, 0);
-  }
-
-  .cards--projects a.card-inner {
-    padding-bottom: 32px;
-  }
-
-  .cards--projects .card-content {
-    height: auto;
-    padding: 0 0 16px 0;
-  }
-
 }
-
-
-
-
-
-
-
-
-

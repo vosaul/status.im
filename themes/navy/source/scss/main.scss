@@ -185,13 +185,6 @@ h5 {
   margin-top: 0;
 }
 
-.cards.cards--three .card:nth-last-child(3) .card-inner,
-.cards.cards--three .card:nth-last-child(2) .card-inner,
-.cards.cards--three .card:nth-last-child(1) .card-inner {
-  margin-bottom: 0;
-}
-
-
 .section-header {
 	margin: 0 auto;
   padding: 0 24px 32px 24px;
@@ -237,78 +230,78 @@ h5 {
 }
 
 @media (max-width: 800px) {
+  .cards {
+    &.cards--three {
+      .card {
+        width: 50%;
 
-  .cards.cards--three .card {
-    width: 50%;
+        &:nth-child(odd) {
+          .card-inner {
+            margin: 12px 12px 12px 0;
+          }
+        }
+
+        &:nth-child(even) {
+          .card-inner {
+            margin: 12px 0 12px 12px;
+          }
+        }
+
+        &:nth-child(-n+2) {
+          .card-inner {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &.cards--three--even {
+      .card {
+        width: 100%;
+
+        &:nth-child(odd) {
+          .card-inner {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+          .card-inner {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          .card-inner {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          .card-inner {
+            margin-top: 12px;
+          }
+        }
+
+        &:nth-last-child(1) {
+          .card-inner {
+            margin-bottom: 0
+          }
+        }
+
+        &:nth-last-child(2),
+        &:nth-last-child(3) {
+          .card-inner {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
   }
-
-  .cards.cards--three .card:nth-child(3n+1) .card-inner { /* 1, 4, 7...*/
-    margin: 12px;
-  }
-
-  .cards.cards--three .card:nth-child(3n+3) .card-inner { /* 3, 6, 9...*/
-    margin: 12px;
-  }
-
-  .cards.cards--three .card:nth-child(odd) .card-inner { 
-    margin-left: 0
-  }
-
-  .cards.cards--three .card:nth-child(even) .card-inner { 
-    margin-right: 0
-  }
-
-  .cards.cards--three .card:nth-child(1) .card-inner,
-  .cards.cards--three .card:nth-child(2) .card-inner {
-    margin-top: 0;
-  }
-
-  .cards.cards--three .card:nth-child(3) .card-inner {
-    margin-top: 12px;
-  }
-
-  .cards.cards--three .card:nth-last-child(3) .card-inner,
-  .cards.cards--three .card:nth-last-child(2) .card-inner {
-    margin-bottom: 0;
-  }
-
-  .cards.cards--three .card:nth-last-child(1) .card-inner {
-    margin-bottom: 12px;
-  }
-
-  .cards.cards--three.cards--three--even .card {
-    width: 100%;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-child(odd) .card-inner { 
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-child(even) .card-inner { 
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-child(1) .card-inner {
-    margin-top: 0;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-child(3) .card-inner,
-  .cards.cards--three.cards--three--even .card:nth-child(2) .card-inner {
-    margin-top: 12px;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-last-child(3) .card-inner,
-  .cards.cards--three.cards--three--even .card:nth-last-child(2) .card-inner {
-    margin-bottom: 12px;
-  }
-
-  .cards.cards--three.cards--three--even .card:nth-last-child(1) .card-inner {
-    margin-bottom: 0;
-  }
-
-
 }
 
 @media (max-width: 520px) {
@@ -317,12 +310,12 @@ h5 {
     width: 100%;
   }
 
-  .cards.cards--three .card:nth-child(odd) .card-inner { 
+  .cards.cards--three .card:nth-child(odd) .card-inner {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .cards.cards--three .card:nth-child(even) .card-inner { 
+  .cards.cards--three .card:nth-child(even) .card-inner {
     margin-right: 0;
     margin-left: 0;
   }
@@ -370,11 +363,11 @@ code.hljs {
   color:#c94922
 }
 
-.hljs-number,.hljs-meta,.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-type,.hljs-params { 
+.hljs-number,.hljs-meta,.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-type,.hljs-params {
   color:#c76b29
 }
 
-.hljs-string,.hljs-symbol,.hljs-bullet { 
+.hljs-string,.hljs-symbol,.hljs-bullet {
   color:#ac9739
 }
 
@@ -393,7 +386,7 @@ code.hljs {
   color:#5e6687;
   padding:0.5em
 }
-  
+
 .hljs-emphasis {
   font-style:italic
 }
