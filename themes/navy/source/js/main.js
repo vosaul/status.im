@@ -10,12 +10,13 @@ function retrieveAdvocacyPrograms(months) {
     url: 'https://statusphere.status.im/api/v1/boards/public/?is_featured=true&org=375',
     success: function(response) {
       $.each(response, function(index, program) {
+        var description = program.description.substr(0, 200) + '...';
         $('#advocacy-programs').prepend(
           `<div class="card">
             <a href="https://statusphere.status.im/b/${program.uuid}/view" class="card-inner">
               <div class="card-content">
                 <h3>${program.title}</h3>
-                <p class="secondary-text">${program.description}</p>
+                <p class="secondary-text">${description}</p>
               </div>
               <div class="card-projects__link">
                 <span class="link-arrow">Learn More</span>

@@ -39,10 +39,6 @@
         <div class="article-inner">
           <div class="article">
             <div id="advocacy-programs" class="cards cards--projects cards--three"></div>
-            <footer class="article-footer">
-              <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-              {{ page_nav() }}
-            </footer>
           </div>
         </div>
       </article>
