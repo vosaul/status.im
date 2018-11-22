@@ -43,7 +43,7 @@
                 <div class="article-content" itemprop="articleBody">
                     <div class="nightly-headings">
                         <h1>Status Nightly Builds - Beware the Dragons!</h1>
-                        <h5>Updated: 2018/10/12 03:24:26 UTC</h5>
+                        <h3>Updated: {{ date(Date.now(), 'YYYY/MM/DD HH:mm:ss') }} UTC</h3>
                         <p><strong>Warning:</strong> Nightly builds are intended for development testing and may include bugs and other issues.</p>
                         <p>By downloading and installing these builds you assume the full responsibility for all risks concerning your data and funds. 
                         Status makes no claims of security or integrity of funds in these builds. Status advises the use of different recovery phrases in nightlies and stable builds.</p>
