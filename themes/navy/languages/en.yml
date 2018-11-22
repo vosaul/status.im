@@ -39,6 +39,7 @@ sidebar:
     build_status_desktop: Status Desktop
     introduction_desktop: Getting Setup
     building_desktop: Build Desktop
+    desktop_inline_eval: Learn About Our Tools
     troubleshooting: Troubleshooting
     using_breakpad: Google Breakpad Integration
     jenkins_pipeline: Jenkins Setup
@@ -68,8 +69,13 @@ sidebar:
     storybook: Status React Storybook
 
   tutorials:
+    whisper: Whisper
+    whisper_basic_cli: Whisper In Your CLI
+    whisper_embark: Whisper With Embark
     extensions: Extensions
-    your_first_chat_extension: Your First Chat Extension
+    extensions_chat_command: Extend Your Chat
+    status_tools: Status Tools
+    desktop_inline_eval: Status-react & Desktop
 
   research:
     whisper: Whisper
@@ -79,11 +85,13 @@ sidebar:
     whisper_pss: Comparison with PSS 
     whisper_faqs: Whisper FAQs
     secure_messaging_compendium: Secure Messaging Compendium
+    research_blog: Research Blog
     research_projects: Research Projects
     ultra_light_clients: Ultra Light Clients
-    nimbus: Nimbus (Ethereum 2.0 Client)
+    nimbus: Nimbus
     tutorials: Tutorials
     basic_cli: Whisper in Your CLI
+    whisper_embark: Whisper with Embark
 
   security:
     security: Security

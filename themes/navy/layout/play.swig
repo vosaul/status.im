@@ -128,7 +128,7 @@
     <aside id="side-column">
       <div id="panel">
       <p>A playground to experiment with extensions and easily publish them on IPFS. Go ahead, modify the default extension on the left side!</p>
-      <p>Find more details about building your own extension in this <a href="./tutorial_chat_command.html">tutorial</a></p>
+      <p>Find more details about building your own extension in this <a href="../tutorials/extensions_chat_command.html">tutorial</a></p>
       <button class="button button--blue" onclick="publish()">Publish</button>
       <div id="qr-wrapper"></div>
       </div>
