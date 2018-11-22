@@ -74,7 +74,7 @@ For additional information check the following:
 Do this in the second terminal window:
 
 ```shell
-react-native start
+make react-native
 ```
 
 ## Build and run the application itself
@@ -83,10 +83,10 @@ react-native start
 
 Just execute
 ```shell
-react-native run-ios
+make run-ios
 ```
 
-If you wish to specify the simulator, just run `react-native run-ios --simulator="iPhone 7"`.
+If you wish to specify the simulator, just run `make run-ios SIMULATOR="iPhone 7"`.
 You can check your available devices by running `xcrun simctl list devices` from the console.
 
 You can also start XCode and run the application there. Execute `open ios/StatusIm.xcworkspace`, select a device/simulator and click **Run**.
@@ -107,7 +107,10 @@ In this case you have to do the following:
 * Run `sdkmanager` from your machine and install the latest Android SDKs;
 * *Optional:* If you want to use AVD (Android Virtual Device, emulator), please, check [this documentation](https://developer.android.com/studio/run/emulator);
 * *Optional:* If you don't like AVD, you can also use [Genymotion](https://genymotion.com);
-* Execute `make run-android`.
+* Execute:
+  ```shell
+  make run-android`
+  ```
 
 Errors like `android-sdk-16 not found` usually mean that you simply need to install missing SDKs. Run `sdkmanager` for that.
 
