@@ -137,11 +137,34 @@ Declare parameters like this:
 ```
 :parameters   [{:id            :collectible-id
                 :type          :text
+                :placeholder   "Collectible name"}]
+```
+
+This example allows a user to select between their various collectibles, either by typing in the "Collectible name" or using the UI's suggestions.
+
+### Suggestions
+
+A parameter can optionally include `suggestions` to cue the user with additional UI components.
+
+```
+:parameters   [{:id            :collectible-id
+                :type          :text
                 :suggestions   [user-collectibles]
                 :placeholder   "Collectible name"}]
 ```
 
 This example allows a user to select between their various collectibles, either by typing in the "Collectible name" or using the UI's suggestions.
+
+To set the parameter value from a suggestion view, the `chat.command/set-parameter` event must be used. `chat.command/set-custom-parameter` can also be used to add extra parameters that will be accessible to all command messages recipients.
+
+```
+views/user-collectibles
+[view
+ [button {:on-click [chat.command/set-parameter {:value "value"}]}
+  "Set parameter value"]
+ [button {:on-click [chat.command/set-custom-parameter {:key :extra :value "value"}]}
+  "Set custom parameter value"]]
+```
 
 ## on-send and on-receive
 
