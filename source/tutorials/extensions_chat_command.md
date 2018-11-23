@@ -61,9 +61,6 @@ events/load-dtwitt
 (let [{{id :id} :params} properties]
   [ethereum/call {:to "0x255ee755f4b88350ec6ddea5d193b11634dc7b95" :method "posts(uint256)" :params [id] :on-result [put-dtwitt]}])
 ```
-```js
-test
-```
 Here, we're calling a contract at a specfic address on Ethereum, targeting a specific method, to which we pass the `id` as a param and then we specify what we expect to happen on the result, which is the `put-dtwitt` event.
 
 # Previews 
