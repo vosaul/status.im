@@ -45,17 +45,19 @@
                         <h1>Status Nightly Builds - Beware the Dragons!</h1>
                         <h3>Updated: {{ date(Date.now(), 'YYYY/MM/DD HH:mm:ss') }} UTC</h3>
                         <p><strong>Warning:</strong> Nightly builds are intended for development testing and may include bugs and other issues.</p>
-                        <p>By downloading and installing these builds you assume the full responsibility for all risks concerning your data and funds. 
+                        <p>By downloading and installing these builds you assume the full responsibility for all risks concerning your data and funds.
                         Status makes no claims of security or integrity of funds in these builds. Status advises the use of different recovery phrases in nightlies and stable builds.</p>
                         <a href="../build_status/desktop.html" target="_blank">Desktop FAQ</a>
                     </div>
                     <div class="nightly-builds-wrap">
                         <div class="box-desktop">
                             <h2>Linux</h2>
-                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download" id="app" target="_blank">
+                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download">
                                 <img src="../nightly/img/linux.png" width="150" />
-                                <br><br>
-                                <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
+                            </a>
+                            <br><br>
+                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download">
+                              <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
                             </a>
                         </div>
                         <div class="box-desktop">
