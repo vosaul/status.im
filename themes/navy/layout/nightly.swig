@@ -52,11 +52,11 @@
                     <div class="nightly-builds-wrap">
                         <div class="box-desktop">
                             <h2>Linux</h2>
-                            <a href="{{ site.data.nightlies['APP'] }}" id="app" class="nightly-download" download>
+                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download">
                                 <img src="../nightly/img/linux.png" width="150" />
                             </a>
                             <br><br>
-                            <a href="{{ site.data.nightlies['APP'] }}" id="app" class="nightly-download" download>
+                            <a href="{{ site.data.nightlies['APP'] }}" class="nightly-download">
                               <span>{{ site.data.nightlies['APP'] | split('/') | last }}</span>
                             </a>
                         </div>
