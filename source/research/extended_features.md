@@ -77,7 +77,7 @@ In the Javascript API, the distinction between envelopes and messages is blurred
 
 Here's a picture for those who don't like so many words:
 
-![Whisper envelope](../technical_specs/thumbnails/whisper_envelope.jpg)
+![Whisper envelope](./thumbnails/whisper_envelope.jpg)
 
 ## Bloom Filters
 
