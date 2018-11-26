@@ -23,7 +23,7 @@ You can find information about how we as an organization operate to keep everyon
 
 ## Informaton & Education
 
-[Security Champion Guide](./org_security_champions.html)]
+[Security Champion Guide](./org_security_champions.html)
 
 [Threat Modeling](./sec_threat_modeling.html)
 
