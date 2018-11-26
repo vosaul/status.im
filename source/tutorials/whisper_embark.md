@@ -82,7 +82,7 @@ EmbarkJS.Messages.sendMessage({
 7. `powTarget`: the minimal PoW target required for this message. The default value is `0.5`.
 8. `topic`: optional when using private keys. It can be an array of strings, or a string that contains the topic for thosee messages. It will be automatically encoded to a 4 bytes hex string(s) by Embark.
 
-##// TODO: Subscribe to whisper messages
+#### // TODO: Subscribe to whisper messages
 
 To receive messages sent via Whisper, you can use `EmbarkJS.Messages.listenTo(options)`; a function Embark provides which helps us obtain messages based on the filters we wish to set. Let's implement this functionality, calling the function `addMessage(data, time)` each time a message is received:
 
