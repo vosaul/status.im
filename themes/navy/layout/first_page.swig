@@ -47,11 +47,11 @@
       </li>
       <li>
         <div class="inner">
-          <h3>Work in Progress</h3>
-          <p>All our WIP items</p>
+          <h3>Tutorials</h3>
+          <p>Learn for yourself</p>
         </div>
         <img src={{url_for_lang('../img/arrow_blue_shaded.svg')}} />
-        <a href="/wip/"></a>
+        <a href="/tutorials/"></a>
       </li>
     </ul>
   </header>
