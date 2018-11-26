@@ -97,7 +97,7 @@
     <div class="info__inner">
         <div class="info-item">
             <div class="info-item-content">
-                <h5>ANNOUNCEMENTS</h5>
+                <h5>ADVOCACY</h5>
                 <div id="latest-announcements" class="latest-posts"></div>
             </div>
             <div class="info-item-link"><a href="https://statusphere.status.im/" class="link-arrow">Learn more</a></div>
