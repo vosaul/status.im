@@ -1,9 +1,10 @@
 ---
-id: tutorial_chat_command
+id: extensions_chat_command
 title: Extensions Tutorial - Chat Command
+layout: tutorials
 ---
 
-This tutorial will go step by step through the creation and deployment of a [chat command](chat_command.html) allowing to interact with a smart contract.
+This tutorial will go step by step through the creation and deployment of a [chat command](../extensions/extension_types.html) allowing to interact with a smart contract.
 
 # Add meta data
 
@@ -52,28 +53,28 @@ When executed, the chat command will load the DTwitt details from the contract t
 
 The `posts(uint256)` method is called to retrieve the post details. The encapsulated IPFS hash is then used to retrieve the post content.
 
-```clojure
- events/put-dtwitt
- (let [{result :result} properties]
-   [store/put {:key "dtwitt" :value result}])
- 
- events/load-dtwitt
- (let [{{id :id} :params} properties]
-   [ethereum/call {:to "0x255ee755f4b88350ec6ddea5d193b11634dc7b95" :method "posts(uint256)" :params [id] :on-result [put-dtwitt]}])
-̀̀```
+```
+events/put-dtwitt
+(let [{result :result} properties]
+  [store/put {:key "dtwitt" :value result}])
+events/load-dtwitt
+(let [{{id :id} :params} properties]
+  [ethereum/call {:to "0x255ee755f4b88350ec6ddea5d193b11634dc7b95" :method "posts(uint256)" :params [id] :on-result [put-dtwitt]}])
+```
+Here, we're calling a contract at a specfic address on Ethereum, targeting a specific method, to which we pass the `id` as a param and then we specify what we expect to happen on the result, which is the `put-dtwitt` event.
 
 # Previews 
 
 Our short preview definition is a simple text element:
 
-```clojure
+```
  (let [{{{id :id} :params} :content} properties]
   [text "Vote for ${id}"])
 ```
 
 Our preview definition displays some details about a dtwitt and allows to upvote it via a button:
 
-```clojure
+```
  (let [{{params :params} :content
         outgoing :outgoing timestamp-str :timestamp-str} properties
        {description :description} [store/get {:key "dtwitt"}]]
@@ -86,8 +87,7 @@ Our preview definition displays some details about a dtwitt and allows to upvote
 
 # Full extension code
 
-
-```clojure
+```
 {meta {:name          "DTwitter"
        :description   "Access DTwitter posts"
        :documentation "Commands to interract with DTwitter."}

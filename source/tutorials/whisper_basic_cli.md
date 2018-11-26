@@ -1,6 +1,7 @@
 ---
 id: tutorial_basic_cli
 title: Getting Started with Whisper
+layout: tutorials
 ---
 
 ## Intro

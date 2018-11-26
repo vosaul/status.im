@@ -44,13 +44,19 @@ build_status:
   build_status_desktop:
     introduction_desktop: intro_desktop.html
     building_desktop: desktop.html
+    desktop_inline_eval: ../tutorials/desktop_inline_eval.html
     troubleshooting: desktop_troubleshooting.html
     using_breakpad: desktop_google_breakpad.html
     jenkins_pipeline: desktop_jenkins.html
 
 tutorials:
-  extensions: 
-    your_first_chat_extension: extensions_tutorial_chat_command.html
+  whisper: 
+    whisper_basic_cli: whisper_basic_cli.html
+    whisper_embark: whisper_embark.html
+  extensions:
+    extensions_chat_command: extensions_chat_command.html
+  status_tools:
+    desktop_inline_eval: desktop_inline_eval.html
 
 research:
   whisper: 
@@ -60,11 +66,13 @@ research:
     whisper_pss: whisper_pss.html
     whisper_faqs: whisper_faqs.html
     secure_messaging_compendium: secure_messaging_compendium.html
+    research_blog: https://our.status.im/tag/research
   research_projects:
     ultra_light_clients: ulc_in_details.html
     nimbus: https://nimbus.status.im/
   tutorials:
-    basic_cli: tutorial_basic_cli.html
+    basic_cli: ../tutorials/whisper_basic_cli.html
+    whisper_embark: ../tutorials/whisper_embark.html
 
 security:
   security:
@@ -129,7 +137,7 @@ extensions:
   build:  
     syntax: syntax.html
     extension_types: extension_types.html
-    tutorial_chat_command: tutorial_chat_command.html
+    tutorial_chat_command: ../tutorials/extensions_chat_command.html
   references:
     reference_views: reference_views.html
     reference_queries: reference_queries.html

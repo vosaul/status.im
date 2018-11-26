@@ -6,7 +6,9 @@ title: Research at Status
 
 # Do You Want to Know a Secret?
 
-Our research began with Whisper, which is not your typical communications system. 
+Our work began with Whisper, which is not your typical communications system. However, we now are also actively implementing [Nimbus (an Ethereum 2.0 Client)](https://nimbus.status.im), [Ultra Light Clients](./ulc_in_details.html), and a number of other things which you can also follow on our [research blog](https://our.status.im/tag/research).
+
+But, for now, let's stick with Whisper:
 
 1. It is not designed to replace or substitute TCP/IP, UDP, HTTP or any other traditional protocols. 
 2. It is not designed to provide a connection oriented system, nor for simply delivering data between a pair of specific network endpoints. 
