@@ -73,12 +73,13 @@ Some elisp code to define and connect via this new, pared-down repl type could l
 (cider-register-cljs-repl-type 'figwheel-cljs "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))")
 (setq cider-default-cljs-repl 'figwheel-cljs)
 (cider-connect-cljs '(:host "localhost" :port 7888)))
-You evaluate this elisp code however you want. The goal of this post is just to show one possible way. I’ve rolled the above into a single defun that I call when opening up emacs. https://github.com/rcullito/emacsfiles/commit/4332d44c21cf264eb7c20bf9760c090dc17c08e9
 ```
+
+You evaluate this elisp code however you want. The goal of this post is just to show one possible way. I’ve rolled the above into a [single defun](https://github.com/rcullito/emacsfiles/commit/4332d44c21cf264eb7c20bf9760c090dc17c08e9) that I call when opening up emacs. 
 
 Our [build docs](https://status.im/build_status/desktop.html) offers another great solution by using a `.dir-locals` file. Any solution is fair game, it’s just worth noting that an understanding of how all the pieces work together is crucial for how you go about configuring this last step.
 
-So, to wrap up: in order to run status-react. Follow along via all the init steps outlined [here](https://status.im/build_status/desktop.html), run “the big 4”, which again are:
+So, in order to run status-react, follow along via all the init steps outlined [here](https://status.im/build_status/desktop.html) and run “the big 4”, which are:
 
 ```bash
 npm start
@@ -87,7 +88,7 @@ make watch-desktop
 react-native run-desktop
 ```
 
-And finally: open emacs and evaluate the elisp code in the manner agreeable to you. Then, at long last, you can open an arbitrary clojurescript file, and evaulate any expression to your heart’s content. Happy coding.
+Finally, open emacs and evaluate the elisp code in the manner agreeable to you. Then, at long last, you can open an arbitrary clojurescript file, and evaulate any expression to your heart’s content. Happy coding.
 
 ## Conclusion
 
