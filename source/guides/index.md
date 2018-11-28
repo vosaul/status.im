@@ -1,6 +1,6 @@
 ---
 id: index
-title: Security Month At Status
+layout: guides
 ---
 
 # Welcome To Our Guides Route
