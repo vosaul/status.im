@@ -26,9 +26,10 @@ sidebar:
     send_transaction_flow: Send Transaction Flow
     status_node: Status Node
     run_status_node: Run a Status Node
-    testing: Testing
-    introduction_testing: How We Test
-    report_a_bug: Report a Bug
+    tutorial: Tutorials
+    tutorials: Learn More!
+    guide: Guides
+    guides: Start Contributing
     analytics: Analytics  
     analytics_status: Analysing Status
 
@@ -119,6 +120,15 @@ sidebar:
   guides: 
     guides: Guides
     introduction_guides: Security Week Guides
+    product: Product
+    pm_guide: Product Managers' Guide
+    desktop: Desktop 
+    desktop_inline_eval: Clojure and Inline-Eval
+    testing: Testing
+    introduction_testing: How We Test
+    report_a_bug: Report a Bug
+    security: Security
+    security_month: Security Month
   
   org_sec: 
     org: Organization

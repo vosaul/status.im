@@ -8,9 +8,10 @@ docs:
     send_transaction_flow: send_transaction_flow.html
   status_node:
     run_status_node: run_status_node.html
-  testing:
-    introduction_testing: testing.html
-    report_a_bug: report_a_bug.html
+  tutorial:
+    tutorials: ../tutorials/
+  guide:
+    guides: ../guides/
   analytics:
     analytics_status: ../analytics/
 
@@ -55,8 +56,6 @@ tutorials:
     whisper_embark: whisper_embark.html
   extensions:
     extensions_chat_command: extensions_chat_command.html
-  status_tools:
-    desktop_inline_eval: desktop_inline_eval.html
 
 research:
   whisper: 
@@ -98,6 +97,15 @@ audits:
 guides:
   guides:
     introduction_guides: index.html
+  product:
+    pm_guide: pm_guide.html
+  desktop:
+    desktop_inline_eval: desktop_inline_eval.html
+  testing:
+    introduction_testing: testing.html
+    report_a_bug: report_a_bug.html
+  security:
+    security_month: security_month.html
 
 org_sec:
   org:

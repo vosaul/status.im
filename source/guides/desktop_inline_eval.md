@@ -1,7 +1,6 @@
 ---
 id: desktop_inline_eval
 title: Coming to Grips with Status-react and Desktop
-layout: tutorials
 ---
 
 ## Inline Evaluation as a Means of Understanding Clojure
@@ -47,7 +46,7 @@ Now that there’s a bit of context around clojure `cli` and `figwheel`, it migh
 
 One final side effect of this command worth noting is that it starts nrepl on a port that we can connect to later. What is nrepl? More on that in Part 3.
 
-## Part 3: Into The Connected Caves
+## Part 3: Connecting The Caves
 
 Working with a clojure repl can be an enjoyable experience, but something about a clojure nrepl feels daunting. Most ignore the `n`, until one day they realise that `n` just stands for `network`, making nrepl the network repl. It comes with a client and a server. When we run `make watch-desktop`, figwheel starts an nrepl server on port `7888` and a first client of that server right in your terminal. 
 
@@ -59,7 +58,7 @@ As of the time of writing, November 2018, it can be confusing to track down whic
 
 Since the decision of using cider’s nrepl has been made for us (at least within the context of status-react) we can peruse the narrower set of options at our disposal for connecting to it. Cider has a [great website](https://cider.readthedocs.io/en/latest/), but for specifics around configuring an nrepl connection, a helpful read can be found within the [project source itself](https://github.com/clojure-emacs/cider/blob/master/doc/clojurescript.md).
 
-## Part 4: Sail into the Clouds
+## Part 4: Into the Clouds
 
 Where does all that leave us? Time to take stock. If we’ve run “the big 4”, we can assume that our development environment has a running nrepl as a result of running `make watch-desktop` and we’re now at the final step of connecting to it properly. The cider docs linked above offer a suite of commands which all seem promising. Among them are: `cider-jack-in`, `cider-connect`, and `cider-connect-cljs`.
 
