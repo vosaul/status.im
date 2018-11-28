@@ -12,7 +12,7 @@
           <p>Day-to-day decentralization</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="life_status.html"></a>
+        <a href="../contribute/life_status.html"></a>
       </li>
       <li>
         <div class="inner">
@@ -20,7 +20,7 @@
           <p>A principled approach</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="our_principles.html"></a>
+        <a href="../contribute/our_principles.html"></a>
       </li>
       <li>
         <div class="inner">
@@ -28,7 +28,7 @@
           <p>See our open positions!</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="open_positions.html"></a>
+        <a href="../contribute/open_positions.html"></a>
       </li>
     </ul>
   </header>
