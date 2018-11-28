@@ -1,7 +1,7 @@
 ---
 id: index
 title: Tutorials
-comments: false
+layout: tutorials
 ---
 
 # Learn More
