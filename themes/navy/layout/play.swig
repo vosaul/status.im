@@ -43,38 +43,73 @@
 <script src="https://cdn.rawgit.com/neocotic/qrious/master/dist/qrious.js"></script>
 <script src="/js/extensions/pluto.js"></script>
 <script>
-    const ipfs = new window.Ipfs();
-
-    async function load() {
-      const buffer = await loadIPFS(ipfs, "QmWKqSanV4M4zrd55QMkvDMZEQyuHzCMHpX1Fs3dZeSExv");
-      return buffer.toString();
+    const TIMEOUT = 5; // seconds
+    const timeout = new Promise((resolve, reject) => {
+      return setTimeout(() => reject(new Error('request timeout')), TIMEOUT * 1000);
+    });
+    async function cat(hash) {
+      try {
+        const response = await Promise.race([timeout, fetch("https://ipfs.infura.io:5001/api/v0/cat?arg=" + hash)]);
+        if (response.status === 200) {
+          return response.text();
+        }
+        return null;
+      } catch {
+        return null;
+      }
     }
-
-    ipfs.once("ready", async () => {
-      const content = await load();
-      codeMirror.setValue(content);
-    })
-
+    async function add(content) {
+      const formData  = new FormData();
+      formData.append("extension.edn", content);
+      const response = await fetch("https://ipfs.infura.io:5001/api/v0/add", {
+        method: 'post',
+        body: formData
+      });
+      if (response.status === 200) {
+        return response.json();
+      }
+      return null;
+    }
+    const defaultHash = "Qmaznq6qZWPTjzh1ZcKJrwSQKt6VF3UL2tUSDkvAUYDRk2";
+    function clearHash() {
+      history.replaceState({hash: null}, null, document.location.href.split('?')[0]);
+    }
+    async function main () {
+      const params = (new URL(document.location)).searchParams;
+      const hash = params.get("hash") || defaultHash;
+      const content = await cat(hash);
+      if (content != null) {
+        codeMirror.setValue(content);
+        history.replaceState({hash: hash}, null, document.location.href.split('?')[0] + "?hash=" + hash);
+        displayQR(hash);
+      } else {
+        codeMirror.setValue("Failed to load the extension");
+        clearHash();
+      }
+    }
     function extensionLink(hash) {
       return "https://get.status.im/extension/ipfs@" + hash;
     }
-
-    async function loadIPFS(ipfs, hash) {
-      return ipfs.files.cat(hash);
-    }
-
     async function publish() {
       const content = codeMirror.getValue();
-      const filesAdded = await uploadIPFS(ipfs, content);
-      displayQR(extensionLink(filesAdded[0].hash));
+      const bel = document.getElementById("publish");
+      bel.disabled = true;
+      const object = await add(content);
+      if (object !== null) {
+        const hash = object.Hash;
+        history.pushState({hash: hash}, null, document.location.href.split('?')[0] + "?hash=" + hash);
+        displayQR(hash);
+      } else {
+        const qel = document.getElementById("qr-wrapper");
+        qel.innerHTML = "Failed to publish the extension";
+      }
+      bel.disabled = false;
     }
-
     function clearErrors() {
       const elErrors = document.getElementById("errors");
       elErrors.innerHTML = '';
       elErrors.className = "";
     }
-
     function displayErrors(errors) {
       const elErrors = document.getElementById("errors");
       if (errors == null) {
@@ -82,8 +117,7 @@
         elErrors.classList.add("ok");
       } else {
         elErrors.classList.add("errors");
-
-        let names = errors.map( (error, i) => {
+        const names = errors.map( (error, i) => {
           return [error.type, error.value]
         })
         var s = '<div>Errors</div><ul>';
@@ -98,29 +132,23 @@
         elErrors.innerHTML = s;
       }
     }
-
-    function uploadIPFS(ipfs, s) {
-      return ipfs.files.add({path: 'extension.edn',
-                            content: ipfs.types.Buffer.from(s, 'utf8')})
-    }
-
     function clearQR() {
       const qel = document.getElementById("qr-wrapper");
       qel.innerHTML = '';
     }
-
-    function displayQR(s) {
+    function displayQR(hash) {
       const qel = document.getElementById("qr-wrapper");
-      qel.innerHTML = '<canvas id="qr"></canvas><a href="' + s + '">Universal link</a>';
+      const s = extensionLink(hash);
+      qel.innerHTML = '<canvas id="qr"></canvas><a href="' + s + '">Universal link</a><a href="https://ipfs.infura.io/ipfs/' + hash + '/">IPFS link</a>';
       new QRious({
             element: document.getElementById('qr'),
             value: s,
             size: 250
       });
     }
+    main();
   </script>
-<div id="play-page">
-<div id="wrapper">
+  <div id="wrapper">
     <main>
       <div id="content"></div>
       <div id="errors"></div>
@@ -128,8 +156,8 @@
     <aside id="side-column">
       <div id="panel">
       <p>A playground to experiment with extensions and easily publish them on IPFS. Go ahead, modify the default extension on the left side!</p>
-      <p>Find more details about building your own extension in this <a href="../tutorials/extensions_chat_command.html">tutorial</a></p>
-      <button class="button button--blue" onclick="publish()">Publish</button>
+      <p>Find more details about building your own extension in this <a href="https://status.im/extensions/">tutorial</a></p>
+      <button id="publish" class="button button--blue" onclick="publish()">Publish</button>
       <div id="qr-wrapper"></div>
       </div>
       <div id="docs">
@@ -158,11 +186,19 @@
 	  </li>
 	  <li>
 	    <code>checkbox</code>
-	    <pre class="inline-args">{:uri String}</pre>
+	    <pre class="inline-args">{:on-change Event :checked Bool}</pre>
 	  </li>
 	  <li>
-	    <code>checkbox</code>
-	    <pre class="inline-args">{:on-change Event :checked Bool}</pre>
+		<code>list</code>
+		<pre class="inline-args">{:data Vector :item-view View :key Keyword}</pre>
+	  </li>
+	  <li>
+		<code>picker</code>
+		<pre class="inline-args">{:on-change Event :selected String :enabled Boolean :data Vector}</pre>
+	  </li>
+	  <li>
+		<code>activity-indicator</code>
+		<pre class="inline-args">{:animating Boolean :color String :size Keyword :hides-when-stopped Boolean}</pre>
 	  </li>
 	  <li>
 	    <code>nft-token-viewer</code>
@@ -239,6 +275,15 @@
  :on-result? Event}</pre>
 	  </li>
 	  <li>
+		<code>ethereum/logs</code>
+		<pre>{:fromBlock? String
+:toBlock?   String
+:address?   Vector
+:topics?    Vector
+:blockhash? String
+:on-result Event}</pre>
+   	  </li>
+	  <li>
 	    <code>ethereum/call</code>
 	    <pre>{:to String
  :method    String
@@ -249,22 +294,21 @@
       </div>
     </aside>
   </div>
-</div>
-
-<script>
-  const codeMirror = CodeMirror(document.getElementById("content"));
-  codeMirror.setValue("Loading content ...");
-  codeMirror.on("change", function(c, change) {
-    clearErrors();
-    clearQR();
-    const read = pluto.reader.read(codeMirror.getValue());
-    const readJS = pluto.js.from_clj(read);
-    displayErrors(readJS.errors);
-    if (readJS.errors == null) {
-      const parsed = pluto.js.parse(read);
-      const parsedJS = pluto.js.from_clj(parsed);
-      displayErrors(parsedJS.errors);
-    }
-  });
-  parinferCodeMirror.init(codeMirror);
-</script>
+  <script>
+    const codeMirror = CodeMirror(document.getElementById("content"));
+    codeMirror.setValue("Loading content ...");
+    codeMirror.on("change", function(c, change) {
+      clearErrors();
+      clearQR();
+      clearHash();
+      const read = pluto.reader.read(codeMirror.getValue());
+      const readJS = pluto.js.from_clj(read);
+      displayErrors(readJS.errors);
+      if (readJS.errors == null) {
+        const parsed = pluto.js.parse(read);
+        const parsedJS = pluto.js.from_clj(parsed);
+        displayErrors(parsedJS.errors);
+      }
+    });
+    parinferCodeMirror.init(codeMirror);
+  </script>
