@@ -21,6 +21,7 @@ Whisper and PSS are two messaging procotols currently being developed in the Eth
 * Sender anonymity: peers generally can't tell if neighbour peer is message originator
     * Being fully surrounded by cooperating adverserial nodes breaks this (similar to an eclipse attack)
     * Light clients that don't repeat traffic will leave more obvious metadata trail
+    * Global Passive Adversary can possibly detect origin of envelope
 * When used without bloom filters or without addressing, routing is equivalent for Whisper and PSS respectively
 
 ### Differences
