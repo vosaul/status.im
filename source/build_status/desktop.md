@@ -74,6 +74,7 @@ npm install -g
   export STATUS_NODE_PORT=12345 # no need to specify this if just running dev instance alongside release build
   export STATUS_DATA_DIR=~/status-files/data1 # this is where Realm data files, Geth node data, and logs will reside; also not strictly needed for dev alongside release
   ```
+  Please be sure to run the instance with default parameters (without any explicit specification of variables above) first, as otherwise it will kill `ubuntu-server` processes that belong to other instances.
 
   - for complete cleanup of generated files and Realm data, issue:
 
