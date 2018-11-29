@@ -21,8 +21,7 @@
                 <li><a href="https://incubate.status.im/" class="">Incubate</a></li>
                 <li><a href="https://nimbus.status.im/" class="">Nimbus</a></li>
                 <li><a href="https://embark.status.im/" class="">Embark</a></li>
-                <li><a href="https://studio.status.im/" class="">Studio</a></li>
-                <li><a href="https://hardwallet.status.im/" class="">Hardwallet</a></li>
+                <li><a href="https://hardwallet.status.im/" class="">Keycard</a></li>
               </ul>
             </li>
             <li><a href={{url_for_lang('contribute')}} class="">Contribute</a></li>
@@ -124,15 +123,15 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-content">
-                            <h4>Status Studio</h4>
-                            <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
+                            <h4>Keycard</h4>
+                            <p class="secondary-text">A hardware wallet in the form of a card with a safe, contactless transaction experience</p>
                         </div>
-                        <div class="card-community-more__link"><a href="https://studio.status.im" class="link-arrow">Learn more</a></div>
+                        <div class="card-community-more__link"><a href="https://hardwallet.status.im/" class="link-arrow">Learn more</a></div>
                     </div>
                 </div>
             </div>
             <div class="separator"></div>
-            <h5>Tools for Everyone</h5>
+            <h5>Enable Everyone</h5>
             <div class="cards cards-community-more cards--three cards--three--even">
                 <div class="card">
                     <div class="card-inner">
@@ -146,10 +145,10 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-content">
-                            <h4>Status Hardwallet</h4>
-                            <p class="secondary-text">A hardware wallet in the form of a card with a safe, contactless transaction experience</p>
+                            <h4>Statusphere</h4>
+                            <p class="secondary-text">Get involved in our community today, no matter who you are.</p>
                         </div>
-                        <div class="card-community-more__link"><a href="https://hardwallet.status.im/" class="link-arrow">Learn more</a></div>
+                        <div class="card-community-more__link"><a href="https://status.im/statusphere/" class="link-arrow">Learn more</a></div>
                     </div>
                 </div>
             </div>

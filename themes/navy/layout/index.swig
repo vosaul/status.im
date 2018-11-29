@@ -155,7 +155,7 @@
             </a>
         </div>
         <div class="card">
-            <a href="https://studio.status.im/" class="card-inner">
+            <a href="#" class="card-inner">
                 <div class="card-content">
                     <h3>Studio</h3>
                     <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
