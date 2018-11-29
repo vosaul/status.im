@@ -9,7 +9,8 @@ title: Build Desktop
 
 You will need the following tools installed:
   - Clojure CLI tool `clj` https://clojure.org/guides/getting_started#_installation_on_mac_via_code_brew_code
-  - Node.js v.8.9.4, npm 5.5.1 (can be installed via `npm install -g npm@5.5.1`)
+  - Node.js v.8.9.4
+  - yarn 1.12.3 (can be installed via `npm install -g yarn@1.12.3`)
   - CMake 3.1.0 or higher
   - Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
     - Linux: `sudo apt install extra-cmake-modules libgnome-keyring0`
@@ -74,6 +75,7 @@ npm install -g
   export STATUS_NODE_PORT=12345 # no need to specify this if just running dev instance alongside release build
   export STATUS_DATA_DIR=~/status-files/data1 # this is where Realm data files, Geth node data, and logs will reside; also not strictly needed for dev alongside release
   ```
+  Please be sure to run the instance with default parameters (without any explicit specification of variables above) first, as otherwise it will kill `ubuntu-server` processes that belong to other instances.
 
   - for complete cleanup of generated files and Realm data, issue:
 
