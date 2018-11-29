@@ -87,6 +87,13 @@ $(document).ready(function () {
   retrieveAdvocacyPrograms(months);
 });
 
+let heroImage = document.querySelectorAll(".hero-image")[0]	
+ if(heroImage) {	
+  setTimeout(function(){	
+    addClassToElement(heroImage, "active")	
+  }, 200)	
+}
+
 
 /* Popups */
 
