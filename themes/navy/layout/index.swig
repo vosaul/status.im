@@ -113,7 +113,7 @@
         <div class="info-item">
             <div class="info-item-content">
                 <h5>LATEST NEWS</h5>
-                <div id="latest-news" class="latest-posts"></div>
+                <div class="latest-news latest-posts" class="latest-posts"></div>
             </div>
             <div class="info-item-link"><a href="https://our.status.im/" class="link-arrow">Read the blog</a></div>
         </div>

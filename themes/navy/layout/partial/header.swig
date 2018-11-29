@@ -66,7 +66,7 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="card-content">
-                            <div class="latest-posts"></div>
+                            <div class="latest-posts latest-news"></div>
                         </div>
                         <div class="card-community-more__link"><a href="https://our.status.im/" class="link-arrow">Learn more</a></div>
                     </div>

@@ -1,3 +1,7 @@
+// let ScrollOver = require("./lib/ScrollOver.js")
+// let animateScroll = require("./lib/animatescroll.js")
+// let d3 = require("d3")
+
 /* global $ */
 
 function retrieveAdvocacyPrograms(months) {
@@ -70,7 +74,7 @@ $(document).ready(function () {
         if(minutes.length == 1){
           minutes = '0' + minutes;
         }
-        $('.latest-posts').prepend(' \
+        $('.latest-news').prepend(' \
         <div class="post"> \
           <time>'+ newDate.getDate() + ' ' + months[(newDate.getMonth()+1)] + ' at ' + newDate.getHours() + ':' + minutes + '</time> \
           <h4><a href="https://our.status.im/'+ val.slug +'">'+ val.title +'</a></h4> \
@@ -87,11 +91,12 @@ $(document).ready(function () {
   retrieveAdvocacyPrograms(months);
 });
 
-let heroImage = document.querySelectorAll(".hero-image")[0]	
- if(heroImage) {	
-  setTimeout(function(){	
-    addClassToElement(heroImage, "active")	
-  }, 200)	
+let heroImage = document.querySelectorAll(".hero-image")[0]
+
+if(heroImage) {
+  setTimeout(function(){
+    addClassToElement(heroImage, "active")
+  }, 200)
 }
 
 
