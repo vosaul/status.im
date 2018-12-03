@@ -70,7 +70,7 @@ npm install
 
 Once you have installed all the dependencies, you may execute `npm start` to see what the tutorial is about. It's pretty simple - just a CLI interface that will allow you to send Whisper messages using a [default topic](https://github.com/status-im/whisper-tutorial/blob/start-here/src/index.js#L6) and some other settings. We cover below how to send both public and private messages.
 
-To understand better why we go through the following steps and to understand each concept we introduce in more detail, please read through the [extended features](./extended_features.html) section above as you complete this.  
+To understand better why we go through the following steps and to understand each concept we introduce in more detail, please read through the [extended features](../research/extended_features.html) section above as you complete this.
 
 You can close the application with `Ctrl + c` at any time.
 
