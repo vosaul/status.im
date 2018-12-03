@@ -2,7 +2,8 @@
 id: add_your_dapp
 title: Adding your DApp to Status
 ---
-## Instructions
+
+# Instructions
 
 We accept submissions to our DApp list via pull request. 
 

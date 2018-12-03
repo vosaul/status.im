@@ -3,6 +3,8 @@ id: send_transaction_flow
 title: Send Transaction Flow
 ---
 
+# How transactions Work in status-react 
+
 ![Send Transaction Flow](../img/SendTransaction_flow_new.png)
 
 The diagram above is fairly self-explanatory if you just follow the flow carefully. Essentially, we have three sources from whence a transaction can be generated - a Webview DApp or the Status Wallet calling `web3.sendTransaction` from within the status-react module, or a full chatbot living in an `JavaScriptCore` jail.

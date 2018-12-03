@@ -3,7 +3,7 @@ id: status_web_api
 title: Status JavaScript API
 ---
 
-## Status DApp API
+# Status DApp API
 
 On top of regular `web3` access, Status offers a set of API available to DApps developers. This API follows the [EIP1102](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md) standard that will soon be used for web3 injection.
 

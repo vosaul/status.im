@@ -3,7 +3,7 @@ id: testing
 title: How To Help With Testing
 ---
 
-## Check if you are ready to help
+# Check if you are ready to help
 
 | Summary                |	Detailed Explanation                                  |
 | -------------------- | ---------------------------------------------------------|
