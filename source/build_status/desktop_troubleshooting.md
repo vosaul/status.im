@@ -3,7 +3,7 @@ id: desktop_troubleshooting
 title: Troubleshooting
 ---
 
-## Initial setup issues
+# Initial setup issues
 
 ### `npm install` hangs
 Use yarn instead. `npm install -g yarn@1.12.3` and use `yarn install`.
