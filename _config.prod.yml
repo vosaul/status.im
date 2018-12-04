@@ -37,3 +37,8 @@ github: staus-im
 
 graphviz:
   enable: true
+
+elasticsearch:
+  index: 'status.im'
+  esHost: 'search.status.im'
+  esPort: 443
