@@ -5,7 +5,7 @@
       <script src="/js/jquery.marcopolo.min.js" type="text/javascript"></script>
       <script type="text/javascript" defer>
         $('#userSearch').marcoPolo({
-          url: 'https://search.status.im/dev.status.im/_search',
+          url: 'https://search.status.im/dev.status.im/_search?size=5&_source=title,url&',
           formatItem: function (data, $item) {
             return data.title || data.url;
           },
