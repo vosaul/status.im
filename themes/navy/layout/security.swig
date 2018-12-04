@@ -1,4 +1,5 @@
 <div class="page-intro wrapper">
+{{ partial('partial/shared-partials/partials/search') }}
   <header class="docs-header">
     <div class="docs-intro">
       <h1>Securing a Better Web</h1>

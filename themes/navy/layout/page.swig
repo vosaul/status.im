@@ -1,4 +1,5 @@
 <div class="page-intro wrapper">
+{{ partial('partial/shared-partials/partials/search') }}
   <header class="article-header">
     <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
     <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}">Edit on Github</a>
