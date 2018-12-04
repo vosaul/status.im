@@ -1,12 +1,11 @@
 .docs-header {
 	max-width: 1200px;
-	margin: 120px auto 0;
-	padding: 50px 0 20px;
+	margin: 0 auto 20px;
 	display: flex;
 	justify-content: space-between;
 	background-image: url("../img/header_bg.svg");
 	background-repeat: no-repeat;
-	background-position-x: 90%;
+	background-position-x: 70%;
 	background-size: 18%;
 	flex-direction: column;
 }
@@ -145,4 +144,78 @@
 
 .docs-header li img {
 	transition: all 0.3s ease-in-out;
+}
+
+/* Search */
+
+.search {
+	max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#userSearch {
+	background-color: $colorWhite;
+    padding: 10px;
+    border: 1px solid $colorWhite;
+    border-radius: 8px;
+	width: 20%;
+	float: right;
+	margin-top: 100px;
+}
+
+.mp_list {
+	position: absolute;
+	top: 150px;
+	right: 100px;
+	width: 18%;
+	z-index: 1;
+	background-color: $colorWhite;
+	border: 1px solid $colorWhite;
+	border-radius: 8px;
+}
+
+.mp_list li {
+	padding: 10px 4px;
+	margin-bottom: 2px;
+	border: 1px solid $colorWhite;
+	border-radius: 8px;
+}
+
+.mp_list li:hover {
+	color: $colorBlue;
+	background: rgba(67,96,223,0.1);
+	border: 1px solid rgba(67,96,223,0.1);
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+	#userSearch {
+		margin-top: 140px;
+		float: left;
+		margin-left: 20px;
+		width: 30%
+	}
+
+	.mp_list {
+		top: 180px;
+		left: 20px;
+		width: 28%
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#userSearch {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+
+	.mp_list {
+		width: 48%;
+	}
 }
