@@ -67,6 +67,7 @@ research:
     secure_messaging_compendium: secure_messaging_compendium.html
     research_blog: https://our.status.im/tag/research
   research_projects:
+    pfs: pfs.html
     ultra_light_clients: ulc_in_details.html
     nimbus: https://nimbus.status.im/
   tutorials:

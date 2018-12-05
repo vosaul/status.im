@@ -5,7 +5,7 @@ Status Perfect Forward Secrecy Whitepaper
 
 ## 1. Introduction
 
-This whitepaper describes protocols used by Status to achieve Perfect Forward Secrecy for 1:1 chat participants. It builds on the [X3DH](https://signal.org/docs/specifications/x3dh/) and [Double Ratchet](https://signal.org/docs/specifications/doubleratchet/) specifications from Open Whisper Systems, with some adaptations to operate in a decentralized environment.
+This whitepaper describes the protocols used by Status to achieve Perfect Forward Secrecy for 1:1 chat participants. It builds on the [X3DH](https://signal.org/docs/specifications/x3dh/) and [Double Ratchet](https://signal.org/docs/specifications/doubleratchet/) specifications from Open Whisper Systems, with some adaptations to operate in a decentralized environment.
 
 ### 1.1. Definitions
 
@@ -33,7 +33,7 @@ Types used in this specification are defined using [Protobuf](https://developers
 
 ### 1.4. Transport Layer
 
-Whisper ([see PoC spec](https://github.com/ethereum/wiki/wiki/Whisper-PoC-2-Protocol-Spec)) serves as the transport layer for the Status chat protocol. Whisper is a hybrid P2P/DHT communication protocol which delivers messages probabilistically. It is designed to provide configurable levels of darkness and plausible deniability at the expense of high-latency and relatively high bandwidth.
+[Whisper](./index.html) serves as the transport layer for the Status chat protocol. Whisper is a hybrid P2P/DHT communication protocol which delivers messages probabilistically. It is designed to provide configurable levels of darkness and plausible deniability at the expense of high-latency and relatively high bandwidth.
 
 ### 1.5. User flow for 1-to-1 communications
 
@@ -131,6 +131,7 @@ The initial key exchange flow is described in [section 3 of the X3DH protocol](h
 Bob's prekey bundle is retrieved by Alice, however it is not specific to Alice. It contains:
 
 ([protobuf](https://github.com/status-im/status-go/blob/c86f8bf6ca35280e7041674f76a2ef1fe333e482/services/shhext/chat/encryption.proto#L11))
+
 ``` protobuf
 message Bundle {
   bytes identity = 1;
@@ -145,6 +146,7 @@ message Bundle {
 - `signature`: Prekey signature <i>Sig($IK_B$, Encode($SPK_B$))</i>
 
 ([protobuf](https://github.com/status-im/status-go/blob/c86f8bf6ca35280e7041674f76a2ef1fe333e482/services/shhext/chat/encryption.proto#L5))
+
 ``` protobuf
 message SignedPreKey {
   bytes signed_pre_key = 1;
@@ -259,7 +261,8 @@ Expired session should not be used for new messages and should be deleted after 
 ## 4. Multi-device support
 
 Multi-device support is quite challenging as we don't have a central place where information on which and how many devices (identified by their respective `installation-id`) belongs to a whisper-identity.
-Furthermore we always need to take account recovery in consideration, where the whole device is wiped clean and all the information about previous sessions is lost.
+
+Furthermore we always need to take account recovery in consideration, where the whole device is wiped clean and all the information about any previous sessions is lost.
 
 Taking these considerations into account, the way multi-device information is propagated through the network is through bundles/contact codes, which will contain information about paired devices as well as information about the sending device.
 
@@ -269,15 +272,14 @@ This mean that every time a new device is paired, the bundle needs to be updated
 
 When a user adds a new account, a new `installation-id` will be generated. The device should be paired as soon as possible if other devices are present. Once paired the contacts will be notified of the new device and it will be included in further communications.
 
-Any time a bundle from your $IK$ but different `installation-id` is received, the device is added to the pairing group. From now on any message sent by one device will also be sent 
-to any device in the pairing group. Eventually devices will have to be explicitly confirmed by the user (TO BE IMPLEMENTED).
+Any time a bundle from your $IK$ but different `installation-id` is received, the device is added to the pairing group. From now on any message sent by one device will also be sent to any device in the pairing group. Eventually devices will have to be explicitly confirmed by the user _(TO BE IMPLEMENTED)_.
 
-Upon receiving a new bundle from it's own $IK$ the following operation are performed:
+Upon receiving a new bundle from it's own `$IK$` the following operation are performed:
 
 1) For each signed-pre-key if the local version is < then the one received or is missing, the local version will be updated/added.
 2) If the received bundle is missing the receiving installation-id, the bundle will be updated with the receiving installation-id and current signed-pre-key/version. 
 
-After this steps a new contact-code/bundle will be generated which will include pairing information.
+After this step a new contact-code/bundle will be generated which will include pairing information.
 
 The bundle will be propagated to contacts through contact updates. The user will be notified to update their contact-code in any other place where it might be stored. (TO BE IMPLEMENTED).
 
