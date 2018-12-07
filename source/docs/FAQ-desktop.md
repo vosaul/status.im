@@ -61,7 +61,7 @@ Download the new release, and run new installer as done on initial install.
 
 ## What operating systems are supported?
 
-Linux, and MacOS, and Windows 7+.
+Linux, and MacOS, and Windows 10 (Windows 7+ support planned).
 
 ## Can I use/recover my existing account?
 
