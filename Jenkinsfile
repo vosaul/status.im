@@ -29,7 +29,19 @@ pipeline {
 
     stage('Install Deps') {
       steps {
-        sh 'npm install'
+        withCredentials([usernamePassword(
+          credentialsId: 'search.status.im-auth',
+          usernameVariable: 'HEXO_ES_USER',
+          passwordVariable: 'HEXO_ES_PASS'
+        )]) {
+          sh 'npm install'
+        }
+      }
+    }
+
+    stage('Index') {
+      steps {
+        sh 'npm run index'
       }
     }
 
