@@ -101,7 +101,6 @@ Release builds do not log by default. When enabled logs can be found here:
 %LOCALAPPDATA%\Status\Status.log
 %LOCALAPPDATA%\Status\ethereum\mainnet_rpc\geth.log
 
-
 ## Where is feature X from mobile?
 
 Status desktop trails the mobile app in development and not all features from mobile are in desktop yet. But let us know what your favourite feature is and we can work to get it included.
