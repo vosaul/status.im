@@ -21,6 +21,7 @@ sidebar:
     use_status: Use Status
     contributor_guide: Contributor Guide
     FAQs: FAQs
+    faq-desktop: Desktop FAQ
     app_structure: App Structure
     status_react_structure: Status-React Structure
     send_transaction_flow: Send Transaction Flow
