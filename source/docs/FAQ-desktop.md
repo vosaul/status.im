@@ -86,7 +86,7 @@ It can also be reported in [#status](https://get.status.im/chat/public/status) i
 
 ## Where are Logs Located?
 
-Release builds do not log by default.  When enabled logs can be found here:
+Release builds do not log by default. When enabled logs can be found here:
 
 ### Mac 
 `~/Library/Application Support/Status/Status.log`
