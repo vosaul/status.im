@@ -30,7 +30,7 @@ To have gnome-keyring keychain working install following package:
 Download AppImage; 
 if required, rename it to be exactly “Status.AppImage” (If you would have another name, app will start fresh without previously stored data).
 
-If you have high-DPI 4K resolution display, you should set QT_AUTO_SCREEN_SCALE_FACTOR, QT_SCREEN_SCALE_FACTORS, QT_SCALE_FACTOR env vars to work with your display’s dpi and resolution.
+If you have high-DPI 4K resolution display, you should set `QT_AUTO_SCREEN_SCALE_FACTOR`, `QT_SCREEN_SCALE_FACTORS`, `QT_SCALE_FACTOR` env vars to work with your display’s DPI and resolution.
 
 To set vars and start the app  you can go following way in new Terminal window:
 
