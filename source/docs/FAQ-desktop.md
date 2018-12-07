@@ -53,7 +53,7 @@ Quit Status, download a new release, and drag to Applications
 
 ### Linux 
 
-Download new release and make sure it’s named “Status.AppImage” and executable permissions are added to the file (chmod +x Status.AppImage).
+Download new release and make sure it’s named “Status.AppImage” and executable permissions are added to the file (`chmod +x Status.AppImage`).
 
 ### Windows
 
