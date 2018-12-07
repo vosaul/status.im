@@ -3,6 +3,7 @@ docs:
     index: index.html
     contributor_guide: contributor_guide.html
     FAQs: FAQs.html
+    faq-desktop: FAQ-desktop.html
   app_structure:
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
