@@ -89,7 +89,7 @@ Release builds do not log by default.  When enabled logs can be found here:
 
 ### Mac 
 `~/Library/Application Support/Status/Status.log`
-~/Library/Application Support/Status/ethereum/mainnet_rpc/geth.log
+`~/Library/Application Support/Status/ethereum/mainnet_rpc/geth.log`
 
 
 ### Linux 
