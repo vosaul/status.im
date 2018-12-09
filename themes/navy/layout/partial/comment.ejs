@@ -1,4 +1,4 @@
-{% if page.comments && config.disqus_shortname %}
+<% if(page.comments && config.disqus_shortname){ %>
 <section id="comments">
   <div id="disqus_thread"></div>
 </section>
@@ -15,4 +15,4 @@
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
-{% endif %}
+<% } %>
