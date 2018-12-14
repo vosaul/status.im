@@ -37,9 +37,9 @@
   <div id="content" class="wrapper">
     <div id="content-inner">
       <ul id="plugin-list">
-        {% for wip in site.data[page.data] %}
-          {{ partial('partial/' + page.partial, {wip: wip}) }}
-        {% endfor %}
+        <% site.data[page.data].forEach(function(wip) { %>
+          <%- include(('partial/' + page.partial), {wip: wip}) %>
+        <% }); %>
       </ul>
     </div>
   </div>

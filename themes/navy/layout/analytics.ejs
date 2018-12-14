@@ -1,5 +1,5 @@
 <div class="page-intro wrapper">
-{{ partial('partial/shared-partials/partials/search') }}
+<%- include('partial/shared-partials/partials/search') %>
   <header class="docs-header">
     <div class="docs-intro">
         <h1>Analysing a Better Web</h1>
@@ -94,8 +94,8 @@
                 </div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= __('page.last_updated', date(page.updated)) %></time>
+                <%- page_nav() %>
               </footer>
             </div>
           </div>

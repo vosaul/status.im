@@ -1,35 +1,35 @@
 <div class="page-intro wrapper">
-{{ partial('partial/shared-partials/partials/search') }}
+<%- include('partial/shared-partials/partials/search') %>
   <header class="docs-header">
     <div class="docs-intro">
-      <h1>Securing a Better Web</h1>
-      <p>Self-reliance is critical in distributed systems. Learn how here.</p>
+      <h1>Extend into a Better Web</h1>
+      <p>Status Extensions will literally blow your mind</p>
       <br/>
     </div>
     <ul>
       <li>
         <div class="inner">
-          <h3>Guides</h3>
-          <p>Become a security ninja</p>
+          <h3>Try Yourself!</h3>
+          <p>Literally, right now...</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="../guides/"></a>
+        <a href="https://status-im.github.io/pluto/try.html" ></a>
       </li>
       <li>
         <div class="inner">
-          <h3>Policy and Procedure</h3>
-          <p>This is how we do!</p>
+          <h3>Fiddle</h3>
+          <p>Play with even more</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="../org_sec/"></a>
+        <a href="../fiddle/"></a>
       </li>
       <li>
         <div class="inner">
-          <h3>Audits</h3>
-          <p>See who guards the guards</p>
+          <h3>Developer Tools</h3>
+          <p>#MakeCodingGreatAgain</p>
         </div>
         <img src="../img/arrow_blue_shaded.svg" />
-        <a href="/audits/"></a>
+        <a href="../developer_tools/"></a>
       </li>
     </ul>
   </header>
@@ -37,17 +37,17 @@
 <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
-      {{ partial('partial/sidebar') }}
+      <%- include('partial/sidebar') %>
       <article class="article-container" itemscope itemtype="http://schema.org/Article">
         <div class="article-inner">
           <div class="article">
             <div class="inner">
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <%- page_anchor(page.content) %>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= __('page.last_updated', date(page.updated)) %></time>
+                <%- page_nav() %>
               </footer>
             </div>
           </div>
