@@ -14,7 +14,6 @@ As always, if you find a bug or vulnerability in our code, please report it to [
 ## Ongoing Security Audits
 
 - ENS smart contract with Sigma Prime
-- Hardware wallet lite with zkLabs
 
 ## Finalized Security Audits
 
