@@ -13,9 +13,16 @@ As always, if you find a bug or vulnerability in our code, please report it to [
 
 ## Ongoing Security Audits
 
-- ENS smart contract with Sigma Prime
+
 
 ## Finalized Security Audits
+
+### ENS smart contract with Sigma Prime
+- October 2018 - [ENS Username Contract ](https://github.com/status-im/ens-usernames/blob/master/contracts/registry/UsernameRegistrar.sol) - commit hash [eaefa92](https://github.com/status-im/ens-usernames/commit/eaefa92a258c784f1df4066e057e8170bcb6ef95#diff-dbff1e6b987cbb9a6b87ea8180c41e72)
+- [report](https://drive.google.com/open?id=1BqiPGBjILgbIlmMXAO8AombxW_jsQtfC)
+- [tests](https://drive.google.com/open?id=12ACYXvPn8WUyRg9WCooUTO3vvJVuo7lL)
+- [code](https://drive.google.com/open?id=16LbYo4PYv3CY8XZ57kBsB3TxPzGkrb8j)
+- [blog post](https://blog.sigmaprime.io/status-ens-review.html)
 
 ### Deja Vu Beta Audit
 - May 07, 2018 - [Status-go](https://github.com/status-im/status-go) and [Status-react](https://github.com/status-im/status-react) repos with Deja Vu 
