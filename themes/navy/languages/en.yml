@@ -21,6 +21,7 @@ sidebar:
     use_status: Use Status
     contributor_guide: Contributor Guide
     FAQs: FAQs
+    faq-desktop: Desktop FAQ
     app_structure: App Structure
     status_react_structure: Status-React Structure
     send_transaction_flow: Send Transaction Flow
@@ -173,8 +174,11 @@ sidebar:
     concepts: Key concepts
     build: Build
     syntax: Syntax
+    examples: Examples
     extension_types: Extension types
-    tutorial_chat_command: Tutorial
+    tutorial: Tutorial
+    tutorial_chat_command: Chat command
+    tutorial_wallet_settings: Wallet settings
     references: References
     reference_views: Views
     reference_queries: Queries
