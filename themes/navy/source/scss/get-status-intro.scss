@@ -6,10 +6,10 @@
 	display: flex;
 	max-width: 760px;
 	padding: 0 32px;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 140px auto 0;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 140px auto 0;
 }
 
 .get-status-intro h2 {
@@ -28,16 +28,32 @@
 	margin: 0 auto;
 }
 
+.get-status-desktop-warning, .get-status-desktop-mobile-warning {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 32px;
+	text-align: center;
+
+	p {
+		color: $colorGray;
+	}
+}
+
 .get-status-desktop-links {
 	padding: 24px 0;
 }
 
-.get-status-desktop-mobile-links {
+.get-status-desktop-mobile-links, .get-status-desktop-mobile-warning {
 	display: none;
 }
 
 .button-icon.button-icon--linux {
 	background-image: url(../img/icon-linux-blue-small.svg);
+}
+
+.button-icon.button-icon--windows {
+	background-image: url(../img/icon-windows-blue.svg);
 }
 
 .get-status-desktop-links ul {
@@ -287,15 +303,15 @@
 	    padding: 0 32px 32px;
 	}
 
-	.get-status-desktop-links {
+	.get-status-desktop-links, .get-status-desktop-warning {
 		display: none;
 	}
 
-	.get-status-desktop-mobile-links {
+	.get-status-desktop-mobile-links, .get-status-desktop-mobile-warning {
 		display: block;
 	}
 
-	.get-status-desktop-mobile-links .button:first-child {
+	.get-status-desktop-mobile-links .button:not(:last-child) {
 		margin: 0 0 16px 0;
 	}
 
