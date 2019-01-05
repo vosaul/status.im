@@ -14,10 +14,6 @@
 .docs-header-first-page {
 	background-image: none;
 }
-
-.docs-intro {
-	margin-top: 120px;
-}
 .docs-header h1 {
 	font-family: $InterUI;
 	font-weight: bold;
@@ -42,6 +38,10 @@
 	margin-bottom: -18px;
 	margin-top: 24px;
 	overflow: auto;
+}
+
+.docs-intro {
+	margin: 120px 0 0 20px;
 }
 
 @media screen and (max-width: break-xl) {
@@ -91,10 +91,6 @@
 	
 	.docs-header li:nth-child(3n) {
 		margin-right: 24px;
-	}
-
-	.docs-intro {
-		margin-left: 20px;
 	}
 }
 
