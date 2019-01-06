@@ -32,11 +32,13 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 32px;
+	margin-top: 24px;
 	text-align: center;
 
 	p {
 		color: $colorGray;
+		font-size: 14px;
+		font-style: italic;
 	}
 }
 
@@ -315,8 +317,13 @@
 		margin: 0 0 16px 0;
 	}
 
-	.get-status-desktop-mobile-links{
+	.get-status-desktop-mobile-links {
 		margin: 16px 0 24px 0;
+	}
+
+	.get-status-desktop-mobile-warning {
+		margin-bottom: 12px;
+		margin-top: 4px;
 	}
 
 	.get-status-info {
@@ -445,6 +452,11 @@
 	.get-status-intro h1 {
   		font-size: 24px;
   		line-height: 1.4em;
+	}
+
+	.get-status-desktop-mobile-warning {
+		margin-bottom: 12px;
+		margin-top: 18px;
 	}
 
 	.get-status-desktop-screen {
