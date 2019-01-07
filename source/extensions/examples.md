@@ -19,7 +19,7 @@ Ethereum logs tests: ([Modify](https://status-im.github.io/pluto/try.html?hash=Q
 
 Status Principles: ([Modify](https://status-im.github.io/pluto/try.html?hash=QmcfsYnFvKXApcFTCNttpQvQKYxiMCqVx5MvsocFyrr2KA), [Install](https://get.status.im/extension/ipfs@QmcfsYnFvKXApcFTCNttpQvQKYxiMCqVx5MvsocFyrr2KA))
 
-Gfycat: ([Modify](https://status-im.github.io/pluto/try.html?hash=Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX) [Install],(https://get.status.im/extension/ipfs@Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX))
+Gfycat: ([Modify](https://status-im.github.io/pluto/try.html?hash=Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX) [Install](https://get.status.im/extension/ipfs@Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX))
 
 # Wallet settings
 
