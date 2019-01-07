@@ -55,7 +55,7 @@
 }
 
 .button-icon.button-icon--windows {
-	background-image: url(../img/icon-windows-blue.svg);
+	background-image: url(../img/icon-windows-blue-small.svg);
 }
 
 .get-status-desktop-links ul {
@@ -92,10 +92,6 @@
 
 .get-status-desktop-links ul a.desktop-link--windows {
 	background-image: url(../img/icon-windows-blue.svg);
-}
-
-.get-status-desktop-links ul span.desktop-link--windows.desktop-link--disabled {
-	background-image: url(../img/icon-windows-gray.svg);
 }
 
 .get-status-desktop-links ul a.desktop-link--linux {
