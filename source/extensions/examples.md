@@ -5,7 +5,7 @@ title: Extensions Examples
 
 To help bootstrap your extensions experimentations here is a list of extensions exploring the various options available.
 
-_WARNING_ Most of those extensions are not working and are presented for education purpoise only.
+_WARNING_ Most of those extensions are not working and are presented for educational purposes only.
 
 # Chat commands
 
