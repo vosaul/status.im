@@ -18,7 +18,8 @@ const run = require('gulp-run-command').default;
 const gen_qr = require('./scripts/gen-qr');
 const nightlies = require('./scripts/nightlies');
 
-const env = process.env.NODE_ENV == 'production' ? 'prod' : 'dev';
+/* this usallly comes as a parameter from Jenkinsfile */
+const env = process.env.ENV
 
 // generate html with 'hexo generate'
 var hexo = new Hexo(process.cwd(), {});
