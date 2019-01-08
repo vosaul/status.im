@@ -25,7 +25,9 @@ App supports gnome-keyring or kwallet keychains (for db encryption key storage).
 
 To have gnome-keyring keychain working install following package:
 
-`sudo apt-get install libgnome-keyring0`
+``` bash
+sudo apt-get install libgnome-keyring0
+```
 
 Download AppImage; 
 if required, rename it to be exactly “Status.AppImage” (If you would have another name, app will start fresh without previously stored data).
@@ -99,6 +101,7 @@ Release builds do not log by default. When enabled logs can be found here:
 ### Windows
 `%LOCALAPPDATA%\Status\Status.log`
 `%LOCALAPPDATA%\Status\ethereum\mainnet_rpc\geth.log`
+
 
 ## Where is feature X from mobile?
 

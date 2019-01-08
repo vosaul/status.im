@@ -147,10 +147,13 @@ extensions:
   build:  
     syntax: syntax.html
     extension_types: extension_types.html
+  tutorial:
     tutorial_chat_command: ../tutorials/extensions_chat_command.html
+    tutorial_wallet_settings: ../tutorials/extensions_wallet_settings.html
   references:
     reference_views: reference_views.html
     reference_queries: reference_queries.html
     reference_events: reference_events.html
   create:
+    examples: examples.html
     create_your_own: play.html

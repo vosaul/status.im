@@ -26,13 +26,21 @@ window.web3.currentProvider.status
  })
 ```
 
+*  `installExtension("extension-url")` allows DApp developers to trigger a native screen for installation of extension.
+
+#### Example implementation
+
+```JavaScript
+window.web3.currentProvider.status.installExtension("https://get.status.im/extension/ipfs@Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX")
+```
+
 ## Other APIs
 
 Status also implements a number of APIs standardized by EIPs.
 
 ### ERC945
 
-[https://github.com/ethereum/EIPs/issues/945](QR Code Scanning API) allows DApp developpers to trigger a native generic QR code scanner.
+[https://github.com/ethereum/EIPs/issues/945](QR Code Scanning API) allows DApp developers to trigger a native generic QR code scanner.
 
 #### Example
 

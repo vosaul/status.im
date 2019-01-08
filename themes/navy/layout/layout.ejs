@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="<%= page.lang %>">
+<%- include('partial/head') %>
+<body>
+  <div id="container">
+    <% if(page.source != 'index.md') { %>
+      <%- include('partial/header') %>
+    <% } %>
+    <%- body %>
+    <% if(page.source == 'index.md') { %>
+      <%- include('partial/footer-home') %>
+    <% } else { %>
+      <%- include('partial/shared-partials/partials/footer') %>
+    <% } %>
+  </div>
+  <%- include('partial/shared-partials/partials/after_footer') %>
+</body>
+</html>
