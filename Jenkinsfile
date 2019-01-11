@@ -32,6 +32,7 @@ pipeline {
     stage('Install Deps') {
       steps {
         sh 'npm install'
+        sh 'npm update'
       }
     }
 
