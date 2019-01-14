@@ -5,17 +5,17 @@ title: Extension Types
 
 # Understand All the Different Typs
 
-Extension types are determined by the available [hooks](https://dev-docs.status.im/extensions/concept_hook.html).
+Extension types are determined by the available [hooks](https://docs.status.im/extensions/concept_hook.html).
 
-The first hook supported by Status is the chat command.
+The first hooks supported by Status are `chat command` and `wallet settings`.
 
-# Chat Commands
+# Chat Command
 
 ## Identifiers
 
-The root identifier for any chat command is `hooks/commands`. Use this to build a chat command extension.
+The root identifier for any chat command is `hooks/chat.command`. Use this to build a chat command extension.
 
-Each extension also requires a unique identifier, e.g. `hooks/commands.collectible`.
+Each extension also requires a unique identifier, e.g. `hooks/chat.command.collectible`.
 
 In the case of a chat command, the unique identifier is what a user is required to type (e.g. `/collectible`) in order to execute a command within a chat.
 
@@ -35,7 +35,7 @@ Once declared, a chat command requires the following properties to be mapped:
 This is declared like so:
 
 ```
-hooks/command.collectible
+hooks/chat.command.collectible
 {:description    "Send collectible"
 :scope            #{:personal-chats}
 :preview          [collectible-preview]
@@ -180,3 +180,24 @@ In the collectible example, `on-send` creates a transaction to move the collecti
  :content {:command-path [collectible #{:personal-chats}]
            :params {:collectible-id    "CK"}}}
 ```
+
+# Wallet settings
+
+Wallet settings hook allow you to plug extra panels in the wallet. Those will be accessible via the wallet settings menu.
+
+To implement a wallet settings you will need to provide the following properties:
+
+* label (the name that will be displayed in the wallet settings menu)
+* view (the view that will be displayed fullscreen)
+
+
+```
+ views/view
+ [text "Hello"]
+ 
+ hooks/wallet.settings.hello
+ {:label   "Test wallet settings"
+  :view    [view]}
+```
+
+You can find a simple example [here](https://status-im.github.io/pluto/try.html?hash=QmYnUj7v3UiP6X1YfRuhea5mXpjTGG1KKnCwFS4TKzKTpD)

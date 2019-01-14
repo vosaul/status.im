@@ -13,7 +13,7 @@ title: Perks & Benefits
 - We'll reward you with a competitive base salary.
 - We'll also reward you with SNT (Status Network Tokens) to give you a real stake in the success of the organisation.
 - A generous budget to choose whatever phone and laptop you prefer.
-- We provide a small allowance for a co-working space, or to work from a café occasionally.
+- We provide a small allowance for a co-working space.
 
 **Freedom**
 - Work from wherever you choose. Our contributors are a varied bunch - some work from home, some from a coworking space, some from a local cafe, others are nomads. 

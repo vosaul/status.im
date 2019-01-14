@@ -3,6 +3,7 @@ docs:
     index: index.html
     contributor_guide: contributor_guide.html
     FAQs: FAQs.html
+    faq-desktop: FAQ-desktop.html
   app_structure:
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
@@ -67,6 +68,7 @@ research:
     secure_messaging_compendium: secure_messaging_compendium.html
     research_blog: https://our.status.im/tag/research
   research_projects:
+    pfs: pfs.html
     ultra_light_clients: ulc_in_details.html
     nimbus: https://nimbus.status.im/
   tutorials:
@@ -145,10 +147,13 @@ extensions:
   build:  
     syntax: syntax.html
     extension_types: extension_types.html
+  tutorial:
     tutorial_chat_command: ../tutorials/extensions_chat_command.html
+    tutorial_wallet_settings: ../tutorials/extensions_wallet_settings.html
   references:
     reference_views: reference_views.html
     reference_queries: reference_queries.html
     reference_events: reference_events.html
   create:
+    examples: examples.html
     create_your_own: play.html

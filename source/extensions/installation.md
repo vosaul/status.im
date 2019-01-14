@@ -1,8 +1,13 @@
-# Installing extensions
+---
+id: installation
+title: Installing Extensions
+---
+
+# Get Set Up
 
 Extensions are currently installed by QR code or URL.
 
-Once an extension is deployed via the [playground](https://status-im.github.io/pluto/try.html?hash=QmYoa8CBcYmzm6Kd1NbPNLYQtbwMpwR7YBiywaAyST5gtH), a unique QR code and universal link are generated for its IPFS hash.
+Once an extension is deployed via the [playground](./play.html), a unique QR code and universal link are generated for its IPFS hash.
 
 To install the extension in Status:
 

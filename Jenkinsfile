@@ -13,6 +13,8 @@ pipeline {
   environment {
     GIT_USER = 'status-im-auto'
     GIT_MAIL = 'auto@status.im'
+    /* This assumes the NODE_ENV parameter is defined in the job */
+    ENV = "${params.ENV}"
   }
 
   stages {
@@ -30,6 +32,19 @@ pipeline {
     stage('Install Deps') {
       steps {
         sh 'npm install'
+        sh 'npm update'
+      }
+    }
+
+    stage('Index') {
+      steps {
+        withCredentials([usernamePassword(
+          credentialsId: 'search.status.im-auth',
+          usernameVariable: 'HEXO_ES_USER',
+          passwordVariable: 'HEXO_ES_PASS'
+        )]) {
+          sh 'npm run index'
+        }
       }
     }
 

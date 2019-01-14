@@ -21,6 +21,7 @@ sidebar:
     use_status: Use Status
     contributor_guide: Contributor Guide
     FAQs: FAQs
+    faq-desktop: Desktop FAQ
     app_structure: App Structure
     status_react_structure: Status-React Structure
     send_transaction_flow: Send Transaction Flow
@@ -88,6 +89,7 @@ sidebar:
     secure_messaging_compendium: Secure Messaging Compendium
     research_blog: Research Blog
     research_projects: Research Projects
+    pfs: Perfect Forward Secrecy
     ultra_light_clients: Ultra Light Clients
     nimbus: Nimbus
     tutorials: Tutorials
@@ -172,8 +174,11 @@ sidebar:
     concepts: Key concepts
     build: Build
     syntax: Syntax
+    examples: Examples
     extension_types: Extension types
-    tutorial_chat_command: Tutorial
+    tutorial: Tutorial
+    tutorial_chat_command: Chat command
+    tutorial_wallet_settings: Wallet settings
     references: References
     reference_views: Views
     reference_queries: Queries
