@@ -4,6 +4,9 @@
 
 /* global $ */
 
+var addClassToElement = require('./shared-js/js/utils').addClassToElement;
+var removeClassFromElement = require('./shared-js/js/utils').removeClassFromElement;
+
 function retrieveAdvocacyPrograms(months) {
   $.ajax({
     type: 'get',
@@ -100,46 +103,6 @@ if(heroImage) {
 }
 
 
-/* Popups */
-
-let community = document.querySelectorAll(".item--dropdown-community")[0]
-let projects = document.querySelectorAll(".item--dropdown-projects")[0]
-
-let popups = document.querySelectorAll(".popup-wrap")
-let overlays = document.querySelectorAll(".popup-overlay")
-let closeButtons = document.querySelectorAll(".popup__button--close")
-
-let activePopup = null;
-let activeOverlay = null;
-
-community.addEventListener('click', function(event){
-    showPopup(popups[0])
-    event.preventDefault()
-})
-
-projects.addEventListener('click', function(event){
-    showPopup(popups[1])
-    event.preventDefault()
-})
-
-closeButtons.forEach((button) => {
-  button.addEventListener('click', closeActivePopup)
-})
-
-overlays.forEach((overlay) => {
-  overlay.addEventListener('click', closeActivePopup)
-})
-
-function showPopup(whichPopup) {
-  activePopup = whichPopup
-  addClassToElement(whichPopup, "popup--shown");
-}
-
-function closeActivePopup() {
-  removeClassFromElement(activePopup, "popup--shown");
-  activePopup = null;
-}
-
 /* Code highlighting */
 
 function highlight() {
@@ -192,19 +155,4 @@ function showNav() {
 
 function closeNav() {
   removeClassFromElement(nav, "mobile-nav--shown");
-}
-
-/*--- Utils ---*/
-function addClassToElement(element, className) {
-  (element.classList) ? element.classList.add(className) : element.className += ' ' + className
-  return element
-}
-
-function removeClassFromElement(element, className) {
-  if(element.classList) {
-    element.classList.remove(className)
-  } else {
-    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
-  }
-  return element
 }
