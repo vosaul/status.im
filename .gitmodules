@@ -3,4 +3,4 @@
 	url = https://github.com/status-im/status.im-partials.git
 [submodule "themes/navy/source/js/shared-js"]
 	path = themes/navy/source/js/shared-js
-	url = https://github.com/status-im/status-im-js.git
+	url = https://github.com/status-im/status.im-js.git
