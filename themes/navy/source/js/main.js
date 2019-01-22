@@ -1,13 +1,19 @@
-// let ScrollOver = require("./lib/ScrollOver.js")
-// let animateScroll = require("./lib/animatescroll.js")
-// let d3 = require("d3")
-
 /* global $ */
+const moment = require('moment');
 
 var addClassToElement = require('./shared-js/js/utils').addClassToElement;
 var removeClassFromElement = require('./shared-js/js/utils').removeClassFromElement;
 
-function retrieveAdvocacyPrograms(months) {
+function formatDate(date) {
+  const day = moment().date(date.get('date')).format('DD');
+  const month = moment().month(date.get('month')).format('MMM');
+  const hour = moment().hour(date.get('hour')).format('HH');
+  const minute = moment().minute(date.get('minute')).format('mm');
+
+  return `${day} ${month} at ${hour}:${minute}`;
+}
+
+function retrieveAdvocacyPrograms() {
   $.ajax({
     type: 'get',
     url: 'https://statusphere.status.im/api/v1/boards/public/?is_featured=true&org=375',
@@ -27,71 +33,67 @@ function retrieveAdvocacyPrograms(months) {
             </a>
           </div>`
         );
+      });
+    }
+  });
+}
 
-        if (index < 2) {
-          var newDate = new Date(program.created_at);
-          var minutes = newDate.getMinutes();
+function retrieveDiscussTopics() {
+  $.ajax({
+    type: 'get',
+    url: 'https://discuss.status.im/latest.json',
+    success: function(response) {
+      const topics = response && response.topic_list && response.topic_list.topics;
+      let numberOfInsertedTopics = 0;
 
-          if (minutes.length === 1) {
-            minutes = '0' + minutes;
-          }
+      $.each(topics, function(index, topic) {
+        if (!topic.pinned && numberOfInsertedTopics < 2) {
+          const date = moment(topic.last_posted_at);
 
           $('#latest-announcements').prepend(
             `<div class="post">
-              <time>
-                ${newDate.getDate()} ${months[newDate.getMonth() + 1]} at ${newDate.getHours()}:${minutes}
-              </time>
-              <h4>
-                <a href="https://statusphere.status.im/b/${program.uuid}/view">
-                  ${program.title}
-                </a>
-              </h4>
-            </div>`
+                <time>
+                  ${formatDate(date)}
+                </time>
+                <h4>
+                  <a href="https://discuss.status.im/t/${topic.slug}/${topic.id}">
+                    ${topic.title}
+                  </a>
+                </h4>
+              </div>`
           );
+
+          numberOfInsertedTopics += 1;
         }
       });
     }
   });
 }
 
-$(document).ready(function () {
-  var months = {'01':'Jan', '02':'Feb', '03':'Mar', '04':'Apr', '05':'May', '06':'Jun', '07':'Jul', '08':'Aug', '09':'Sep', '10':'Oct', '11':'Nov', '12':'Dec'};
+$(document).ready(function() {
   let url = 'https://our.status.im/ghost/api/v0.1/posts/?order=published_at%20desc&limit=2&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba';
-  var urlBase = [location.protocol, '//', location.host, location.pathname].join('');
 
   $.ajax({
-    type: "get",
+    type: 'get',
     url: url,
-    success: function (response) {
+    success: function(response) {
       response.posts = response.posts.reverse();
-      $.each(response.posts, function (index, val) {
-        var excerpt = '';
-        if(val.custom_excerpt != null) {
-          excerpt = val.custom_excerpt;
-        }else{
-          excerpt = getWords(val.plaintext);
-        }
-        var newDate = new Date(val.published_at);
-        var minutes = newDate.getMinutes();
-        minutes = minutes + "";
-        if(minutes.length == 1){
-          minutes = '0' + minutes;
-        }
-        $('.latest-news').prepend(' \
-        <div class="post"> \
-          <time>'+ newDate.getDate() + ' ' + months[(newDate.getMonth()+1)] + ' at ' + newDate.getHours() + ':' + minutes + '</time> \
-          <h4><a href="https://our.status.im/'+ val.slug +'">'+ val.title +'</a></h4> \
-        </div> \
-        ');
+
+      $.each(response.posts, function(index, val) {
+        const date = moment(val.published_at);
+
+        $('.latest-news').prepend(
+          `<div class="post">
+            <time>${formatDate(date)}</time>
+            <h4><a href="https://our.status.im/${val.slug}">${val.title}</a></h4>
+          </div>`
+        );
       });
     }
   });
 
-  function getWords(str) {
-    return str.split(/\s+/).slice(0,25).join(" ");
-  }
-
-  retrieveAdvocacyPrograms(months);
+  retrieveAdvocacyPrograms();
+  retrieveDiscussTopics();
 });
 
 let heroImage = document.querySelectorAll(".hero-image")[0]
