@@ -21,8 +21,12 @@ Status Principles: ([Modify](https://status.im/extensions/play.html?hash=QmcfsYn
 
 Gfycat: ([Modify](https://status.im/extensions/play.html?hash=Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX), [Install](https://get.status.im/extension/ipfs@Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX))
 
+Weasel (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.html?hash=QmZaUniGLGfjy4ggdK3Jhk3xq5b2T126zCYLjk5CTc7yiL), [Install](https://get.status.im/extension/ipfs@QmZaUniGLGfjy4ggdK3Jhk3xq5b2T126zCYLjk5CTc7yiL))
+
 # Wallet settings
 
 Hello world: ([Modify](https://status.im/extensions/play.html?hash=QmYnUj7v3UiP6X1YfRuhea5mXpjTGG1KKnCwFS4TKzKTpD), [Install](https://get.status.im/extension/ipfs@QmYnUj7v3UiP6X1YfRuhea5mXpjTGG1KKnCwFS4TKzKTpD))
 
 Components galery: ([Modify](https://status.im/extensions/play.html?hash=QmXEmvhNSvAabQ8t7WX4Fz8SJ3KNh8mtLtK3985sYccjmA), [Install](https://get.status.im/extension/ipfs@QmXEmvhNSvAabQ8t7WX4Fz8SJ3KNh8mtLtK3985sYccjmA))
+
+Kyber exchange (**WIP**): ([Modify](https://status.im/extensions/play.html?hash=QmeqDrXwwwesgb6Dj9UurtgX1VoS4h6tApxLTLU1BSD7Vo), [Install](https://get.status.im/extension/ipfs@QmeqDrXwwwesgb6Dj9UurtgX1VoS4h6tApxLTLU1BSD7Vo))
