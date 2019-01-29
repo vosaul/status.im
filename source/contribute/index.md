@@ -10,5 +10,4 @@ Status is not a traditional organisation. There are many ways that you can contr
 1. Download the app and join our community. We'd love to see you there. 
 2. We're an Open Source project, so you can check out our repositories and [contribute code here](https://github.com/status-im). Look for the label: ["good first issue"](https://github.com/status-im/status-react/labels/good%20first%20issue) to get started. 
 3. Complete one of our [bounties listed on gitcoin](https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=status.im&order_by=-web3_created).
-4. Join the [Status Advocacy Program](https://statusphere.status.im/) - share your expertise, showcase your creativity, and help spread the Status love - all while earning SNT rewards.
-5. And of course, we're always looking for core contributors to join us on a full/part time basis. Use the navigation to the left to find out more.
+4. Occasionally we look to hire core contributors to join us on a full/part time basis. Use the navigation to the left to find out more.
