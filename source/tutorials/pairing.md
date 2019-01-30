@@ -19,6 +19,8 @@ Some things we do not sync:
 
 - Seen status in your chats
 - messages you sent before pairing
+- If removing a chat on device B, or clearing history, it won't be removed on device A
+- Push notifications will only be received on one device
 
 # How it works
 
@@ -43,8 +45,11 @@ To sync old data (contacts and open public chats, account profile), click on `Sy
 
 ## Data is not synced
 
-Make sure devices are paired correctly and enabled. If the problem still persist you can try clicking on `Pair this device` again on both devices and `disable` and `enable` them again. In any case please open an issue at https://github.com/status-im/status-react and upload your `geth.log` from both devices (after sending sending a message from both device A & B)
+Make sure devices are paired correctly and enabled. If the problem still persist you can try clicking on `Pair this device` again on both devices and `disable` and `enable` them again. In any case please open an issue at https://github.com/status-im/status-react and upload your `geth.log` from both devices (after sending a message from both device A & B)
 
+## I see "No info" on one device
+
+Click on "Pair this device" on the other device, and "No info" should be replaced with the actual device name
 # Examples
 
 ### Example on android
