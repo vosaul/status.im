@@ -13,7 +13,7 @@ Hello world: ([Modify](https://status.im/extensions/play.html?hash=QmV8JsEA2fBnj
 
 Hello world with button and use of storage: ([Modify](https://status.im/extensions/play.html?hash=QmPDUJqVKyAqQQgwTQE9NsZpX6RCkG1JF3awe2WQVuzFTr), [Install](https://get.status.im/extension/ipfs@QmPDUJqVKyAqQQgwTQE9NsZpX6RCkG1JF3awe2WQVuzFTr))
 
-DTwitter: ([Modify](https://status.im/extensions/play.html?hash=QmZjmcwcsUefSpxnR6qqELEQTrU7xS612qxsaoBwRu1QAC), [Install](https://get.status.im/extension/ipfs@QmZjmcwcsUefSpxnR6qqELEQTrU7xS612qxsaoBwRu1QAC))
+DTwitter: ([Modify](https://status.im/extensions/play.html?hash=QmU1w3ZRGMSKHFzFbwAUm7PR2tqoL1uE8j2kYizh5NSU65), [Install](https://get.status.im/extension/ipfs@QmU1w3ZRGMSKHFzFbwAUm7PR2tqoL1uE8j2kYizh5NSU65))
 
 Ethereum logs tests: ([Modify](https://status.im/extensions/play.html?hash=QmaKKKUgDsJKQJ5Q9BJg8V1SRDhhiKbyyQycoExF3eehUZ), [Install](https://get.status.im/extension/ipfs@QmaKKKUgDsJKQJ5Q9BJg8V1SRDhhiKbyyQycoExF3eehUZ))
 
