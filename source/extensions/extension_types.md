@@ -142,6 +142,8 @@ Declare parameters like this:
 
 This example allows a user to select between their various collectibles, either by typing in the "Collectible name" or using the UI's suggestions.
 
+Type can be one of `:text`, `:phone`, `:password` or `:number`. The keyboard layout will be modified to reflect this value.
+
 ### Suggestions
 
 A parameter can optionally include `suggestions` to cue the user with additional UI components.
@@ -180,6 +182,20 @@ In the collectible example, `on-send` creates a transaction to move the collecti
  :content {:command-path [collectible #{:personal-chats}]
            :params {:collectible-id    "CK"}}}
 ```
+
+## on-send-sync
+
+`on-send-sync` allows a extension developer to programmatically control when the chat message will be sent. It is not automatically sent when the user hits the `send` button.
+To send a message, use the `chat.command/send-message` or `chat.command/send-plain-text-message` events.
+
+```
+ events/on-send-sync
+ (let [{{{title :title text :text} :params} :content} properties]
+   [chat.command/send-plain-text-message {:value "*${title}*\n${text}\nhttps://people-ops.status.im/status-principles/"}])
+
+```
+
+Note that `on-send` is then ignored. Messages views still rely on `preview` and `short-preview`.
 
 # Wallet settings
 
