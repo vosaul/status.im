@@ -29,7 +29,7 @@ EthereumJ has different goals, its developers intended for server use and had no
 Our current approach allows us to get bleeding edge tech and stability of geth whilst maintaining a single codebase.
 
 ## I would like to contribute to the project, where would you suggest I start?
-Best place to start is by [downloading Status itself](https://status-im.github.io/nightly/) and playing with it. You can install our Android nightly builds from here, or join us in [chat.status.im](https://chat.status.im) to ask for access to our iOS builds through TestFlight.
+Best place to start is by [downloading Status itself](https://status.im/nightly/) and playing with it. You can install our Android nightly builds from here, or join us in [chat.status.im](https://chat.status.im) to ask for access to our iOS builds through TestFlight.
 
 If you're a DApp developer, head over to those [docs](intro_dapps.md). If you are a mobile developer yourself and love functional languages, then build Status [yourself](build_status.md) and start submitting those PRs.
 
