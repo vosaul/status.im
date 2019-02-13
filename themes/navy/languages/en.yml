@@ -30,7 +30,7 @@ sidebar:
     tutorial: Tutorials
     tutorials: Learn More!
     keycard: Keycard
-    api: API
+    keycard_api: API
     guide: Guides
     guides: Start Contributing
     analytics: Analytics  
@@ -72,7 +72,8 @@ sidebar:
     status_storybook: Storybook
     storybook: Status React Storybook
 
-  keycard:
+  keycard_api:
+    getting_started: Getting Started
     overview: Overview
     applet_installation: Preparing the card
     resources: Resources

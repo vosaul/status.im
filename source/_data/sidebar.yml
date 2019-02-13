@@ -10,7 +10,7 @@ docs:
   status_node:
     run_status_node: run_status_node.html
   keycard:
-    api: ../keycard_api/
+    keycard_api: ../keycard_api/
   tutorial:
     tutorials: ../tutorials/
   guide:
