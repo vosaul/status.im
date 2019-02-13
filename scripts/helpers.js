@@ -15,6 +15,20 @@ function startsWith(str, start) {
   return str.substring(0, start.length) === start;
 }
 
+/* helper for pointing status channel link at relevant channel based on path */
+hexo.extend.helper.register('join_status_chat', function() {
+  var channel = 'status';
+  /* not pretty but does the job */
+  if (this.path.includes('keycard')) { 
+    channel = 'status-keycard';
+  }
+  if (this.path.includes('nimbus')) { 
+    channel = 'status-nimbus';
+  }
+  var url = `https://get.status.im/chat/public/${channel}`;
+  return `<a href="${url}" class="button">Join Status Chat</a>`;
+});
+
 hexo.extend.helper.register('page_nav', function() {
   var type = this.page.canonical_path.split('/')[0];
   var sidebar = this.site.data.sidebar[type];
