@@ -34,7 +34,7 @@ We believe in fair and widespread access to our software, with an emphasis on ea
 **IX - Continuance**  
 We create software incentivized to continue to exist and improve, without the stewardship of a single entity or any of the current team members.  
 
-**Resourcefulness**
+**X - Resourcefulness**
 We are relentlessly resourceful. As we grow and have ready access to capital, it is our obligation to token holders to fight bureaucracy and inefficiencies within the organization. This means solving problems in the most effective way possible at lower economic costs (in terms of capital, time and resources).  
 
 A step-by-step guide on how to cryptographically sign these principles yourself can be found [here](https://discuss.status.im/t/principles-how-to-sign-them-cryptographically/293).
