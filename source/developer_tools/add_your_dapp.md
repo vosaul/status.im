@@ -24,6 +24,7 @@ Once you've tested your DApp thoroughly on Status and addressed any issues, make
          :photo-path  "contacts://cryptokitties"
          :description "Collect and breed adorable digital cats."}
 ```
+- Finally, label the issue on GitHub with `new DApp` and add it to the `Core DApps` project.
 
 ## Link to your DApp
 
