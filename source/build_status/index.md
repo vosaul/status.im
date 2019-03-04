@@ -106,6 +106,8 @@ You can also start XCode and run the application there. Execute `open ios/Status
 
 *Note:* Of course, you need to install XCode first in both cases. Just go to Mac AppStore to do this.
 
+*Note for XCode 10/macOS Mojave users*: as Status is built against React Native 0.56, it does not support a new build system that is used by default in XCode 10. This results in build errors when invoking `make run-ios`. In order to fix this, follow the advice given [here](https://github.com/facebook/react-native/issues/19573) and switch to the legacy build system. Open `ios/StatusIm.xcodeproj` project in Xcode, click on File->Project Settings, and there change the value in the `Build System` dropdown to `Legacy Build System`.
+
 ### Android
 
 Installation script installs Android SDK (if your environment doesn't define `ANDROID_SDK_ROOT`) and Android NDK.
@@ -165,7 +167,7 @@ If you need to test a mobile build with a custom locally built status-go depende
 2. From the root of the status-react repo, run `scripts/bundle-status-go.sh <platform>`, where `platform` can be `android` or `ios`;
 3. This will generate a build artifact under the status-react repo, and will be considered prioritary in the dependencies until it is deleted (e.g. by running `make clean` or `make prod-build`).
 
-NOTE: Desktop builds currently always download and build status-go locally.
+*Note:* Desktop builds currently always download and build status-go locally.
 
 ## Debugging tips
 
