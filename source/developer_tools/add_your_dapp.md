@@ -24,6 +24,7 @@ Once you've tested your DApp thoroughly on Status and addressed any issues, make
          :photo-path  "contacts://cryptokitties"
          :description "Collect and breed adorable digital cats."}
 ```
+- Once submitted, please ping in #status-core-dapps to ensure that your PR is reviewed.
 
 ## Link to your DApp
 
