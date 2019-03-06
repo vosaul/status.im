@@ -134,12 +134,8 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.src.scss, ['compress'])
 });
 
-gulp.task('artifacts', function(cb) {
-    runSequence('nightlies', 'releases')
-});
-
 gulp.task('build', function(cb) {
-    runSequence('artifacts', 'generate', 'compress', 'genqr', 'bundle', 'watch')
+    runSequence('nightlies', 'releases', 'generate', 'compress', 'genqr', 'bundle', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -147,7 +143,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('artifacts', 'generate', 'compress', 'genqr', 'bundle', 'exit')
+    runSequence('nightlies', 'releases', 'generate', 'compress', 'genqr', 'bundle', 'exit')
     
 });
 
