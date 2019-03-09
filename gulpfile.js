@@ -135,7 +135,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', function(cb) {
-    runSequence('nightlies', 'releases', 'generate', 'compress', 'genqr', 'bundle', 'watch')
+    runSequence('nightlies', 'generate', 'compress', 'genqr', 'bundle', 'watch')
 });
 
 gulp.task('exit', function(cb) {
@@ -143,7 +143,7 @@ gulp.task('exit', function(cb) {
 });
 
 gulp.task('run', function(cb) {
-    runSequence('nightlies', 'releases', 'generate', 'compress', 'genqr', 'bundle', 'exit')
+    runSequence('nightlies', 'generate', 'compress', 'genqr', 'bundle', 'exit')
     
 });
 
