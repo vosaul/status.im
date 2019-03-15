@@ -17,6 +17,8 @@ docs:
     guides: ../guides/
   analytics:
     analytics_status: ../analytics/
+  mobile_release:
+    mobile_release_schedule: ../mobile-release-schedule/
 
 developer_tools:
   web3_for_everyone:
