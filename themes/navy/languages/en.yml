@@ -35,6 +35,8 @@ sidebar:
     guides: Start Contributing
     analytics: Analytics  
     analytics_status: Analysing Status
+    mobile_release: Releases (Mobile)
+    mobile_release_schedule: Schedule
 
   build_status:
     build_status: Build Status Yourself
