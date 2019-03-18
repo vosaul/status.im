@@ -15,7 +15,7 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const run = require('gulp-run-command').default;
 
-const gen_qr = require('./scripts/gen-qr');
+const genqr = require('./scripts/gen-qr');
 const updateBuilds = require('./scripts/update-builds');
 
 /* this usallly comes as a parameter from Jenkinsfile */
@@ -113,7 +113,10 @@ gulp.task('releases', function() {
 })
 
 gulp.task('genqr', function() {
-    gen_qr()
+    genqr('nightlies', 'APK',   'public/nightly/img', 'qr-apk.png')
+    genqr('nightlies', 'DIAWI', 'public/nightly/img', 'qr-ios.png')
+    genqr('releases',  'APK',   'public/stable/img',  'qr-apk.png')
+    genqr('releases',  'DIAWI', 'public/stable/img',  'qr-ios.png')
 })
 
 gulp.task('bundle', function() {
