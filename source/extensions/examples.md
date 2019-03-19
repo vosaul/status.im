@@ -23,7 +23,7 @@ Gfycat: ([Modify](https://status.im/extensions/play.html?hash=Qmb1B3jXNdc9WZCcWF
 
 Weasel (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.html?hash=QmZaUniGLGfjy4ggdK3Jhk3xq5b2T126zCYLjk5CTc7yiL), [Install](https://get.status.im/extension/ipfs@QmZaUniGLGfjy4ggdK3Jhk3xq5b2T126zCYLjk5CTc7yiL))
 
-Aragon integration (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.html?hash=QmXzaJygxtbYu4ttJ2WpyczuKUrYahiuNT6VV79Dswhi89), [Install](https://get.status.im/extension/ipfs@QmXzaJygxtbYu4ttJ2WpyczuKUrYahiuNT6VV79Dswhi89))
+Aragon integration (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.html?hash=QmeEGtHHBn8p11gjCWPh1EzNaojNtDzLqWCdN2XE3auJDV), [Install](https://get.status.im/extension/ipfs@QmeEGtHHBn8p11gjCWPh1EzNaojNtDzLqWCdN2XE3auJDV))
 
 # Wallet settings
 
