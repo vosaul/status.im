@@ -17,6 +17,7 @@ const run = require('gulp-run-command').default;
 
 const genqr = require('./scripts/gen-qr');
 const updateBuilds = require('./scripts/update-builds');
+const bamboo = require('./scripts/bamboo-hr');
 
 /* this usallly comes as a parameter from Jenkinsfile */
 const env = process.env.ENV
@@ -110,6 +111,10 @@ gulp.task('nightlies', function() {
 
 gulp.task('releases', function() {
     return updateBuilds('releases', 'release.json')
+})
+
+gulp.task('employees', async function() {
+    return bamboo.saveEmployees('source/_data/employees.yml')
 })
 
 gulp.task('genqr', function() {
