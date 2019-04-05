@@ -19,8 +19,7 @@ const API_URL = `https://api.bamboohr.com/api/gateway.php/${API_ORG}/v1`
 const DEFAULT_FIELDS = [
   'displayName', 'firstName', 'lastName',
   'jobTitle', 'division', 'workEmail', 'photoUrl',
-  'customStatusPublicKey',
-  'customGitHubusername', /* This one seems to be broken */
+  'customStatusPublicKey', 'customGitHubusername',
 ].join(',')
 
 const DEFAULT_OPTIONS = {
@@ -45,6 +44,14 @@ const getEmployeesList = async () => {
   })
 }
 
+/* some people give username, some URL */
+const cleanGitHubUsername = (data) => {
+  if (data.customGitHubusername) {
+    let matches = data.customGitHubusername.match(/https:\/\/github.com\/(.*)/)
+    data.customGitHubusername = (matches) ? matches[1] : data.customGitHubusername
+  }
+}
+
 const saveEmployees = async (outFilePath) => {
   let data = await getEmployeesList()
   log(`Found active employees: ${data.employees.length}`)
@@ -52,6 +59,7 @@ const saveEmployees = async (outFilePath) => {
   let employees = []
   for (let employee of data.employees) {
     let rval = await getEmployee(employee.id)
+    cleanGitHubUsername(rval)
     employees.push(rval)
   }
 
