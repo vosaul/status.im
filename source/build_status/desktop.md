@@ -12,9 +12,6 @@ Run the following commands to build a Desktop package for the host environment:
 ``` bash
 git clone https://github.com/status-im/status-react.git
 cd status-react
-make setup
-. ~/.nix-profile/etc/profile.d/nix.sh
-make shell
 make release-desktop
 ```
 
@@ -38,14 +35,11 @@ npm install -g
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
-    make setup
-    . ~/.nix-profile/etc/profile.d/nix.sh
-    make shell
     make startdev-desktop # note: wait until sources are compiled
     ```
 
 1. In separate terminal tab: `make react-native` (note: it starts react-native packager)
-1. In separate terminal tab: `node ./ubuntu-server.js`
+1. In separate terminal tab: `make desktop-server` (note: it runs `node ./ubuntu-server.js`)
 1. In separate terminal tab: `make run-desktop`
 
 ## Notes
@@ -58,6 +52,7 @@ npm install -g
   export STATUS_DATA_DIR=~/status-files/data1 # this is where Realm data files, Geth node data, and logs will reside; also not strictly needed for dev alongside release
   ```
 
+  The Makefile already specifies default values that allow you to run a debug instance without clashing with the release version.
   Please be sure to run the instance with default parameters (without any explicit specification of variables above) first, as otherwise it will kill `ubuntu-server` processes that belong to other instances.
 
 - for complete cleanup of generated files and Realm data, issue:
