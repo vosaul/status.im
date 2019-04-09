@@ -10,10 +10,6 @@ const request = require('request-promise')
 
 const API_ORG = 'statusim' || process.env.BAMBOO_API_ORG
 const API_TOKEN = process.env.BAMBOO_API_TOKEN
-if (!API_TOKEN) {
-  err('Environment variable BAMBOO_API_TOKEN not set!')
-  process.exit(1)
-}
 
 const API_URL = `https://api.bamboohr.com/api/gateway.php/${API_ORG}/v1`
 const DEFAULT_FIELDS = [
@@ -53,6 +49,10 @@ const cleanGitHubUsername = (data) => {
 }
 
 const saveEmployees = async (outFilePath) => {
+  if (!API_TOKEN) {
+    err('Environment variable BAMBOO_API_TOKEN not set!')
+    process.exit(1)
+  }
   let data = await getEmployeesList()
   log(`Found active employees: ${data.employees.length}`)
 
