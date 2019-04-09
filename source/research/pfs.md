@@ -45,23 +45,7 @@ Generating a user account in Status involves 3 steps:
 - Generation of a X3DH bundle. This prekey bundle will become part of the user's contact code;
 - Registration with Push Notification platform.
 
-#### 1.5.2. Contact request
-
-Once two accounts have been generated (Alice and Bob), Alice can send a contact request with an introductory message to Bob.
-
-There are two possible scenarios, which dictate the presence or absence of a prekey bundle:
-1. If Alice is using Bob's public chat key or ENS name, no prekey bundle is present;
-1. If Alice found Bob through the app or scanned Bob's QR code, a prekey bundle is embedded and can be used to set up a secure channel as described in section [2.4.1](#241-Initial-key-exchange-flow-X3DH).
-
-Bob receives a contact request, informing him of:
-- Alice's introductory message.
-
-If Bob's prekey bundle was not available to Alice, Perfect Forward Secrecy hasn't yet been established. In any case, there are no implicit guarantees that Alice is whom she claims to be, and Bob should perform some form of external verification (e.g., using an Identicon).
-
-If Bob accepts the contact request, a secure channel is created (if it wasn't already), and a visual indicator is displayed to signify that PFS has been established. Bob and Alice can then start exchanging messages, making use of the Double Ratchet algorithm as explained in more detail in section [2.4.2](#242-Double-Ratchet).
-If Bob denies the request, Alice is not able to send messages and the only action available is resending the contact request. (TO BE IMPLEMENTED).
-
-#### 1.5.3. Account recovery
+#### 1.5.2. Account recovery
 
 If Alice later recovers her account, the Double Ratchet state information will not be available, so she is no longer able to decrypt any messages received from existing contacts.
 
@@ -269,10 +253,6 @@ If two sessions are created concurrently between two peers the one with the symm
 
 On receiving a bundle from a given peer with a higher version, the old bundle should be marked as expired and a new session should be established on the next message sent.
 
-## 3.4 Expired session
-
-Expired session should not be used for new messages and should be deleted after 14 days from the expiration date (TO BE IMPLEMENTED), in order to be able to decrypt out-of-order and mailserver messages.
-
 ## 4. Multi-device support
 
 Multi-device support is quite challenging as we don't have a central place where information on which and how many devices (identified by their respective `installation-id`) belongs to a whisper-identity.
@@ -301,22 +281,47 @@ When sending a message, the peer will send a message to any `installation-id` th
 
 The number of devices is capped to 3, ordered by last activity.
 
-## 4.3 Stale devices (TO BE IMPLEMENTED)
-
-When a bundle is received from $IK$ a timer is initiated on any `installation-id` belonging to $IK$ not included in the bundle. If after 7 days no bundles are received from these devices they are marked as `stale` and no message will be sent to them.
-
-## 4.4 Account recovery
+## 4.3 Account recovery
 
 Account recovery is no different from adding a new device, and it is handled in exactly the same way.
 
-## 4.5 Partitioned devices
+## 4.4 Partitioned devices
 
 In some cases (i.e. account recovery when no other pairing device is available, device not paired), it is possible that a device will receive a message that is not targeted to its own `installation-id`.
 In this case an empty message containing bundle information is sent back, which will notify the receiving end of including this device in any further communication.
 
-# 4. Security Considerations
+# 5. Security Considerations
 
 The same considerations apply as in [section 4 of the X3DH spec](https://signal.org/docs/specifications/x3dh/#security-considerations) and [section 6 of the Double Ratchet spec](https://signal.org/docs/specifications/doubleratchet/#security-considerations), with some additions detailed below.
 
 **_TODO: Add any additional context here not covered in the X3DH and DR specs, e.g.:_**
 
+
+### To be implemented
+
+## 1. Introduction
+
+#### 1.5.x. Contact request
+
+Once two accounts have been generated (Alice and Bob), Alice can send a contact request with an introductory message to Bob.
+
+There are two possible scenarios, which dictate the presence or absence of a prekey bundle:
+1. If Alice is using Bob's public chat key or ENS name, no prekey bundle is present;
+1. If Alice found Bob through the app or scanned Bob's QR code, a prekey bundle is embedded and can be used to set up a secure channel as described in section [2.4.1](#241-Initial-key-exchange-flow-X3DH).
+
+Bob receives a contact request, informing him of:
+- Alice's introductory message.
+
+If Bob's prekey bundle was not available to Alice, Perfect Forward Secrecy hasn't yet been established. In any case, there are no implicit guarantees that Alice is whom she claims to be, and Bob should perform some form of external verification (e.g., using an Identicon).
+
+If Bob accepts the contact request, a secure channel is created (if it wasn't already), and a visual indicator is displayed to signify that PFS has been established. Bob and Alice can then start exchanging messages, making use of the Double Ratchet algorithm as explained in more detail in section [2.4.2](#242-Double-Ratchet).
+If Bob denies the request, Alice is not able to send messages and the only action available is resending the contact request.
+
+
+## 3.4 Expired session
+
+Expired session should not be used for new messages and should be deleted after 14 days from the expiration date, in order to be able to decrypt out-of-order and mailserver messages.
+
+## 4.3 Stale devices
+
+When a bundle is received from $IK$ a timer is initiated on any `installation-id` belonging to $IK$ not included in the bundle. If after 7 days no bundles are received from these devices they are marked as `stale` and no message will be sent to them.
