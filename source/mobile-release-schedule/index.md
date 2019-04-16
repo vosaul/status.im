@@ -19,6 +19,7 @@ var releases = [
     {
         dates: [new Date(2019, 2, 26)],
         title: "Release 0.11.0",
+        released: true,
     },
     {
         dates: [new Date(2019, 3, 9)],
@@ -36,6 +37,26 @@ var releases = [
     {
         dates: [new Date(2019, 4, 21)],
         title: "Release 0.14.0",
+    },
+    {
+        dates: [new Date(2019, 5, 4)],
+        title: "Release 0.15.0",
+    },
+    {
+        dates: [new Date(2019, 5, 18)],
+        title: "Release 0.16.0",
+    },
+    {
+        dates: [new Date(2019, 6, 2)],
+        title: "Release 0.17.0",
+    },
+    {
+        dates: [new Date(2019, 6, 16)],
+        title: "Release 0.18.0",
+    },
+    {
+        dates: [new Date(2019, 6, 30)],
+        title: "Release 1.0.0",
     },
 
 ];
@@ -94,17 +115,32 @@ var timeline = new Chronoline(
 
 // printing out the releases
 releases.forEach(function(event) {
+    if (event.released) {
+        document.write('<div style="color: #7ABA7A">');
+    }
     if (event.cancelled) {
         document.write('<div style="opacity: 0.3;">');
         document.write('<del>');
     }
-    document.write("<h2>" + event.title + "</h2>");
-    document.write("<p>Planned date: " + formatDate(event.dates[0]) + "</p>");
-    document.write("<p>Feature freeze: " + formatDate(featureFreezeStart(event.dates[0])) + "</p>");
+    document.write("<h2>")
+    if (event.released) {
+        document.write('&#10003;&nbsp;');
+    }
+    document.write(event.title)
+    document.write("</h2>");
+
+    if (!event.released) {
+        document.write("<p>Planned date: " + formatDate(event.dates[0]) + "</p>");
+        document.write("<p>Feature freeze: " + formatDate(featureFreezeStart(event.dates[0])) + "</p>");
+    }
 
     if (event.cancelled) {
         document.write("</del>");
         document.write("</div>");
+    }
+
+    if (event.released) {
+        document.write('</div>');
     }
 });
 
