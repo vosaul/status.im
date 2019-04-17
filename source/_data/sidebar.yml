@@ -76,6 +76,7 @@ keycard_api:
     sdk_authentication: sdk_authentication.html
     sdk_create_wallet: sdk_create_wallet.html
     sdk_derivation_sign: sdk_derivation_sign.html
+    sdk_pinless: sdk_payments.html
     sdk_export: sdk_export.html
     sdk_duplication: sdk_duplication.html
   apdu:
