@@ -1,185 +1,145 @@
-<div class="home-cover">
-    <%- include('partial/header') %>
-    <div class="intro">
-        <h1>Access a Better Web, Anywhere</h1>
-        <p>Chat, browse and transact securely in an open source community committed to bringing the power of Ethereum and a more distributed internet to your pocket.</p>
-        <div class="intro-buttons">
-            <a class="button button-part button-get-ios app-download" id="release:apk" href="<%= site.data.official['IOS'] %>">
-                <span class="button-icon button-icon--ios"></span>
-                GET STATUS FOR IPHONE
-            </a>
-            <a class="button button-part button-get-android app-download" id="release:ios" href="<%= site.data.official['APK'] %>">
-                <span class="button-icon button-icon--android"></span>
-                GET STATUS FOR ANDROID
-            </a>
-        </div>
-        <div class="intro-under-buttons secondary-text">Or try out the <a href="/get_desktop/">Desktop App</a></div>
-    </div>
-</div>
+<!-- The main content area -->
+<main id="main" role="main">
 
-<div class="hero-image">
-    <div class="image-wallet">
-        <div class="image-wallet-back"></div>
-        <div class="image-wallet-front">
-            <div class="image-wallet-logo"></div>
-            <div class="image-wallet-lines">
-                <div class="image-line"></div>
-                <div class="image-line"></div>
-            </div>
-        </div>
-    </div>
-    <div class="image-token-stack image-token-stack--vertical image-token-stack--one">
-        <div class="image-token image-token--main">OMG</div>
-        <div class="image-token"></div>
-    </div>
-    <div class="image-token-stack image-token-stack--vertical image-token-stack--two">
-        <div class="image-token image-token--main">ETH</div>
-        <div class="image-token"></div>
-        <div class="image-token"></div>
-    </div>
-    <div class="image-token-stack image-token-stack--horizontal image-token-stack--three">
-        <div class="image-token image-token--main">ANT</div>
-        <div class="image-token"></div>
-        <div class="image-token"></div>
-    </div>
-    <div class="image-token-stack image-token-stack--horizontal image-token-stack--four">
-        <div class="image-token image-token--main">SNT</div>
-        <div class="image-token"></div>
-        <div class="image-token"></div>
-        <div class="image-token"></div>
-    </div>
-    <div class="image-token-stack image-token-stack--vertical image-token-stack--five">
-        <div class="image-token image-token--main">DAI</div>
-        <div class="image-token"></div>
-        <div class="image-token"></div>
-    </div>
-    <div class="image-message image-message--one">
-        <div class="image-message-avatar"></div>
-        <div class="image-message-lines">
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-        </div>
-    </div>
-    <div class="image-message image-message--two">
-        <div class="image-message-avatar"></div>
-        <div class="image-message-lines">
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-        </div>
-    </div>
-    <div class="image-status image-status--one">
-        <div class="image-status-avatar"></div>
-        <div class="image-status-lines">
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-        </div>
-    </div>
-    <div class="image-status image-status--two">
-        <div class="image-status-avatar"></div>
-        <div class="image-status-lines">
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-        </div>
-    </div>
-    <div class="image-status image-status--three">
-        <div class="image-status-avatar"></div>
-        <div class="image-status-lines">
-            <div class="image-line"></div>
-            <div class="image-line"></div>
-        </div>
-    </div>
-</div>
+	<!--HOME-INTRO-->
+	<section class="home-intro">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-md-7 col-lg-6">
+	            	<div class="inner d-flex align-items-start flex-column justify-content-center h-100">
+						<div class="row">
+							<div class="col-md-11">
+								<h1>Private, Secure Communication</h1>
+								<p class="teaser-1">Status is a messenger, crypto wallet, and Web3 browser leveraging state of the art technology.</p>
+								<div class="d-flex">
+									<a href="/get/" class="btn btn-purple-fill btn-arrow btn-arrow-white m-r-30">Get Status</a>
+									<a href="/get-involved/" class="btn btn-arrow">Get Involved</a>
+								</div>
+								<a href="#" target="_blank" class="announcement inactive"><span>news</span><b></b></a>
+							</div>
+						</div>
+	            	</div>
+	            </div>
+	            <div class="col-md-4 ml-auto col-lg-6 col-black">
+					<%- image_tag("/img/teaser-image.png", { srcset: '/img/teaser-image-2x.png 2x'}) %>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!--END-HOME-INTRO-->
 
-<div class="info">
-    <div class="info__inner">
-        <div class="info-item">
-            <div class="info-item-content">
-                <h5>DISCUSS</h5>
-                <div id="latest-announcements" class="latest-posts"></div>
-            </div>
-            <div class="info-item-link"><a href="https://discuss.status.im/" class="link-arrow">Learn more</a></div>
-        </div>
-        <div class="info-item">
-            <div class="info-item-content">
-                <h5>STATUS PRINCIPLES</h5>
-                <h4>A Principled Approach</h4>
-                <p class="secondary-text">Status is a community of people all over the world connected by a set of values and principles.</p>
-            </div>
-            <div class="info-item-link"><a href="/contribute/our_principles.html" class="link-arrow">See the full set of principles</a></div>
-        </div>
-        <div class="info-item">
-            <div class="info-item-content">
-                <h5>LATEST NEWS</h5>
-                <div class="latest-news latest-posts"></div>
-            </div>
-            <div class="info-item-link"><a href="https://our.status.im/" class="link-arrow">Read the blog</a></div>
-        </div>
-    </div>
-</div>
+	<!--HOME-ABOUT-->
+	<section class="home-about p-t-160 p-b-160">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="inner">
+						<h3>An Open Source Project</h3>
+						<p class="teaser-2">Status is completely open source and made by contributors all over the world. Developers, designers, creators, educators, hobbyists, enthusiasts, and more – everyone has free and open access to the repos, assets, and information.</p>
+						<ul class="inline-links">
+							<li><a href="/get-involved/developers/"><%- image_tag("/img/developers-img.svg") %> Developers</a></li>
+							<li><a href="/get-involved/educators/"><%- image_tag("/img/educators-img.svg") %> Educators</a></li>
+							<li><a href="/get-involved/community-groups/"><%- image_tag("/img/community-group-img.svg") %> Community Group</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="inner">
+						<h3>Mission & Principles</h3>
+						<p class="teaser-2">Status strives to be a secure communication tool that upholds human rights. We enable community money, community law and through privacy, preserve culture.</p>
+						<a href="/about/" class="link-arrow">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--END-HOME-ABOUT-->
 
-<div class="home-wrap">
-    <div class="section-header section-header--main">
-        <h2 id="top-header">The Status Ecosystem</h2>
-        <p class="secondary-text">Status is more than an app - it's a community of people creating the tools and infrastructure we need to #buidl a better web. Our collective goal is the mass adoption of Ethereum.</p>
-    </div>
+	<!--HOME-DECENTRALIZED-PRIVATE-->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-grey home-decentralized">
+					<div class="inner d-flex align-items-start flex-column h-100">
+						<div class="row">
+							<div class="col-md-11 col-lg-10">
+								<%- image_tag("/img/decentralized-illustration.png", { srcset: '/img/decentralized-illustration-2x.png 2x'}) %>
+								<p class="teaser-2">Decentralized Communication</p>
+								<h3>Chat, Browse, Transact on Your Terms</h3>
+								<p class="p-large">Status combines a decentralized messenger, wallet, and DApp browser into a powerful, private, and secure communication tool.</p>
+								<a href="/features/" class="btn btn-arrow">Explore all features</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-black col-offset-top home-private">
+					<div class="inner d-flex align-items-start flex-column justify-content-center h-100">
+						<div class="row">
+							<div class="col-lg-11 d-flex align-items-start flex-column">
+								<p class="teaser-2">Preserving Privacy</p>
+								<h3>Truly Private Messaging</h3>
+								<p class="p-large">Status uses the peer-to-peer protocol Whisper and end-to-end encryption to protect your communication from third party interference. Only you can view your messages.</p>
+								<a href="/features/" class="btn btn-white btn-arrow btn-arrow-white">Learn More</a>
+								<%- image_tag("/img/private-message-illustration.png", { srcset: '/img/private-message-illustration-2x.png 2x'}) %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--END-HOME-DECENTRALIZED-PRIVATE-->
 
-    <div class="cards cards--projects cards--three">
-        <div class="card">
-            <a href="/get/" class="card-inner">
-                <div class="card-content">
-                    <h3>App</h3>
-                    <p class="secondary-text">Chat, transact, and access a revolutionary new world of ÐApps. Test the mobile beta or get started with the desktop alpha.</p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://incubate.status.im/" class="card-inner">
-                <div class="card-content">
-                    <h3>Incubate</h3>
-                    <p class="secondary-text">Incubate supports open source, early stage startups with funding, technical mentorship, legal and regulatory compliance and much more.</p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://embark.status.im" class="card-inner">
-                <div class="card-content">
-                    <h3>Embark</h3>
-                    <p class="secondary-text">Embark is a simple and easy to use development framework that enables you to build and deploy your own decentralized applications smoothly.</p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="#" class="card-inner">
-                <div class="card-content">
-                    <h3>Studio</h3>
-                    <p class="secondary-text">Studio is an integrated developer environment and educational platform designed to be a one-stop-shop for ÐApp development.</p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://nimbus.status.im/" class="card-inner">
-                <div class="card-content">
-                    <h3>Nimbus</h3>
-                    <p class="secondary-text">Nimbus is a research project and light client implementation for Ethereum 2.0 designed to perform well on embedded systems and resource-restricted hardware. </p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://keycard.status.im/" class="card-inner">
-                <div class="card-content">
-                    <h3>Keycard</h3>
-                    <p class="secondary-text">A hardware wallet in the form of a card with a safe, contactless transaction experience </p>
-                </div>
-                <div class="card-projects__link"><span class="link-arrow">Learn More</span></div>
-            </a>
-        </div>
-    </div>
-</div>
+	<!--HOME-WALLET-BROWSER-->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-black col-offset-bottom home-wallet">
+					<div class="inner d-flex align-items-start flex-column justify-content-center h-100">
+						<div class="row">
+							<div class="col-md-11 col-lg-10">
+								<p class="teaser-2">Enabling Community Money</p>
+								<h3>Secure Crypto Wallet</h3>
+								<p class="p-large">Safely send, store and receive ERC20 and ERC721 tokens. Only you hold the keys to your serverless wallet. Intuitive design protects you from attack.</p>
+								<a href="/features/" class="btn btn-white btn-arrow btn-arrow-white">Learn more</a>
+								<div class="img-holder">
+									<%- image_tag("/img/wallet-illustration.png", { srcset: '/img/wallet-illustration-2x.png 2x'}) %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-grey home-browser">
+					<div class="inner d-flex align-items-start flex-column h-100">
+						<%- image_tag("/img/browser-illustration.png", {srcset: "/img/browser-illustration-2x.png 2x"}) %>
+						<p class="teaser-2">Own Your Data</p>
+						<h3>Decentralized Web3 Browser</h3>
+						<p class="p-large">Navigate the growing ecosystem of decentralized applications from our web3-enabled browser, without being tracked. Browse the latest marketplaces, exchanges, games, and more.</p>
+						<a href="/features/" class="btn btn-arrow">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--END-HOME-WALLET-BROWSER-->
+
+	<!--HOME-SECURITY-->
+	<section class="home-security p-t-160 p-b-160">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="inner text-center">
+						<div class="img-holder">
+							<%- image_tag("/img/lock.svg") %>
+						</div>
+						<h3>Private and Secure by Design</h3>
+						<p class="teaser-2">Status uses state of the art technology to ensure your messages and transactions are yours and yours alone. Status removes intermediaries to keep your messages private and your assets secure. Communicate with confidence.</p>
+						<a href="/security/" class="link-arrow">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--END-HOME-SECURITY-->
+
+</main>

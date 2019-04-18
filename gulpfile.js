@@ -14,10 +14,10 @@ const minify = require('gulp-minify');
 const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const run = require('gulp-run-command').default;
+// const bamboo = require('./scripts/bamboo-hr');
 
 const genqr = require('./scripts/gen-qr');
 const updateBuilds = require('./scripts/update-builds');
-const bamboo = require('./scripts/bamboo-hr');
 
 /* this usallly comes as a parameter from Jenkinsfile */
 const env = process.env.ENV
@@ -46,9 +46,7 @@ var config = {
         src: {
             scss: './themes/navy/source/scss/*.scss',
             js: [
-                './themes/navy/source/js/shared-js/js/utils.js',
-                './themes/navy/source/js/shared-js/js/popups.js',
-                './themes/navy/source/js/main.js'
+                './themes/navy/source/js/dev.js',
             ],
         },
         dist: {
@@ -84,14 +82,14 @@ function bundle() {
             browserSync.notify('Browserify Error!')
             this.emit('end')
         })
-        .pipe(exorcist('./themes/navy/source/js/vendor.js.map'))
-        .pipe(source('vendor.js'))
+        .pipe(exorcist('./themes/navy/source/js/main.js.map'))
+        .pipe(source('main.js'))
         .pipe(gulp.dest('./themes/navy/source/js'))
         .pipe(browserSync.stream({ once: true }))
 }
 
 gulp.task('compress', ['sass'], function() {
-    gulp.src('./themes/navy/source/js/vendor.js')
+    gulp.src('./themes/navy/source/js/main.js')
         .pipe(minify({
             ext: {
                 min: '.min.js'
@@ -113,9 +111,9 @@ gulp.task('releases', function() {
     return updateBuilds('releases', 'release.json')
 })
 
-gulp.task('employees', async function() {
-    return bamboo.saveEmployees('source/_data/employees.yml')
-})
+// gulp.task('employees', async function() {
+//     return bamboo.saveEmployees('source/_data/employees.yml')
+// })
 
 gulp.task('genqr', function() {
     genqr('nightlies', 'APK',   'public/nightly/img', 'qr-apk.png')

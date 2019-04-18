@@ -4,7 +4,7 @@ description: "Status is the mobile windown onto Ethereum, the platform with whic
 author: Status
 timezone: UTC
 
-language: [en, es, ko]
+language: [en]
 locale: en
 i18n:
   type: [page, post]
@@ -27,9 +27,8 @@ highlight:
 theme: navy
 deploy:
   type: git
+  repo: git@github.com:NistorCristian/status.git
   branch: gh-pages
-  name: status-im-auto
-  repo: git@github.com:status-im/status.im.git
 
 disqus_shortname: hexojs
 twitter: ethstatus
