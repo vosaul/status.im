@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<h1 class="community-nav-trigger">Researching a Better Web</h1>
+					<h1>Researching a Better Web</h1>
 					<p class="teaser-1">We are driving the R&D of lighter, more efficient, and scalable Web3 technologies.</p>
 				</div>
 				<div class="col-md-6 ml-auto">
@@ -22,9 +22,9 @@
 					<div class="col-md-12">
 						<ul>
 							<li><a href="#messaging-protocol">Messaging Protocol</a></li>
-							<li><a href="#snt-tToken-economics">SNT Token Economics</a></li>
 							<li><a href="#nimbus">Nimbus</a></li>
 							<li><a href="#vyper">Vyper</a></li>
+							<li><a href="#clients">Ultra Light Clients</a></li>
 						</ul>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 		</div>
 	</section>
 
-	<section class="p-b-160 p-t-160" id="nimbus">
+	<section class="p-b-160 p-t-160 research-nimbus" id="nimbus">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -64,10 +64,10 @@
 						<%- image_tag("/img/research-nimbus.svg") %>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-5 ml-auto">
 					<div class="inner">
 						<h2>Nimbus</h2>
-						<p class="teaser-2">Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware.</p>
+						<p>Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware.</p>
 						<a href="https://nimbus.status.im/" target="_blank" class="btn btn-arrow">Learn more</a>
 					</div>
 				</div>
@@ -75,17 +75,17 @@
 		</div>
 	</section>
 
-	<section class="p-b-160 p-t-160" id="vyper">
+	<section class="p-b-160 p-t-160 research-vyper col-black" id="vyper">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-5 mr-auto">
 					<div class="inner">
 						<h2>Vyper</h2>
-						<p class="teaser-2">Vyper is a smart contract development language built with security, language and compiler simplicity, and auditability in mind. Vyper code should be maximally human-readable. Furthermore, it should be maximally difficult to write misleading code. </p>
-						<ul>
-							<li><a href="https://vyper.readthedocs.io/en/latest/" target="_blank" class="link-arrow">Learn More About Vyper</a></li>
-							<li><a href="https://github.com/ethereum/vyper" target="_blank" class="link-arrow">View Repository</a></li>
-							<li><a href="https://our.status.im/tag/vyper/" target="_blank" class="link-arrow">Latest News</a></li>
+						<p>Vyper is a smart contract development language built with security, language and compiler simplicity, and auditability in mind. Vyper code should be maximally human-readable. Furthermore, it should be maximally difficult to write misleading code. </p>
+						<ul class="inline-links">
+							<li><a href="https://github.com/ethereum/vyper" target="_blank"><%- image_tag("/img/icon-github-white.svg") %> View Repository</a></li>
+							<li><a href="https://our.status.im/tag/vyper/" target="_blank"><%- image_tag("/img/icon-news-white.svg") %> Latest News</a></li>
+							<li><a href="https://vyper.readthedocs.io/en/latest/" target="_blank"><%- image_tag("/img/icon-book-white.svg") %> Learn More About Vyper</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,7 +98,7 @@
 		</div>
 	</section>
 
-	<section class="p-b-160 p-t-160" id="clients">
+	<section class="p-b-160 p-t-160 research-clients" id="clients">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -106,15 +106,15 @@
 						<%- image_tag("/img/research-clients.svg") %>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-5 ml-auto">
 					<div class="inner">
 						<h2>Ultra Light Clients</h2>
-						<p class="teaser-2">ULC is a new option in the light Ethereum subprotocol that doesn’t break compatibility with the protocol, but does significantly reduce the time and resources required to sync with the main Ethereum chain. The main idea is to reduce the amount of messages and do less client side validation.</p>
-						<ul>
-							<li><a href="#" target="_blank" class="link-arrow">Documentation</a></li>
-							<li><a href="#" target="_blank" class="link-arrow">View Repository</a></li>
-							<li><a href="#" target="_blank" class="link-arrow">Join Status Channel</a></li>
-							<li><a href="#" target="_blank" class="link-arrow">Latest News</a></li>
+						<p>ULC is a new option in the light Ethereum subprotocol that doesn’t break compatibility with the protocol, but does significantly reduce the time and resources required to sync with the main Ethereum chain. The main idea is to reduce the amount of messages and do less client side validation.</p>
+						<ul class="inline-links">
+							<li><a href="#"><%- image_tag("/img/icon-book.svg") %> Documentation</a></li>
+							<li><a href="#" target="_blank"><%- image_tag("/img/icon-github.svg") %> View Repository</a></li>
+							<li><a href="#" target="_blank"><%- image_tag("/img/icon-status-black.svg") %> Join #status</a></li>
+							<li><a href="#" target="_blank"><%- image_tag("/img/icon-news.svg") %> View long form discusion</a></li>
 						</ul>
 					</div>
 				</div>

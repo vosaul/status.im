@@ -21,6 +21,14 @@ $(document).ready(function ($) {
     return false;
   });
 
+  $('.template-research .quick-nav a').on('click', function () {
+    var id = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - 60
+    }, 500);
+    return false;
+  });
+
   function mobileMenu(w) {
     if (w < 1199) {
       $('header nav, header .btns').appendTo('.mobile-nav');

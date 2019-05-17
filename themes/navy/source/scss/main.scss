@@ -2618,6 +2618,15 @@ img.qr-code{
 
 .research-whisper{
     background: #C7C9CC;
+    position: relative;
+    z-index: 1;
+    .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
     .inline-links{
         flex-wrap: wrap;
         margin-top: 30px;
@@ -2637,6 +2646,89 @@ img.qr-code{
         img{
             max-width: 100%;
         }
+    }
+}
+
+.research-nimbus{
+    background: #FFF7E9;
+    .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+        p{
+            margin-bottom: 50px;
+        }
+        .btn{
+            color: #452900;
+            border: 1px solid #452900;
+            &:hover{
+                background: #452900;
+                color: $white;
+            }
+        }
+    }
+    img{
+        max-width: 100%;
+    }
+}
+
+.research-vyper{
+    background: $darker-grey;
+    .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+    p{
+        color: rgba( $white, .8 )
+    }
+    .inline-links{
+        flex-wrap: wrap;
+        margin-top: 30px;
+        li{
+            width: 50%;
+            margin: 30px 0 0 0;
+            a{
+                color: $white;
+                &:hover{
+                    color: $purple;
+                }
+            }
+        }
+    }
+}
+
+.research-clients{
+    background: $lighter-grey;
+    .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+    .inline-links{
+        flex-wrap: wrap;
+        margin-top: 30px;
+        li{
+            width: 50%;
+            margin: 30px 0 0 0;
+            a{
+                color: $black;
+                &:hover{
+                    color: $dark-grey;
+                }
+            }
+        }
+    }
+    .inner-img{
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
     }
 }
 
@@ -2886,6 +2978,25 @@ img.qr-code{
                 font-size: 12px;
                 line-height: 18px;
             }
+        }
+    }
+    .research-intro{
+        .img-holder{
+            margin-bottom: -320px;
+        }
+    }
+    .research-whisper {
+        .inner-img{
+            margin-bottom: -100px;
+            transform: translateY(4px);
+        }
+        .col-md-5{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-md-6{
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
         }
     }
     footer{
