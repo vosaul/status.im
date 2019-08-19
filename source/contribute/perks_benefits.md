@@ -19,6 +19,7 @@ title: Perks & Benefits
 - Work from wherever you choose. Our contributors are a varied bunch - some work from home, some from a coworking space, some from a local cafe, others are nomads. 
 - We operate an open vacation policy, meaning there are no hard limits or strict rules around how much holiday you take and how you schedule it.
 - We want our contributors to be healthy and take the time they need to relax and enjoy quality disconnected time away from work.
+- We offer all contributors a [Headspace](https://www.headspace.com/) subscription. 
 
 **Travel**
  - Each team has a travel budget to attend conferences & team meetups of their choice. 
