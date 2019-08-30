@@ -2,7 +2,6 @@ const fs  = require('fs')
 const yml = require('js-yaml')
 const log = require('fancy-log')
 const err = log.error
-const warn = log.warn
 const crypto = require('crypto')
 const request = require('request-promise')
 
@@ -21,11 +20,7 @@ const DEFAULT_FIELDS = [
   'customStatusPublicKey', 'customGitHubusername',
 ].join(',')
 
-const SKIP_EMAILS = [
-  'rumpf_a@web.de',
-  'yevheniia@status.im',
-  'guylouis@status.im',
-]
+const SKIP_EMAILS = [ 'rumpf_a@web.de' ]
 
 const DEFAULT_OPTIONS = {
   auth: { user: API_TOKEN, pass: 'x' },
@@ -59,11 +54,6 @@ const cleanGitHubUsername = (data) => {
 
 /* Details: https://www.bamboohr.com/api/documentation/photos.php */
 const addPhotoUrl = (data) => {
-  if (data.workEmail == null) { /* sometimes people don't set their email */
-    warn(`WARNING: No email available for user: ${data.displayName}`)
-    data['photoUrl'] = 'MISSING_EMAIL'
-    return
-  }
   let email = data.workEmail.trim().toLowerCase()
   let emailHash = crypto.createHash('md5').update(email).digest("hex")
   data['photoUrl'] = `${PHOTO_URL}/?h=${emailHash}`
