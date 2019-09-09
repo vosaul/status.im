@@ -29,7 +29,6 @@ docs:
     status_go: status_go.html (Build Status-Go)
     intro_desktop: intro_desktop.html
     desktop: desktop.html (Build Desktop)
-    desktop_inline_eval: ../tutorials/desktop_inline_eval.html (Learn About Our Tools)
     desktop_troubleshooting: desktop_troubleshooting.html (Desktop Troubleshooting)
     desktop_google_breakpad: desktop_google_breakpad.html (Google Breakpad Integration)
     desktop_jenkins: desktop_jenkins.html (Jenkins Setup)
