@@ -13,9 +13,9 @@ The most obvious case for integration of Keycard is crypto wallets (ETH, BTC, et
 
 To further simplify integration, we have developed a Java-based API which can be used on both desktop and Android systems. On the desktop it uses the javax.smartcardio to interface with the card, which is compatible with most USB readers. On Android it uses the on-board NFC reader. If you develop in Java or any other language available, this is the easiest way to use the Keycard. 
 
-[Read the SDK documentation](sdk_installation.html)
+[Read the SDK documentation](sdk/installation.html)
 
-If you use a different language, please first refer to the [Java SDK](sdk_installation.html) documentation for a high level overview of how to perform different tasks with the Keycard. Then, please check the [protocol documentation](apdu_overview.html) out for the low-level details.
+If you use a different language, please first refer to the [Java SDK](sdk/installation.html) documentation for a high level overview of how to perform different tasks with the Keycard. Then, please check the [protocol documentation](apdu) out for the low-level details.
 
 ## Versioning
 

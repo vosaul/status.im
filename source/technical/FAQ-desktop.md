@@ -113,7 +113,7 @@ In particular, Status Desktop is focused on Chat. Wallet and DApps support will 
 
 ## I’ve got more questions!
 
-Check the Status [FAQ](/docs/FAQs.html) for general answers. Or submit a bug/issue on [Github](https://github.com/status-im/status-react/issues)
+Check the Status [FAQ](/technical/FAQs.html) for general answers. Or submit a bug/issue on [Github](https://github.com/status-im/status-react/issues)
 
 
 
