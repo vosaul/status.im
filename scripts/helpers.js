@@ -80,14 +80,20 @@ hexo.extend.helper.register('sidebar', function(path) {
 });
 
 function genSidebarList(parent, entries) {
-  let self = this /* necessary due to changed context of map() */
+  /* necessary due to changed context of map() */
+  let self = this
+  /* all languages except english needs a path prefix */
   let lang = (self.page.lang != 'en' && parent == "") ?  self.page.lang : ''
   return entries.map(entry => {
-    let fullPath = join(lang, parent, entry.path)
-    let isActive = self.path.startsWith(fullPath)
+    /* normally path needs to be prefixed with lang and parent path */
+    let fullPath = join('/', lang, parent, entry.path)
+    /* sometimes paths are full URLs instead of sub-paths */
+    if (entry.path.startsWith('http')) { fullPath = entry.path }
+    /* path is active when it's the one we are on currently */
+    let isActive = ('/'+self.path).startsWith(fullPath)
     return `
       <li class="${isActive ? "active" : ""}">
-        <a href="${join('/', fullPath)}">${entry.title}</a>
+        <a href="${fullPath}">${entry.title}</a>
         ${(entry.children != undefined) ? `
         <ul class="sidebar-submenu">
           ${genSidebarList.call(self, fullPath, entry.children)}
