@@ -59,7 +59,7 @@ docs:
       - title: Build Desktop
         path: desktop.html
       - title: Learn About Our Tools
-        path: ../tutorials/desktop_inline_eval.html
+        path: ../guides/desktop_inline_eval.html
       - title: Desktop Troubleshooting
         path: desktop_troubleshooting.html
       - title: Google Breakpad Integration
