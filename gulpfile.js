@@ -72,14 +72,14 @@ const getEnv = () => {
     return gitBranch() == 'master' ? 'prod' : 'dev'
 }
 
-const hexo = async (cmdName) => {
+const hexo = async (cmdName, args={}) => {
     var h = new Hexo(process.cwd(), {
         config: `_config.${getEnv()}.yml`,
         watch: false,
     })
     try {
         await h.init()
-        await h.call(cmdName)
+        await h.call(cmdName, args)
         await h.exit()
     } catch(err) {
         h.exit(err)
@@ -138,7 +138,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('index', async () => {
-  await hexo('elasticsearch')
+  await hexo('elasticsearch', {'delete': true})
 })
 
 gulp.task('watch', async () => {
