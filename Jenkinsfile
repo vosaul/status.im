@@ -30,7 +30,6 @@ pipeline {
     stage('Install Deps') {
       steps {
         sh 'yarn install'
-        sh 'yarn update'
       }
     }
 
