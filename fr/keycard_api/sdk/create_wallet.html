@@ -477,7 +477,7 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/sdk/duplication.html">Card Duplication</a>
+        <a href="/fr/keycard_api/sdk/cash.html">Cash applet</a>
         
       </li>
         </ul>
@@ -530,11 +530,6 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/apdu/setndef.html">SET NDEF</a>
-        
-      </li>
-
-      <li class="">
         <a href="/fr/keycard_api/apdu/verifypin.html">VERIFY PIN</a>
         
       </li>
@@ -575,11 +570,6 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/apdu/duplicatekey.html">DUPLICATE KEY</a>
-        
-      </li>
-
-      <li class="">
         <a href="/fr/keycard_api/apdu/sign.html">SIGN</a>
         
       </li>
@@ -591,6 +581,16 @@
 
       <li class="">
         <a href="/fr/keycard_api/apdu/exportkey.html">EXPORT KEY</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/fr/keycard_api/apdu/storedata.html">STORE DATA</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/fr/keycard_api/apdu/getdata.html">GET DATA</a>
         
       </li>
         </ul>
@@ -873,7 +873,7 @@ cmdSet.loadKey(mnemonic.toBIP32KeyPair()).checkOK();
 <pre><code class="java">// The passphrase is a string with space separated words. The password can be any non-null string, usually is empty.
 cmdSet.loadKey(Mnemonic.toBinarySeed(passphrase, password)).checkOK();
 </code></pre>
-<h2 id="Generating-keys-on-card" class="article-heading"><a href="#Generating-keys-on-card" class="headerlink" title="Generating keys on-card"></a>Generating keys on-card<a class="article-anchor" href="#Generating-keys-on-card" aria-hidden="true"></a></h2><p>This is the simplest and safest method, because the generated wallet never leaves the card and there is no “paper backup” to keep secure. It is possible to create secure duplicates of the wallet on other Keycards, with a mechanism described in later chapters. Using the SDK, you simply do</p>
+<h2 id="Generating-keys-on-card" class="article-heading"><a href="#Generating-keys-on-card" class="headerlink" title="Generating keys on-card"></a>Generating keys on-card<a class="article-anchor" href="#Generating-keys-on-card" aria-hidden="true"></a></h2><p>This is the simplest and safest method, because the generated wallet never leaves the card and there is no “paper backup” to keep secure. Using a multi-sig wallet can solve the problem of backups, by having multiple cards signers for the wallet. Using the SDK, you simply do</p>
 <pre><code class="java">cmdSet.generateKey().checkOK();
 </code></pre>
 <h2 id="Importing-an-EC-keypair" class="article-heading"><a href="#Importing-an-EC-keypair" class="headerlink" title="Importing an EC keypair"></a>Importing an EC keypair<a class="article-anchor" href="#Importing-an-EC-keypair" aria-hidden="true"></a></h2><p>You can import on the keycard any EC keypair on the SECP256k1 curve, with or without the BIP32 extension. If your import a key without the BIP32 extension, then key derivation will not work, but you will still be able to use the Keycard for signing transactions using the imported key. This scenario can be useful if you are migrating from a wallet not using BIP39 passphrases or for wallets following some custom generation rules. It is however generally preferable to use one of the methods presented above.</p>
@@ -891,7 +891,7 @@ cmdSet.loadKey(keypair).checkOK();
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-10-21
 								
 							</div>
 						</div>

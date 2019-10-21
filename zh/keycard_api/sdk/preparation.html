@@ -477,7 +477,7 @@
       </li>
 
       <li class="">
-        <a href="/zh/keycard_api/sdk/duplication.html">Card Duplication</a>
+        <a href="/zh/keycard_api/sdk/cash.html">Cash applet</a>
         
       </li>
         </ul>
@@ -530,11 +530,6 @@
       </li>
 
       <li class="">
-        <a href="/zh/keycard_api/apdu/setndef.html">SET NDEF</a>
-        
-      </li>
-
-      <li class="">
         <a href="/zh/keycard_api/apdu/verifypin.html">VERIFY PIN</a>
         
       </li>
@@ -575,11 +570,6 @@
       </li>
 
       <li class="">
-        <a href="/zh/keycard_api/apdu/duplicatekey.html">DUPLICATE KEY</a>
-        
-      </li>
-
-      <li class="">
         <a href="/zh/keycard_api/apdu/sign.html">SIGN</a>
         
       </li>
@@ -591,6 +581,16 @@
 
       <li class="">
         <a href="/zh/keycard_api/apdu/exportkey.html">EXPORT KEY</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/zh/keycard_api/apdu/storedata.html">STORE DATA</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/zh/keycard_api/apdu/getdata.html">GET DATA</a>
         
       </li>
         </ul>
@@ -879,7 +879,7 @@ info.getAppVersion();
 
 // Returns the number of free pairing slots. If you are not yet paired with the card, it helps you know if you can still
 // pair or not
-info.getFreePairingSlots());
+info.getFreePairingSlots();
 
 // Tells if the card has a wallet or not. If no wallet is available, you must create once before you can perform most
 // operations on the card
@@ -903,7 +903,7 @@ if (!info.isInitializedCard()) {
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-10-21
 								
 							</div>
 						</div>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page Meta -->
-    <title>Status - Protocol</title>
+    <title>Status - Java SDK</title>
     
 
     <!-- Mobile Meta -->
@@ -34,16 +34,16 @@
 
     <meta property="og:site_name" content="Status">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Status - Protocol">
+    <meta property="og:title" content="Status - Java SDK">
     
-    <meta property="og:url" content="https://status.im/keycard_api/apdu/setndef.html">
+    <meta property="og:url" content="https://status.im/keycard_api/sdk/cash.html">
     
     <meta property="og:image" content="https://status.im/img/share.png">
     <meta property="article:publisher" content="https://www.facebook.com/ethstatus">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Status - Protocol">
+    <meta name="twitter:title" content="Status - Java SDK">
     
-    <meta name="twitter:url" content="https://status.im/keycard_api/apdu/setndef.html">
+    <meta name="twitter:url" content="https://status.im/keycard_api/sdk/cash.html">
     
     <meta property="twitter:image" content="https://status.im/img/share.png">
     <meta name="twitter:site" content="@ethstatus">
@@ -163,7 +163,7 @@
       <div class="language-selector">
         <a href="#" class="language-selector-trigger btn btn-arrow">ru</a>
         <ul>
-          <li class=""><a href="/keycard_api/apdu/setndef.html">English</a></li><li class=""><a href="/ko/keycard_api/apdu/setndef.html">한국어</a></li><li class=""><a href="/zh/keycard_api/apdu/setndef.html">中文</a></li><li class="active"><a href="/ru/keycard_api/apdu/setndef.html">Русский</a></li><li class=""><a href="/fr/keycard_api/apdu/setndef.html">Français</a></li>
+          <li class=""><a href="/keycard_api/sdk/cash.html">English</a></li><li class=""><a href="/ko/keycard_api/sdk/cash.html">한국어</a></li><li class=""><a href="/zh/keycard_api/sdk/cash.html">中文</a></li><li class="active"><a href="/ru/keycard_api/sdk/cash.html">Русский</a></li><li class=""><a href="/fr/keycard_api/sdk/cash.html">Français</a></li>
         </ul>
       </div>
     
@@ -426,7 +426,7 @@
         
       </li>
 
-      <li class="">
+      <li class="active">
         <a href="/ru/keycard_api/sdk">Java SDK</a>
         
         <ul class="sidebar-submenu">
@@ -476,15 +476,15 @@
         
       </li>
 
-      <li class="">
-        <a href="/ru/keycard_api/sdk/duplication.html">Card Duplication</a>
+      <li class="active">
+        <a href="/ru/keycard_api/sdk/cash.html">Cash applet</a>
         
       </li>
         </ul>
         
       </li>
 
-      <li class="active">
+      <li class="">
         <a href="/ru/keycard_api/apdu">APDU API</a>
         
         <ul class="sidebar-submenu">
@@ -529,11 +529,6 @@
         
       </li>
 
-      <li class="active">
-        <a href="/ru/keycard_api/apdu/setndef.html">SET NDEF</a>
-        
-      </li>
-
       <li class="">
         <a href="/ru/keycard_api/apdu/verifypin.html">VERIFY PIN</a>
         
@@ -575,11 +570,6 @@
       </li>
 
       <li class="">
-        <a href="/ru/keycard_api/apdu/duplicatekey.html">DUPLICATE KEY</a>
-        
-      </li>
-
-      <li class="">
         <a href="/ru/keycard_api/apdu/sign.html">SIGN</a>
         
       </li>
@@ -591,6 +581,16 @@
 
       <li class="">
         <a href="/ru/keycard_api/apdu/exportkey.html">EXPORT KEY</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/ru/keycard_api/apdu/storedata.html">STORE DATA</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/ru/keycard_api/apdu/getdata.html">GET DATA</a>
         
       </li>
         </ul>
@@ -854,22 +854,32 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="editor-content">
-								<h1 id="SET-NDEF" class="article-heading"><a href="#SET-NDEF" class="headerlink" title="SET NDEF"></a>SET NDEF<a class="article-anchor" href="#SET-NDEF" aria-hidden="true"></a></h1><ul>
-<li>CLA = 0x80</li>
-<li>INS = 0xF3</li>
-<li>P1 = 0x00</li>
-<li>P2 = 0x00</li>
-<li>Data = the data to store</li>
-<li>Response SW = 0x9000 on success</li>
-<li>Preconditions: Secure Channel must be opened, PIN must be verified</li>
-<li>Capability: NDEF</li>
-</ul>
-<p>Used to set the content of the data file owned by the NDEF applet. This allows changing the behavior of Android and other clients when tapping the card with no open client. As an example, it could be used to launch a specific wallet software.</p>
-<p>If the first 2 bytes, read as a MSB first short, are equal to the Lc field minus 2 (the length of the field itself) then the data is stored as is. Otherwise Lc is extended to a 16-bit value and appended to the stored data.</p>
+								<h1 id="Cash-applet" class="article-heading"><a href="#Cash-applet" class="headerlink" title="Cash applet"></a>Cash applet<a class="article-anchor" href="#Cash-applet" aria-hidden="true"></a></h1><p>Since version 3.0 the Keycard package also includes a Cash applet. When installed, the applet immediately generates a keypair which cannot be changed, exported or be used for derivation. The applet only responds to the SELECT and SIGN commands and has no concept of PIN or SecureChannel. All in all, it is a very basic version of the main Keycard applet. </p>
+<p>The use cases for this applet are burner wallets, payment cards (including prepaid ones). This applet can be installed alongside the main Keycard applet and does not interfere with it. As the name implies, the applet has roughly the same security level of cash in the pocket and should be used with this in mind. Security cen be enhanced by making the applet a signer to a smartcontract (instead of holding funds directly) and applying anti-fraud policies on the network.</p>
+<p>The SDK provides a separate command set to interact with this applet.</p>
+<h2 id="Instatiating-the-command-set" class="article-heading"><a href="#Instatiating-the-command-set" class="headerlink" title="Instatiating the command set"></a>Instatiating the command set<a class="article-anchor" href="#Instatiating-the-command-set" aria-hidden="true"></a></h2><pre><code class="java">// cardChannel is our CardChannel instance
+CashCommandSet cashCmdSet = new CashCommandSet(cardChannel);
+</code></pre>
+<h2 id="Selecting-the-CashApplet" class="article-heading"><a href="#Selecting-the-CashApplet" class="headerlink" title="Selecting the CashApplet"></a>Selecting the CashApplet<a class="article-anchor" href="#Selecting-the-CashApplet" aria-hidden="true"></a></h2><pre><code class="java">// note that selecting the cash applet deselects the Keycard applet, so if you use both command sets make sure you invoke select every time you want to switch application
+CashApplicationInfo info = new CashApplicationInfo(cashCmdSet.select().checkOK().getData());
+
+// Returns the public key of the wallet&#39;s keypair. This can be used to calculate the Ethereum address.
+info.getPubKey();
+
+// Returns the version of the applet.
+info.getAppVersion();
+
+// Returns arbitrary data which has been set either at applet installation or through the STORE DATA command in the Keycard applet
+info.getPubData();
+</code></pre>
+<h2 id="Signing" class="article-heading"><a href="#Signing" class="headerlink" title="Signing"></a>Signing<a class="article-anchor" href="#Signing" aria-hidden="true"></a></h2><pre><code class="java">// hash is the hash to sign, for example the Keccak-256 hash of an Ethereum transaction
+// the signature object contains r, s, recId and the public key associated to this signature
+RecoverableSignature signature = new RecoverableSignature(hash, cashCmdSet.sign(hash).checkOK().getData());
+</code></pre>
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-10-21
 								
 							</div>
 						</div>

@@ -477,7 +477,7 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/sdk/duplication.html">Card Duplication</a>
+        <a href="/fr/keycard_api/sdk/cash.html">Cash applet</a>
         
       </li>
         </ul>
@@ -530,11 +530,6 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/apdu/setndef.html">SET NDEF</a>
-        
-      </li>
-
-      <li class="">
         <a href="/fr/keycard_api/apdu/verifypin.html">VERIFY PIN</a>
         
       </li>
@@ -575,11 +570,6 @@
       </li>
 
       <li class="">
-        <a href="/fr/keycard_api/apdu/duplicatekey.html">DUPLICATE KEY</a>
-        
-      </li>
-
-      <li class="">
         <a href="/fr/keycard_api/apdu/sign.html">SIGN</a>
         
       </li>
@@ -591,6 +581,16 @@
 
       <li class="">
         <a href="/fr/keycard_api/apdu/exportkey.html">EXPORT KEY</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/fr/keycard_api/apdu/storedata.html">STORE DATA</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/fr/keycard_api/apdu/getdata.html">GET DATA</a>
         
       </li>
         </ul>
@@ -855,7 +855,7 @@
 						<div class="col-md-12">
 							<div class="editor-content">
 								<h1 id="Overview" class="article-heading"><a href="#Overview" class="headerlink" title="Overview"></a>Overview<a class="article-anchor" href="#Overview" aria-hidden="true"></a></h1><p>This document describes all APDUs part of the Keycard APDU protocol. Any implementation must fully implement this specification except for items explicitly marked as optional or conditional. The Keycard applet is a full implementation of this specification. The Java SDK provides both low-level methods to send each of the APDUs described here as well as convenience methods and classes to simplify integration.</p>
-<h2 id="Version" class="article-heading"><a href="#Version" class="headerlink" title="Version"></a>Version<a class="article-anchor" href="#Version" aria-hidden="true"></a></h2><p>This documentation is at version 2.2.</p>
+<h2 id="Version" class="article-heading"><a href="#Version" class="headerlink" title="Version"></a>Version<a class="article-anchor" href="#Version" aria-hidden="true"></a></h2><p>This documentation is at version 3.0.</p>
 <h2 id="Conventions" class="article-heading"><a href="#Conventions" class="headerlink" title="Conventions"></a>Conventions<a class="article-anchor" href="#Conventions" aria-hidden="true"></a></h2><ul>
 <li>Bits are counted from 0. If this documentation talks mentions bit 7 it refers to the MSB of a byte.</li>
 <li>When a command has a precondition clause and these are not met the Status Word 0x6985 is returned. </li>
@@ -867,15 +867,15 @@
 <h3 id="Secure-Channel" class="article-heading"><a href="#Secure-Channel" class="headerlink" title="Secure Channel"></a>Secure Channel<a class="article-anchor" href="#Secure-Channel" aria-hidden="true"></a></h3><p>The Secure Channel protocol defined in this document provides both passive and active MITM protection and PFS. Some devices however might have inherently secure connections to the client (for example Bluetooth based devices can use pairing and encrypted communication). To avoid overhead, devices using inherently secure connections can avoid implementing the secure channel defined here.</p>
 <p>Devices not implementing the Secure Channel capability do not implement the <strong>PAIR</strong>, <strong>UNPAIR</strong>, <strong>OPEN SECURE CHANNEL</strong> and <strong>MUTUALLY AUTHENTICATE</strong> commands. The <strong>CHANGE PIN</strong> and <strong>INIT</strong> commands do not allow setting the pairing password.</p>
 <h3 id="Key-management" class="article-heading"><a href="#Key-management" class="headerlink" title="Key management"></a>Key management<a class="article-anchor" href="#Key-management" aria-hidden="true"></a></h3><p>Key management is the ability to generate, remove, backup and restore keys. Some devices might have internal key management and not allow the client to take part in this process.</p>
-<p>Devices not implementing the Key management capability do not implement the <strong>LOAD KEY</strong>, <strong>GENERATE KEY</strong>, <strong>GENERATE MNEMONIC</strong>, <strong>REMOVE KEY</strong> and <strong>DUPLICATE KEY</strong> commands.</p>
+<p>Devices not implementing the Key management capability do not implement the <strong>LOAD KEY</strong>, <strong>GENERATE KEY</strong>, <strong>GENERATE MNEMONIC</strong>, <strong>REMOVE KEY</strong> commands.</p>
 <h3 id="Credentials-management" class="article-heading"><a href="#Credentials-management" class="headerlink" title="Credentials management"></a>Credentials management<a class="article-anchor" href="#Credentials-management" aria-hidden="true"></a></h3><p>Credentials management is the ability to authenticate the user and manipulate PIN, PUK and pairing password. Some devices, especially those with screen and buttons, might want to handle this completely internally without client intervention.</p>
 <p>Devices not implementing the Credentials management capability do not implement the <strong>INIT</strong>, <strong>VERIFY PIN</strong>, <strong>UNBLOCK PIN</strong> and <strong>CHANGE PIN</strong> commands.</p>
 <h3 id="NDEF" class="article-heading"><a href="#NDEF" class="headerlink" title="NDEF"></a>NDEF<a class="article-anchor" href="#NDEF" aria-hidden="true"></a></h3><p>The NDEF capability is the ability to set a custom NDEF record on the NFC interface. The NDEF record is used, for example, by mobile phones to decide the action to perform when a card is tapped to the device and no application using NFC is open. Customizing the NDEF record allow setting a default client or link to launch. Obviously, not all devices have a NFC interface and even those who do might not provide a way to customize the NDEF response.</p>
-<p>Devices not implementing the NDEF capability do not implement the <strong>SET NDEF</strong> command.</p>
+<p>Devices not implementing the NDEF capability do not support P1 = 0x01 (SET NDEF DATA) in the <strong>STORE DATA</strong> command.</p>
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-10-21
 								
 							</div>
 						</div>
