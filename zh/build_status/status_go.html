@@ -864,12 +864,13 @@
 <li>A command line tool to test availability of a given Whisper mailserver (used to check uptime of the Status cluster).</li>
 </ul>
 <h2 id="Build-status-go-1" class="article-heading"><a href="#Build-status-go-1" class="headerlink" title="Build status-go"></a>Build status-go<a class="article-anchor" href="#Build-status-go-1" aria-hidden="true"></a></h2><h3 id="1-Requirements" class="article-heading"><a href="#1-Requirements" class="headerlink" title="1. Requirements"></a>1. Requirements<a class="article-anchor" href="#1-Requirements" aria-hidden="true"></a></h3><ul>
-<li>Go version 1.10;</li>
+<li>Go version 1.12;</li>
 <li>Set <code>GOPATH</code>;</li>
 <li>Docker (only if cross-compiling).</li>
 </ul>
 <h3 id="2-Clone-the-repository" class="article-heading"><a href="#2-Clone-the-repository" class="headerlink" title="2. Clone the repository"></a>2. Clone the repository<a class="article-anchor" href="#2-Clone-the-repository" aria-hidden="true"></a></h3><pre><code class="shell">git clone https://github.com/status-im/status-go
 cd status-go
+git checkout develop
 </code></pre>
 <h3 id="3-Set-up-build-environment" class="article-heading"><a href="#3-Set-up-build-environment" class="headerlink" title="3. Set up build environment"></a>3. Set up build environment<a class="article-anchor" href="#3-Set-up-build-environment" aria-hidden="true"></a></h3><p>status-go uses Makefile to perform the most common actions. See <code>make help</code> output for available commands.</p>
 <p>The first thing to do to get started is to run <code>make setup</code>. That’ll ensure that all tools required to do a first build are installed and set up.</p>
@@ -954,7 +955,7 @@ cd status-go
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-10-28
 								
 							</div>
 						</div>
