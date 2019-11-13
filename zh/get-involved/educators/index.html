@@ -568,6 +568,7 @@
                 <div class="col-md-12">
                     <div class="inline">
                         <a href="/zh/privacy-policy/">隐私政策</a>
+                        <a href="https://our.status.im/implementing-fathom-analytics-on-marketing-websites/">Site Analytics</a>
                     </div>
                     <p>Status Research＆Development GmbH，Baarerstrasse 10，Zug，Switzerland</p>
                 </div>
@@ -592,13 +593,27 @@
     <script type="text/javascript" src="/js/main.js"></script>
 
     <script>
-      /* This POSTs to the clicks-api service to click numbers of downloads of different releases */
-      $(document).ready(function () {
-        $('a.app-download').click(function (ev) {
-          let downloadType = $(this).closest('a').attr('id')
-          $.post(`https://clicks.status.im/clicks/${downloadType}`)
+        /* This POSTs to the clicks-api service to click numbers of downloads of different releases */
+        $(document).ready(function () {
+          $('a.app-download').click(function (ev) {
+            let downloadType = $(this).closest('a').attr('id')
+            $.post(`https://clicks.status.im/clicks/${downloadType}`)
+          });
         });
-      });
+    </script>
+    <script>
+        /* Fathom - simple website analytics - https://github.com/usefathom/fathom */
+        (function(f, a, t, h, o, m){
+          a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+          };
+          o=f.createElement('script'),
+          m=f.getElementsByTagName('script')[0];
+          o.async=1; o.src=t; o.id='fathom-script';
+          m.parentNode.insertBefore(o,m)
+        })(document, window, '//fathom.status.im/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'BMGJI');
+        fathom('trackPageview');
     </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
