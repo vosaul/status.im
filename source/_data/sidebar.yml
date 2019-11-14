@@ -180,7 +180,7 @@ docs:
       - title: Ultra Light Client in details
         path: ulc_in_details.html
       - title: Nimbus
-        path: https://nimbus.status.im/
+        path: https://nimbus.team/
       - title: Whisper In Your CLI
         path: ../tutorials/whisper_basic_cli.html
       - title: Whisper with Embark

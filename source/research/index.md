@@ -7,7 +7,7 @@ title: Research at Status
 
 ## Do You Want to Know a Secret?
 
-Our work began with Whisper, which is not your typical communications system. However, we now are also actively implementing [Nimbus (an Ethereum 2.0 Client)](https://nimbus.status.im), [Ultra Light Clients](./ulc_in_details.html), and a number of other things which you can also follow on our [research blog](https://our.status.im/tag/research).
+Our work began with Whisper, which is not your typical communications system. However, we now are also actively implementing [Nimbus (an Ethereum 2.0 Client)](https://nimbus.team/), [Ultra Light Clients](./ulc_in_details.html), and a number of other things which you can also follow on our [research blog](https://our.status.im/tag/research).
 
 But, for now, let's stick with Whisper:
 
