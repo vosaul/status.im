@@ -65,8 +65,6 @@ docs:
         path: desktop_troubleshooting.html
       - title: Google Breakpad Integration
         path: desktop_google_breakpad.html
-      - title: Jenkins Setup
-        path: desktop_jenkins.html
       - title: Status-React Quick Start
         path: status_react_quickstart.html
       - title: Your First PR
