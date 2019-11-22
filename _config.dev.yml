@@ -55,14 +55,5 @@ elasticsearch:
 # ID for Fathom Analytics
 fathom_site_id: 'QMOCY'
 
-math:
-  engine: 'mathjax' # or 'katex'
-  mathjax:
-   # src: custom_mathjax_source
-   # config: MathJax config
-  katex:
-   # css: custom_css_source
-   # config: KaTeX config
-
 marked:
   breaks: false

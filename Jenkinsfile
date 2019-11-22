@@ -11,6 +11,9 @@ pipeline {
   }
 
   environment {
+    SCP_OPTS = 'StrictHostKeyChecking=no'
+    DEV_HOST = 'jenkins@node-01.do-ams3.proxy.misc.statusim.net'
+    DEV_SITE = 'dev.status.im'
     GIT_USER = 'status-im-auto'
     GIT_MAIL = 'auto@status.im'
   }
@@ -63,7 +66,7 @@ pipeline {
       when { expression { GIT_BRANCH.endsWith('master') } }
       steps { script {
         sshagent(credentials: ['status-im-auto-ssh']) {
-          sh 'npm run deploy'
+          sh 'yarn run deploy'
         }
       } }
     }
@@ -71,11 +74,16 @@ pipeline {
     stage('Publish Devel') {
       when { expression { !GIT_BRANCH.endsWith('master') } }
       steps { script {
+        def site = DEV_SITE
+        /* dev site for testing translations */
+        if (GIT_BRANCH == 'dev-lang') {
+           site = 'dev-lang.status.im'
+        }
         sshagent(credentials: ['jenkins-ssh']) {
-          sh '''
-            rsync -e 'ssh -o StrictHostKeyChecking=no' -r --delete public/. \
-            jenkins@node-01.do-ams3.proxy.misc.statusim.net:/var/www/dev/
-          '''
+          sh """
+            rsync -e 'ssh -o ${SCP_OPTS}' -r --delete \
+              public/. ${DEV_HOST}:/var/www/${DEV_SITE}/
+          """
         }
       } }
     }
