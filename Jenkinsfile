@@ -76,13 +76,13 @@ pipeline {
       steps { script {
         def site = DEV_SITE
         /* dev site for testing translations */
-        if (GIT_BRANCH == 'dev-lang') {
+        if (GIT_BRANCH.endsWith('dev-lang')) {
            site = 'dev-lang.status.im'
         }
         sshagent(credentials: ['jenkins-ssh']) {
           sh """
             rsync -e 'ssh -o ${SCP_OPTS}' -r --delete \
-              public/. ${DEV_HOST}:/var/www/${DEV_SITE}/
+              public/. ${DEV_HOST}:/var/www/${site}/
           """
         }
       } }
