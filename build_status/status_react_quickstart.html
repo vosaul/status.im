@@ -170,7 +170,7 @@
       <div class="language-selector">
         <a href="#" class="language-selector-trigger btn btn-arrow">en</a>
         <ul>
-          <li class="active"><a href="/build_status/status_react_quickstart.html">English</a></li><li class=""><a href="/ko/build_status/status_react_quickstart.html">한국어</a></li><li class=""><a href="/zh/build_status/status_react_quickstart.html">中文</a></li><li class=""><a href="/ru/build_status/status_react_quickstart.html">Русский</a></li><li class=""><a href="/fr/build_status/status_react_quickstart.html">Français</a></li>
+          <li class="active"><a href="/build_status/status_react_quickstart.html">English</a></li><li class=""><a href="/ko/build_status/status_react_quickstart.html">한국어</a></li><li class=""><a href="/zh/build_status/status_react_quickstart.html">中文</a></li><li class=""><a href="/ru/build_status/status_react_quickstart.html">Русский</a></li><li class=""><a href="/fr/build_status/status_react_quickstart.html">Français</a></li><li class=""><a href="/ar/build_status/status_react_quickstart.html">العربية</a></li>
         </ul>
       </div>
     
@@ -903,13 +903,16 @@
 <h1 id="Debugging-amp-Developing-with-re-frisk" class="article-heading"><a href="#Debugging-amp-Developing-with-re-frisk" class="headerlink" title="Debugging &amp; Developing with re-frisk"></a>Debugging &amp; Developing with re-frisk<a class="article-anchor" href="#Debugging-amp-Developing-with-re-frisk" aria-hidden="true"></a></h1><p>As mentioned above, our Makefiles loaded up a re-frisk instance for us, to aid development / debugging.  If you open a browser window and head over to <code>http://localhost:4567</code> – you can make use of this.</p>
 <p><img src="./img/re-frisk-monitoring.png" alt="re-frisk-monitoring.png"></p>
 <h1 id="Re-installing-amp-Cleaning-Up" class="article-heading"><a href="#Re-installing-amp-Cleaning-Up" class="headerlink" title="Re-installing &amp; Cleaning Up"></a>Re-installing &amp; Cleaning Up<a class="article-anchor" href="#Re-installing-amp-Cleaning-Up" aria-hidden="true"></a></h1><p>If for any reason you need to completely clean up Status, go to <code>~/Library/Application Support/</code> and delete any <code>Status</code> directories. Delete the app in <code>/Application</code>. Then you are ready to reinstall.</p>
-<p>You can also purge / clean up Nix by running the command:</p>
+<p>To free up space by removing old packages from the Nix store you can use:</p>
+<pre><code class="bash">make nix-gc
+</code></pre>
+<p>You can also purge Nix and all its related files by running the command:</p>
 <pre><code class="bash">make nix-purge
 </code></pre>
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-12-19
 								
 							</div>
 						</div>

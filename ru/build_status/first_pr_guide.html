@@ -170,7 +170,7 @@
       <div class="language-selector">
         <a href="#" class="language-selector-trigger btn btn-arrow">ru</a>
         <ul>
-          <li class=""><a href="/build_status/first_pr_guide.html">English</a></li><li class=""><a href="/ko/build_status/first_pr_guide.html">한국어</a></li><li class=""><a href="/zh/build_status/first_pr_guide.html">中文</a></li><li class="active"><a href="/ru/build_status/first_pr_guide.html">Русский</a></li><li class=""><a href="/fr/build_status/first_pr_guide.html">Français</a></li>
+          <li class=""><a href="/build_status/first_pr_guide.html">English</a></li><li class=""><a href="/ko/build_status/first_pr_guide.html">한국어</a></li><li class=""><a href="/zh/build_status/first_pr_guide.html">中文</a></li><li class="active"><a href="/ru/build_status/first_pr_guide.html">Русский</a></li><li class=""><a href="/fr/build_status/first_pr_guide.html">Français</a></li><li class=""><a href="/ar/build_status/first_pr_guide.html">العربية</a></li>
         </ul>
       </div>
     
@@ -879,7 +879,7 @@ git fetch upstream
 <pre><code class="bash">git checkout -b my_example_status_branch -t upstream/develop
 </code></pre>
 <h3 id="3-Get-the-environment-ready" class="article-heading"><a href="#3-Get-the-environment-ready" class="headerlink" title="3. Get the environment ready"></a>3. Get the environment ready<a class="article-anchor" href="#3-Get-the-environment-ready" aria-hidden="true"></a></h3><p>Depending on which environment you want to build for (Android/iOS/Desktop), there are different build targets to leverage.  Update the target OS defined below based on your intended build environment.</p>
-<pre><code class="bash">make shell TARGET_OS=android
+<pre><code class="bash">make shell TARGET=android
 </code></pre>
 <p>Follow the more detailed walkthroughs in the below links to get up and running with the end-to-end build process for each environment.</p>
 <ul>
@@ -908,7 +908,7 @@ git commit -m &quot;My code works!&quot;
 
 							</div>
 							<div class="docs-footer">
-								Last update: 2019-10-15
+								Last update: 2019-12-19
 								
 							</div>
 						</div>
