@@ -27,7 +27,7 @@ new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
 per_page: 0
 
-discord_url: https://discord.gg/qKWa9pF
+discord_url: https://discord.gg/3Exux7Y
 
 highlight:
   enable: false
