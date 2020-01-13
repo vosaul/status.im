@@ -399,6 +399,9 @@ h4{
 .m-r-30{
     margin-right: 30px;
 }
+.m-r-20{
+    margin-right: 20px;
+}
 .m-b-25{
     margin-bottom: 25px;
 }
@@ -954,6 +957,40 @@ footer{
     background: $black;
     color: $white;
     padding: 0 25px;
+    &.grey{
+        background: $lighter-grey;
+        .get-started,
+        .navigation,
+        .connect{
+            display: none;
+        }
+        .copyright{
+            .inline{
+                a{
+                    color: rgba($light-black, .6);
+                    &:hover{
+                        color: $light-black;
+                    }
+                }
+            }
+            p{
+                color: rgba($light-black, .3);
+            }
+            .verified{
+                a{
+                    color: rgba($black, 0.6);
+                    &:hover{
+                        color: rgba($black, 1);
+                        svg{
+                            path{
+                                fill: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     a{
         color: $white;
         svg{
@@ -981,6 +1018,14 @@ footer{
         a{
             color: rgba($white, .5);
             pointer-events: none;
+            &.pe-all{
+                pointer-events: all;
+                display: inline-block;
+                margin: -6px 0 -8px 5px;
+                &:hover{
+                    opacity: .8;
+                }
+            }
         }
     }
     ul{
@@ -1061,6 +1106,27 @@ footer{
             font-family: $manrope;
             font-weight: $manrope-medium;
         }
+        .verified{
+            text-align: right;
+            margin-top: -4px;
+            a{
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.6);
+                font-family: $manrope;
+                font-weight: $manrope-medium;
+                &:hover{
+                    color: $white;
+                    svg{
+                        path{
+                            fill: $white;
+                        }
+                    }
+                }
+                svg{
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -1070,8 +1136,34 @@ footer{
     .inner{
         padding: 30px 0;
     }
-    img{
-        margin: -2px 0 0 -110px;
+    .mobile{
+        img{
+            margin: -2px 0 0 -110px;
+        }
+    }
+    .features{
+        list-style-type: none;
+        padding: 0;
+        max-width: 430px;
+        li{
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            .img-holder{
+                margin-top: 6px;
+                width: 30px;
+            }
+            .li-inner{
+                margin-left: 20px;
+                h4{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 38px;
+                    color: $black;
+                    margin-bottom: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -1137,6 +1229,20 @@ footer{
     .img-holder{
         margin: 40px 0 30px;
     }
+    h3{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 30px;
+        }
+    }
+    .inner-security{
+        h3{
+            img{
+                margin-top: -10px;
+            } 
+        }
+    }
 }
 
 /*------FEATURES-----*/
@@ -1150,9 +1256,10 @@ footer{
         }
     }
     .img-holder{
+        display: flex;
+        justify-content: center;
         img{
-            margin-top: -110px;
-            max-width: 100%;
+            margin-top: -150px;
         }
     }
 }
@@ -2974,6 +3081,44 @@ img.qr-code{
     }
 }
 
+.channel-invite{
+    h3{
+        a{
+            background: $purple;
+            color: $white;
+            padding: 0 10px;
+            border-radius: 4px;
+            &:hover{
+                background: $black;
+            }
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        margin: 60px -30px 0;
+        padding: 0;
+        li{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: $purple;
+            width: calc(25% - 30px);
+            margin: 0 15px;
+            display: flex;
+            &:before{
+                content: '';
+                min-width: 16px;
+                height: 16px;
+                background-image: url('../img/icon-status-list.svg');
+                display: flex;
+                margin-right: 8px;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1499px){
     .container {
         max-width: 1170px;
@@ -3069,9 +3214,11 @@ img.qr-code{
         }
     }
     .home-intro{
-        img{
-            width: 100%;
-            margin-left: -80px;
+        .mobile{
+            img{
+                width: 100%;
+                margin-left: -80px;
+            }
         }
     }
     .home-private{
@@ -3126,7 +3273,7 @@ img.qr-code{
         }
         .img-holder{
             img{
-                max-width: 80%;
+                max-width: 100%;
                 margin: -100px auto 0 auto;
                 display: block;
             }
@@ -3318,6 +3465,27 @@ img.qr-code{
             padding-right: 0;
         }
     }
+    .home-security{
+        h3{
+            img{
+                margin-right: 20px;
+            }
+        }
+        .inner-security{
+            h3{
+                img{
+                    width: 30px;
+                }
+            }
+        }
+        .inner-status-network{
+            h3{
+                img{
+                    width: 40px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -3330,7 +3498,7 @@ img.qr-code{
         font-size: 31px;
     }
     h3{
-        line-height: 38px;
+        line-height: 34px;
         font-size: 25px;
     }
     h4{
@@ -3482,9 +3650,11 @@ img.qr-code{
         }
     }
     .home-intro {
-        img{
-            width: 200%;
-            margin-left: -160px;
+        .mobile{
+            img{
+                width: 200%;
+                margin-left: -160px;
+            }
         }
     }
     .home-browser {
@@ -3609,12 +3779,44 @@ img.qr-code{
             }
         }
     }
+    .korean-channel{
+        ul{
+            flex-wrap: wrap;
+            margin-top: 10px;
+            li{
+                width: calc(50% - 30px);
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .col-offset-bottom{
+        margin-bottom: 0;
+    }
     .home-intro{
+        .inner{
+            margin-top: 0;
+        }
         .announcement{
             display: none;
+        }
+        .features{
+            li{
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .li-inner{
+                    h4{
+                        font-size: 18px;
+                        line-height: 38px;
+                    }
+                    p{
+                        margin-left: -50px;
+                    }
+                }
+            }
         }
     }
     .container{
@@ -3713,9 +3915,8 @@ img.qr-code{
             order: -1;
             .img-holder {
                 img{
-                    margin-top: -54px;
-                    max-width: calc(100% + 40px);
-                    margin: -54px -20px 0;
+                    max-width: 120%;
+                    margin: -100px -20px 0;
                     display: block;
                 }
             }
@@ -4037,6 +4238,15 @@ img.qr-code{
             .collapse:not(.show){
                 display: none;
             }
+            .pe-all{
+                display: none;
+            }
+        }
+        .copyright{
+            .verified{
+                text-align: left;
+                margin-top: 20px;
+            }
         }
     }
     .docs-content {
@@ -4239,6 +4449,22 @@ img.qr-code{
             &:first-child{
                 margin-bottom: 50px;
             }
+        }
+    }
+    .korean-channel{
+        ul{
+            margin-left: 0;
+            margin-right: 0;
+            li{
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    .home-security{
+        .inner-security{
+            margin-bottom: 50px;
         }
     }
 }
