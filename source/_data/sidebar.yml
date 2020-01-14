@@ -6,10 +6,6 @@ docs:
         path: contributor_guide.html
       - title: FAQs
         path: FAQs.html
-      - title: Status React Structure
-        path: status_react_structure.html
-      - title: Send Transaction Flow
-        path: send_transaction_flow.html
       - title: Run Status Node
         path: run_status_node.html
       - title: Keycard API
