@@ -21,12 +21,14 @@ Status currently has a private campaign on the HackerOne platform for bug bounti
 
 ## Ongoing Security Audits
 
+There are no current ongoing security audits. 
+
+## Finalized Security Audits
+
 ### Status Mobile App V1 with Trail of Bits
 - Started September 30th, 2019
 - Ends November 1st, 2019
-- Github repo will be made available after all issues are resolved
-
-## Finalized Security Audits
+- [Blog post](https://our.status.im/status-mobile-app-security-audit-complete-ahead-of-v1-launch/)
 
 ### Sticker Market contracts with Trail of Bits
 - June 2019 - [Sticker Market Repository (with contracts)](github.com/status-im/sticker-market)
@@ -36,12 +38,12 @@ Status currently has a private campaign on the HackerOne platform for bug bounti
  
 ### ENS smart contract with Sigma Prime
 - October 2018 - [ENS Username Contract ](https://github.com/status-im/ens-usernames/blob/master/contracts/registry/UsernameRegistrar.sol) - commit hash [eaefa92](https://github.com/status-im/ens-usernames/commit/eaefa92a258c784f1df4066e057e8170bcb6ef95#diff-dbff1e6b987cbb9a6b87ea8180c41e72)
-- [report](https://drive.google.com/open?id=1BqiPGBjILgbIlmMXAO8AombxW_jsQtfC)
-- [tests](https://drive.google.com/open?id=12ACYXvPn8WUyRg9WCooUTO3vvJVuo7lL)
-- [code](https://drive.google.com/open?id=16LbYo4PYv3CY8XZ57kBsB3TxPzGkrb8j)
-- [blog post](https://blog.sigmaprime.io/status-ens-review.html)
+- [Report](https://drive.google.com/open?id=1BqiPGBjILgbIlmMXAO8AombxW_jsQtfC)
+- [Tests](https://drive.google.com/open?id=12ACYXvPn8WUyRg9WCooUTO3vvJVuo7lL)
+- [Code](https://drive.google.com/open?id=16LbYo4PYv3CY8XZ57kBsB3TxPzGkrb8j)
+- [Blog post](https://blog.sigmaprime.io/status-ens-review.html)
 
 ### Deja Vu Beta Audit
 - May 07, 2018 - [Status-go](https://github.com/status-im/status-go) and [Status-react](https://github.com/status-im/status-react) repos with Deja Vu 
-- [report](https://drive.google.com/file/d/1wB5pGPaNsQwq2udV7NmHkLuW-2JCMbnV/view) 
-- [blog post](https://blog.status.im/status-deja-vu-security-audit-final-report-5b6eda5a683a)
+- [Report](https://drive.google.com/file/d/1wB5pGPaNsQwq2udV7NmHkLuW-2JCMbnV/view) 
+- [Blog post](https://blog.status.im/status-deja-vu-security-audit-final-report-5b6eda5a683a)
