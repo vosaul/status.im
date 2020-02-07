@@ -660,7 +660,7 @@ site:
         link-1: "DApp Integration"
         link-2: "Contributor Guide"
         link-3: "Build Status"
-        link-4: "Security"
+        link-5: "Security"
       about: "About"
       blog: "Blog"
   footer:
