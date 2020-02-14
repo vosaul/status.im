@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-md-4 offset-md-1">
                                 <ul>
-                                    <li><a href="/es/get-involved/developers/" class="link-arrow">Desarrolladores</a></li>
+                                    <li><a href="/es/docs/" class="link-arrow">Desarrolladores</a></li>
                                     <li>
                                         <ul class="social-links">
                                             <li>
@@ -88,7 +88,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://get.status.im/chat/public/status" target="_blank" class="icon-status">
+                                                <a href="https://join.status.im/chat/public/status" target="_blank" class="icon-status">
                                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7.56399 7.53454C8.44481 7.62823 9.32562 7.72186 10.4085 7.66023C13.3425 7.49313 15.1198 5.95469 14.9937 3.6551C14.8652 1.31539 12.5007 -0.126087 10.1349 0.00869768C6.27942 0.228154 3.44428 3.68621 3.12497 7.6386C3.64857 7.51329 4.19968 7.43847 4.71939 7.4089C5.80237 7.34727 6.68318 7.4409 7.56399 7.53454ZM0.00597997 12.6495C0.12764 14.7943 2.3677 16.1156 4.60907 15.992C8.26156 15.7908 10.9476 12.6209 11.25 8.9979C10.754 9.11278 10.2319 9.18145 9.73953 9.20852C8.71356 9.26504 7.87904 9.17921 7.04453 9.09332C6.21007 9.0075 5.37556 8.92167 4.34965 8.97819C1.57021 9.13134 -0.113675 10.5415 0.00597997 12.6495Z" fill="#090909"/> </svg>
                                                 </a>
                                             </li>
@@ -144,12 +144,8 @@
                             </div>
                             <div class="col-md-4 offset-md-1">
                                 <ul>
-                                    <li><a href="/es/technical/contributor_guide.html" class="link-arrow">Empezar</a></li>
-                                    <li><a href="/es/build_status/" class="link-arrow">Construye Status</a></li>
-                                    <li><a href="/es/nightly/" class="link-arrow">Nightlies</a></li>
-                                    <li><a href="/es/developer_tools/" class="link-arrow">Herramientas de desarrollo</a></li>
-                                    <li><a href="/es/research/" class="link-arrow">Investigación</a></li>
-                                    <li><a href="/es/tutorials/" class="link-arrow">Tutoriales</a></li>
+                                    <li><a href="/es/technical/" class="link-arrow">Construye Status</a></li>
+                                    <li><a href="/es/developer_tools/" class="link-arrow">Empezar</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -193,282 +189,189 @@
         <!-- The main content area -->
 <main id="main" role="main">
 
-	<!-- DEVELOPMENT-OPEN-SOURCE -->
-	<section class="get-involved-intro p-t-160 p-b-160">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h4>Una comunidad de código abierto</h4>
-					<h1 class="community-nav-trigger">Desarrollo</h1>
-					<p class="teaser-1">Bienvenido al portal de desarrolladores de Status. Encuentra todo lo que necesitas para empezar a contribuir a Status, construyendo tus propios DApps, o ampliando tu trabajo con las funciones nativas de Status.</p>
-					<div class="open-source-illustration-horz"><img src="/img/open-source-illustration-horz.svg"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END-DEVELOPMENT-OPEN-SOURCE -->
-
-	<div class="position-relative">
-		<!-- DEVELOPMENT-QUICK-NAV -->
-		<section class="quick-nav">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<ul>
-							<li><a href="/es/get-involved/developers/" class="active"><img src="/img/development-small-icon.svg">Desarrolladores</a></li>
-							<li><a href="/es/get-involved/educators/"><img src="/img/educate-small-icon.svg">Educadores</a></li>
-							<li><a href="/es/get-involved/community-groups/"><img src="/img/community-groups-small-icon.svg">Grupos comunitarios</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- END-DEVELOPMENT-QUICK-NAV -->
-
-		<!-- DEVELOPMENT-QUICK-NAV-SUB -->
-		<section class="quick-nav-sub">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<ul>
-							<li><a href="#contribute-to-status">Contribuir a Status</a></li>
-							<li><a href="#build-dapps">Construir DApps</a></li>
-							<li><a href="#extend-dapps">Extender DApps</a></li>
-							<li><a href="#developer-resources">Recursos para desarrolladores</a></li>
-						</ul>
-						<a href="https://github.com/status-im" target="_blank"><img src="/img/github-white-logo.svg">Github</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- END-DEVELOPMENT-QUICK-NAV-SUB -->
+	<div class="stripe">
+		<b>Status Documentation</b>
+		<form id="search-form">
+    <input type="text" name="userSearch" id="search-input" placeholder="Search documentation...">
+    <div id="search-results"></div>
+</form>
 	</div>
 
-	<!-- DEVELOPMENT-CONTRIBUTE-TO-STATUS -->
-	<section class="development-contribute-to-status p-t-160 p-b-160" id="contribute-to-status">
-		<div class="container">
+	<section class="single-docs-content">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12">
-					<h2>Contribuir a Status</h2>
-					<p class="teaser-2">Prepárate con esta guía para contibuidores. <a href="/es/technical/contributor_guide.html" class="link-arrow quick-start-guide">Guía de inicio rápido</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="box-with-icon m-t-50">
-						<img src="/img/github-black-logo.svg">
-						<div class="inner">
-							<h3>Status-React</h3>
-							<p class="p-large">Escrito en Clojure - aquí es donde manejamos las interacciones entre Whisper y la aplicación; entre la billetera, el usuario y cualquier aplicación distribuida (DApp) a la que quieran acceder; y donde vive la lógica de la interfaz de usuario.</p>
-							<a href="https://github.com/status-im/status-react" target="_blank" class="link-arrow">Ver repositorio</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="box-with-icon m-t-50">
-						<img src="/img/github-black-logo.svg">
-						<div class="inner">
-							<h3>Status-Go</h3>
-							<p class="p-large">Escrito en Go - aquí es donde vive toda la lógica de la blockchain, las transacciones y el trabajo del cliente ligero que realizamos. </p>
-							<a href="https://github.com/status-im/status-go" target="_blank" class="link-arrow">Ver repositorio</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container m-t-90 open-issues">
-			<div class="row">
-				<div class="col-md-6">
-					<h3>Open Issues Status-React</h3>
-					<ul class="open-issues-react"></ul>
-					<a href="https://github.com/status-im/status-react/issues/" target="_blank" class="link-arrow">Ver todos los open issues</a>
-				</div>
-				<div class="col-md-6">
-					<h3>Open Issues Status-Go</h3>
-					<ul class="open-issues-go"></ul>
-					<a href="https://github.com/status-im/status-go/issues/" target="_blank" class="link-arrow">Ver todos los open issues</a>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="box-with-icon m-t-50">
-						<img src="/img/crypto-logo.svg">
-						<div class="inner">
-							<h3>Gana cripto por <br> completar bounties</h3>
-							<p class="p-large">Ve la lista completa de bounties técnicos en <a href="https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=status&order_by=-web3_created" target="_blank" class="link-arrow">Gitcoin</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="box-with-icon m-t-50">
-						<img src="/img/bounty-program.svg">
-						<div class="inner">
-							<h3>Reporta una vulnerabilidad de seguridad <br> y solucionala</h3>
-							<p class="p-large">Aprende más sobre el <a href="https://blog.status.im/status-network-token-bug-bounty-a66fc2324359" target="_blank" class="link-arrow">Programa Bug Bounty</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END-DEVELOPMENT-CONTRIBUTE-TO-STATUS -->
+				<div class="col-md-3 col-xl-2">
+					<aside class="sidebar" role="navigation">
+  <a href="#" class="btn sidebar-mobile-trigger">Docs categories</a>
+  <div class="sidebar-container">
+    <div class="mobile-sidebar-header">
+      <a href="/es/" class="logo"><img src="/img/logo.svg"></a>
+      <a href="#" class="mobile-sidebar-trigger-close">
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.5752" y="0.368273" width="22" height="1" rx="0.5" transform="rotate(45 1.5752 0.368273)" fill="#090909"></rect> <rect x="0.868164" y="15.9246" width="22" height="1" rx="0.5" transform="rotate(-45 0.868164 15.9246)" fill="#090909"></rect> </svg>
+      </a>
+    </div>
+    
+    <ul class="sidebar-menu">
+      
+      <li class="">
+        <a href="/es/technical/">Contributor Guide</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/technical/FAQs.html">Technical FAQs</a>
+        
+      </li>
 
-	<!-- DEVELOPMENT-DAPP -->
-	<section class="development-dapp" id="build-dapps">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 development-build-dapp">
-					<div class="inner d-flex align-items-start flex-column h-100">
-						<div class="row">
-							<div class="col-md-11 col-lg-10">
-								<h2>Construye tu propia DApp</h2>
-								<p class="teaser-2">Empieza a utilizar nuestras herramientas y frameworks para construir tu propia aplicación descentralizada.</p>
-								<ul>
-									<li><a href="/es/developer_tools/status_web_api.html" class="link-arrow">Optimiza para dispositivos móviles con la API de Javascript</a></li>
-									<li><a href="https://embark.status.im/" target="_blank" class="link-arrow">Construye tu propia DApp con Embark</a></li>
-									<li><a href="/es/developer_tools/access_eth_provider.html" class="link-arrow">Accede a proveedores Web3 y detecta Status</a></li>
-									<li><a href="/es/developer_tools/add_your_dapp.html" class="link-arrow">Envía tu DApp a la lista de DApp de Status.</a></li>
-								</ul>
+      <li class="">
+        <a href="/es/technical/contributor_workflow.html">Contributor Workflow</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/technical/run_status_node.html">Running A Status Node</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/technical/org_github_labels.html">Github Labels</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/technical/pfs.html">Perfect Forward Security</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/technical/build_status">Build Status</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/technical/build_status/status_go.html">Build Status-Go</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/technical/build_status/status_react_quickstart.html">Status-React Quick Start</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools">DApp Integration Center</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/developer_tools/why_status.html">Why Status</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/run_on_status/">Run on Status</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/developer_tools/run_on_status/mobile_dev_tools.html">Mobile Developer Tools</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/run_on_status/dapp_store_requirements.html">DApp Store Requirements</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/run_on_status/eip-1102.html">Implement EIP-1102</a>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/run_on_status/assets_guidelines.html">Asset Guidelines</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/status_extras/">Status DApp API</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/developer_tools/status_extras/status_dapp_api.html">Whisper &amp; QR Codes</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+
+      <li class="">
+        <a href="/es/developer_tools/register_dapps/">Curated DApp Store</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/es/developer_tools/register_dapps/register_dapps.html">Register DApps</a>
+        
+      </li>
+        </ul>
+        
+      </li>
+        </ul>
+        
+      </li>
+    </ul>
+  
+  </div>
+  <div class="backdrop"></div>
+</aside>
+				</div>
+				<div class="col-md-9 col-xl-8">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="editor-content">
+								
+							</div>
+							<div class="docs-footer">
+								Last update: 2019-10-15
+								
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-black col-offset-top development-extend-dapp" id="extend-dapps">
-					<div class="inner d-flex align-items-start flex-column justify-content-center h-100">
-						<div class="row">
-							<div class="col-lg-11 d-flex align-items-start flex-column">
-								<h2>Extiende tu DApp</h2>
-								<p class="teaser-2">Las extensiones te permiten aprovechar las funciones nativas de Status dentro de tu DApp.</p>
-								<ul>
-									<li><a href="/es/extensions/" class="link-arrow link-arrow-white">Introducción a extensiones</a></li>
-									<li><a href="/es/tutorials/" class="link-arrow link-arrow-white">Tutoriales</a></li>
-									<li><a href="/es/extensions/examples.html" class="link-arrow link-arrow-white">Ejemplos y extensiones existentes</a></li>
-								</ul>
-							</div>
-						</div>
+				<div class="col-lg-12 col-xl-2 d-none d-xl-block">
+					<div class="right-sub-navigation">
+						<b>On this page</b>
+						<ul></ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- DEVELOPMENT-DAPP -->
-
-	<!-- DEVELOPMENT-RESOURCES -->
-	<section class="development-resources col-dark-grey col-black p-b-160 p-t-160" id="developer-resources">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 mr-auto contribute-support">
-					<div class="inner">
-						<h2>Contribuir apoyo</h2>
-						<ul>
-							<li>
-								<a href="/es/docs/" class="link-arrow link-arrow-white">Escribe documentación</a>
-								<p>Sumérgete y ayuda a escribir, editar y arreglar los documentos. Las ediciones se realizan a través de GitHub.</p>
-							</li>
-							<li>
-								<a href="https://lokalise.co/projects" target="_blank" class="link-arrow link-arrow-white">Traduce documentación</a>
-								<p>Necesitamos ayuda para traducir toda nuestra documentación a tu idioma local.</p>
-							</li>
-							<li>
-								<a href="https://get.status.im/chat/public/introductions" target="_blank" class="link-arrow link-arrow-white">Bienvenidos nuevos contribuidores</a>
-								<p>Únete al canal de Status #introductions y ayuda a los nuevos contribuidores y miembros de la comunidad.</p>
-							</li>
-							<li>
-								<a href="mailto:contribute@status.im" class="link-arrow link-arrow-white">Crea tutoriales</a>
-								<p>Contáctanos y aprende cómo puedes tener tus tutoriales en los documentos y en el blog de Status.</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 developer-resources">
-					<div class="inner">
-						<h2>Recursos para desarrolladores</h2>
-						<ul>
-							<li><a href="https://github.com/status-im" target="_blank" class="link-arrow link-arrow-white">Repositorios Github</a></li>
-							<li><a href="/es/docs/" class="link-arrow link-arrow-white">Documentación</a></li>
-							<li><a href="https://embark.status.im/" target="_blank" class="link-arrow link-arrow-white">Embark</a></li>
-							<li><a href="/es/tutorials/" class="link-arrow link-arrow-white">Tutoriales</a></li>
-							<li><a href="/es/nightly/" class="link-arrow link-arrow-white">Nightly Builds</a></li>
-							<li><a href="https://our.status.im/" target="_blank" class="link-arrow link-arrow-white">Blog</a></li>
-							<li><a href="https://www.youtube.com/playlist?list=PLbrz7IuP1hrjyCQqEpkpho41JpaFF3czG" target="_blank" class="link-arrow link-arrow-white">Escucha la última llamada de desarrolladores core</a></li>
-							<li><a href="https://our.status.im/" target="_blank" class="link-arrow link-arrow-white">Echa un vistazo a las últimas notas de lanzamiento</a></li>
-							<li><a href="/es/about/#active-swarms" class="link-arrow link-arrow-white">Ve la lista de enjambres activos</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- DEVELOPMENT-RESOURCES  -->
-
-	<!-- DEVELOPMENT-GET-IN-TOUCH -->
-	<section class="development-get-in-touch p-t-160 p-b-160">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Ponte en contacto</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="inner">
-						<a href="https://get.status.im/chat/public/status" target="_blank"><img src="/img/status-purple-logo.svg">Únete a #status</a>
-						<p>Noticias y discusión general de Status.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="inner">
-						<a href="https://get.status.im/chat/public/status-core" target="_blank"><img src="/img/status-purple-logo.svg">Únete a #status-core</a>
-						<p>Canal público sobre desarrollo core.</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="inner">
-						<a href="https://get.status.im/chat/public/introductions" target="_blank"><img src="/img/status-purple-logo.svg">Únete a #introductions</a>
-						<p>¿Nuevo en Status? ¡Preséntate y saluda!</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="inner">
-						<a href="mailto:contribute@status.im">Contáctanos</a>
-						<p>Para todo lo demás, envíanos un correo electrónico directamente.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END-DEVELOPMENT-GET-IN-TOUCH -->
-
-	<div class="community-nav">
-		<a href="#" class="community-nav-trigger-close">
-			<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.5752" y="0.368273" width="22" height="1" rx="0.5" transform="rotate(45 1.5752 0.368273)" fill="#090909"></rect> <rect x="0.868164" y="15.9246" width="22" height="1" rx="0.5" transform="rotate(-45 0.868164 15.9246)" fill="#090909"></rect> </svg>
-		</a>
-		<nav>
-			<ul>
-				<li><a href="/es/get-involved/developers/" class="active">Desarrolladores</a></li>
-				<li><a href="/es/get-involved/educators/">Educadores</a></li>
-				<li><a href="/es/get-involved/community-groups/">Grupos comunitarios</a></li>
-			</ul>
-		</nav>
-	</div>
-	<div class="backdrop-community-nav"></div>
 
 </main>
-
-        <footer>
+        <footer class="">
     <div class="get-started">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <h3>¿Listo/a para empezar <br>con Status?</h3>
                 </div>
-                <div class="col-lg-7 text-right">
+                <div class="col-lg-8 text-right">
                     <div class="inline">
-                        <a href="/es/get/" class="btn btn-white-fill btn-arrow">Obtener Status</a>
+                        <a href="https://apps.apple.com/us/app/status-private-communication/id1178893006" class="m-r-20 download"><img src="/img/app-store.svg"></a>
+                        <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" class="m-r-20 download"><img src="/img/google-play.svg"></a>
+                        <a href="https://status-im.ams3.cdn.digitaloceanspaces.com/StatusIm-v1.0.1.apk" class="m-r-20 download"><img src="/img/apk.svg"></a>
                         <a href="/es/get-involved/" class="btn btn-white btn-arrow btn-arrow-white">Involucrate</a>
                     </div>
                 </div>
@@ -485,6 +388,7 @@
                             <li><a href="/es/features/">Funciones</a></li>
                             <li><a href="/es/security/">Seguridad</a></li>
                             <li><a href="/es/get/">Apps</a></li>
+                            <li><a href="/es/nightly/">Nocturna</a></li>
                         </ul>
                     </div>
                 </div>
@@ -494,9 +398,10 @@
                         <ul>
                             <li><a href="/es/get-involved/">Involucrate</a></li>
                             <li><a href="/es/about/">Acerca de</a></li>
-                            <li><a href="/es/contribute/open_positions.html">Vacantes</a></li>
+                            <li><a href="http://statusnetwork.com/press-kit/status/" target="_blank">Media Kit</a></li>
+                            <!-- <li><a href="/es/contribute/open_positions.html">Vacantes</a></li> -->
                             <li><a href="https://our.status.im/">Blog</a></li>
-                            <li><a href="/whitepaper.pdf" target="_blank">White Paper</a></li>
+                            <li><a href="/files/whitepaper.pdf" target="_blank">White Paper</a></li>
                         </ul>
                     </div>
                 </div>
@@ -505,21 +410,30 @@
                     <div class="collapse show" id="footer-nav-3">
                         <ul>
                             <li><a href="/es/docs/">Documentos</a></li>
-                            <li><a href="/es/technical/contributor_guide.html">Empezar</a></li>
-                            <li><a href="/es/build_status/">Construye Status</a></li>
-                            <li><a href="/es/nightly/">Nightlies</a></li>
-                            <li><a href="/es/developer_tools/">Herramientas de desarrollo</a></li>
-                            <li><a href="/es/tutorials/">Tutoriales</a></li>
+                            <li><a href="/es/developer_tools/">Empezar</a></li>
+                            <li><a href="/es/technical/">Construye Status</a></li>
+                            <li><a href="/es/technical/build_status/">Nightlies</a></li>
+                            <li><a href="/es/security/">Investigación</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h5><a data-toggle="collapse" href="#footer-nav-4" role="button" aria-expanded="true" aria-controls="footer-nav-4">Status Network</a></h5>
+                    <h5>
+                        <a data-toggle="collapse" href="#footer-nav-4" role="button" aria-expanded="true" aria-controls="footer-nav-4">
+                            Status Network
+                        </a>
+                        <a href="https://statusnetwork.com/" target="_blank" class="pe-all"><img src="/img/footer-status-network-logo.svg"></a>
+                    </h5>
                     <div class="collapse show" id="footer-nav-4">
                         <ul>
-                            <li><a href="https://embark.status.im/">Embark</a></li>
-                            <li><a href="https://nimbus.team/">Nimbus</a></li>
-                            <li><a href="https://keycard.tech/">Keycard</a></li>
+                            <li><a href="https://keycard.tech/" target="_blank">Keycard</a></li>
+                            <li><a href="https://dap.ps/" target="_blank">Dap.ps</a></li>
+                            <li><a href="https://teller.exchange/" target="_blank">Teller</a></li>
+                            <li><a href="https://assemble.fund/" target="_blank">Assemble</a></li>
+                            <li><a href="https://embark.status.im/" target="_blank">Embark</a></li>
+                            <li><a href="https://subspace.status.im/" target="_blank">Subspace</a></li>
+                            <li><a href="https://vac.dev/" target="_blank">Vac</a></li>
+                            <li><a href="https://nimbus.team/" target="_blank">Nimbus</a></li>
                         </ul>
                     </div>
                 </div>
@@ -533,7 +447,7 @@
                     <h5>Conectar</h5>
                     <ul>
                         <li>
-                            <a href="https://get.status.im/chat/public/status" target="_blank">
+                            <a href="https://join.status.im/chat/public/status" target="_blank">
                                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g opacity="0.5">
                                     <rect width="26" height="26" rx="2" fill="white"/>
@@ -624,12 +538,22 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-7">
                     <div class="inline">
                         <a href="/es/privacy-policy/">Política de privacidad</a>
                         <a href="https://our.status.im/implementing-fathom-analytics-on-marketing-websites/">Análisis del sitio</a>
                     </div>
                     <p>Status Research & Development GmbH, Baarerstrasse 10, Zug, Suiza</p>
+                </div>
+                <div class="col-md-5">
+                    <p class="verified">
+                        <a href="https://messari.io/asset/status/" target="_blank">
+                            Messari Transparency Verified 
+                            <svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.619 6.78163L16.354 0.130678C16.7424 -0.04464 17.1887 -0.0435034 17.5762 0.133791L32.0108 6.73815C32.4435 6.93613 32.7519 7.33018 32.8377 7.79455C34.0223 14.2086 33.5242 20.161 31.3434 25.6518C29.0785 31.3543 24.3727 35.4913 17.226 38.0626C9.87383 36.2554 4.90753 31.9102 2.32714 25.0269C-0.145514 18.431 -0.647719 12.6534 0.82053 7.69391C0.940286 7.2894 1.2317 6.95644 1.619 6.78163ZM20.1354 10.4413L16.0844 14.5553L14.5369 13.0577C14.1926 12.7246 13.6316 12.7218 13.2837 13.0515C12.9359 13.3813 12.933 13.9187 13.2773 14.2519L15.47 16.3738C15.8226 16.7151 16.4004 16.7084 16.7444 16.3591L21.4247 11.606C21.7605 11.265 21.7441 10.7278 21.3881 10.4062C21.032 10.0845 20.4712 10.1002 20.1354 10.4413ZM23.432 15.4245C23.432 15.3277 23.393 15.2349 23.3236 15.1667C23.1799 15.0257 22.9479 15.0267 22.8055 15.1691L20.0205 17.9523C19.9525 18.0203 19.9144 18.1121 19.9144 18.2077V26.9774C19.9144 27.0655 19.9467 27.1506 20.0054 27.2167C20.1388 27.3674 20.3703 27.3823 20.5223 27.2501L23.3073 24.8297C23.3866 24.7608 23.432 24.6614 23.432 24.5569V15.4245ZM16.9686 20.9306C16.8355 21.0433 16.6405 21.0469 16.5032 20.9392L15.6375 20.2602C15.5728 20.2094 15.4927 20.1818 15.4101 20.1818C15.2078 20.1818 15.0438 20.3442 15.0438 20.5446V26.9781C15.0438 27.0666 15.0764 27.152 15.1355 27.2183C15.2694 27.3685 15.5009 27.3827 15.6525 27.2501L18.4375 24.815C18.5163 24.7461 18.5614 24.647 18.5614 24.543V20.3701C18.5614 20.2837 18.5303 20.2001 18.4736 20.1344C18.3422 19.982 18.111 19.964 17.9571 20.0942L16.9686 20.9306ZM10.4437 15.4237V26.9822C10.4437 27.1826 10.6078 27.345 10.8101 27.345C10.8943 27.345 10.976 27.3163 11.0414 27.2636L13.8264 25.0175C13.9118 24.9486 13.9614 24.8452 13.9614 24.7361V18.19C13.9614 18.0939 13.923 18.0018 13.8545 17.9338L11.0695 15.1675C10.9266 15.0256 10.6947 15.0253 10.5514 15.1668C10.4825 15.2349 10.4437 15.3273 10.4437 15.4237Z" fill="#808080"/>
+                            </svg>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

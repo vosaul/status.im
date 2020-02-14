@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page Meta -->
-    <title>Status - Technical Documentation</title>
+    <title>Status - Contribute to Status</title>
     
 
     <!-- Mobile Meta -->
@@ -34,14 +34,14 @@
 
     <meta property="og:site_name" content="Status">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Status - Technical Documentation">
+    <meta property="og:title" content="Status - Contribute to Status">
     
     <meta property="og:url" content="https://status.im/technical/index.html">
     
     <meta property="og:image" content="https://status.im/img/share.png">
     <meta property="article:publisher" content="https://www.facebook.com/ethstatus">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Status - Technical Documentation">
+    <meta name="twitter:title" content="Status - Contribute to Status">
     
     <meta name="twitter:url" content="https://status.im/technical/index.html">
     
@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 </head></html>
-<body class="template-page">
+<body class="template-landingpage">
 
     <div class="main-container">
         <header>
@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-md-4 offset-md-1">
                                 <ul>
-                                    <li><a href="/zh/get-involved/developers/" class="link-arrow">开发者</a></li>
+                                    <li><a href="/zh/docs/" class="link-arrow">开发者</a></li>
                                     <li>
                                         <ul class="social-links">
                                             <li>
@@ -88,7 +88,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://get.status.im/chat/public/status" target="_blank" class="icon-status">
+                                                <a href="https://join.status.im/chat/public/status" target="_blank" class="icon-status">
                                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7.56399 7.53454C8.44481 7.62823 9.32562 7.72186 10.4085 7.66023C13.3425 7.49313 15.1198 5.95469 14.9937 3.6551C14.8652 1.31539 12.5007 -0.126087 10.1349 0.00869768C6.27942 0.228154 3.44428 3.68621 3.12497 7.6386C3.64857 7.51329 4.19968 7.43847 4.71939 7.4089C5.80237 7.34727 6.68318 7.4409 7.56399 7.53454ZM0.00597997 12.6495C0.12764 14.7943 2.3677 16.1156 4.60907 15.992C8.26156 15.7908 10.9476 12.6209 11.25 8.9979C10.754 9.11278 10.2319 9.18145 9.73953 9.20852C8.71356 9.26504 7.87904 9.17921 7.04453 9.09332C6.21007 9.0075 5.37556 8.92167 4.34965 8.97819C1.57021 9.13134 -0.113675 10.5415 0.00597997 12.6495Z" fill="#090909"/> </svg>
                                                 </a>
                                             </li>
@@ -144,12 +144,8 @@
                             </div>
                             <div class="col-md-4 offset-md-1">
                                 <ul>
-                                    <li><a href="/zh/technical/contributor_guide.html" class="link-arrow">开始参与</a></li>
-                                    <li><a href="/zh/build_status/" class="link-arrow">构建 Status.</a></li>
-                                    <li><a href="/zh/nightly/" class="link-arrow">Nightlies版</a></li>
-                                    <li><a href="/zh/developer_tools/" class="link-arrow">开发工具</a></li>
-                                    <li><a href="/zh/research/" class="link-arrow">研究</a></li>
-                                    <li><a href="/zh/tutorials/" class="link-arrow">教程</a></li>
+                                    <li><a href="/zh/technical/" class="link-arrow">Contributor Guide</a></li>
+                                    <li><a href="/zh/developer_tools/" class="link-arrow">开始参与</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -193,19 +189,19 @@
         <!-- The main content area -->
 <main id="main" role="main">
 
-	<div class="stripe">
-		<b>Status Documentation</b>
-		<form id="search-form">
+  <div class="stripe">
+    <b>Status Documentation</b>
+    <form id="search-form">
     <input type="text" name="userSearch" id="search-input" placeholder="Search documentation...">
     <div id="search-results"></div>
 </form>
-	</div>
+  </div>
 
-	<section class="single-docs-content">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3 col-xl-2">
-					<aside class="sidebar" role="navigation">
+  <section class="single-docs-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-xl-2">
+          <aside class="sidebar" role="navigation">
   <a href="#" class="btn sidebar-mobile-trigger">Docs categories</a>
   <div class="sidebar-container">
     <div class="mobile-sidebar-header">
@@ -218,42 +214,50 @@
     <ul class="sidebar-menu">
       
       <li class="active">
-        <a href="/zh/technical">Technical Documentation</a>
+        <a href="/zh/technical/">Contributor Guide</a>
         
         <ul class="sidebar-submenu">
           
       <li class="">
-        <a href="/zh/technical/contributor_guide.html">Contributor Guide</a>
+        <a href="/zh/technical/FAQs.html">Technical FAQs</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/technical/FAQs.html">FAQs</a>
+        <a href="/zh/technical/contributor_workflow.html">Contributor Workflow</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/technical/run_status_node.html">Run Status Node</a>
+        <a href="/zh/technical/run_status_node.html">Running A Status Node</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/keycard_api/">Keycard API</a>
+        <a href="/zh/technical/org_github_labels.html">Github Labels</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/tutorials/">Tutorials</a>
+        <a href="/zh/technical/pfs.html">Perfect Forward Security</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/guides/">Start Contributing</a>
+        <a href="/zh/technical/build_status">Build Status</a>
+        
+        <ul class="sidebar-submenu">
+          
+      <li class="">
+        <a href="/zh/technical/build_status/status_go.html">Build Status-Go</a>
         
       </li>
 
       <li class="">
-        <a href="/zh/mobile-release-schedule/">Schedule</a>
+        <a href="/zh/technical/build_status/status_react_quickstart.html">Status-React Quick Start</a>
+        
+      </li>
+        </ul>
         
       </li>
         </ul>
@@ -326,498 +330,50 @@
         </ul>
         
       </li>
-
-      <li class="">
-        <a href="/zh/build_status">Build Status</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/build_status/status_go.html">Build Status-Go</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/build_status/first_pr_guide.html">Your First PR</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/build_status/makefile_tour.html">A Makefile Tour</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/build_status/status_react_quickstart.html">Status-React Quick Start</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/tutorials">Tutorials</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/tutorials/whisper_basic_cli.html">Whisper Basic Cli</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/tutorials/whisper_embark.html">Whisper Embark</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api">Keycard API</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/keycard_api/applet_installation.html">Applet Installation</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/resources.html">Resources</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk">Java SDK</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/keycard_api/sdk/installation.html">Installation</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/connection.html">Card Connection</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/preparation.html">Preparation</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/securechannel.html">Secure Channel</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/authentication.html">Authentication</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/create_wallet.html">Wallet Creation</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/derivation_sign.html">Derivation & Signing</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/pinless.html">Pinless Signing</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/export.html">Exporting Keys</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/sdk/cash.html">Cash applet</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu">APDU API</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/keycard_api/apdu/changelog.html">CHANGELOG</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/select.html">SELECT</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/init.html">INIT</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/opensecurechannel.html">OPEN SECURE CHANNEL</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/mutuallyauthenticate.html">MUTUALLY AUTHENTICATE</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/pair.html">PAIR</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/unpair.html">UNPAIR</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/getstatus.html">GET STATUS</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/verifypin.html">VERIFY PIN</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/changepin.html">CHANGE PIN</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/unblockpin.html">UNBLOCK PIN</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/loadkey.html">LOAD KEY</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/derivekey.html">DERIVE KEY</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/generatemnemonic.html">GENERATE MNEMONIC</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/removekey.html">REMOVE KEY</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/generatekey.html">GENERATE KEY</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/sign.html">SIGN</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/setpinlesspath.html">SET PINLESS PATH</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/exportkey.html">EXPORT KEY</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/storedata.html">STORE DATA</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/keycard_api/apdu/getdata.html">GET DATA</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research">Research</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/research/extended_features.html">Whisper Extended Features</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/dark_routing.html">Whisper Dark Routing</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/whisper_pss.html">Whisper Comparison with PSS</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/whisper_faqs.html">Whisper FAQs</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/secure_messaging_compendium.html">Secure messaging Compendium</a>
-        
-      </li>
-
-      <li class="">
-        <a href="https://our.status.im/tag/research">Research Blog</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/pfs.html">Perfect Forward Secrecy</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/research/ulc_in_details.html">Ultra Light Client in details</a>
-        
-      </li>
-
-      <li class="">
-        <a href="https://nimbus.team/">Nimbus</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/tutorials/whisper_basic_cli.html">Whisper In Your CLI</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/tutorials/whisper_embark.html">Whisper with Embark</a>
-        
-      </li>
-
-      <li class="">
-        <a href="https://analytics.status.im/">Status Analytics</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/security_docs">Security</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/security_docs/sec_threat_modeling.html">Threat Modeling</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/security_docs/sec_existing_features.html">Existing Features Project</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/security_docs/sec_new_features.html">New Features Project</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/security_docs/sec_sensitive_data.html">What is Sensitive Data?</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/security_docs/sec_experiment.html">Security Experiment</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/audits/">Status External Audits</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/guides/">Security Week Guides</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/org_sec/">Policy and Procedure</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/audits">Audits</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/guides">Guides</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/guides/pm_guide.html">Product Manager's Guide</a>
-        
-      </li>
-        </ul>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute">Contribute</a>
-        
-        <ul class="sidebar-submenu">
-          
-      <li class="">
-        <a href="/zh/contribute/perks_benefits.html">Perks & Benefits</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/applying_to_status.html">Applying to Status</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/open_positions.html">Open Positions</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/applicant_privacy.html">Applicant Privacy</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/our_principles.html">Our Principles</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/life_status.html">Life at Status</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/the_future.html">The Future</a>
-        
-      </li>
-
-      <li class="">
-        <a href="/zh/contribute/faqs.html">FAQs</a>
-        
-      </li>
-        </ul>
-        
-      </li>
     </ul>
   
   </div>
   <div class="backdrop"></div>
 </aside>
-				</div>
-				<div class="col-md-9 col-xl-8">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="editor-content">
-								<h1 id="Technical-Documentation" class="article-heading"><a href="#Technical-Documentation" class="headerlink" title="Technical Documentation"></a>Technical Documentation<a class="article-anchor" href="#Technical-Documentation" aria-hidden="true"></a></h1><p>Welcome to our documentation pages! We know it’s the most important thing for growing our distributed ecosystem…</p>
-<p>Status is an open source community of people committed to building better, decentralised tools for web3, and making sure that everyone across the world can access these tools directly from their pockets.</p>
-<blockquote>
-<p>Writing “non-technical” documentation is a little besides the point, because our culture is <em>technical</em>. <a href="https://www.youtube.com/playlist?list=PLbrz7IuP1hrjyCQqEpkpho41JpaFF3czG" target="_blank" rel="noopener">Developer discussions</a>, <a href="#">tutorials</a>, and <a href="https://www.youtube.com/playlist?list=PLbrz7IuP1hrgu-NlZEaxatGS5slTkhZ0N" target="_blank" rel="noopener">Town Halls</a> are an essential part of our community, and should not be obscured or downplayed. We really want to build a better web, and we are doing it ourselves with skills we are teaching each other. This fact should be celebrated! Discussions about technical matters can be liberating and self-empowering; seriously, it’s through the slow accumulation of technical knowledge and skills that we can become excited about the future again.</p>
-</blockquote>
-<p><a href="../about/">Status the app</a> is how we implement in practical reality our vision of a more open, accessible and equitable internet for everyone: a brand new place where you can </p>
-<ol>
-<li><strong>Say</strong> what’s on your mind without fear of censorship.</li>
-<li><strong>Play</strong> with a new world of decentralised applications, creating all kinds of new value.</li>
-<li><strong>Pay</strong> whom you want, how you want, with no delays or middlemen.</li>
-<li><strong>Stay</strong> for the community of people committed to direct and private communication without intermediaries and the better world that vision implies.</li>
-</ol>
-<p>If “peer-to-peer electronic payment systems” are really going to change the ways we interact and organise as a society, then we need to make sure that as many people can take part in these networks as possible. As importantly, the tools they have ready access to must support web3 without making compromises that might keep the playing fields permanently skewed.</p>
-<p>People everywhere need to be able to connect, transact, explore, and create value with as much ease and freedom as bankers on Wall Street. It’s as simple as that, really.</p>
-<h1 id="Building-For-Mobile-Is-An-Adventure" class="article-heading"><a href="#Building-For-Mobile-Is-An-Adventure" class="headerlink" title="Building For Mobile Is An Adventure"></a>Building For Mobile Is An Adventure<a class="article-anchor" href="#Building-For-Mobile-Is-An-Adventure" aria-hidden="true"></a></h1><p>We give you that broad introduction to our goals here in order to prepare you for some of the rough edges you might run into when exploring web3 and the tooling that currently exists…</p>
-<p>Our code lives in two main repos: <a href="https://github.com/status-im/status-react" target="_blank" rel="noopener">status-react</a> and <a href="https://github.com/status-im/status-go" target="_blank" rel="noopener">status-go</a>. </p>
-<p>Status-react is where most of what might traditionally be called the “frontend” logic sits (everything to do with UI components and interactions, chats, views etc.) and status-go is where all the heavier blockchain logic sits. Status-go can be compiled as a stand alone library, and gets included as a static dependency in status-react at build time.</p>
-<p>Status-react is actually written in Clojure, which is a Lisp-like language that can be compiled down to React Native, so that we only have to maintain one codebase for Android, iOS and our desktop app.</p>
-<h1 id="Why-Clojure" class="article-heading"><a href="#Why-Clojure" class="headerlink" title="Why Clojure?"></a>Why Clojure?<a class="article-anchor" href="#Why-Clojure" aria-hidden="true"></a></h1><p>Well, it’s one of the most performant frontend frameworks going, with the <a href="https://medium.freecodecamp.org/a-real-world-comparison-of-front-end-frameworks-with-benchmarks-2018-update-e5760fb4a962" target="_blank" rel="noopener">fewest lines of code</a>. However, a lot of that is lost in the compilation down to React Native, so what are our real motivations?</p>
-<p>With Clojure you get a complete separation of functions and data. This means we can do amazing things in Status extensions that allow developers a lot of access to different parts of the data that now lives client side in decentralized networks, without compromising on the security of our users. And this is just the tip of the iceberg. </p>
-<p>We can imagine making every single component in the app just some data living at some content-addressed store in a distributed file system like Swarm, and then using the appropriate functions to compile a service Just In Time on your mobile device that allows you to do what you need to. Check out this <a href="https://www.youtube.com/watch?v=VYWujJBAb80&amp;index=9&amp;list=PLbrz7IuP1hrgDI595BXQGAXKvoexj8JCY" target="_blank" rel="noopener">tech talk</a> or read more in <a href="intro_dapps.html">these docs</a>.</p>
-<p>So, while we realise that we lose a lot of potential contributors to the core app by making such a choice, the developers we do attract tend to think about the world in similar ways to us. They don’t mind taking on really ambitious projects, but they do so with an approach to complex problems that is uniquely effective.</p>
-<p><img src="../img/lisp.jpg" alt="Lisp"></p>
-<p>Building on any decentralized network, in any language, requires something of a change in mindset. In fact, the Clojure docs are split up into:</p>
-<ol>
-<li><strong>The Forest of Tooling</strong></li>
-<li><strong>The Mountain of Language</strong></li>
-<li><strong>The Cave of Artifacts</strong></li>
-<li><strong>The Cloud Castle of Mindset</strong></li>
-</ol>
-<p>Status developers love this kind of thing, especially the Cloud Castle of Mindset, because building truly decentralised applications is really - first and foremost - about approaching the problems you face in fundamentally different ways. </p>
-<h1 id="What-Do-I-Need-To-Learn" class="article-heading"><a href="#What-Do-I-Need-To-Learn" class="headerlink" title="What Do I Need To Learn?"></a>What Do I Need To Learn?<a class="article-anchor" href="#What-Do-I-Need-To-Learn" aria-hidden="true"></a></h1><p>If you want to contribute to the Status core app, then yes, it’s probably a good idea to at least <a href="https://www.braveclojure.com/introduction/" target="_blank" rel="noopener">start with Clojure</a>.</p>
-<p>However, if you want to build awesome and amazing DApps, there is absolutely no need for all that. Just use <a href="https://embark.status.im" target="_blank" rel="noopener">Embark</a>, plugin to the Status <a href="/developer_tools/">JS API</a> and perhaps even <a href="/extensions/">extend your DApp</a> to watch the magic happen from people’s pockets all around the world.</p>
-<p>Building great DApps that live up to high standards of security, censorship-resistance, and smooth user experience is absolutely vital to creating a thriving decentralised economy.</p>
-<p>We love developers who build great DApps as much as we love Clojurians. In Status, there really is space for everyone.</p>
+        </div>
+        <div class="col-md-9 col-xl-10">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="editor-content">
+                <div class="docs-lp-wrapper row">
+                  <div class="docs-lp-wrapper row"><br>  <div class="intro col-md-12 col-xl-6"><br>    <h2 class="intro-headline article-heading">Contribute to Status<a class="article-anchor" href="#undefined" aria-hidden="true"></a></h2><br>    <p class="intro-text"><br>      Status is not a traditional organisation. There are many ways that you can contribute your ideas and talents to the Status ecosystem:<br>    </p><br>    <p class="intro-text"><br>      1. Download the app and join our community. We’d love to see you there.<br>    </p><br>    <p class="intro-text"><br>      2. We’re an Open Source project, so you can check out our repositories and <a href="https://github.com/status-im" target="_blank" rel="noopener">contribute code here</a>. Look for the label: “<a href="https://github.com/status-im/status-react/labels/good%20first%20issue" target="_blank" rel="noopener">good first issue</a>“ to get started.<br>    </p><br>    <p class="intro-text"><br>      3. Complete one of our <a href="https://gitcoin.co/explorer?network=mainnet&amp;idx_status=open&amp;keywords=status.im&amp;order_by=-web3_created" target="_blank" rel="noopener">bounties listed on gitcoin</a>.<br>    </p><br>    <p class="intro-text"><br>      4. Occasionally we look to hire core contributors to join us on a full/part time basis. Use the navigation to the left to find out more.<br>    </p><br>  </div>
 
-							</div>
-							<div class="docs-footer">
-								Last update: 2019-10-15
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12 col-xl-2 d-none d-xl-block">
-					<div class="right-sub-navigation">
-						<b>On this page</b>
-						<ul></ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <div class="tiles-wrapper col-xl-6 col-md-12"><br>    <div class="row"><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-1-Build-Status-for-Android-or-iOS" class="action-tile"><br>          <div class="item-heading">Build Status for Android&nbsp;&amp;&nbsp;iOS</div><br>          <img src="/technical/img/lp-icon-mobile.svg"><br>          <div class="item-links"><br>            Build a decentralized app<br>          </div><br>        </a><br>      </div><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-2-Find-Something-To-Work-On" class="action-tile"><br>          <div class="item-heading">Find Something To Work On</div><br>          <img src="/technical/img/lp-icon-find.svg"><br>          <div class="item-links"><br>            <a href="https://gitcoin.co/explorer?network=mainnet&keywords=status&order_by=-web3_created" target="_blank">Use Gitcoin</a><br><br>            <a href="https://github.com/status-im/status-react/issues?utf8=%E2%9C%93&q=is%3Aopen+label%3A%22good+first+issue%22+label%3A%22bug%22+label%3A%22low-priority%22+" target="_blank">Find suitable bugs</a><br><br>            <a href="https://github.com/status-im/status-react/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+keyboard+android" target="_blank">Build the stuff you need</a><br><br>          </div><br>        </a><br>      </div><br>    </div><br>    <div class="row"><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-3-Fix-the-Bug" class="action-tile"><br>          <div class="item-heading">Fix the Bug</div><br>          <img src="/technical/img/lp-icon-bug.svg"><br>          <div class="item-links"><br>            <a href="/technical/contributor_workflow.html#Step-3-Fix-the-Bug">Pull request content</a><br><br>          </div><br>        </a><br>      </div><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-4-Get-Your-Code-Reviewed" class="action-tile"><br>          <div class="item-heading">Get Your Code Reviewed</div><br>          <img src="/technical/img/lp-icon-code.svg"><br>          <div class="item-links"><br>            <a href="/technical/contributor_workflow.html#Step-4-Get-Your-Code-Reviewed">Definitions</a><br><br>            <a href="/technical/contributor_workflow.html#Step-4-Get-Your-Code-Reviewed">Pull request lifecycle</a><br>          </div><br>        </a><br>      </div><br>    </div><br>    <div class="row"><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-5-Respond-to-the-review" class="action-tile"><br>          <div class="item-heading">Respond to the Review</div><br>          <img src="/technical/img/lp-icon-review.svg"><br>          <div class="item-links"><br>            <a href="/technical/contributor_workflow.html#Step-5-Respond-to-the-review">The First Review of Your Patch</a><br><br>          </div><br>        </a><br>      </div><br>      <div class="tile-item col-md-6"><br>        <a href="/technical/contributor_workflow.html#Step-6-Repeat" class="action-tile"><br>          <div class="item-heading">Repeat</div><br>          <img src="/technical/img/lp-icon-repeat.svg"><br>          <div class="item-links"><br>            <a href="/technical/contributor_workflow.html#Step-6-Repeat">Next Steps</a><br><br>          </div><br>        </a><br>      </div><br>    </div><br>  </div><br></div>
+
+
+                </div>
+              </div>
+              
+              <div class="docs-footer">
+                Last update: 2020-02-14
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
-        <footer>
+
+        <footer class="">
     <div class="get-started">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <h3>准备好从Status开始？</h3>
                 </div>
-                <div class="col-lg-7 text-right">
+                <div class="col-lg-8 text-right">
                     <div class="inline">
-                        <a href="/zh/get/" class="btn btn-white-fill btn-arrow">获取Status</a>
+                        <a href="https://apps.apple.com/us/app/status-private-communication/id1178893006" class="m-r-20 download"><img src="/img/app-store.svg"></a>
+                        <a href="https://play.google.com/store/apps/details?id=im.status.ethereum" class="m-r-20 download"><img src="/img/google-play.svg"></a>
+                        <a href="https://status-im.ams3.cdn.digitaloceanspaces.com/StatusIm-v1.0.1.apk" class="m-r-20 download"><img src="/img/apk.svg"></a>
                         <a href="/zh/get-involved/" class="btn btn-white btn-arrow btn-arrow-white">参与</a>
                     </div>
                 </div>
@@ -834,6 +390,7 @@
                             <li><a href="/zh/features/">功能</a></li>
                             <li><a href="/zh/security/">Security</a></li>
                             <li><a href="/zh/get/">应用程序</a></li>
+                            <li><a href="/zh/nightly/">每夜</a></li>
                         </ul>
                     </div>
                 </div>
@@ -843,9 +400,10 @@
                         <ul>
                             <li><a href="/zh/get-involved/">参与</a></li>
                             <li><a href="/zh/about/">关于</a></li>
-                            <li><a href="/zh/contribute/open_positions.html">工作职位</a></li>
+                            <li><a href="http://statusnetwork.com/press-kit/status/" target="_blank">Media Kit</a></li>
+                            <!-- <li><a href="/zh/contribute/open_positions.html">工作职位</a></li> -->
                             <li><a href="https://our.status.im/">博客</a></li>
-                            <li><a href="/whitepaper.pdf" target="_blank">白皮书</a></li>
+                            <li><a href="/files/whitepaper.pdf" target="_blank">白皮书</a></li>
                         </ul>
                     </div>
                 </div>
@@ -854,21 +412,30 @@
                     <div class="collapse show" id="footer-nav-3">
                         <ul>
                             <li><a href="/zh/docs/">文档</a></li>
-                            <li><a href="/zh/technical/contributor_guide.html">开始参与</a></li>
-                            <li><a href="/zh/build_status/">构建 Status.</a></li>
-                            <li><a href="/zh/nightly/">Nightlies版</a></li>
-                            <li><a href="/zh/developer_tools/">开发工具</a></li>
-                            <li><a href="/zh/tutorials/">教程</a></li>
+                            <li><a href="/zh/developer_tools/">开始参与</a></li>
+                            <li><a href="/zh/technical/">Contributor Guide</a></li>
+                            <li><a href="/zh/technical/build_status/">Nightlies版</a></li>
+                            <li><a href="/zh/security/">研究</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h5><a data-toggle="collapse" href="#footer-nav-4" role="button" aria-expanded="true" aria-controls="footer-nav-4">Status 网络</a></h5>
+                    <h5>
+                        <a data-toggle="collapse" href="#footer-nav-4" role="button" aria-expanded="true" aria-controls="footer-nav-4">
+                            Status 网络
+                        </a>
+                        <a href="https://statusnetwork.com/" target="_blank" class="pe-all"><img src="/img/footer-status-network-logo.svg"></a>
+                    </h5>
                     <div class="collapse show" id="footer-nav-4">
                         <ul>
-                            <li><a href="https://embark.status.im/">Embark</a></li>
-                            <li><a href="https://nimbus.team/">Nimbus</a></li>
-                            <li><a href="https://keycard.tech/">Keycard</a></li>
+                            <li><a href="https://keycard.tech/" target="_blank">Keycard</a></li>
+                            <li><a href="https://dap.ps/" target="_blank">Dap.ps</a></li>
+                            <li><a href="https://teller.exchange/" target="_blank">Teller</a></li>
+                            <li><a href="https://assemble.fund/" target="_blank">Assemble</a></li>
+                            <li><a href="https://embark.status.im/" target="_blank">Embark</a></li>
+                            <li><a href="https://subspace.status.im/" target="_blank">Subspace</a></li>
+                            <li><a href="https://vac.dev/" target="_blank">Vac</a></li>
+                            <li><a href="https://nimbus.team/" target="_blank">Nimbus</a></li>
                         </ul>
                     </div>
                 </div>
@@ -882,7 +449,7 @@
                     <h5>联系我们</h5>
                     <ul>
                         <li>
-                            <a href="https://get.status.im/chat/public/status" target="_blank">
+                            <a href="https://join.status.im/chat/public/status" target="_blank">
                                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g opacity="0.5">
                                     <rect width="26" height="26" rx="2" fill="white"/>
@@ -973,12 +540,22 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-7">
                     <div class="inline">
                         <a href="/zh/privacy-policy/">隐私政策</a>
                         <a href="https://our.status.im/implementing-fathom-analytics-on-marketing-websites/">Site Analytics</a>
                     </div>
                     <p>Status Research＆Development GmbH，Baarerstrasse 10，Zug，Switzerland</p>
+                </div>
+                <div class="col-md-5">
+                    <p class="verified">
+                        <a href="https://messari.io/asset/status/" target="_blank">
+                            Messari Transparency Verified 
+                            <svg width="34" height="39" viewBox="0 0 34 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.619 6.78163L16.354 0.130678C16.7424 -0.04464 17.1887 -0.0435034 17.5762 0.133791L32.0108 6.73815C32.4435 6.93613 32.7519 7.33018 32.8377 7.79455C34.0223 14.2086 33.5242 20.161 31.3434 25.6518C29.0785 31.3543 24.3727 35.4913 17.226 38.0626C9.87383 36.2554 4.90753 31.9102 2.32714 25.0269C-0.145514 18.431 -0.647719 12.6534 0.82053 7.69391C0.940286 7.2894 1.2317 6.95644 1.619 6.78163ZM20.1354 10.4413L16.0844 14.5553L14.5369 13.0577C14.1926 12.7246 13.6316 12.7218 13.2837 13.0515C12.9359 13.3813 12.933 13.9187 13.2773 14.2519L15.47 16.3738C15.8226 16.7151 16.4004 16.7084 16.7444 16.3591L21.4247 11.606C21.7605 11.265 21.7441 10.7278 21.3881 10.4062C21.032 10.0845 20.4712 10.1002 20.1354 10.4413ZM23.432 15.4245C23.432 15.3277 23.393 15.2349 23.3236 15.1667C23.1799 15.0257 22.9479 15.0267 22.8055 15.1691L20.0205 17.9523C19.9525 18.0203 19.9144 18.1121 19.9144 18.2077V26.9774C19.9144 27.0655 19.9467 27.1506 20.0054 27.2167C20.1388 27.3674 20.3703 27.3823 20.5223 27.2501L23.3073 24.8297C23.3866 24.7608 23.432 24.6614 23.432 24.5569V15.4245ZM16.9686 20.9306C16.8355 21.0433 16.6405 21.0469 16.5032 20.9392L15.6375 20.2602C15.5728 20.2094 15.4927 20.1818 15.4101 20.1818C15.2078 20.1818 15.0438 20.3442 15.0438 20.5446V26.9781C15.0438 27.0666 15.0764 27.152 15.1355 27.2183C15.2694 27.3685 15.5009 27.3827 15.6525 27.2501L18.4375 24.815C18.5163 24.7461 18.5614 24.647 18.5614 24.543V20.3701C18.5614 20.2837 18.5303 20.2001 18.4736 20.1344C18.3422 19.982 18.111 19.964 17.9571 20.0942L16.9686 20.9306ZM10.4437 15.4237V26.9822C10.4437 27.1826 10.6078 27.345 10.8101 27.345C10.8943 27.345 10.976 27.3163 11.0414 27.2636L13.8264 25.0175C13.9118 24.9486 13.9614 24.8452 13.9614 24.7361V18.19C13.9614 18.0939 13.923 18.0018 13.8545 17.9338L11.0695 15.1675C10.9266 15.0256 10.6947 15.0253 10.5514 15.1668C10.4825 15.2349 10.4437 15.3273 10.4437 15.4237Z" fill="#808080"/>
+                            </svg>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
