@@ -72,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://status.im/technical/build_status/status_react_quickstart.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.157Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://status.im/technical/build_status/status_go.html</loc>
     
     <lastmod>2020-02-14T10:51:09.157Z</lastmod>
@@ -86,21 +79,21 @@
   </url>
   
   <url>
+    <loc>https://status.im/technical/build_status/status_react_quickstart.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/our_team/applicant_privacy.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/our_team/index.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/our_team/applying_to_status.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/our_team/faqs.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
@@ -114,14 +107,7 @@
   </url>
   
   <url>
-    <loc>https://status.im/our_team/open_positions.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/our_team/our_principles.html</loc>
+    <loc>https://status.im/our_team/applying_to_status.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
@@ -135,6 +121,20 @@
   </url>
   
   <url>
+    <loc>https://status.im/our_team/our_principles.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/our_team/open_positions.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/research/index.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/our_team/applicant_privacy.html</loc>
+    <loc>https://status.im/our_team/life_status.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/our_team/life_status.html</loc>
+    <loc>https://status.im/our_team/faqs.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
@@ -170,6 +170,13 @@
   </url>
   
   <url>
+    <loc>https://status.im/keycard_api/apdu/duplicatekey.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.141Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/keycard_api/apdu/setndef.html</loc>
     
     <lastmod>2020-02-14T10:51:09.141Z</lastmod>
@@ -178,13 +185,6 @@
   
   <url>
     <loc>https://status.im/keycard_api/sdk/duplication.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.141Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/keycard_api/apdu/duplicatekey.html</loc>
     
     <lastmod>2020-02-14T10:51:09.141Z</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/technical/tribute_to_talk.html</loc>
+    <loc>https://status.im/technical/testing.html</loc>
     
     <lastmod>2019-10-15T03:17:57.803Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/technical/testing.html</loc>
+    <loc>https://status.im/technical/tribute_to_talk.html</loc>
     
     <lastmod>2019-10-15T03:17:57.803Z</lastmod>
     
@@ -289,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://status.im/security/index.html</loc>
+    <loc>https://status.im/research/whisper_faqs.html</loc>
     
     <lastmod>2019-10-15T03:17:57.799Z</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/snt-utility/index.html</loc>
+    <loc>https://status.im/security/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.799Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/research/whisper_faqs.html</loc>
+    <loc>https://status.im/snt-utility/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.799Z</lastmod>
     
@@ -394,21 +394,7 @@
   </url>
   
   <url>
-    <loc>https://status.im/fiddle/index.html</loc>
-    
-    <lastmod>2019-10-15T03:17:57.791Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://status.im/get/index.html</loc>
-    
-    <lastmod>2019-10-15T03:17:57.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/get-involved/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.791Z</lastmod>
     
@@ -423,6 +409,20 @@
   
   <url>
     <loc>https://status.im/join/index.html</loc>
+    
+    <lastmod>2019-10-15T03:17:57.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/fiddle/index.html</loc>
+    
+    <lastmod>2019-10-15T03:17:57.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/get-involved/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.791Z</lastmod>
     
@@ -457,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/troubleshooting_dapps.html</loc>
+    <loc>https://status.im/developer_tools/why_status.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/why_status.html</loc>
+    <loc>https://status.im/developer_tools/troubleshooting_dapps.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
@@ -485,14 +485,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/register_dapps/register_dapps.html</loc>
+    <loc>https://status.im/developer_tools/run_on_status/assets_guidelines.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/run_on_status/assets_guidelines.html</loc>
+    <loc>https://status.im/developer_tools/register_dapps/register_dapps.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
@@ -534,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/detecting_status.html</loc>
+    <loc>https://status.im/developer_tools/enable_chat.html</loc>
     
     <lastmod>2019-10-15T03:17:57.779Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/enable_chat.html</loc>
+    <loc>https://status.im/developer_tools/detecting_status.html</loc>
     
     <lastmod>2019-10-15T03:17:57.779Z</lastmod>
     
