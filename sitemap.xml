@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://status.im/nft-nyc/index.html</loc>
+    
+    <lastmod>2020-02-17T22:07:47.485Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/contribute/index.html</loc>
     
     <lastmod>2020-02-16T17:11:54.318Z</lastmod>
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/technical/statusphere.html</loc>
+    <loc>https://status.im/technical/run_status_node.html</loc>
     
     <lastmod>2020-02-14T10:51:09.161Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/technical/run_status_node.html</loc>
+    <loc>https://status.im/technical/statusphere.html</loc>
     
     <lastmod>2020-02-14T10:51:09.161Z</lastmod>
     
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://status.im/our_team/faqs.html</loc>
-    
-    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://status.im/our_team/applying_to_status.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
@@ -121,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://status.im/our_team/open_positions.html</loc>
+    <loc>https://status.im/our_team/faqs.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
@@ -129,6 +129,13 @@
   
   <url>
     <loc>https://status.im/our_team/index.html</loc>
+    
+    <lastmod>2020-02-14T10:51:09.145Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/our_team/open_positions.html</loc>
     
     <lastmod>2020-02-14T10:51:09.145Z</lastmod>
     
@@ -212,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/run_on_status/index.html</loc>
+    <loc>https://status.im/developer_tools/run_on_status/eip-1102.html</loc>
     
     <lastmod>2020-02-14T10:51:09.077Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/run_on_status/eip-1102.html</loc>
+    <loc>https://status.im/developer_tools/run_on_status/index.html</loc>
     
     <lastmod>2020-02-14T10:51:09.077Z</lastmod>
     
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/research/whisper_pss.html</loc>
+    <loc>https://status.im/snt-utility/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.799Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/snt-utility/index.html</loc>
+    <loc>https://status.im/research/whisper_pss.html</loc>
     
     <lastmod>2019-10-15T03:17:57.799Z</lastmod>
     
@@ -331,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/nightly/index.html</loc>
+    <loc>https://status.im/mobile-release-schedule/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.795Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/mobile-release-schedule/index.html</loc>
+    <loc>https://status.im/nightly/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.795Z</lastmod>
     
@@ -450,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/why_status.html</loc>
+    <loc>https://status.im/developer_tools/troubleshooting_dapps.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/troubleshooting_dapps.html</loc>
+    <loc>https://status.im/developer_tools/why_status.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
@@ -499,14 +506,14 @@
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/status_extras/status_dapp_api.html</loc>
+    <loc>https://status.im/developer_tools/status_extras/index.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://status.im/developer_tools/status_extras/index.html</loc>
+    <loc>https://status.im/developer_tools/status_extras/status_dapp_api.html</loc>
     
     <lastmod>2019-10-15T03:17:57.787Z</lastmod>
     
